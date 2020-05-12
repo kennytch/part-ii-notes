@@ -1,5 +1,33 @@
 \section{Integration}\label{sec:integration}
 
 \begin{itemize}
-    \item simple function
+    \item simple function ------ $\sum^N a_i \In_{A_{i}}$ with $a_i \geq 0$
 \end{itemize}
+
+\begin{lemma}
+   $f$ simple, $f = \sum a_i\In_{A_i} = \sum b_j \In{B_j}$, then $\sum a_i \mu(A_i) = \sum b_j \mu(B_j)$
+\end{lemma}
+
+\begin{itemize}
+    \item integral $\mu(f)$ for simple $f$ ------ $\mu(f) = \sum a_i \mu(A_i) = \int f d\mu$
+    \item integral $\mu(f)$ for non-negative $f$ ------ $\mu(f) = \sup \{\mu(g) : g \leq f, g \text{ simple}\}$
+\end{itemize}
+
+\begin{prop}[positivity]
+    $f, g$ non-negative measurable, then
+    \begin{itemize}
+        \item $f \geq g \Rightarrow \mu(f) \geq \mu(g)$
+        \item $f \geq g$, $\mu(f) = \mu(g)$ $\Rightarrow$ $f = g$ a.e.
+    \end{itemize}
+\end{prop}
+
+\begin{itemize}
+    \item $f = g$ almost everywhere
+\end{itemize}
+
+\begin{lemma}
+    $f \geq 0$, then $\exists$ increasing simple functions $g_n$ st $g_n \rightarrow f$ pointwise 
+\end{lemma}
+\begin{proof}
+    $g_n = 2^{-n}\floor{23}$
+\end{proof}

@@ -8,6 +8,11 @@
 \usepackage{bm} %bold
 \usepackage{bbm} %indicator
 
+% floor and ceil
+\usepackage{mathtools}
+\DeclarePairedDelimiter{\ceil}{\lceil}{\rceil}
+\DeclarePairedDelimiter{\floor}{\lfloor}{\rfloor}
+
 % theorem, lemma, example
 \newtheorem{thm}{Theorem}[section]
 \newtheorem{lemma}[thm]{Lemma}
@@ -26,8 +31,23 @@
 \newcommand{\Q}{\mathbb{Q}}
 \newcommand{\N}{\mathbb{N}}
 
-% highlighter
+%% highlighter
 \usepackage{soul}
+
+% bold the enumerator
+\usepackage{enumitem}
+\setlist[enumerate,1]{label=(\bfseries\roman*)}
+
+% hyperlink
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,
+    urlcolor=cyan,
+}
+
+\urlstyle{same}
 
 %% strike indicate crossed out term e.g. calculating fraction
 \usepackage{cancel}
@@ -37,11 +57,10 @@
 \usepackage{verbatim, ifpdf}
 \usepackage{subcaption}
 \usepackage{atbegshi,picture}
-\usepackage{listings}
-\usepackage{mathtools}
-\usepackage{enumerate}
-\usepackage{array}
-\usepackage{booktabs}
+%\usepackage{listings}
+%\usepackage{enumerate}
+%\usepackage{array}
+%\usepackage{booktabs}
 
 % for import svg
 \usepackage{graphicx, color}
@@ -67,21 +86,10 @@
     \import{./figure}{#2.pdf_tex}%
 }
 
-% floor and ceil
-\DeclarePairedDelimiter{\ceil}{\lceil}{\rceil}
-\DeclarePairedDelimiter{\floor}{\lfloor}{\rfloor}
 
-% bold the enumerator
-\usepackage{enumitem}
-\setlist[enumerate,1]{label=(\roman*)}
 
-% hyperlink
-\usepackage{hyperref}
-\hypersetup{
-    colorlinks=true,
-    linkcolor=blue,
-    filecolor=magenta,
-    urlcolor=cyan,
-}
 
-\urlstyle{same}
+
+
+
+

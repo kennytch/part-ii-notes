@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.3.16)  12 MAY 2020 14:33
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.3.16)  12 MAY 2020 16:36
 entering extended mode
 **./prob_measure.tex
 (prob_measure.tex
@@ -120,20 +120,57 @@ LaTeX Font Info:    Overwriting math alphabet `\mathbbm' in version `bold'
 LaTeX Font Info:    Overwriting math alphabet `\mathbbmss' in version `bold'
 (Font)                  U/bbmss/m/n --> U/bbmss/bx/n on input line 35.
 )
-\c@thm=\count187
-\c@setting=\count188
+("C:\Users\Asus\AppData\Local\Programs\MiKTeX 2.9\tex/latex/mathtools\mathtools
+.sty"
+Package: mathtools 2020/01/17 v1.23 mathematical typesetting tools
 
-("C:\Users\Asus\AppData\Local\Programs\MiKTeX 2.9\tex/latex/soul\soul.sty"
-Package: soul 2003/11/17 v2.4 letterspacing/underlining (mf)
-\SOUL@word=\toks25
-\SOUL@lasttoken=\toks26
-\SOUL@cmds=\toks27
-\SOUL@buffer=\toks28
-\SOUL@token=\toks29
-\SOUL@spaceskip=\skip55
-\SOUL@ttwidth=\dimen144
-\SOUL@uldp=\dimen145
-\SOUL@ulht=\dimen146
+("C:\Users\Asus\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\keyval.sty
+"
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks25
+) ("C:\Users\Asus\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tools\calc.sty"
+Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count187
+\calc@Bcount=\count188
+\calc@Adimen=\dimen144
+\calc@Bdimen=\dimen145
+\calc@Askip=\skip55
+\calc@Bskip=\skip56
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count189
+\calc@Cskip=\skip57
+)
+("C:\Users\Asus\AppData\Local\Programs\MiKTeX 2.9\tex/latex/mathtools\mhsetup.s
+ty"
+Package: mhsetup 2017/03/31 v1.3 programming setup (MH)
+)
+LaTeX Info: Thecontrolsequence`\('isalreadyrobust on input line 129.
+LaTeX Info: Thecontrolsequence`\)'isalreadyrobust on input line 129.
+LaTeX Info: Thecontrolsequence`\['isalreadyrobust on input line 129.
+LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 129.
+\g_MT_multlinerow_int=\count190
+\l_MT_multwidth_dim=\dimen146
+\origjot=\skip58
+\l_MT_shortvdotswithinadjustabove_dim=\dimen147
+\l_MT_shortvdotswithinadjustbelow_dim=\dimen148
+\l_MT_above_intertext_sep=\dimen149
+\l_MT_below_intertext_sep=\dimen150
+\l_MT_above_shortintertext_sep=\dimen151
+\l_MT_below_shortintertext_sep=\dimen152
+)
+\c@thm=\count191
+\c@setting=\count192
+
+("C:\Users\Asus\AppData\Local\Programs\MiKTeX 2.9\tex/latex/enumitem\enumitem.s
+ty"
+Package: enumitem 2019/06/20 v3.9 Customized lists
+\labelindent=\skip59
+\enit@outerparindent=\dimen153
+\enit@toks=\toks26
+\enit@inbox=\box47
+\enit@count@id=\count193
+\enitdp@description=\count194
 )
 ("C:\Users\Asus\AppData\Local\Programs\MiKTeX 2.9\tex/latex/cancel\cancel.sty"
 Package: cancel 2013/04/12 v2.2 Cancel math terms
@@ -142,40 +179,35 @@ Package: cancel 2013/04/12 v2.2 Cancel math terms
 ty"
 Package: geometry 2020/01/02 v5.9 Page Geometry
 
-("C:\Users\Asus\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\keyval.sty
-"
-Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
-\KV@toks@=\toks30
-)
 ("C:\Users\Asus\AppData\Local\Programs\MiKTeX 2.9\tex/generic/iftex\ifvtex.sty"
 Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 ("C:\Users\Asus\AppData\Local\Programs\MiKTeX 2.9\tex/generic/iftex\iftex.sty"
 Package: iftex 2019/11/07 v1.0c TeX engine tests
 ))
-\Gm@cnth=\count189
-\Gm@cntv=\count190
-\c@Gm@tempcnt=\count191
-\Gm@bindingoffset=\dimen147
-\Gm@wd@mp=\dimen148
-\Gm@odd@mp=\dimen149
-\Gm@even@mp=\dimen150
-\Gm@layoutwidth=\dimen151
-\Gm@layoutheight=\dimen152
-\Gm@layouthoffset=\dimen153
-\Gm@layoutvoffset=\dimen154
-\Gm@dimlist=\toks31
+\Gm@cnth=\count195
+\Gm@cntv=\count196
+\c@Gm@tempcnt=\count197
+\Gm@bindingoffset=\dimen154
+\Gm@wd@mp=\dimen155
+\Gm@odd@mp=\dimen156
+\Gm@even@mp=\dimen157
+\Gm@layoutwidth=\dimen158
+\Gm@layoutheight=\dimen159
+\Gm@layouthoffset=\dimen160
+\Gm@layoutvoffset=\dimen161
+\Gm@dimlist=\toks27
 
 ("C:\Users\Asus\AppData\Local\Programs\MiKTeX 2.9\tex/latex/geometry\geometry.c
 fg"))
 ("C:\Users\Asus\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\inputenc.sty"
 Package: inputenc 2018/08/11 v1.3c Input encoding file
-\inpenc@prehook=\toks32
-\inpenc@posthook=\toks33
+\inpenc@prehook=\toks28
+\inpenc@posthook=\toks29
 ) ("C:\Users\Asus\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tools\verbatim.st
 y"
 Package: verbatim 2019/11/10 v1.5r LaTeX2e package for verbatim enhancements
-\every@verbatim=\toks34
-\verbatim@line=\toks35
+\every@verbatim=\toks30
+\verbatim@line=\toks31
 \verbatim@in@stream=\read2
 ) ("C:\Users\Asus\AppData\Local\Programs\MiKTeX 2.9\tex/generic/iftex\ifpdf.sty
 "
@@ -193,20 +225,20 @@ Package: caption 2020/01/03 v3.4h Customizing captions (AR)
 y"
 Package: caption3 2020/01/03 v1.8h caption3 kernel (AR)
 Package caption3 Info: TeX engine: e-TeX on input line 61.
-\captionmargin=\dimen155
-\captionmargin@=\dimen156
-\captionwidth=\dimen157
-\caption@tempdima=\dimen158
-\caption@indent=\dimen159
-\caption@parindent=\dimen160
-\caption@hangindent=\dimen161
+\captionmargin=\dimen162
+\captionmargin@=\dimen163
+\captionwidth=\dimen164
+\caption@tempdima=\dimen165
+\caption@indent=\dimen166
+\caption@parindent=\dimen167
+\caption@hangindent=\dimen168
 Package caption Info: Standard document class detected.
 )
-\c@caption@flags=\count192
-\c@continuedfloat=\count193
+\c@caption@flags=\count198
+\c@continuedfloat=\count199
 )
-\c@subfigure=\count194
-\c@subtable=\count195
+\c@subfigure=\count266
+\c@subtable=\count267
 )
 ("C:\Users\Asus\AppData\Local\Programs\MiKTeX 2.9\tex/generic/atbegshi\atbegshi
 .sty"
@@ -223,104 +255,7 @@ Package: ltxcmds 2019/12/15 v1.24 LaTeX kernel commands for general use (HO)
 ("C:\Users\Asus\AppData\Local\Programs\MiKTeX 2.9\tex/latex/picture\picture.sty
 "
 Package: picture 2019/12/09 v1.5 Dimens for picture macros (HO)
-Package picture Info: Calculation method: etex.
-)
-("C:\Users\Asus\AppData\Local\Programs\MiKTeX 2.9\tex/latex/listings\listings.s
-ty"
-\lst@mode=\count196
-\lst@gtempboxa=\box47
-\lst@token=\toks36
-\lst@length=\count197
-\lst@currlwidth=\dimen162
-\lst@column=\count198
-\lst@pos=\count199
-\lst@lostspace=\dimen163
-\lst@width=\dimen164
-\lst@newlines=\count266
-\lst@lineno=\count267
-\lst@maxwidth=\dimen165
-
-("C:\Users\Asus\AppData\Local\Programs\MiKTeX 2.9\tex/latex/listings\lstmisc.st
-y"
-File: lstmisc.sty 2019/09/10 1.8c (Carsten Heinz)
-\c@lstnumber=\count268
-\lst@skipnumbers=\count269
-\lst@framebox=\box48
-)
-("C:\Users\Asus\AppData\Local\Programs\MiKTeX 2.9\tex/latex/listings\listings.c
-fg"
-File: listings.cfg 2019/09/10 1.8c listings configuration
-))
-Package: listings 2019/09/10 1.8c (Carsten Heinz)
-
-("C:\Users\Asus\AppData\Local\Programs\MiKTeX 2.9\tex/latex/mathtools\mathtools
-.sty"
-Package: mathtools 2020/01/17 v1.23 mathematical typesetting tools
- ("C:\Users\Asus\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tools\calc.sty"
-Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count270
-\calc@Bcount=\count271
-\calc@Adimen=\dimen166
-\calc@Bdimen=\dimen167
-\calc@Askip=\skip56
-\calc@Bskip=\skip57
-LaTeX Info: Redefining \setlength on input line 80.
-LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count272
-\calc@Cskip=\skip58
-)
-("C:\Users\Asus\AppData\Local\Programs\MiKTeX 2.9\tex/latex/mathtools\mhsetup.s
-ty"
-Package: mhsetup 2017/03/31 v1.3 programming setup (MH)
-)
-LaTeX Info: Thecontrolsequence`\('isalreadyrobust on input line 129.
-LaTeX Info: Thecontrolsequence`\)'isalreadyrobust on input line 129.
-LaTeX Info: Thecontrolsequence`\['isalreadyrobust on input line 129.
-LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 129.
-\g_MT_multlinerow_int=\count273
-\l_MT_multwidth_dim=\dimen168
-\origjot=\skip59
-\l_MT_shortvdotswithinadjustabove_dim=\dimen169
-\l_MT_shortvdotswithinadjustbelow_dim=\dimen170
-\l_MT_above_intertext_sep=\dimen171
-\l_MT_below_intertext_sep=\dimen172
-\l_MT_above_shortintertext_sep=\dimen173
-\l_MT_below_shortintertext_sep=\dimen174
-)
-("C:\Users\Asus\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tools\enumerate.sty
-"
-Package: enumerate 2015/07/23 v3.00 enumerate extensions (DPC)
-\@enLab=\toks37
-) ("C:\Users\Asus\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tools\array.sty"
-Package: array 2019/08/31 v2.4l Tabular extension package (FMi)
-\col@sep=\dimen175
-\ar@mcellbox=\box49
-\extrarowheight=\dimen176
-\NC@list=\toks38
-\extratabsurround=\skip60
-\backup@length=\skip61
-\ar@cellbox=\box50
-)
-("C:\Users\Asus\AppData\Local\Programs\MiKTeX 2.9\tex/latex/booktabs\booktabs.s
-ty"
-Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
-\heavyrulewidth=\dimen177
-\lightrulewidth=\dimen178
-\cmidrulewidth=\dimen179
-\belowrulesep=\dimen180
-\belowbottomsep=\dimen181
-\aboverulesep=\dimen182
-\abovetopsep=\dimen183
-\cmidrulesep=\dimen184
-\cmidrulekern=\dimen185
-\defaultaddspace=\dimen186
-\@cmidla=\count274
-\@cmidlb=\count275
-\@aboverulesep=\dimen187
-\@belowrulesep=\dimen188
-\@thisruleclass=\count276
-\@lastruleclass=\count277
-\@thisrulewidth=\dimen189
+Package picture Info: Calculation method: calc.
 )
 ("C:\Users\Asus\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\graphicx.s
 ty"
@@ -343,8 +278,8 @@ Package graphics Info: Driver file: pdftex.def on input line 105.
 .def"
 File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
 ))
-\Gin@req@height=\dimen190
-\Gin@req@width=\dimen191
+\Gin@req@height=\dimen169
+\Gin@req@width=\dimen170
 )
 ("C:\Users\Asus\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\color.sty"
 Package: color 2019/11/23 v1.2a Standard LaTeX Color (DPC)
@@ -359,11 +294,11 @@ Package color Info: Driver file: pdftex.def on input line 147.
 Package: import 2020/01/22  v 6.0
 ) ("C:\Users\Asus\AppData\Local\Programs\MiKTeX 2.9\tex/latex/float\float.sty"
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count278
-\float@exts=\toks39
-\float@box=\box51
-\@float@everytoks=\toks40
-\@floatcapt=\box52
+\c@float@type=\count268
+\float@exts=\toks32
+\float@box=\box48
+\@float@everytoks=\toks33
+\@floatcapt=\box49
 )
 ("C:\Users\Asus\AppData\Local\Programs\MiKTeX 2.9\tex/latex/svg\svg.sty"
 Package: svg 2020/01/13 v2.02e (include SVG pictures)
@@ -393,9 +328,9 @@ Package shellesc Info: Restricted shell escape enabled on input line 77.
 es.sty"
 Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
 )
-\svg@box=\box53
-\c@svg@param@lastpage=\count279
-\c@svg@param@currpage=\count280
+\svg@box=\box50
+\c@svg@param@lastpage=\count269
+\c@svg@param@currpage=\count270
 )
 ("C:\Users\Asus\AppData\Local\Programs\MiKTeX 2.9\tex/latex/xcolor\xcolor.sty"
 Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
@@ -427,11 +362,11 @@ Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
 ))
 ("C:\Users\Asus\AppData\Local\Programs\MiKTeX 2.9\tex/latex/wrapfig\wrapfig.sty
 "
-\wrapoverhang=\dimen192
-\WF@size=\dimen193
-\c@WF@wrappedlines=\count281
-\WF@box=\box54
-\WF@everypar=\toks41
+\wrapoverhang=\dimen171
+\WF@size=\dimen172
+\c@WF@wrappedlines=\count271
+\WF@box=\box51
+\WF@everypar=\toks34
 Package: wrapfig 2003/01/31  v 3.6
 )
 ("C:\Users\Asus\AppData\Local\Programs\MiKTeX 2.9\tex/latex/algorithms\algorith
@@ -442,24 +377,24 @@ nment
 ("C:\Users\Asus\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\ifthen.sty"
 Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 )
-\@float@every@algorithm=\toks42
-\c@algorithm=\count282
+\@float@every@algorithm=\toks35
+\c@algorithm=\count272
 )
 ("C:\Users\Asus\AppData\Local\Programs\MiKTeX 2.9\tex/latex/algorithmicx\algori
 thmicx.sty"
 Package: algorithmicx 2005/04/27 v1.2 Algorithmicx
 
 Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
-\c@ALG@line=\count283
-\c@ALG@rem=\count284
-\c@ALG@nested=\count285
-\ALG@tlm=\skip62
-\ALG@thistlm=\skip63
-\c@ALG@Lnr=\count286
-\c@ALG@blocknr=\count287
-\c@ALG@storecount=\count288
-\c@ALG@tmpcounter=\count289
-\ALG@tmplength=\skip64
+\c@ALG@line=\count273
+\c@ALG@rem=\count274
+\c@ALG@nested=\count275
+\ALG@tlm=\skip60
+\ALG@thistlm=\skip61
+\c@ALG@Lnr=\count276
+\c@ALG@blocknr=\count277
+\c@ALG@storecount=\count278
+\c@ALG@tmpcounter=\count279
+\ALG@tmplength=\skip62
 )
 ("C:\Users\Asus\AppData\Local\Programs\MiKTeX 2.9\tex/latex/algorithmicx\algpse
 udocode.sty"
@@ -479,14 +414,14 @@ Package: expl3 2020-02-14 L3 programming layer (loader)
 ("C:\Users\Asus\AppData\Local\Programs\MiKTeX 2.9\tex/latex/l3backend\l3backend
 -pdfmode.def"
 File: l3backend-pdfmode.def 2020-02-03 L3 backend support: PDF mode
-\l__kernel_color_stack_int=\count290
-\l__pdf_internal_box=\box55
+\l__kernel_color_stack_int=\count280
+\l__pdf_internal_box=\box52
 ))
 Package: xparse 2020-02-14 L3 Experimental document command parser
-\l__xparse_current_arg_int=\count291
-\g__xparse_grabber_int=\count292
-\l__xparse_m_args_int=\count293
-\l__xparse_v_nesting_int=\count294
+\l__xparse_current_arg_int=\count281
+\g__xparse_grabber_int=\count282
+\l__xparse_m_args_int=\count283
+\l__xparse_v_nesting_int=\count284
 )))
 Runaway argument?
 {\newcommand {\svgwidth {##1}}{\import {./figure}{##2.pdf_tex}} \par \ETC.
@@ -514,7 +449,7 @@ Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-(C:/Users\Asus\Desktop\Revision\auxil\prob_measure.aux)
+(C:/Users\Asus\Documents\GitHub\part-ii-notes\auxil\prob_measure.aux)
 \openout1 = `prob_measure.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 14.
@@ -568,26 +503,24 @@ LaTeX Font Info:    ... okay on input line 14.
 
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: float package is loaded.
-Package caption Info: listings package is loaded.
 Package caption Info: wrapfig package is loaded.
 Package caption Info: End \AtBeginDocument code.
-\AtBeginShipoutBox=\box56
-\c@lstlisting=\count295
+\AtBeginShipoutBox=\box53
 
 ("C:\Users\Asus\AppData\Local\Programs\MiKTeX 2.9\tex/context/base/mkii\supp-pd
 f.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count296
-\scratchdimen=\dimen194
-\scratchbox=\box57
-\nofMPsegments=\count297
-\nofMParguments=\count298
-\everyMPshowfont=\toks43
-\MPscratchCnt=\count299
-\MPscratchDim=\dimen195
-\MPnumerator=\count300
-\makeMPintoPDFobject=\count301
-\everyMPtoPDFconversion=\toks44
+\scratchcounter=\count285
+\scratchdimen=\dimen173
+\scratchbox=\box54
+\nofMPsegments=\count286
+\nofMParguments=\count287
+\everyMPshowfont=\toks36
+\MPscratchCnt=\count288
+\MPscratchDim=\dimen174
+\MPnumerator=\count289
+\makeMPintoPDFobject=\count290
+\everyMPtoPDFconversion=\toks37
 )
 ("C:\Users\Asus\AppData\Local\Programs\MiKTeX 2.9\tex/latex/epstopdf-pkg\epstop
 df-base.sty"
@@ -630,35 +563,38 @@ OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 E[]\OT1/cmr/m/n/10.95 ) =
  []
 
 [4]) (sec5.tex) (sec6.tex [5]) (sec7.tex) [6]
-(C:/Users\Asus\Desktop\Revision\auxil\prob_measure.aux) ) 
+(C:/Users\Asus\Documents\GitHub\part-ii-notes\auxil\prob_measure.aux) ) 
 Here is how much of TeX's memory you used:
- 9740 strings out of 481556
- 152124 string characters out of 2914337
- 433831 words of memory out of 3000000
- 24775 multiletter control sequences out of 15000+200000
- 548935 words of font info for 86 fonts, out of 3000000 for 9000
+ 8450 strings out of 481556
+ 135317 string characters out of 2914337
+ 417430 words of memory out of 3000000
+ 23505 multiletter control sequences out of 15000+200000
+ 548981 words of font info for 86 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 51i,10n,54p,345b,247s stack positions out of 5000i,500n,10000p,200000b,50000s
- <C:\Users\Asus\AppDat
-a\Local\MiKTeX\2.9\fonts/pk/ljfour/public/bbm/dpi657\bbm10.pk><C:/Users/Asus/Ap
-pData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/U
-sers/Asus/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx
-12.pfb><C:/Users/Asus/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsf
-onts/cm/cmex10.pfb><C:/Users/Asus/AppData/Local/Programs/MiKTeX 2.9/fonts/type1
-/public/amsfonts/cm/cmmi10.pfb><C:/Users/Asus/AppData/Local/Programs/MiKTeX 2.9
-/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/Asus/AppData/Local/Programs
-/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Asus/AppData/Loc
-al/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/Asus/
-AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/U
-sers/Asus/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy
-10.pfb><C:/Users/Asus/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsf
-onts/cm/cmsy8.pfb><C:/Users/Asus/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/
-public/amsfonts/cm/cmti10.pfb><C:/Users/Asus/AppData/Local/Programs/MiKTeX 2.9/
-fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on C:/Users\Asus\Desktop\Revision\out\prob_measure.pdf (6 pages,
- 158657 bytes).
+ 51i,10n,54p,345b,303s stack positions out of 5000i,500n,10000p,200000b,50000s
+ <C:\Use
+rs\Asus\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/public/bbm/dpi657\bbm10.pk><C:
+/Users/Asus/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cm
+bx10.pfb><C:/Users/Asus/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/am
+sfonts/cm/cmbx12.pfb><C:/Users/Asus/AppData/Local/Programs/MiKTeX 2.9/fonts/typ
+e1/public/amsfonts/cm/cmbxti10.pfb><C:/Users/Asus/AppData/Local/Programs/MiKTeX
+ 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Asus/AppData/Local/Pro
+grams/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Asus/AppDa
+ta/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users
+/Asus/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pf
+b><C:/Users/Asus/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/
+cm/cmr10.pfb><C:/Users/Asus/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/publi
+c/amsfonts/cm/cmr17.pfb><C:/Users/Asus/AppData/Local/Programs/MiKTeX 2.9/fonts/
+type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Asus/AppData/Local/Programs/MiKTeX 
+2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Asus/AppData/Local/Prog
+rams/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/Asus/AppData
+/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/
+Asus/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm
+10.pfb>
+Output written on C:/Users\Asus\Documents\GitHub\part-ii-notes\out\prob_measure
+.pdf (6 pages, 176830 bytes).
 PDF statistics:
- 74 PDF objects out of 1000 (max. 8388607)
+ 82 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
