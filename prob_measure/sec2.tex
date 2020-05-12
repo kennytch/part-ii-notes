@@ -1,0 +1,53 @@
+\section{Jordan Measure on $\mathbb{R}^d$}\label{sec:jordan-measure-on}
+
+\begin{itemize}
+    \item box $B = I_1 \x \cdots \x I_d$
+    \item elementary subset ------ finite union of boxes
+    \item volume of box, $|B|$
+    \item $\E(B)$ ------ family of elementary subsets of box $B$
+\end{itemize}
+
+\begin{prop}
+    Fixed $B$, then
+    \begin{enumerate}
+        \item $\E(B)$ Boolean algebra
+        \item every $E \in \E(B)$ finite union of disjoint boxes
+        \item volume well defined
+    \end{enumerate}
+\end{prop}
+
+\begin{itemize}
+    \item $m(E) = \sum|B_i|$ for $E = \bigsqcup B_i$
+\end{itemize}
+
+\begin{fact}
+    $m$ finitely additively measure on $(B, \E(B))$
+\end{fact}
+
+\begin{itemize}
+    \item Jordan measurable ------ For all $\epsilon > 0$, $\exists \text{ elementary } E \subset A \subset F$ st $m(F \backslash E) < \epsilon$
+\end{itemize}
+
+\begin{fact}
+    Jordan measurable subsets bounded
+\end{fact}
+
+\begin{itemize}
+    \item $m(A)$ for Jordan measurable $A$ ------
+    \begin{align*}
+        m(A) = \inf\{m(F) : A \subset F, F \text{ elementary}\} = \sup\{m(F) : A \supset E, E \text{ elementary}\}
+    \end{align*}
+    \item $\mathcal{J}(B)$ ------ family of Jordan measurable subsets of box $B$
+\end{itemize}
+
+\begin{prop}
+    Fixed $B$, then
+    \begin{enumerate}
+        \item $\mathcal{J}(B)$ Boolean algebra
+        \item $m$ finitely additive measure on $(B, \mathcal{J}(B))$
+    \end{enumerate}
+\end{prop}
+
+\begin{fact}
+    $E \subset$ finite interval $[a, b] \subset \R$, then $E$ Jordan measurable iff $\In_E(x)$ Riemann integrable
+\end{fact}

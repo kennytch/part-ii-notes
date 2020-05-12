@@ -1,0 +1,118 @@
+\section{Eigenvalue Methods}\label{sec:eigenvalue-methods}
+
+\begin{exam}
+    \,
+    \begin{enumerate}
+        \item[2017-Paper4-16H] \hl{strongly regular, Petersen graph}
+    \end{enumerate}
+\end{exam}
+
+\begin{itemize}
+    \item adjacency matrix, $A$
+\end{itemize}
+
+\begin{fact}
+    $A$ real symmetric
+\end{fact}
+
+\begin{fact}
+    $(A^d)_{ij}$ number of walks length $d$ from $i$ to $j$
+\end{fact}
+
+\begin{itemize}
+    \item diameter, $diam(G)$
+\end{itemize}
+
+\begin{fact}
+    $\{I, A, A^2, A^{diam(G)}\}$ linearly independent, so at least $diam(G) + 1$ distinct eigenvalues
+\end{fact}
+
+\begin{fact}
+    $\lambda_{\min} = \min_{|x|=1}x^{T}Ax, \lambda_{\max} = \max_{|x|=1}x^T Ax$
+\end{fact}
+
+\begin{fact}
+    $H$ induced subgraph, $\lambda_{\min}(G) \leq \lambda_{\min}(H) \leq \lambda_{\max}(H) \leq \lambda_{\max}(G)$
+\end{fact}
+
+\begin{fact}
+    bipartite $G$, then $A =
+    \begin{pmatrix}
+        0 & * \\
+        * & 0
+    \end{pmatrix}$.
+    Also, characteristic polynomial is in $t^2$
+\end{fact}
+
+\begin{thm}
+    $G$ graph
+    \begin{enumerate}
+        \item $\delta(G) \leq \lambda_{\max} \leq \Delta(G)$
+        \item $|\lambda| \leq \Delta(G)$ for all $\lambda$
+    \end{enumerate}
+    If $G$ connected, then
+    \begin{enumerate}
+        \item $\lambda_{\max} = \Delta(G)$ iff $G$ regular, in this case multiplicity of $\lambda_{\max}$ = 1
+        \item $\lambda_{\min} = -\Delta(G)$ iff $G$ regular and bipartite, in this case multiplicity of $\lambda_{\min}$ = 1
+    \end{enumerate}
+\end{thm}
+
+\begin{itemize}
+    \item orientation
+    \item incidence matrix, $B$
+    \item combinatorial Laplacian, $L = BB^T$
+\end{itemize}
+
+\begin{fact}
+    let $D = diag(d(1), \dots,  d(n))$
+    \begin{align*}
+        L = D - A =
+        \begin{cases}
+            d(i) & \text{if $i = j$} \\
+            -1 & \text{$i \rightarrow j$ or $j \rightarrow i$} \\
+            0 & \text{otherwise}
+        \end{cases}
+    \end{align*}
+\end{fact}
+
+\begin{fact}
+    $L$ positive semi-definite
+\end{fact}
+
+\begin{fact}
+    let eigenvalue be $\mu_1 \leq \mu_2 \leq \cdots \leq \mu_n$ \\
+    $x^T L x = \sum_{ij \in E(G)} (x_i - x_j)^2$, hence eigenvalue $\mu_1 = 0$
+\end{fact}
+
+\begin{prop}
+    $\mu_2 = \min\{ x^T L x / \Vert x \Vert^2 : x \neq 0, \sum x_i = 0\}$
+\end{prop}
+
+\begin{thm}
+    $G$ graph, $U \subset V(G)$, then at least $\frac{\mu_2|U||V - U|}{|G|}$ edges between $U$ and $V - U$
+\end{thm}
+
+\begin{itemize}
+    \item Moore graph, $d$-regular, diameter 2, order $d^2 + 1$
+    \item strongly regular $(d, a, b)$:
+    \begin{enumerate}
+        \item regular of degree $d$
+        \item every pair of adjacent vertices exactly $a$ common neighbours
+        \item every pair of non-adjacent vertices exactly $b$ common neighbours
+    \end{enumerate}
+\end{itemize}
+
+\begin{fact}
+    Moore graph is $(d, 0, 1)$
+\end{fact}
+
+\begin{thm}
+    $G$ strongly regular $(d, a, b)$, order $n$, then
+    \begin{align*}
+        \frac{1}{2} \left( n - 1 \pm \frac{(n-1)(b -a) - 2d}{\sqrt{(a - b)^2 + 4(d - b)}} \right) \in \mathbb{N}
+    \end{align*}
+\end{thm}
+
+\begin{thm}
+    exist Moore graph only if $d \in \{1,2,3,7,57\}$
+\end{thm}

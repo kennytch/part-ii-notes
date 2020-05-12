@@ -1,0 +1,157 @@
+\section{Basic Definition}\label{sec:basic-definition}
+
+\begin{exam}
+    \,
+    \begin{enumerate}
+        \item[2016-Paper4-16G] \hl{Handshaking}
+        \item[2016-Paper1-16G] \hl{Euler's formula, planar graph inequality with girth}
+        \item[2017-Paper3-15H] \hl{bipartite}
+    \end{enumerate}
+\end{exam}
+
+\begin{itemize}
+    \item Graph
+    \item Vertices
+    \item Edges
+    \item Order of a graph
+    \item Size of a graph
+    \item Isomorphic
+\end{itemize}
+
+\begin{example}
+    $P_n, K_n, C_n, E_n$
+\end{example}
+
+\begin{itemize}
+    \item Subgraph
+    \item Induced subgraph
+    \item Connected
+    \item Component
+    \item Forest
+    \item Tree
+\end{itemize}
+
+\begin{thm}
+    Following equiv:
+    \begin{enumerate}
+        \item Tree
+        \item Minimal connected
+        \item Maximal acyclic
+    \end{enumerate}
+\end{thm}
+
+\begin{thm}
+   Connented iff has spanning tree
+\end{thm}
+
+\begin{lemma}[Handshaking lemma]
+    $\sum d(v) = 2e(G)$
+\end{lemma}
+
+\begin{itemize}
+    \item Leaf
+    \item Minimum degree $\delta(G)$
+    \item Maximum degree $\Delta(G)$
+\end{itemize}
+
+\begin{thm}
+    Order $\geq 2$, then at least 2 leaves
+\end{thm}
+
+\begin{cor}
+    Tree order n-1
+\end{cor}
+
+\begin{cor}
+    Following equiv:
+    \begin{enumerate}
+        \item Tree
+        \item Connected of order n size n-1
+        \item Acyclic of order n size n-1
+    \end{enumerate}
+\end{cor}
+
+\begin{thm} [Caley]
+    $n^{n-2}$ labelled trees of order n
+\end{thm}
+
+\begin{itemize}
+    \item r-partite
+    \item Bipartite
+\end{itemize}
+
+\begin{thm}
+    Bipartite iff no odd cycles
+\end{thm}
+
+\begin{itemize}
+    \item Eulerian tour
+    \item Eulerian
+\end{itemize}
+
+\begin{thm}
+    Eulerian iff $|G| > 1$, connected, d(v) even
+\end{thm}
+
+\begin{itemize}
+   \item Planar
+   \item Plane graph
+   \item Face
+\end{itemize}
+
+\begin{lemma}
+    d(v) even, then partitioned into cycles
+\end{lemma}
+
+\begin{lemma}
+    e boundary of two faces iff contained in cycle
+\end{lemma}
+
+\begin{thm}[Euler]
+    Connected plane graph, order n, size m, faces f
+    \begin{align*}
+        n - m + f = 2
+    \end{align*}
+\end{thm}
+
+\begin{itemize}
+    \item Bridge
+\end{itemize}
+%
+\begin{fact}
+    $f_i$ number of faces of length i
+    \begin{align*}
+        \sum i f_i = 2m
+    \end{align*}
+\end{fact}
+
+\begin{itemize}
+    \item Girth
+\end{itemize}
+
+\begin{thm}
+    G connected, bridgeless, planar graph
+    \begin{align*}
+        e(G) \leq \frac{g}{g-2}(n-2)
+    \end{align*}
+    G planar graph
+    \begin{align*}
+        e(G) \leq 3(n -2)
+    \end{align*}
+\end{thm}
+
+\begin{itemize}
+    \item omplete bipartite graph $K_{p,q}$
+\end{itemize}
+
+\begin{thm}[Kuratowski]
+    Planar iff not contain subdivision of $K_{3,3}$ or $K_5$
+\end{thm}
+
+\begin{itemize}
+    \item dual graph
+\end{itemize}
+
+\begin{fact}
+    Simple if 3-connected
+\end{fact}

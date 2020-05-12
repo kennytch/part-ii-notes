@@ -1,0 +1,102 @@
+\section{Lebesgue measurable setds}\label{sec:lebesgue-measurable-sets}
+
+\begin{itemize}
+    \item Lebesgue outer-measure ------ $E \subset \R^d$,
+    \begin{align*}
+        m^{\ast}(E) = \inf \{ \sum |B_n| : E \subset \bigcup B_n \text{ boxes}\}
+    \end{align*}
+\end{itemize}
+
+\begin{fact}
+    $m^\ast$ translation invariant
+\end{fact}
+
+\begin{itemize}
+    \item Lebesgue measurable ------ For $\epsilon > 0$, $\exists C = \bigcup B_n$, $E \subset C$ st
+    \begin{align*}
+        m^\ast (C \backslash E) < \epsilon
+    \end{align*}
+    \item $\mathcal{L}$ ------ family of Lebesgue measurable sets
+\end{itemize}
+
+\begin{fact}
+    $\mathcal{L}$ translation invariant, scales naturally
+\end{fact}
+
+\begin{fact}
+    Jordan measurable $\Rightarrow$ Lebesgue measurable
+\end{fact}
+
+\begin{prop}
+    \,
+    \begin{enumerate}
+        \item $m^\ast$ extends $m$
+        \item $\mathcal{L}$ Boolean algebra, stable under countable unions
+        \item $m^\ast$ countably additive on $(\R^d, \mathcal{L})$
+    \end{enumerate}
+\end{prop}
+
+\begin{lemma}
+    $m^\ast$
+    \begin{enumerate}
+        \item monotone ------ $A \subset B \Rightarrow m^\ast(A) \leq m^\ast(B)$
+        \item countably sub-additive ------ $m^\ast\left(\bigcup A_n\right) \leq \sum m^\ast(A_n)$
+    \end{enumerate}
+\end{lemma}
+
+\begin{fact}
+    Jordan measure countably additive on Jordan measurable set
+\end{fact}
+
+\begin{itemize}
+    \item continuity property ------ $E_n$ non-increasing, empty intersection $\Rightarrow$ $\lim m(E_n) = 0$
+\end{itemize}
+
+\begin{lemma}
+    Jordan measure has continuity property on elementary sets
+\end{lemma}
+
+\begin{lemma}
+    Elementary sets  $E_n$ decreasing, $A = \bigcap E_n$, then
+    \begin{enumerate}
+        \item $A$ Lebesgue measurable
+        \item $m(E_n) \rightarrow m^\ast(A)$
+    \end{enumerate}
+\end{lemma}
+
+\begin{fact}
+    countable intersection of elementary sets Lebesgue measurable
+\end{fact}
+
+\begin{cor}
+    open and closed subsets Lebesgue measurable
+\end{cor}
+
+\begin{itemize}
+    \item null set ------ $m^\ast(E) = 0$
+\end{itemize}
+
+\begin{lemma}
+    null set Lebesgue measurable
+\end{lemma}
+
+\begin{prop}
+    $E$ Lebesgue measurable, then $\exists$ closed $C$, open $O$ st
+    \begin{enumerate}
+        \item $C \subset E \subset O$
+        \item $m^\ast(O\backslash C) < \epsilon$
+    \end{enumerate}
+\end{prop}
+
+\begin{fact}
+    $E$ can be written as $\left( \bigcup C_n \right) \sqcup N$ or $\left( \bigcap O_n \right) \backslash N$
+\end{fact}
+
+\begin{example}
+    Vitali's counter example ------ $E$ set of representatives $E = \{ x + \Q\} \subset [0,1]$
+    \begin{enumerate}
+        \item $m^\ast$ not additive on all subsets of $\R^d$
+        \item $E$ not Lebesgue measurable
+    \end{enumerate}
+\end{example}
+

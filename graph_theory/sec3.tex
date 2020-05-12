@@ -1,0 +1,108 @@
+\section{Extremal Graph Theory}\label{sec:extremal-graph-theory}
+
+\begin{exam}
+    \,
+    \begin{enumerate}
+        \item[2016-Paper2-15G] \hl{Turan}
+        \item[2017-Paper1-16H] \hl{Hamiltonian}
+    \end{enumerate}
+\end{exam}
+
+\begin{itemize}
+    \item Hamiltonian cycle
+\end{itemize}
+
+\begin{thm}
+    $|G| \geq 3$, every pair of non-adjacent vertices $d(x) + d(y) \geq k$ \\
+    If $k < n$, G connected, then exists path of length k \\
+    If k = n, exist Hamiltonian cycle
+\end{thm}
+
+\begin{cor}[Dirac]
+    $|G| = n$, $\delta \geq n/2$, then exists Hamiltonian cycle
+\end{cor}
+
+\begin{thm}
+    G order n, no length k path.
+    Then $e(G) \leq \frac{k-1}{2} n$. \\
+    Equality holds iff $k|n$, G disjoint copies of $K_k$
+\end{thm}
+
+\begin{itemize}
+    \item $ex(n, F)$
+    \item r partite Turan graph of order n, $T_r(n)$ with size $t_r(n)$
+\end{itemize}
+
+\begin{thm}[Turan]
+    $K_{r+1}$ free, order n, $e(G) \geq t_r(n)$, then $G = T_r(n)$
+\end{thm}
+
+\begin{proof}[Proof 1]
+    Induction on $n$ with base case $K_r$.
+    Remove edges to $G'$ with $t_r(n)$ edges.
+    Delete $\delta(G')$ vertex $x$.
+    $G - {x}$ Turan.
+    Put back $x$.
+    $T_{r+1}$ maximal.
+\end{proof}
+
+\begin{proof}[Proof 2]
+    Induction on $n$ with base case $K_r$.
+    Add edges to maximal. $K_n \subset G'$.
+    Count edges.
+    $G - K_n$ Turan.
+    Put back $K_n$.
+\end{proof}
+
+\begin{thm}[problem of Zarankiewicz]
+    Bipartite n x n, no $K_{t,t}$
+    \begin{align*}
+        z(n, t) \leq (t - 1)^{1/t}(n - t + 1)n^{1 - 1/t} + (t - 1)n = O(n^{2 - 1/t})
+    \end{align*}
+\end{thm}
+
+\begin{thm}
+    \begin{align*}
+        z(n, 2) \leq n/2 (1 + \sqrt{4n - 3}), \text{ equality holds for infinitely many n}
+    \end{align*}
+\end{thm}
+
+\begin{thm}
+\begin{align*}
+    ex(n, K_{2,2}) \leq n/4 (1 + \sqrt{4n - 3})
+\end{align*}
+\end{thm}
+
+\begin{fact}
+    \,
+    \begin{enumerate}
+        \item $ex(n, K_{r+1}) = t_r(n)$
+        \item $ex(n, K_3) = \lfloor\frac{n^2}{4}\rfloor$
+        \item $ex(n, C_5) = t_2(n)$
+        \item $ex(n, F) = \lfloor n^2 / 4\rfloor + 2$
+        \item $ex(n, P) = t_2(n) + n - 2$
+    \end{enumerate}
+\end{fact}
+
+\begin{itemize}
+    \item $K_r(t)$ complete r-partite graph, $K_r(t) = T_r(rt)$
+\end{itemize}
+
+\begin{lemma}
+    If $n > n_1(r, t, \epsilon), |G| = n, \delta(G) \geq (1 - 1/r + \epsilon)n $
+    Then contains $K_{r+1}(t)$
+\end{lemma}
+
+\begin{thm}[Erdos-Stone]
+    n sufficiently large, $e(G) \geq (1 - 1/r + \epsilon) {n\choose2}$, then contains $K_{r+1}(t)$
+\end{thm}
+
+\begin{itemize}
+    \item chromatic number, $\chi(G)$
+\end{itemize}
+
+\begin{cor}
+    \begin{align*}
+        \lim_{n \rightarrow \infty} \frac{ex(n, F)}{{n\choose 2}} = 1 -  \frac{1}{\chi(F) - 1}
+    \end{align*}
+\end{cor}

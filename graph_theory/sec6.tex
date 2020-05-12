@@ -1,0 +1,76 @@
+\section{Probabilistic Method}\label{sec:probabilistic-method}
+
+\begin{thm}[Erdos]\label{Erdos}
+$s \geq 3$, then $R(s) \geq 2^{(s-1)/2}$
+\end{thm}
+
+\begin{thm}
+    $G$ has independent set of size at least
+    \begin{align*}
+        \sum_{v \in G} \frac{1}{d(v) + 1} \geq \frac{|G|}{d + 1}
+    \end{align*}
+\end{thm}
+
+\begin{itemize}
+    \item $\mathcal{G}(n, p)$ ------ space of all $2^{n \choose 2}$ labelled graph
+\end{itemize}
+
+\begin{fact}
+    From~\ref{Erdos}, exists graph with $\omega(G)$ and $\alpha(G)$ at most $2\log_2 n +1$.
+    Hence, exist $G$ with $\chi(G) \geq \frac{n}{2\log_2 n + 1}$
+\end{fact}
+
+\begin{thm}[Erdos]
+    $g \geq 3, k \geq 2$, then exists $G$ with $\chi(G) \geq k$ ang girth at least $g$
+\end{thm}
+
+\begin{thm}
+    $n \geq t \geq 2$, then $z(n, t) > \frac{3}{4}n^{2- 2/(t+1)}$
+\end{thm}
+
+\begin{lemma}
+    $\mathbb{E}(X_n^2) / \mathbb{E}(X_n)^2 \rightarrow 1$ or $Var(X_n) / \mathbb{E}(X_n)^2 \rightarrow 0$, then
+    any constant $c$,
+    \begin{align*}
+        \mathbb{P}(|X_n - \mathbb{E}(X_n)| \geq c\mathbb{E}(X_n)) \rightarrow 0
+    \end{align*}
+    let $c = 1$, then
+    \begin{align*}
+        \mathbb{P}(X_n = 0) \rightarrow 0
+    \end{align*}
+\end{lemma}
+
+\begin{fact}
+    $\mathbb{P}(X = 0) \leq \frac{Var(X)}{(\mathbb{E}X)^2}$
+\end{fact}
+
+\begin{fact}
+    let $X = \sum_A I_A$, then
+    \begin{itemize}
+        \item $\mathbb{E}X^2 = \sum_{A, B} \mathbb{P}(A \cap B) = \sum_{A, B} \mathbb{P}(A)\mathbb{P}(B|A)$
+        \item $Var(X) = \sum_{A, B} \mathbb{P}(A) [\mathbb{P}(B | A) - \mathbb{P}(B)]$
+    \end{itemize}
+\end{fact}
+
+\begin{thm}
+    $\omega(n) \rightarrow \infty, G \in \mathcal(G)(n, p)$ \\
+    If $p = \frac{\log n - \omega(n)}{n}$, $G$ has isolated vertices a.s. \\
+    If $p = \frac{\log n + \omega(n)}{n}$, $G$ has no isolated vertices a.s.
+\end{thm}
+
+\begin{itemize}
+    \item almost surely ------ $\mathbb{P}(A) \rightarrow 1$ as $n \rightarrow \infty$
+    \item threshold phenomenon
+\end{itemize}
+
+\begin{thm}
+    let $\mu(d) = {n \choose d}p^{d \choose 2}$, fixed $p$, then \\
+    If $\mu(d) \rightarrow 0$, $G \in \mathcal{G}(n, p)$ almost certainly not contain $K_d$ \\
+    If $\mu(d) \rightarrow \infty$, $G \in \mathcal{G}(n, p)$ almost certainly contain $K_d$
+\end{thm}
+
+\begin{cor}
+    $0 < p < 1$ fixed, then clique number is $(2 + o(1))\log_{1/p}n$ almost surely
+\end{cor}
+
+

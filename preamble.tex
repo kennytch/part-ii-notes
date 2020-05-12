@@ -1,0 +1,87 @@
+% Packages
+
+% ams package
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{bm} %bold
+\usepackage{bbm} %indicator
+
+% theorem, lemma, example
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{lemma}[thm]{Lemma}
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem*{example}{Example}
+\newtheorem*{definition}{Definition}
+\newtheorem{setting}{Setting}
+\newtheorem*{fact}{Fact}
+\newtheorem*{myth}{Myth}
+\newtheorem*{exam}{Topics covered in Exam}
+
+% shortcut
+\newcommand{\x}{\times}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\N}{\mathbb{N}}
+
+% highlighter
+\usepackage{soul}
+
+%% strike indicate crossed out term e.g. calculating fraction
+\usepackage{cancel}
+
+\usepackage[hmargin={25mm,25mm},vmargin={25mm,25mm}]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{verbatim, ifpdf}
+\usepackage{subcaption}
+\usepackage{atbegshi,picture}
+\usepackage{listings}
+\usepackage{mathtools}
+\usepackage{enumerate}
+\usepackage{array}
+\usepackage{booktabs}
+
+% for import svg
+\usepackage{graphicx, color}
+\usepackage{import}
+\usepackage{float}
+\usepackage{svg}
+
+% for figure mixed with text
+\usepackage{wrapfig}
+
+% for pseudocode
+\usepackage{algorithm}
+\usepackage{algorithmicx}
+\usepackage[noend]{algpseudocode}
+\algrenewcommand\textproc{\texttt}
+
+% for partial diff symbol
+\usepackage{physics}
+
+%% Custom Commands for inkscape
+\newcommand{\inkfig}[2]{%
+    \newcommand{\svgwidth{#1}}{%}
+    \import{./figure}{#2.pdf_tex}%
+}
+
+% floor and ceil
+\DeclarePairedDelimiter{\ceil}{\lceil}{\rceil}
+\DeclarePairedDelimiter{\floor}{\lfloor}{\rfloor}
+
+% bold the enumerator
+\usepackage{enumitem}
+\setlist[enumerate,1]{label=(\roman*)}
+
+% hyperlink
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,
+    urlcolor=cyan,
+}
+
+\urlstyle{same}

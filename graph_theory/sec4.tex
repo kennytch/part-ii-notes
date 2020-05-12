@@ -1,0 +1,159 @@
+\section{Colouring}\label{sec:colouring}
+
+\begin{exam}
+    \,
+    \begin{enumerate}
+        \item[2016-Paper3-15G] \hl{chromatic polynomial}
+    \end{enumerate}
+\end{exam}
+
+\begin{itemize}
+    \item Vertex colouring
+    \item greedy algorithm
+\end{itemize}
+
+\begin{thm}
+    \begin{align*}
+        \chi(G) \leq 1 + \max_H \delta(H)
+    \end{align*}
+\end{thm}
+
+\begin{cor}
+    $\chi(G) \leq \Delta(G) + 1$
+\end{cor}
+
+\begin{itemize}
+    \item Block
+\end{itemize}
+
+\begin{fact}
+    Tree of blocks and bridges
+\end{fact}
+
+\begin{thm}[Brooks]
+    $\chi (G) = \Delta(G) + 1$, then G complete or odd cycle
+\end{thm}
+
+\begin{itemize}
+    \item clique number, $\omega(G)$
+    \item independence number, $\alpha(G)$
+\end{itemize}
+
+\begin{fact}
+    \alpha(G) = \omega(\bar{G})
+\end{fact}
+
+\begin{fact}
+    $\max \left\{ \omega(G), \frac{|G|}{\alpha(G)} \right\} \leq \chi(G)$
+\end{fact}
+
+\begin{itemize}
+    \item chromatic polynomial, $p_G(x)$ ------ number of ways to colour vertices of $G$ with colours $1, 2, \dots, x$
+\end{itemize}
+
+\begin{example}
+    \,
+    \begin{enumerate}
+        \item complement of $K_n$, $p_{\bar{K_n}(x) = x^n}$
+        \item Tree $T$, $p_T(x) = x(x-1)^{n-1}$
+        \item complete graph, $p_{K_n}(x) x(x - 1)(x - 2)\cdots(x - n + 1)$
+    \end{enumerate}
+\end{example}
+
+\begin{thm}
+    Any $e \in E(G)$, $p_G(x) = p_{G-e}(x) - p_{G/e}(x)$
+\end{thm}
+
+\begin{fact}
+    $p_G(x) = \prod_C p_C(x)$
+\end{fact}
+
+\begin{cor}
+    \begin{align*}
+        p_G(x) = x^n - a_{n-1} x^{n-1} + \cdots + (-1)^n a_0
+    \end{align*}
+    where $n = |G|, a_{n-1} = e(G), a_j \geq 0$ for all $j$, $\min\{j: a_j \neq 0\} = k$ the number of components
+\end{cor}
+
+\begin{fact}
+    $G$ not specified by $p_G(x)$
+\end{fact}
+
+\begin{itemize}
+    \item k-edge-colouring
+    \item chromatic index, $\chi'(G)$
+\end{itemize}
+
+\begin{thm}
+    Bipartite multigraph, then $\chi'(G) = \Delta(G)$
+\end{thm}
+
+\begin{fact}
+    fail for non-bipartite graph e.g. $K_3$
+\end{fact}
+
+\begin{thm}[Vizing]
+    $\Delta(G) \leq \chi'(G) \leq \Delta(G) + 1$
+\end{thm}
+
+\begin{itemize}
+    \item list colouring, $\chi_l(G)$
+\end{itemize}
+
+\begin{fact}
+    $\chi_l(G) \geq \chi(G)$
+\end{fact}
+
+\begin{fact}
+    $\chi_l(G) \leq 1 + \max_H\delta(H)$
+\end{fact}
+
+\begin{thm}[Five Colour Theorem]
+    G planar, then $\chi(G) \leq 5$
+\end{thm}
+
+\begin{thm}[Thomasson]
+    G planar, then $\chi_l(G) \leq 5$
+\end{thm}
+
+\begin{fact}
+    exist graph with $\chi_l(G) = 5$
+\end{fact}
+
+\begin{thm}[Tait]
+    Four Colour Theorem holds iff $\chi'(G) = 3$ for every cubic bridgeless planar G
+\end{thm}
+
+\subsection{Graph on other surfaces}\label{subsec:graph-on-other-surfaces}
+
+\begin{itemize}
+    \item Euler characteristic, $E \leq 2$
+\end{itemize}
+
+\begin{fact}
+    simply connected, then $n - m + f = E$
+\end{fact}
+
+\begin{example}
+    \textbf{Orientable surface} $g$ handles, $E = 2 - g$
+    \begin{itemize}
+        \item g = 1, torus
+        \item g = 2, double torus
+    \end{itemize}
+    \textbf{Non-orientable surfaces}, one for each $E \leq 1$
+    \begin{itemize}
+        \item E = 1, projective plane
+        \item E = 0, Klein bottle
+    \end{itemize}
+\end{example}
+
+\begin{fact}
+    $m \leq 3(n - E)$
+\end{fact}
+
+\begin{thm}[Heawood]
+characteristic $E \leq 1$, then
+    \begin{align*}
+        \chi(G) \leq H(E) = \left \lfloor \frac{7 + \sqrt{49 - 24E}}{2} \right \rfloor
+    \end{align*}
+\end{thm}

@@ -1,0 +1,61 @@
+\section{Ramsey Theory}\label{sec:ramsey-theory}
+
+\begin{exam}
+    \,
+    \begin{enumerate}
+        \item[2017-Paper3-15H] \hl{Ramsey numbers}
+    \end{enumerate}
+\end{exam}
+
+\begin{itemize}
+    \item Ramsey number, $R(s), R(s, t)$ ------ smallest $n$ st if colour edges of $K_n$ red or blue, then exists red $K_s$ or blue $K_t$
+\end{itemize}
+
+\begin{thm}[Ramsey]
+    $R(s, t) \leq R(s - 1, t) + R(s, t - 1)$
+\end{thm}
+
+\begin{fact}
+    $R(s, t) \leq {s + t - 2 \choose s-1} < 2^{s + t}$
+\end{fact}
+\begin{fact}
+    inequality not exact
+\end{fact}
+
+\begin{itemize}
+    \item $R_k(s_1, s_2, \dots, s_k)$
+\end{itemize}
+
+\begin{thm}
+    $R_k(s_1, s_2, \dots, s_k)$ exists
+\end{thm}
+
+\begin{fact}
+    $R_k(s_1, \dots, s_k) \leq R_{k-1}(R(s_1, s_2), s_3, \dots, s_k)$
+\end{fact}
+
+\begin{fact}
+    $R_k(s_1, \dots, s_k) \leq R_k(s_1 - 1, \dots, s_k) + \cdots + R_k(s_1, \dots, s_k - 1) - k + 2$
+\end{fact}
+
+\begin{itemize}
+    \item r-uniform hypergraph
+\end{itemize}
+
+\begin{thm}[Ramsey for $r$-sets]
+    $R^{(r)}(s, t)$ exists
+\end{thm}
+
+\begin{thm}[Infinite Ramsey]
+    k colours $\mathbb{N}^{(r)}$, then exists infinite $M \subset \mathbb{N}$ s.t. $M^{(r)}$ monochromatic
+\end{thm}
+
+\begin{itemize}
+    \item big if $|Y| \geq \min Y$
+\end{itemize}
+
+\begin{thm}
+    exists $B(s, k, r)$ s.t.\ if $n \geq B(s, k, r)$, $\{s, s+1, \dots, n\}^{(r)}$ k coloured, \\
+    then exist big set $Y \subset \{s, s+1, \dots, n\}^{(r)}$ s.t. $Y^{(r)}$ monochromatic
+\end{thm}
+

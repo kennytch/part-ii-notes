@@ -1,0 +1,89 @@
+\section{Matching and Connectivity}\label{sec:matching-and-connectivity}
+
+\begin{exam}
+    \,
+    \begin{enumerate}
+        \item[2016-Paper4-16G] \hl{Menger}
+        \item[2017-Paper2-15H] \hl{Hall}
+    \end{enumerate}
+\end{exam}
+
+\begin{itemize}
+    \item Matching
+    \item Independent
+    \item 1-factor (1 regular spanning subgraph)
+    \item n-regular
+\end{itemize}
+
+\begin{thm}[Hall]
+    G bipartite with vertex classes $X, Y$
+    \begin{align*}
+        \text{Matching from X to Y iff $|\Gamma(A)| \geq |A|$ for all subsets $A \subset X$}
+    \end{align*}
+\end{thm}
+
+\begin{thm}[defect form]
+    \begin{align*}
+        |X| - d \text{ independent edges iff } |\Gamma(A)| \geq |A| - d
+    \end{align*}
+\end{thm}
+
+\begin{thm}[polygamous version]
+    1 to 2 matching iff $|\Gamma(A)| \geq 2|A|$
+\end{thm}
+
+\begin{itemize}
+    \item Distinct representatives
+\end{itemize}
+
+\begin{cor}
+    Set of distinct representative iff for all subset $S \in [n], |\bigcup_{i \in S}{Y_i}| \geq |S|$
+\end{cor}
+
+\begin{itemize}
+    \item K-connected (be careful with $K_n$)
+    \item Vertex connectivity $\kappa (G)$
+    \item Local connectivity $\kappa(a, b; G)$
+    \item Edge connectivity $\lambda(G), \lambda(a, b; G)$
+\end{itemize}
+
+\begin{fact}
+    \begin{align*}
+        \kappa(G) \leq \lambda(G) \leq \delta(G)
+    \end{align*}
+\end{fact}
+
+\begin{itemize}
+    \item Vertex disjoint (set of paths)
+\end{itemize}
+
+\begin{thm}[Menger] $ab \notin E(G)$, then
+    \begin{align*}
+         \text{$\exists \kappa(a, b; G) $ vertex disjoint $a - b$ paths}
+    \end{align*}
+\end{thm}
+
+\begin{itemize}
+    \item graph contraction
+    \item contration
+\end{itemize}
+
+\begin{cor}
+    $\kappa(G) \geq k, X, Y$ disjoint subsets $|X|, |Y| \geq k$ \\
+    Then exists set of k completely vertex disjoint X - Y paths
+\end{cor}
+
+\begin{thm}[edge form of Menger]
+    $a, b \in V(G)$, then
+    \begin{align*}
+        \exists \text{ set of } \lambda(a, b; G) \text{ edge-disjoint } a - b \text{ paths}
+    \end{align*}
+\end{thm}
+
+\begin{itemize}
+    \item Line graph
+\end{itemize}
+
+\begin{fact}
+    Menger impies Hall
+\end{fact}
