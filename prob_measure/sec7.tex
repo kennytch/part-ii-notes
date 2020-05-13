@@ -28,6 +28,111 @@
 \begin{lemma}
     $f \geq 0$, then $\exists$ increasing simple functions $g_n$ st $g_n \rightarrow f$ pointwise 
 \end{lemma}
+
 \begin{proof}
-    $g_n = 2^{-n}\floor{23}$
+    $g_n(x) = 2^{-n}\floor{2^n(f(x) \wedge n)}$
 \end{proof}
+
+\begin{thm}[Monotone Convergence Theorem]\,
+    \begin{enumerate}
+        \item $(f_n)$ non-negative, non-decresing
+        \item let $f(x) = \lim f_n(x)$, the pointwise limit
+    \end{enumerate}
+    Then, $\mu(f) = \lim \mu(f_n)$
+\end{thm}
+
+\begin{lemma}
+    Fixed $g$ simple, then $m_g(E) := \mu(\In_E g)$ is a measure
+\end{lemma}
+
+\begin{lemma}[Fatou]
+    $f_n \geq 0$, then $\mu(\liminf f_n) \leq \liminf \mu(f_n)$
+\end{lemma}
+
+\begin{itemize}
+    \item $f^+, f^-$
+    \item $\mu$-integrable ------ $\mu(|f|) < \infty$
+    \item intergral $\mu(f)$ for integrable $f$ ------ $\mu(f) = \mu(f^+) - \mu(f^-)$
+\end{itemize}
+
+\begin{prop}[Linearity of integral]
+    $f, g$ integrable
+    \begin{enumerate}
+        \item $\alpha f + \beta g$ integrable
+        \item $\mu(\alpha f + \beta g) = \alpha \mu(f) + \beta \mu(g)$
+    \end{enumerate}
+\end{prop}
+
+\begin{fact}
+    Also holds for nonegative $f, g,\alpha, \beta$
+\end{fact}
+
+\begin{thm}[Dominated Convergence Theorem]
+    $f, f_n$ measurable, $g$ integrable
+    \begin{enumerate}
+        \item $|f_n(x)| \leq g(x)$
+        \item $\lim f_n(x) = f(x)$
+    \end{enumerate}
+    Then,
+    \begin{enumerate}
+        \item $\lim \mu(f_n) = \mu(f)$
+        \item $f$ integrable
+    \end{enumerate}
+\end{thm}
+
+\begin{fact}
+    condition for MCT, Fatou, DCT only need to hold $\mu$-almost everywhere
+\end{fact}
+
+\begin{cor}[Exchange of $\int$ and $\sum$]\,
+    \begin{enumerate}
+        \item $f_n \geq 0$, then $\mu\left(\sum^\infty f_n\right) = \sum^\infty \mu(f_n)$
+        \item $\sum |f_n|$ $\mu$-integrable, then
+        \begin{itemize}
+            \item $\sum f_n$ integrable
+            \item $\mu \left(\sum f_n\right) = \sum \mu(f_n)$
+        \end{itemize}
+    \end{enumerate}
+\end{cor}
+
+\begin{cor}[Differentiation under $\int$ sign]
+    $U$ open set, $f: U \times X \rightarrow \R$ st
+    \begin{enumerate}
+        \item $f(t, \cdot)$ $\mu$-integrable
+        \item $f(\cdot, x)$ differentiable
+        \item (domination) $\exists$ integrable $g$ st $\sup_{t} |\pdv{f}{t}\,(t, x)| \leq g(x)$
+    \end{enumerate}
+    Then,
+    \begin{enumerate}
+        \item $\pdv{f}{t}\,(t, \cdot)$ $\mu$-integrable
+        \item let $F(t) = \int_X f(t, x) d\mu(x)$, then
+        \begin{enumerate}
+            \item $F$ differentiable
+            \item $F' = \int_X \pdv{f}{t}\,(t, x)d\mu(x)$
+        \end{enumerate}
+    \end{enumerate}
+\end{cor}
+
+\begin{fact}
+    $f$ bounded, then $f$ Riemann integrable iff $\{x : f(x) \text{ not continuous}\}$ has Lebsegue measure 0
+\end{fact}
+
+\begin{fact}[invariance under affine map]
+    $g \in GL_d(\R), f$ integrable, then $m(f \circ g) = \frac{1}{|det g|}m(f)$
+\end{fact}
+
+\begin{fact}
+    $\phi \in C^1$, then $\int f(\phi(x))J_\phi(x)dx = \int f(x)dx$
+\end{fact}
+
+\begin{itemize}
+    \item Radon measure ------ Borel measure, finite on every compact subset
+\end{itemize}
+
+\begin{fact}[Riesz Representation for locally compact spaces]
+    \,
+    \begin{enumerate}
+        \item $\mu$ Radon measure, let $\Lambda(f) = \mu(f)$, then $\Lambda \in C_c(X)'$
+        \item let $\Lambda \in C_c(X)'$, $\Lambda$ non-negative, then $\exists$ Radon measure $\mu$ st $\Lambda(f) = \mu(f)$
+    \end{enumerate}
+\end{fact}
