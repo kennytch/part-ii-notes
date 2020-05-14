@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.3.16)  12 MAY 2020 16:41
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.3.16)  14 MAY 2020 09:55
 entering extended mode
 **./graph_theory.tex
 (graph_theory.tex
@@ -161,7 +161,32 @@ LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 129.
 )
 \c@thm=\count191
 \c@setting=\count192
- ("C:\Users\Asus\AppData\Local\Programs\MiKTeX 2.9\tex/latex/soul\soul.sty"
+
+
+../preamble.tex:33: LaTeX Error: Command \Pb undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.33 \renewcommand{\Pb}
+                       {\mathbb{P}}
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+../preamble.tex:34: LaTeX Error: Command \Ex undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.34 \renewcommand{\Ex}
+                       {\mathbb{E}}
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+("C:\Users\Asus\AppData\Local\Programs\MiKTeX 2.9\tex/latex/soul\soul.sty"
 Package: soul 2003/11/17 v2.4 letterspacing/underlining (mf)
 \SOUL@word=\toks26
 \SOUL@lasttoken=\toks27
@@ -326,7 +351,7 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip61
 )
-Package hyperref Info: Option `colorlinks' set `true' on input line 48.
+Package hyperref Info: Option `colorlinks' set `true' on input line 50.
 
 ("C:\Users\Asus\AppData\Local\Programs\MiKTeX 2.9\tex/latex/cancel\cancel.sty"
 Package: cancel 2013/04/12 v2.2 Cancel math terms
@@ -765,10 +790,10 @@ Package rerunfilecheck Info: File `graph_theory.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 18.
  ) 
 Here is how much of TeX's memory you used:
- 12284 strings out of 481556
- 195176 string characters out of 2914337
- 502211 words of memory out of 3000000
- 27156 multiletter control sequences out of 15000+200000
+ 12286 strings out of 481556
+ 195180 string characters out of 2914337
+ 502223 words of memory out of 3000000
+ 27158 multiletter control sequences out of 15000+200000
  546405 words of font info for 74 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  51i,19n,54p,345b,419s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -791,7 +816,7 @@ rs/Asus/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10
 .pfb><C:/Users/Asus/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfon
 ts/symbols/msbm10.pfb>
 Output written on C:/Users\Asus\Documents\GitHub\part-ii-notes\out\graph_theory
-.pdf (10 pages, 236566 bytes).
+.pdf (10 pages, 236561 bytes).
 PDF statistics:
  244 PDF objects out of 1000 (max. 8388607)
  100 named destinations out of 1000 (max. 500000)

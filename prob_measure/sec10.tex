@@ -1,0 +1,79 @@
+\section{Independence}\label{sec:independence}
+
+\begin{itemize}
+    \item events $(A_i)$ mutually independent ------ every finite $F \subset \N$, $\Pb(\bigcap_F A_i) = \prod_F\Pb(A_i)$
+\end{itemize}
+
+\begin{fact}
+    $(A_i)$ independent $\Rightarrow$ $(B_i)$ independent where $B_i = A_i$ or $A_i^c$
+\end{fact}
+
+\begin{itemize}
+    \item $\sigma$-subalgebras $(\A_i)$ mutually independent ------ $\A_i \subset F$, every $A_i \in \A_i$, $(A_i)$ mutually independent
+\end{itemize}
+
+\begin{fact}
+    $\Pi_i \subset \A_i$ $\pi$-system, $\sigma(\Pi_i) = \A_i$, then suffices just check $A_i \in \Pi_i$
+\end{fact}
+
+\begin{itemize}
+    \item $\sigma(X)$
+    \item random variables $(X_i)$ mutually independent ------ $(\sigma(X_i))$ independent
+\end{itemize}
+
+\begin{fact}Equivalence to every finite $F \subset \N$
+    \begin{enumerate}
+        \item[--] $\Pb(\bigcap_F X_i \leq t_i) = \prod_F \Pb(X_i \leq t_i)$
+        \item[--] $\mu_{(X_{i_1}, \dots, X_{i_m})} = \mu_{X_{i_1}} \otimes \cdots \otimes \mu_{X_{i_m}}$
+    \end{enumerate}
+\end{fact}
+
+\begin{fact}
+    $(X_i)$ independent $\Rightarrow$ $(f_i(X_i))$ independent
+\end{fact}
+
+\begin{prop}
+    $X, Y$ independent, non-negative (or integrable), then $\Ex(XY) = \Ex(X)\Ex(Y)$
+\end{prop}
+
+\begin{setting}
+    $\left\{ (\Omega_i, \F_i, \nu_i) \right\}$
+\end{setting}
+
+\begin{itemize}
+    \item cylinder set ------ $A \times \prod_{i > n} \Omega_i$ where $A \subset \prod_{n} \Omega_i$, $A \in \F_1 \otimes \cdots \otimes \F_n$
+    \item Boolean algebra of cylinder set $\mathcal{C}$
+    \item infinite product measure
+\end{itemize}
+
+\begin{prop}
+    $\Omega = \prod \Omega_i$, $\F = \sigma(\mathcal{C})$, then $\exists$ unique probability measure $\nu$ on $(\Omega, \F)$ st
+    \begin{align*}
+        \nu(B) = \nu_1 \otimes \cdots \otimes \nu_n (A) && \text{for every cylinder set $B$}
+    \end{align*}
+\end{prop}
+
+\begin{fact}
+    more general theorem Kolmogorov extension theorem
+\end{fact}
+
+\begin{itemize}
+    \item $\limsup A_n$ ------ $\bigcap \bigcup A_n$ (infinitely offen)
+\end{itemize}
+
+\begin{lemma}[1st Borel Cantelli]
+    $\sum \Pb(A_n) < \infty$, then $\Pb (\limsup A_n) = 0$
+\end{lemma}
+
+\begin{lemma}[2nd Borel Cantelli]
+    $\sum \Pb(A_n) = \infty$, $(A_n)$ mutually independent, then \\
+    $\Pb (\limsup A_n) = 1$
+\end{lemma}
+
+\begin{fact}
+    independence condition in 2nd Cantelli can be relaxed
+    \begin{itemize}
+        \item pairwise independence
+        \item small correlation between events
+    \end{itemize}
+\end{fact}

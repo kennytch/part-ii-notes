@@ -2,15 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="805a30fc-edf0-4349-b4a4-7e21bcb95f75" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/prob_measure/sec10.tex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/prob_measure/sec9.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/Asus.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/Asus.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/auxil/graph_theory.log" beforeDir="false" afterPath="$PROJECT_DIR$/auxil/graph_theory.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/auxil/prob_measure.aux" beforeDir="false" afterPath="$PROJECT_DIR$/auxil/prob_measure.aux" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/auxil/prob_measure.log" beforeDir="false" afterPath="$PROJECT_DIR$/auxil/prob_measure.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/graph_theory/sec1.tex" beforeDir="false" afterPath="$PROJECT_DIR$/graph_theory/sec1.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/graph_theory/sec2.tex" beforeDir="false" afterPath="$PROJECT_DIR$/graph_theory/sec2.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/graph_theory/sec4.tex" beforeDir="false" afterPath="$PROJECT_DIR$/graph_theory/sec4.tex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/graph_theory.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/out/graph_theory.pdf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/graph_theory.synctex.gz" beforeDir="false" afterPath="$PROJECT_DIR$/out/graph_theory.synctex.gz" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/prob_measure.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/out/prob_measure.pdf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/prob_measure.synctex.gz" beforeDir="false" afterPath="$PROJECT_DIR$/out/prob_measure.synctex.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prob_measure/sec7.tex" beforeDir="false" afterPath="$PROJECT_DIR$/prob_measure/sec7.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/preamble.tex" beforeDir="false" afterPath="$PROJECT_DIR$/preamble.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prob_measure/prob_measure.tex" beforeDir="false" afterPath="$PROJECT_DIR$/prob_measure/prob_measure.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prob_measure/sec4.tex" beforeDir="false" afterPath="$PROJECT_DIR$/prob_measure/sec4.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prob_measure/sec8.tex" beforeDir="false" afterPath="$PROJECT_DIR$/prob_measure/sec8.tex" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -47,7 +56,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="LaTeX.prob_measure">
+  <component name="RunManager" selected="LaTeX.graph_theory">
     <configuration name="graph_theory" type="LATEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory" temporary="true">
       <texify>
         <compiler>PDFLATEX</compiler>
@@ -104,8 +113,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="LaTeX.prob_measure" />
         <item itemvalue="LaTeX.graph_theory" />
+        <item itemvalue="LaTeX.prob_measure" />
         <item itemvalue="LaTeX.sec3" />
       </list>
     </recent_temporary>
@@ -127,7 +136,8 @@
       <workItem from="1589210961506" duration="13076000" />
       <workItem from="1589267996394" duration="17327000" />
       <workItem from="1589291243498" duration="9509000" />
-      <workItem from="1589350315864" duration="1191000" />
+      <workItem from="1589350315864" duration="16577000" />
+      <workItem from="1589445986735" duration="551000" />
     </task>
     <task id="LOCAL-00001" summary="Updated ./preamble.tex and recompile the pdf">
       <created>1589298006446</created>
@@ -136,7 +146,14 @@
       <option name="project" value="LOCAL" />
       <updated>1589298006446</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="prob_measure/sec7.tex">
+      <created>1589351593665</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1589351593665</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -157,6 +174,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Updated ./preamble.tex and recompile the pdf" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated ./preamble.tex and recompile the pdf" />
+    <MESSAGE value="prob_measure/sec7.tex" />
+    <option name="LAST_COMMIT_MESSAGE" value="prob_measure/sec7.tex" />
   </component>
 </project>

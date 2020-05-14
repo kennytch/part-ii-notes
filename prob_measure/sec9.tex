@@ -1,0 +1,81 @@
+\section{Probability Theory}\label{sec:probability-theory}
+
+\begin{itemize}
+    \item universe $\Omega$
+    \item outcome $\omega$
+    \item events $\mathcal{F}$
+    \item probability measure $\Pb$
+    \item random variable $X$
+    \item expectation $\Ex$
+    \item probability space $(\Omega, \F, \Pb)$
+    \item law of $X$ / distribution of $X$ ------ Borel measure $\mu_X(A) = \Pb(X \in A)$ on $(\R, \B(R))$
+    \item image measure $f_*\mu$ ------ $f_*\mu(A) = \mu(f^{-1}(A))$
+    \item distribution function of $X$, $F_X$ ------ $F_X(t) = \Pb(X \leq t)$
+\end{itemize}
+
+\begin{prop}
+    $F_X$
+    \begin{enumerate}
+        \item non-decreasing
+        \item right continuous
+        \item $F_X$ determines $\mu_X$ uniquely
+    \end{enumerate}
+\end{prop}
+
+\begin{itemize}
+    \item Lebesgue-Stieltjes measure $\mu_F$
+\end{itemize}
+
+\begin{prop}
+    Given $F$ non-decreasing, right continuous, $\lim_{-\infty} F(t) = 0$, $\lim_{\infty} F(t) = 1$, then \\
+    $\exists$ unique Borel measure $\mu_F$ st $F(t) = \mu_F((-\infty, t])$
+\end{prop}
+
+\begin{proof}
+    One approach using Caratheodory.
+    Another shown as follow.
+\end{proof}
+
+\begin{itemize}
+    \item "inverse function" $g$ ------ $g(y) = \inf(t : F(t) \geq y)$
+\end{itemize}
+
+\begin{lemma}
+    $g$
+    \begin{enumerate}
+        \item non-decreasing
+        \item left continuous
+        \item $g(y) \leq t$ iff $y \leq F(t)$
+    \end{enumerate}
+\end{lemma}
+
+\begin{fact}
+    let $m$ Lebesgue measure on $(0, 1)$, set $\mu(A) = g_{*}m(A) = m(g^{-1}(A))$, then $\mu = \mu_F$
+\end{fact}
+
+\begin{prop}
+    $\mu$ Borel probability measure, then $\exists (\Omega, \F, \R)$, r.v. $X$ st $\mu = \mu_X$
+\end{prop}
+
+\begin{fact}
+    Can take $\Omega, \F, \mu = (0, 1), \text{ Borel }\sigma\text{-algebra }, \Pb$
+\end{fact}
+
+\begin{itemize}
+    \item density
+\end{itemize}
+
+\begin{example}\,
+    \begin{enumerate}
+        \item uniform distribution
+        \item exponential distribution
+        \item gaussian distribution
+        \item Dirac mass
+    \end{enumerate}
+\end{example}
+
+\begin{itemize}
+    \item mean
+    \item moment of order $k$
+    \item variance
+\end{itemize}
