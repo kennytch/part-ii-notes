@@ -1,0 +1,51 @@
+\section{Hilbert Spaces and $L^2$ methods}\label{sec:hilbert-spaces-andmethods}
+
+\begin{itemize}
+    \item Hermitian inner product ------ $\C$
+    \item sesquilinear form ------ we pick linear in first argument
+    \item Euclidean inner product ------ $\R$
+    \item bilinear symmetric form
+\end{itemize}
+
+\begin{lemma}
+    \begin{enumerate}
+        \item $\norm{\alpha x} = |\alpha|\norm{x}$
+        \item Cauchy-Schwarz inequality $|\langle x, y \rangle| \leq \norm{x}\norm{y}$
+        \item triangle inequality $\norm{x + y}  \leq \norm{x} + \norm{y}$
+        \item Parallelogram identity $\norm{x + y}^2 + \norm{x - y}^2 = 2(\norm{x}^2 + \norm{y}^2)$
+    \end{enumerate}
+\end{lemma}
+
+\begin{cor}
+    $(V, \norm{\cdot})$ normed vector space
+\end{cor}
+
+\begin{itemize}
+    \item Hilbert space ------ complete Hermitian/Euclidean vector space
+    \item orthogonal projection ------ unique $\pi_{\mathcal{C}}(x)$ st $\norm{x - \pi_\mathcal{C}(x)} = \inf_\mathcal{C}\norm{x - c}$
+\end{itemize}
+
+\begin{prop}[orthogonal projection on closed convex sets]
+    $\mathcal{H}$ Hilbert, $\mathcal{C}$ closed convex, then $\exists$ orthogonal projection
+\end{prop}
+
+\begin{cor}
+    $V$ closed vector subspace, then $\mathcal{H} = V \oplus V^\perp$
+\end{cor}
+
+\begin{fact}
+    $V^\perp$ closed
+\end{fact}
+
+\begin{itemize}
+    \item bounded linear form
+\end{itemize}
+
+\begin{fact}
+    bounded iff continuous
+\end{fact}
+
+\begin{thm}[Riesz representation theorem for Hilbert spaces]
+    $\mathcal{H}$ Hilbert space, $l$ bounded linear form, then $\exists$ unique $v_0$ st $l(\cdot) = \langle \cdot, v_0 \rangle$
+\end{thm}
+

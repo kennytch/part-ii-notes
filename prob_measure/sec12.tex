@@ -1,0 +1,89 @@
+\section{$L^p$ spaces}\label{sec:space}
+
+\begin{setting}\label{set:Jensen}
+    $(\Omega, \A, \Pb)$ probability space, $I$ open interval, $X:\Omega \rightarrow I$, $\phi:I \rightarrow \R$
+\end{setting}
+
+\begin{prop}[Jensen's inequality]
+    Under setting~\ref{set:Jensen}, $X$ integrable, $\phi$ convex, then \\
+    $\Ex (\phi(X)) \geq \phi(\Ex(X))$
+\end{prop}
+
+\begin{itemize}
+    \item convex
+\end{itemize}
+
+\begin{lemma}
+    convex iff $\phi = \sup_\F l$ where $\F$ family of affine linear forms
+\end{lemma}
+
+\begin{fact}
+    $\phi(X)^-$ always integrable
+\end{fact}
+
+\begin{itemize}
+    \item $L^p$ norm $\norm{f}_p$
+    \item $L^\infty$ norm $essup\ |f|$
+\end{itemize}
+
+\begin{fact}
+    let $g = f\In_{f \leq \norm{f}_\infty}$, then $\sup g = essup\ |g|$
+\end{fact}
+
+\begin{prop}[Minkowski inequality]
+    $p \in [1, \infty]$, then $\norm{f + g}_p \leq \norm{f}_p + \norm{g}_p$
+\end{prop}
+
+\begin{setting}
+    $\frac{1}{p} + \frac{1}{q} = 1$
+\end{setting}
+
+\begin{prop}[Holder's inequality]
+    $\int |pq|d\mu \leq \norm{f}_p\norm{g}_q$ \\
+    Equality holds for finite $p, q$ when $\alpha |f|^p = \beta |g|^q$ for $\mu$-a.e.\
+\end{prop}
+
+\begin{lemma}[Young's inequality for product]
+    $a, b \geq 0$, then $ab \leq \frac{a^p}{p} + \frac{b^q}{q}$.
+    Equality iff $a^p = b^q$
+\end{lemma}
+
+\begin{itemize}
+    \item $L^p(X, \A, \mu)$ ------ $\left\{ \norm{f}_p < \infty \right\}$
+    \item $f \equiv g$ ------ $f = g$ $\mu$-a.e.\
+\end{itemize}
+
+\begin{lemma}
+    $\equiv$ equivalence relation, stable under addition and multiplication
+\end{lemma}
+
+\begin{itemize}
+    \item $L^p$ space ------ $L^p(X, \A, \mu) / \equiv$
+\end{itemize}
+
+\begin{prop}[completeness of $L^p$ spaces]\,
+    \begin{enumerate}
+        \item $L^p$ space with $\norm{\cdot}_p$ normed vector space
+        \item complete (a.k.a.\ Banach space)
+    \end{enumerate}
+\end{prop}
+
+\begin{prop}[Approxiamtion by simple functions]
+    $p \in [1, \infty)$, $V$ linear span of simple functions, then $V \bigcap L^p$ dense in $L^p$
+\end{prop}
+
+\begin{fact}
+    linear span as we need $g^+ - g^-$
+\end{fact}
+
+\begin{fact}
+    For $(\R^d, \mathcal{L}, m)$, $C_c^\infty(\R^d)$ dense in $L^p$
+\end{fact}
+
+\begin{fact}
+    $\mu(X) < \infty$, then $L^p' \subset L^p$ for $p' \geq p$
+\end{fact}
+
+\begin{fact}
+    $X$ discrete, countable, then $L^p' \subset L^p$ for $p' \leq p$
+\end{fact}

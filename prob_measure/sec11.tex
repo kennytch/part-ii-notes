@@ -1,0 +1,89 @@
+\section{Convergence of Random Variables}\label{sec:convergence-of-random-variables}
+
+\begin{itemize}
+    \item probability measures $\mu_n$ converge weakly ------ $\forall$ bounded, continuous $f$, $\mu_n(f) \rightarrow \mu(f)$
+    \item[$\diamond$] sequences $(X_n)$
+    \item almost surely (a.s.\ ) ------ $X_n(\omega) \rightarrow X(\omega)$ for $\Pb$ almost every $\omega$
+    \item in probability (in measure) ------ $\Pb(\norm{X_n - X} > \epsilon) \rightarrow 0$
+    \item in law (in distribution) ------ $\mu_{X_n}$ converge weakly to $\mu_X$
+\end{itemize}
+
+\begin{prop}
+    almost surely $\Rightarrow$ in probability $\Rightarrow$ in distribution
+\end{prop}
+
+\begin{fact}
+    $X_n \rightarrow X$ in law iff $F_{X_n}(x) \rightarrow F_{X}(x)$
+\end{fact}
+
+\begin{fact}
+    To prove $\mu_n$ converge weakly to $\mu$, suffice to check $f \in C^\infty_c$
+\end{fact}
+
+\begin{counterexample}\,
+    \begin{itemize}
+        \item weakly $\nRightarrow$ in prob ------ i.i.d.\ $X_n$ with same distribution
+        \item in prob $\nRightarrow$ a.s.\  ------ moving bump $\In_{[k/n, (k+1)/n]}$
+    \end{itemize}
+\end{counterexample}
+
+\begin{prop}
+    $X_n \rightarrow X$ in prob, then $\exists$ subsequence $X_{n_j} \rightarrow X$ a.s.
+\end{prop}
+
+\begin{itemize}
+    \item converge in $L^1$ ------ integrable $X_n$, $\Ex \norm{X_n - X} \rightarrow 0$
+\end{itemize}
+
+\begin{prop}
+    $L^1 \Rightarrow$ in probability
+\end{prop}
+
+\begin{counterexample}\,
+    \begin{itemize}
+        \item in prob $\nRightarrow$ in $L^1$ ------ $X_n = n\In_{[0,1/n]}$
+    \end{itemize}
+\end{counterexample}
+
+\begin{itemize}
+    \item bounded ------- $X_n \leq C$ for constant $C$ independent of $n$
+\end{itemize}
+
+\begin{fact}
+    If $(X_n)$ bounded, in prob $\Rightarrow$ in $L^1$
+\end{fact}
+\begin{proof}
+    Passing to subsequence, a.s.\, convergence.
+    Then DCT
+\end{proof}
+
+\begin{itemize}
+    \item uniformly integrable (U.I.\ ) ------ integrable $(X_n)$, $\lim_M \limsup_n \Ex(\norm{X_n} \In_{\norm{X_n} > M)} = 0$
+    \item dominated ------ $X_n \leq Y$ for integrable $Y$, all $n$
+\end{itemize}
+
+\begin{fact}
+    dominated $\Rightarrow$ U.I.\
+\end{fact}
+
+\begin{itemize}
+    \item bounded in $L^p$ ------ $\sup_n \Ex \norm{X_n}^p < \infty$
+\end{itemize}
+
+\begin{fact}
+    bounded in $L^p$ for $p > 1$ $\Rightarrow$ U.I.\
+\end{fact}
+
+\begin{thm}
+    $(X_n)$ integrable, then following equivalent:
+    \begin{enumerate}
+        \item $X_n \rightarrow X$ in $L^1$, $X$ integrable
+        \item $X_n \rightarrow X$ in prob, $X_n$ U.I.\
+    \end{enumerate}
+\end{thm}
+
+\begin{lemma}
+    $Y$ integrable, $(X_n)$ U.I.\ , then $(X_n + Y)$ U.I.\
+\end{lemma}
+
+

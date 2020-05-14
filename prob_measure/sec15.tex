@@ -1,0 +1,42 @@
+\section{Fourier Transform on $\R$^n}\label{sec:fourier-transform-on^n}
+
+\begin{itemize}
+    \item Fourier transform $\widehat{f}(u)$ ------ $f \in L^1$, $\widehat{f}(u) = \int f(x) e^{i\langle u,x \rangle}dx$
+\end{itemize}
+
+\begin{prop}\,
+    \begin{enumerate}
+        \item $|\widehat{f}(u)| \leq \norm{f}_1$
+        \item $\widehat{f} \in C^0$
+    \end{enumerate}
+\end{prop}
+
+\begin{itemize}
+    \item characteristic function of $\widehat{\mu}$ ------ $\mu$ finite Borel measure, $\widehat{\mu}(u) = \int e^{i\langle u, x \rangle} d\mu(x)$
+\end{itemize}
+
+\begin{prop}\,
+    \begin{enumerate}
+        \item $|\widehat{\mu}(u)| \leq \mu(\R^d)$
+        \item $\widehat{\mu} \in C^0$
+    \end{enumerate}
+\end{prop}
+
+\begin{example}
+    For Gaussian measure, let $g(x) = \frac{1}{\sqrt{2\pi}} \exp(-\frac{x^2}{2})$, then $\widehat{g}(u) = \sqrt{2\pi}g(u)$
+\end{example}
+
+\begin{itemize}
+    \item self-dual
+\end{itemize}
+
+\begin{thm}[Fourier Inversion Formula]\,
+    \begin{enumerate}
+        \item $\mu$ finite Borel measure, $\widehat{\mu} \in L^1$, then
+        \begin{itemize}
+            \item[$\bullet$] $\exists$ density $\phi \in C^0$ st $d\mu = \phi(x)dx$
+            \item[$\bullet$] $\phi(x) = \frac{1}{(2\pi)^d}\widehat{\widehat{\mu}}(-x)$
+        \end{itemize}
+        \item $f, \widehat{f} \in L^1$, then $f(x) = \frac{1}{(2\pi)^d}\widehat{\widehat{f}}(-x)$ a.e.
+    \end{enumerate}
+\end{thm}

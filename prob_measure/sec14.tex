@@ -1,0 +1,30 @@
+\section{Conditional Expectation}\label{sec:conditional-expectation}
+
+\begin{setting}
+    $(\Omega, \F, \Pb)$ probability space, $\mathcal{G} \subset \mathcal{F}$ $\sigma$-subalgebra, $X$ integrable
+\end{setting}
+
+\begin{itemize}
+    \item conditional expectation $\Ex(X|\mathcal{G})$
+\end{itemize}
+
+\begin{prop}
+    $\exists$ (a.s.\ ) unique conditional expectation $Y$ st
+    \begin{enumerate}
+        \item $\mathcal{G}$-measurable
+        \item integrable
+        \item $\Ex(\In_A X) = \Ex(\In_A Y)$
+    \end{enumerate}
+\end{prop}
+
+\begin{prop}\,
+    \begin{enumerate}
+        \item linearity ------ $\Ex(\alpha X + \beta Y | \mathcal{G}) = \alpha \Ex(X|\mathcal{G}) + \beta \Ex(Y|\mathcal{G})$ a.s.\
+        \item positivity ------ $X \geq 0$ a.s.\ , then $\Ex(X|\G) \geq 0$ a.s.
+        \item tower preperty ------ $\mathcal{H} \subset \G$ $\sigma$-subalgebra, then $\Ex(\Ex(X|\G)|\mathcal{H}) = \Ex(X|\mathcal{H})$ a.s.\
+        \item independence ------ $X$ independent of $\G$, then $\Ex(X|\G) = \Ex(X)$ a.s.\
+        \item $X$ $\G$-measurable, then $\Ex(X|\G) \leq 0$ a.s.\
+        \item $Z$ $\G$-measurable, bounded, then $\Ex(XZ|\G) = Z\Ex(X|\G)$
+        \item MCT, Fatou, DCT holds for $\Ex(\cdot|\G)$
+    \end{enumerate}
+\end{prop}

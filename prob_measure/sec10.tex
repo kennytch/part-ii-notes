@@ -77,3 +77,32 @@
         \item small correlation between events
     \end{itemize}
 \end{fact}
+
+\begin{itemize}
+    \item[$\diamond$] $(\Omega, \F, \Pb)$ probability space
+    \item random process / stochastic process $(X_n)$
+    \item n-th term of the associated filtration $\F_n = \sigma(X_1, \dots, X_n)$
+    \item tail $\sigma$-algebra $\mathcal{T} = \bigcap \sigma(X_n, X_{n+1}, \dots)$
+\end{itemize}
+
+\begin{thm}[Kolmogorov 0-1 law]
+    $(X_n)$ mutually independent, then $\Pb(A) \in \left\{ 0, 1 \right\}$ for all $A \in \mathcal{T}$
+\end{thm}
+
+\begin{itemize}
+    \item Cauchy-Schwarz ------ $\Ex|XY| \leq \sqrt{\Ex(X^2)\Ex(Y^2)}$
+    \item Markov's inequality ------ $\lambda \Pb(X \geq \lambda) \leq \Ex(X)$ for $X \geq 0, \lambda \geq 0$
+    \item Chebychev's inequality ------ $\lambda^2 \Pb (|Y - \Ex(Y)| \geq \lambda) \leq Var(Y)$ for $\lambda \geq 0$
+\end{itemize}
+
+\begin{thm}[Strong law of large number]
+    $(X_n)$ i.i.d.\ , $\Ex |X_1| < \infty$, then $\bar{X}_n \xrightarrow[\text{a.s.}]{} \Ex{X_1}$
+\end{thm}
+
+\begin{fact}
+    $\Ex(X^4) < \infty$ $\Rightarrow$ $\Ex((X - \Ex X)^4) < \infty$ (Jensen on $X^4$)
+\end{fact}
+
+\begin{fact}
+    $\Ex(|X|^n) < \infty \Rightarrow \Ex(|X|^k) < \infty$ for $k \leq n$
+\end{fact}
