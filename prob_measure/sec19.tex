@@ -1,0 +1,77 @@
+\section{Mean Ergodic Theorem}\label{sec:mean-ergodic-theorem}
+
+\begin{setting}
+    $(X, \A, \mu, T)$ prob measure preserving system
+\end{setting}
+
+\begin{itemize}
+    \item $S_n(f) = \frac{1}{n}\sum^{n-1}_0 f\circ T^i$
+\end{itemize}
+
+\begin{thm}[Mean ergodic theorem in $L^2$]
+    $f \in L^2(X, \A, \mu)$, then\\
+    $\exists$ $T$-invariant $\bar{f} = \Ex(f|\mathcal{I})$ st $S_n(f) \rightarrow \bar{f}$ in $L^2$
+\end{thm}
+
+\begin{itemize}
+    \item adjoint $A^*$ ------ $\mathcal{H}$ Hilbert space, $A$ bounded linear map, then by Riesz $\exists$ $A^*$ st $\langle Ax, y \rangle = \langle x, A^{*}y \rangle$
+    \item involutive ------ $A^{**} = A$
+\end{itemize}
+
+\begin{fact}\,
+    \begin{enumerate}
+        \item $\norm{A^*} = \norm{A}$
+        \item $\norm{AA^*} = \norm{A}^2$
+    \end{enumerate}
+\end{fact}
+
+\begin{itemize}
+    \item $U(f) = f \circ T$
+    \item co-boundaries $W = \{\phi - U\phi\}$
+\end{itemize}
+
+\begin{fact}
+    $\bar{f}$ orthogonal projection onto $W^\perp = \{g = Ug\}$
+\end{fact}
+
+\begin{cor}[Mean ergodic theorem in $L^p$]
+    $p \in [1, \infty)$, $f \in L^p$, then\\
+    $\exists$ $T$-invariant $\bar{f} = \Ex(f|\mathcal{I})$ st $S_n(f) \rightarrow \bar{f}$ in $L^p$
+\end{cor}
+
+\begin{itemize}
+    \item $E_t = \left\{ x : \sup_n S_{n}f(x) > t \right\}$
+\end{itemize}
+
+\begin{thm}[Maximal ergodic theorem]
+    $f \in L^1$, then $\mu(E_t) \leq \frac{1}{t}\norm{f}_1$
+\end{thm}
+
+\begin{lemma}[the maximal inequality]
+    $f \in L^1$, $f_n = nS_{n}f$, $f_0 = 0$, $P_N = \left\{ x : \max_{0 \leq x \leq N} f_n(x) > 0 \right\}$, then $\int_{P_{N}} fd\mu \geq 0$
+\end{lemma}
+
+\begin{thm}[Pointwise ergodic theorem]
+    $f \in L^1$, then $S_n(f) \rightarrow \bar{f}$ $\mu$-a.e.\
+\end{thm}
+
+\begin{fact}
+    ergodic $\Rightarrow$ $\Ex(f|\mathcal{I}) = \Ex(f)$
+\end{fact}
+
+\begin{fact}
+    $f = \In_A$, orbit $\left\{ T^{n}x \right\}$, then time spent in almost every orbit equidistributed
+\end{fact}
+
+\begin{cor}[Strong law of large number]
+    $(X_n)$ i.i.d.\ , $\Ex(\norm{X_1}) < \infty$, then $\frac{1}{n}\sum S_i \rightarrow \Ex(X_1)$ a.s.\
+\end{cor}
+
+\begin{itemize}
+    \item $\mathcal{I}(X)$ ------ family of all $T$-invariant probability measures
+    \item extremal ------ $\mu \in \mathcal{I}$, $\nexists \mu_1, \mu_2$ st $\mu = t\mu_1 + (1 - t)\mu_2$
+\end{itemize}
+
+\begin{prop}
+    $\mu \in \mathcal{I}(X)$, then ergodic iff extremal
+\end{prop}

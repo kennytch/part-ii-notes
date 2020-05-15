@@ -1,0 +1,51 @@
+\section{Canonical Model for Stochastic Process}\label{sec:canonical-model-for-stochastic-process}
+
+\begin{setting}
+    $(X_n)$ $\R^d$ r.v.\ on $(\Omega, \F, \Pb)$ probability space
+\end{setting}
+
+\begin{itemize}
+    \item space of sequences $(\R^d)^\N$
+    \item sample path map $\Phi$ ------ $\Phi(\omega) = (X_n(\omega))$
+    \item shift map $T$ ------ $T((x_n)_n) = (x_{n+1})_n$
+    \item shift space
+    \item coordinate functions $x_k$ ------ $x_k((x_n)_n) = x_k$
+\end{itemize}
+
+\begin{setting}
+    $X = ((\R^d)\N)$ endowed $\sigma$-algebra $\A = \sigma(x_k)$
+\end{setting}
+
+\begin{itemize}
+    \item cylinder set
+    \item $\pi_F$ ------ $F$ finite set of indices
+    \item law of the stochastic process $\mu$ ------ $\mu = \Phi_\ast\Pb$ prob measure on $(X, \A)$
+    \item canonical model ------ $(X, \A, \mu, T)$
+\end{itemize}
+
+\begin{prop}
+    $(X_n)$ stochastic process, $(X, \A, \mu, T)$ canonical model, then following equivalent:
+    \begin{enumerate}
+        \item $(X, \A ,\mu, T)$ measure preseving
+        \item joint law of $(X_n, X_{n+1}, \dots, X_{n+k})$ independent of $n$
+    \end{enumerate}
+\end{prop}
+
+\begin{itemize}
+    \item stationary
+\end{itemize}
+
+\begin{prop}
+    $(X_n)$ i.i.d.\ process, then
+    \begin{enumerate}
+        \item stationary
+        \item canonical model ergodic
+    \end{enumerate}
+\end{prop}
+
+\begin{itemize}
+    \item Bernoulli shift $\mu = \nu^{\otimes \N}$ ------ $\nu$ law of $X_1$
+\end{itemize}
+
+
+

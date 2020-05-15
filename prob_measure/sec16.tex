@@ -1,0 +1,57 @@
+\section{Gaussian random variables}\label{sec:gaussion-random-variables}
+
+
+\begin{itemize}
+    \item gaussian ($\R^d$) ------ can be degenerated
+    \item mean
+    \item covariance matrix
+    \item correlation coefficients
+\end{itemize}
+
+\begin{fact}
+    $\mathcal{N}(m, 0) := \delta_m$
+\end{fact}
+
+\begin{prop}
+    law of Gaussian determined by mean and cov
+\end{prop}
+\begin{proof}
+    can assume 1-d Gaussian determined by mean and var
+\end{proof}
+
+\begin{fact}
+    cov matrix positive semi-definite symmetric
+\end{fact}
+
+\begin{prop}
+    $N_i$ i.i.d\ $\mathcal{N}(0, 1)$, $A \in M_d(\R)$, $b \in \R^d$, then
+    \begin{enumerate}
+        \item $AN + b \sim \mathcal{N}_d(b, AA^*)$
+        \item every Gaussian $X = AN + b$ for some $A, b$
+    \end{enumerate}
+\end{prop}
+
+\begin{fact}
+    $\mathcal{N}(0, \lambda I_d)$ only Borel probability law with
+    \begin{itemize}
+        \item[$\bullet$] invariant under rotation
+        \item[$\bullet$] independent coordinates
+    \end{itemize}
+\end{fact}
+
+\begin{prop}
+    $X = (X_1, \dots, X_n)$ Gaussian vector, then following equivalent:
+    \begin{enumerate}
+        \item $X_i$ independent r.v.\
+        \item $X_i$ pairwise independent
+        \item Cov matrix diagonal
+    \end{enumerate}
+\end{prop}
+
+\begin{thm}[Central Limit Theorem]
+    $(X_n)$ i.i.d with common law $\mu$, finite moment of order 2, then $\sqrt{n}(\bar{X}_n - \Ex(X_1)) \rightarrow \mathcal{N}(0, Cov(X_1))$ in law
+\end{thm}
+
+\begin{fact}
+    $\widehat{\mu_Y}(tu) = \widehat{\mu_{\langle Y, u \rangle}}(t)$
+\end{fact}

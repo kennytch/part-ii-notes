@@ -1,0 +1,58 @@
+\section{Introduction to Ergodic Theory}\label{sec:introduction-to-ergodic-theory}
+
+\begin{setting}
+    measurable map $T: X \rightarrow X$
+\end{setting}
+
+\begin{itemize}
+    \item measure preserving map ------ $T_\ast\mu = \mu$
+    \item measure preserving system ------ measure space $(X, \A, \mu)$ with measure preseving map $T$
+    \item $T$-invariant function ------ measurable $f = f \circ T$
+    \item $T$-invariant subset ------ $T^{-1}A = A$
+    \item invariant $\sigma$-algebra $\mathcal{I}$ ------ $\left\{ A : T^{-1}A = A \right\}$
+\end{itemize}
+
+\begin{lemma}
+    $f$ measurable functoin, then following equivalent:
+    \begin{enumerate}
+        \item $f$ $T$-invariant
+        \item $f$ measurable wrt $\mathcal{I}$
+    \end{enumerate}
+\end{lemma}
+
+\begin{itemize}
+    \item egodic wrt $T$ ------ $T$ measure preserving, $\forall A \in \mathcal{I}$, $\mu(A) = 0$ or $\mu(A^c) = 0$
+\end{itemize}
+
+\begin{fact}
+    egodic kind of irreducibility condition
+\end{fact}
+
+\begin{lemma}
+    $(X, \A, \mu, T)$ measure preseving system, then following equivalent:
+    \begin{enumerate}
+        \item $T$ ergodic
+        \item every $\mathcal{I}$-measurable $f$, $f(x) \equiv a$ $\mu$-a.e.\ for some $a$
+    \end{enumerate}
+\end{lemma}
+
+\begin{setting}[circle rotation]
+    $X = \R/\Z$, $T(x) = x + a$
+\end{setting}
+
+\begin{prop}
+    $T$ ergodic iff $a$ irrational
+\end{prop}
+
+\begin{fact}[Parseval's formula]
+    $f(x) = \sum \widehat{f}(n) e^{-i2\pi nx}$
+\end{fact}
+
+\begin{setting}[times 2 map on the circle]
+    $X = \R/\Z$, $T_2(x) = 2x \mod \Z$
+\end{setting}
+
+\begin{prop}
+    $T_2$ ergodic
+\end{prop}
+

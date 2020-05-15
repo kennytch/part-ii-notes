@@ -28,6 +28,7 @@
 
 \begin{itemize}
     \item self-dual
+    \item character $\chi_u(x) = e^{-i\langle u, x \rangle}$
 \end{itemize}
 
 \begin{thm}[Fourier Inversion Formula]\,
@@ -40,3 +41,99 @@
         \item $f, \widehat{f} \in L^1$, then $f(x) = \frac{1}{(2\pi)^d}\widehat{\widehat{f}}(-x)$ a.e.
     \end{enumerate}
 \end{thm}
+
+\begin{fact}
+    simple sufficient condition for $\widehat{f} \in L^1$ : $f \in C^2$ and $f, f', f''$ integrable
+\end{fact}
+
+\begin{itemize}
+    \item convolution $\mu \ast\nu$ ------ $\Phi_\ast(\mu \otimes \nu)$ where $\Phi(x, y) = x + y$
+    \item convolution $f \ast g$ ------ $f, g \in L^1$, then $f \ast g = \int f(x-t)g(t)dt$
+\end{itemize}
+
+\begin{fact}
+    $\mu_X \ast \nu_Y$ equivalent to law of $X+Y$
+\end{fact}
+
+\begin{fact}
+    $\norm{f \ast g}_1 \leq \norm{f}_1\norm{g}_{1}$
+\end{fact}
+
+\begin{itemize}
+    \item $G_\sigma$ ------ density of $\mathcal{N}(0, \sigma^2 I_d)$
+    \item $\tau_t(f)(x)$ ------ $f(x + t)$
+\end{itemize}
+
+\begin{prop}[Gaussian approximation]
+    $f \in L^p(\R^d)$, $p \in [1, \infty)$, then $\lim \norm{f \ast G_\sigma - f}_p = 0$
+\end{prop}
+
+\begin{lemma}[continuity of translation in $L^p$]
+    $f \in L^p(\R^d)$, $p \in [1, \infty)$, then $\lim \norm{\tau_t(f) - f}_p = 0$
+\end{lemma}
+
+\begin{prop}\,
+    \begin{enumerate}
+        \item $\mu, \nu$ Borel prob measures, then $\widehat{\mu \ast \nu} = \widehat{\mu}\widehat{\nu}$
+        \item $f, g \in L^1$, then $\widehat{f \ast g} = \widehat{f}\widehat{g}$
+    \end{enumerate}
+\end{prop}
+
+\begin{thm}[Levy's criterion]
+    $X_n$ r.v.\ , then following are equivalent:
+    \begin{enumerate}
+        \item $X_n \rightarrow X$ in law
+        \item $\lim_n \widehat{\mu_{X_n}}(u) = \widehat{\mu_X}(u)$ for all $u$
+    \end{enumerate}
+\end{thm}
+
+\begin{fact}
+    $\widehat{\mu_X} = \widehat{\mu_Y}$ iff $\mu_X = \mu_Y$
+\end{fact}
+
+\begin{example}
+    $\mathcal{N}(m ,\sigma^2) \rightarrow \delta_m$ weakly
+\end{example}
+
+\begin{fact}
+    $\widehat{\mu_X}(0) = 1$
+\end{fact}
+
+\begin{itemize}
+    \item positive definite ------ $\forall u_1, \dots, u_N \in \R^d$, $\forall t_1, \dots, t_N \in \C$, $\sum t_{i}\bar{t_j}\widehat{\mu_X}(u_i - u_j)$ real and $\geq 0$
+    \item normalize ------ $f(0) = 1$
+\end{itemize}
+
+\begin{fact}[Boucher's theorem]
+    $f$ normalized continuous positive-definite, then $\exists$ unique probability measure $\mu$ st $f = \widehat{\mu}$
+\end{fact}
+
+\begin{itemize}
+    \item linear isometry
+\end{itemize}
+
+\begin{thm}[Plancherel formula]
+    $f, g \in L^1 \bigcap L^2$, then
+    \begin{enumerate}
+        \item $\widehat{f} \in L^2$
+        \item $\norm{\widehat{f}}_2 = (2\pi)^{d/2}\norm{f}_2$
+        \item $\langle \widehat{f}, \widehat{g} \rangle_{L^2} = (2\pi)^d\langle f, g \rangle_{L^2}$
+        \item $\F:L^1 \bigcap L^2 \rightarrow L^2$ where $\F(f) = \frac{1}{(2\pi)^{d/2}}\widehat{f}$
+        \begin{itemize}
+            \item[$\bullet$] extends uniquely to linear isometry of $L^2$
+            \item[$\bullet$] $\F \circ \F(f)(x) = f(-x)$
+        \end{itemize}
+    \end{enumerate}
+\end{thm}
+
+\begin{fact}
+    smoothness/decay barter
+\end{fact}
+
+\begin{fact}
+    uncertainty principle
+\end{fact}
+
+\begin{fact}
+    Schwarz space
+\end{fact}
