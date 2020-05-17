@@ -2,19 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="805a30fc-edf0-4349-b4a4-7e21bcb95f75" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/prob_measure/sec16.tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/prob_measure/sec17.tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/prob_measure/sec18.tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/prob_measure/sec19.tex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/prob_measure/sec20.tex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/auxil/prob_measure.aux" beforeDir="false" afterPath="$PROJECT_DIR$/auxil/prob_measure.aux" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/auxil/prob_measure.log" beforeDir="false" afterPath="$PROJECT_DIR$/auxil/prob_measure.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/prob_measure.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/out/prob_measure.pdf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/prob_measure.synctex.gz" beforeDir="false" afterPath="$PROJECT_DIR$/out/prob_measure.synctex.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/preamble.tex" beforeDir="false" afterPath="$PROJECT_DIR$/preamble.tex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/prob_measure/prob_measure.tex" beforeDir="false" afterPath="$PROJECT_DIR$/prob_measure/prob_measure.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prob_measure/sec15.tex" beforeDir="false" afterPath="$PROJECT_DIR$/prob_measure/sec15.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prob_measure/sec8.tex" beforeDir="false" afterPath="$PROJECT_DIR$/prob_measure/sec8.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prob_measure/sec12.tex" beforeDir="false" afterPath="$PROJECT_DIR$/prob_measure/sec12.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prob_measure/sec3.tex" beforeDir="false" afterPath="$PROJECT_DIR$/prob_measure/sec3.tex" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -133,6 +129,7 @@
       <workItem from="1589291243498" duration="9509000" />
       <workItem from="1589350315864" duration="16577000" />
       <workItem from="1589445986735" duration="45014000" />
+      <workItem from="1589610090964" duration="2137000" />
     </task>
     <task id="LOCAL-00001" summary="Updated ./preamble.tex and recompile the pdf">
       <created>1589298006446</created>
