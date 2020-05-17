@@ -1,0 +1,142 @@
+\section{Utility and Mean-Variance analysis}\label{sec:utility-and-mean-variance-analysis}
+
+\begin{itemize}
+    \item contingent claims ------ r.v. $X$
+    \item utility function ------ non-decreasing
+\end{itemize}
+
+\begin{fact}
+    $Y$ is preferred to $X$ iff $\Ex(U(X)) \leq \Ex(U(Y))$
+\end{fact}
+
+\begin{itemize}
+    \item indifferent
+    \item risk neutral
+    \item risk averse
+    \item concave
+    \item strictly concave
+\end{itemize}
+
+\begin{prop}
+    risk averse iff $U$ concave
+\end{prop}
+
+\begin{itemize}
+    \item CARA with parameter $\gamma$ ------ $\gamma \in (0, \infty)$, $U(X) = CARA_\gamma(x) = -\exp(-\gamma x)$
+    \item CRRA with parameter $R$ ------ $R \in (0,1) \bigcup (1, \infty)$, $U(X) = CRRA_R(x) = \begin{cases}
+                                              \frac{x^{1-R}}{1-R} & \text{if } x > 0\\
+                                              -\infty & \text{otherwise}
+    \end{cases}$
+    \item CRRA with parameter 1 ------  $U(X) = CRRA_1(x) = \begin{cases}
+                                              \log x & \text{if } x > 0\\
+                                              -\infty & \text{otherwise}
+    \end{cases}$
+    \item constant absolute risk aversion ------ CARA
+    \item constant relative risk aversion ------ CRRA
+\end{itemize}
+
+\begin{fact}[Arrow-Pratt coefficient of absolute risk aversion]
+    $\omega + X$ preferred to $\omega$ iff $\frac{2\Ex(X)}{\Ex(X^2)} \geq  -\frac{U''(\omega)}{U'(\omega)}$
+\end{fact}
+
+\begin{fact}[Arrow-Pratt coefficient of relative risk aversion]
+    $\omega(1 + X)$ preferred to $\omega$ iff $\frac{2\Ex(X)}{\Ex(X^2)} \geq  -\frac{\omega U''(\omega)}{U'(\omega)}$
+\end{fact}
+
+\begin{itemize}
+    \item available claim $\A$
+    \item reservation bid price $\pi_b(Y)$ ------ $\sup \pi$ st $\Ex(U(X + Y - \pi)) > \Ex(U(X^*))$
+    \item reservation ask price $\pi_a(Y)$ ------ $\inf \pi$ st $\Ex(U(X - Y + \pi)) > \Ex(U(X^*))$
+\end{itemize}
+
+\begin{prop}[Ask above, bid below]
+    $\A$ convex, then $\pi_b(Y) \leq \pi_a(Y)$
+\end{prop}
+
+\begin{setting}
+    $\A$ affine space, $U$ differentiable, strictly concave
+\end{setting}
+
+\begin{itemize}
+    \item marginal price $\pi_m(Y)$ ------ $\pi_m(Y) = \frac{\Ex(U'(X^*)Y)}{\Ex(U'(X^*))}$
+\end{itemize}
+
+\begin{itemize}
+    \item single-period asset price model
+    \item numeraire
+    \item riskless bond
+    \item interest rate ------ $r > -1$
+    \item state-price density $\rho$ ------ $S_0^i = \Ex(S^i_1\rho)$
+    \item wealth $\omega_0$
+    \item portfolio $\theta$
+\end{itemize}
+
+\begin{example}
+    no bond
+    \begin{align*}
+        \text{given} && \Ex(\theta\cdot S_1) =  \theta \cdot \mu, var(\theta\cdot S_1) = \theta^T V \theta\\
+        \text{minimize} && var(\theta\cdot S_1) \\
+        \text{subject to} && \theta\cdot S_0 = \omega_0, \Ex(\theta\cdot S_1) = \omega_1
+    \end{align*}
+\end{example}
+
+\begin{itemize}
+    \item mean-variance-efficient frontier ------ $\left\{ \theta^*(\omega_1) \right\}$
+    \item minimum variance portfolio $\theta_\min^*$ ------ minimise var over $\omega_1$
+\end{itemize}
+
+\begin{example}
+    with bond
+    \begin{align*}
+        \text{minimise} && \theta^T V\theta \\
+        \text{subject to} && \theta^0 + \theta S_0 = \omega_0, \theta^0(1 + r) + \theta\mu = \omega_1
+    \end{align*}
+    Then , $\theta^* = \lambda\theta^*_m$
+\end{example}
+
+\begin{itemize}
+    \item market portfolio $\theta^*_m$ ------ $A(\mu - (1 + r)S_0)$, $A = V^{-1}$
+\end{itemize}
+
+\begin{setting}
+    $S_1$ Gaussian, $U$ CARA
+\end{setting}
+
+\begin{example}
+    no bond
+    \begin{align*}
+        \text{maximise} && \Ex(U(\theta S_1))\\
+        \text{subject to} && \theta S_0 = \omega_0
+    \end{align*}
+\end{example}
+
+\begin{example}
+    with bond
+    \begin{align*}
+        \text{maximise} && \Ex(U(\bar\theta \bar S_1))\\
+        \text{subject to} && \bar\theta \bar S_0 = \omega_0
+    \end{align*}
+    then, $\theta^* = \gamma^{-1}\theta^*_m$
+\end{example}
+
+\begin{itemize}
+    \item beta/sensitivity $\beta^i$ ------ $\beta^i = \frac{cov(S^i_1, \theta_m^* S_1)}{var(\theta_m^* S_1)}$
+    \item $\mu^m$ ------ $\theta_m^* \mu$
+    \item $S_0^m$ ------ $\theta_m^* S_0$
+\end{itemize}
+
+\begin{prop}
+    $\mu^i - (1 + r)S_0^i = \beta^i (\mu^m - (1 + r)S_0^m)$
+\end{prop}
+
+\begin{itemize}
+    \item capitalization-weights of the relevant market index
+\end{itemize}
+
+\begin{setting}
+
+\end{setting}
+    $S_1 = (1 + R)S_0$, $S_1^m = (1 + R^m)S_0^m$, $\tilde\beta^i = \frac{cov(R^i, R^m)}{var(R^m)}$
+\begin{fact}
+    write , then $\Ex(R^i) = r + \tilde\beta^i(\Ex(R^m) - r)$
+\end{fact}

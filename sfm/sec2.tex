@@ -1,0 +1,56 @@
+\section{Martingales}\label{sec:martingales}
+
+\begin{itemize}
+    \item conditional probability
+    \item conditional expectation given event
+    \item conditional expectation given $\G$,  $\Ex(X|\G)$
+\end{itemize}
+
+\begin{thm}
+    $\G \subset \F$ sub-\sa, $X$ integrable, then $\exists$ unique $Y$ (up to a.s.) st
+    \begin{enumerate}
+        \item $Y$ integrable
+        \item $Y$ $\G$-measurable
+        \item $\Ex(Y\In_A) = \Ex(X\In_A)$ for all $A \in \G$
+    \end{enumerate}
+\end{thm}
+
+\begin{fact}
+    also true if replace integrable by non-negative
+\end{fact}
+
+\begin{itemize}
+    \item $\Ex(X|Z)$ ------ $\G = \sigma(Z)$ for r.v. $Z$
+    \item $\Pb(A|\G)$ ------ $X = \In_A$
+\end{itemize}
+
+\begin{fact}
+    $\G = \sigma(B_n)$ discrete, then $\Ex(X|\G) = \sum\Ex(X|B_n)\In_{B_n}$ a.s.\
+\end{fact}
+
+\begin{prop}
+    $\G \subset \F$, $X, W$ integrable, then
+    \begin{enumerate}
+        \item $\Ex(\Ex(X|\G)) = \Ex(X)$
+        \item $X$ $\G$-measurable, then $\Ex(X|\G) = X$ a.s.
+        \item $X$ independent of $\G$, then $\Ex(X|\G) = E(X)$ a.s.
+        \item $X \geq 0$ a.s.\ , then $\Ex(X|\G) \geq 0$ a.s.
+        \item $\Ex(\alpha X + \beta W|\G) = \alpha \Ex(X|\G) + \beta \Ex(W|\|G)$ a.s.
+    \end{enumerate}
+\end{prop}
+
+\begin{prop}[Tower property]
+    $\mathcal{H} \subset \G \subset \F$ sub-\sa, $X$ integrable, then \\
+    $\Ex(\Ex(X|\G)|\mathcal{H}) = \Ex(X|\mathcal{H})$ a.s.\
+\end{prop}
+
+\begin{prop}[Taking out what is known]
+    $\G \subset \F$ sub-\sa, $X$ integrable, $Z$ $\G$-measurable, $ZX$ integrable, then \\
+    $\Ex(ZX|\G) = Z\Ex(X|\G)$ a.s.\
+\end{prop}
+
+\begin{prop}[Averaging over independent variables]
+    $X_1, X_2$ r.v. in $(E_1, \E_1), (E_2, \E_2)$, $\G \subset \F$, $X_1$ $\G$-measurable, $X_2$ independent of $\G$, $F$ non-negative, let $f = \Ex(F(\cdot, X_2))$, then \\
+    $\Ex(F(X_1, X_2)|\G) = f(X_1)$ a.s.
+\end{prop}
+
