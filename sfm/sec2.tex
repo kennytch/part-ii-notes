@@ -35,7 +35,7 @@
         \item $X$ $\G$-measurable, then $\Ex(X|\G) = X$ a.s.
         \item $X$ independent of $\G$, then $\Ex(X|\G) = E(X)$ a.s.
         \item $X \geq 0$ a.s.\ , then $\Ex(X|\G) \geq 0$ a.s.
-        \item $\Ex(\alpha X + \beta W|\G) = \alpha \Ex(X|\G) + \beta \Ex(W|\|G)$ a.s.
+        \item $\Ex(\alpha X + \beta W|\G) = \alpha \Ex(X|\G) + \beta \Ex(W|\G)$ a.s.
     \end{enumerate}
 \end{prop}
 
@@ -53,4 +53,97 @@
     $X_1, X_2$ r.v. in $(E_1, \E_1), (E_2, \E_2)$, $\G \subset \F$, $X_1$ $\G$-measurable, $X_2$ independent of $\G$, $F$ non-negative, let $f = \Ex(F(\cdot, X_2))$, then \\
     $\Ex(F(X_1, X_2)|\G) = f(X_1)$ a.s.
 \end{prop}
+
+\begin{itemize}
+    \item filtration $(\F_n)$
+    \item random process
+    \item $(X_n)$ adapted to $(\F_n)$
+    \item natural filtration $(\F_n^X)$ ------ $\F_n^X = \sigma(X_k : 0 \leq k \leq n)$
+    \item martingale ------
+    \begin{itemize}
+        \item (Adapted) $X_n$ $F_n$-measurable
+        \item (Intergrable) $\Ex(|X_n|) < \infty$
+        \item (Martingale property) $\Ex(X_{n+1}|\F_n) = X_n$ a.s.\
+    \end{itemize}
+    \item supermartingale ------ $\Ex(X_{n+1}|\F_n) \leq X_n$
+    \item submartingale ------ $\Ex(X_{n+1}|\F_n) \geq X_n$
+\end{itemize}
+
+\begin{fact}
+    Any martingale also martingale in natural filtration (natural filtration smalllest)
+\end{fact}
+
+\begin{itemize}
+    \item martingale (continuous-time) ------ adapted, integrable, $\Ex(X_t|\F_s) = X_s$ for all $s\leq t$
+    \item $(X_t)$ continuous ------ $t \mapsto X_t(\omega)$ continuous for all $\omega$
+\end{itemize}
+
+\begin{example}
+    $X_n$ i.i.d.\ , $\F_0 = \left\{ \varnothing, \Omega \right\}$, $(\F_n)$ natural filtration
+    \begin{itemize}
+        \item (additive martingale) $X_1$ inegrable, $E(X_1) = 0$, $S_0 = 0$, $S_n = \sum^n X_k$
+        \item (multiplicative martingale) $X_1$ non-negative, $\Ex(X_1) = 1$, $Z_0 = 1$, $Z_n = \prod^n Z_k$
+    \end{itemize}
+\end{example}
+
+\begin{example}
+    $(X_n)$ Markov chain, countable state space $S$, transition matrix $P$, natural filtration $(\F_n)$, bounded/non-negative $f$ on $S$, let
+    \begin{align*}
+        Pf(x) = \sum p_{xy} f(y)
+    \end{align*}
+    then if $f$ subharmonic
+    \begin{align*}
+        \Ex(f(X_{n+1})|\F_n) = Pf(X_n) \geq f(X_n)
+    \end{align*}
+    then, $(f(X_n))$ submartingale
+\end{example}
+
+\begin{itemize}
+    \item subharmonic ------ $f(x) \leq Pf(x)$ for all $x$
+    \item random time ------ $T:\Omega \rightarrow \left\{ 0, 1, \dots \right\} \bigcup \left\{ \infty \right\}$
+    \item stopping time ------ $\left\{ T \leq n \right\} \in \F_n$
+\end{itemize}
+
+\begin{thm}[Optional stopping]
+    $(M_n)$ martingale, $T$ \hl{bounded}, stopping time, then $\Ex(M_T) = \Ex(M_0)$
+\end{thm}
+
+\begin{fact}
+    Doob's optional sampling theorem basic form
+\end{fact}
+
+\begin{thm}
+    $(M_n)$ martingale, $T$ \hl{almost surely finite}, stopping time, suppose one of the following holds:
+    \begin{enumerate}
+        \item $|M_n| \leq C$ for all $n \leq T$, $C$ constant
+        \item $\Ex(T) \leq \infty$, $|M_n - M_{n-1}| \leq C$ for all $n \leq T$
+    \end{enumerate}
+\end{thm}
+
+\begin{fact}
+    $T$ stopping time $\Rightarrow$ $T \wedge n$ bounded stopping time
+\end{fact}
+
+\begin{counterexample}
+    additive martingale, simple random walk, $T = \min \left\{ n : S_n = 1 \right\}$, then \\
+    almost sure finite as recurrent, but $\Ex(T) = \infty$, $\Ex(S_T) = 1 \neq 0 = S_0$
+\end{counterexample}
+
+\begin{counterexample}
+    multiplicative martingale, $(X_k)$ i.i.d.\ ,$\Pb(X_1 = 0) = \Pb(X_1 = 2) = 1/2$, $T = \min \left\{ n : Z_n = 0 \right\}$, then
+    $\Ex(T) = 2$, but $\Ex(Z_T) = 0 \neq 1 = Z_0$
+\end{counterexample}
+
+\begin{thm}
+    $(M_n)$ martingale, $T$ stopping time, then $(M_{T \wedge n})$ martingale
+\end{thm}
+
+\begin{itemize}
+    \item previsible ------ $H_n$ $\F_{n-1}$-measurable
+    \item martingale transform of $(M_n)$ by $(H_n)$ ------ $Y_0 = 0$, $Y_n = \sum^n_1 H_k(M_k - M_{k-1})$
+\end{itemize}
+
+\begin{thm}[Martingale transform]
+    $(M_n)$ martingale, $(H_n)$ bounded, previsible, $(Y_n)$ martingale transform, then $(Y_n)$ martingale
+\end{thm}
 
