@@ -1,0 +1,74 @@
+\section{Dynamic Programming}\label{sec:dynamic-programming}
+
+\begin{itemize}
+    \item state-space $E$
+    \item action-space $A$
+\end{itemize}
+
+\begin{setting}
+    $F: \{0, \dots, T-1\}\times E \times A \times [0,1] \rightarrow E$, $(\epsilon_n)$ i.i.d.\ , $\F_n = \sigma(\epsilon_1, \dots, \epsilon_n)$
+\end{setting}
+
+\begin{itemize}
+    \item adapted control $u = (u_n)_{k\leq n\leq T-1}$ ------ initial time $k$, $u_n$ $\F_n$-measurable
+\end{itemize}
+
+\begin{setting}
+    initial state $x \in E$, adapted control $u$, define $X_k = x, X_{n+1} = F(n, X_n, u_n, \epsilon_{n+1})$ \\
+    Write $X_n = X^u_n(k, x)$
+\end{setting}
+
+\begin{itemize}
+    \item expected reward ------ $V^u(k, x) = \Ex \left( \left( \sum_k^{T-1} r(n , X_n^u(k, x), u_n)  \right)+ R(X_T^u(k, x)) \right)$
+    \item reward function $r, R$ ------ non-negative measurable function
+    \item value function $V$ ------ $V(k, x) = \sup_u V^u(k, x)$
+    \item $u$ optimal control from $(k, x)$ ------ $V(k, x) = V^u(k, x)$
+\end{itemize}
+
+\begin{prop}[Bellman equation]
+    Let $Pv(n, x, a) = \Ex \left( v(n + 1, F(n, x, a, \epsilon_{n+1})) \right)$
+    \begin{align*}
+        &v(T, x) = R(x) \\
+        &v(n, x) = \sup_{a \in A} \left\{ r(n,x,a) + Pv(n, x, a)\right\} && n = 0, \dots, T-1
+    \end{align*}
+    Suppose $\exists a$ st
+    \begin{align*}
+        v(n, x) = r(n, x, a(n, x)) + Pv(n, x, a(n, x)) && n=0,\dots, T-1
+    \end{align*}
+    Then,
+    \begin{enumerate}
+        \item $V = v$
+        \item optimal control $u_n^* = a(n, X_n^{u*}(k, x))$
+    \end{enumerate}
+\end{prop}
+
+\begin{fact}
+    Possible variations:
+    \begin{enumerate}
+        \item $r, R$ as costs
+        \item mixture of costs and rewards
+        \item time-dependent state-space $E_n$
+        \item time-and-state-dependent action-space $A_{n,x}$
+    \end{enumerate}
+\end{fact}
+
+\begin{itemize}
+    \item American call ------ family of time-$T$ contingent claim $(1 + r)^{T-\tau}(S_\tau - K)^+$
+    \item American put ------ family of time-$T$ contingent claim $(1 + r)^{T-\tau}(S_\tau - K)^-$
+\end{itemize}
+
+\begin{setting}
+    $(S_n)$ binomial model, $r \in (a, b)$
+\end{setting}
+
+\begin{fact}
+    complete $\Rightarrow$ can hedge all $C$ with $\Ex^*(C) = 0$
+\end{fact}
+
+\begin{example}[American call]
+    $\tau = T$ always optimal, American and European calls equivalent
+\end{example}
+
+\begin{fact}
+    fair price can be founded using Bellman equation
+\end{fact}

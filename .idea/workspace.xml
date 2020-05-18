@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="805a30fc-edf0-4349-b4a4-7e21bcb95f75" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/sfm/sec3.tex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/sfm.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/sfm.synctex.gz" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sfm/sec4.tex" beforeDir="false" afterPath="$PROJECT_DIR$/sfm/sec4.tex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sfm/sfm.tex" beforeDir="false" afterPath="$PROJECT_DIR$/sfm/sfm.tex" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -144,7 +146,7 @@
       <workItem from="1589445986735" duration="45014000" />
       <workItem from="1589610090964" duration="2137000" />
       <workItem from="1589742943239" duration="8851000" />
-      <workItem from="1589787391422" duration="22218000" />
+      <workItem from="1589787391422" duration="26407000" />
     </task>
     <task id="LOCAL-00001" summary="Updated ./preamble.tex and recompile the pdf">
       <created>1589298006446</created>
@@ -202,7 +204,14 @@
       <option name="project" value="LOCAL" />
       <updated>1589793190428</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="SFM sec3 done">
+      <created>1589821167416</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1589821167416</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -229,6 +238,7 @@
     <MESSAGE value="prob_measure" />
     <MESSAGE value="SFM Martingale" />
     <MESSAGE value="SFM sec2 done" />
-    <option name="LAST_COMMIT_MESSAGE" value="SFM sec2 done" />
+    <MESSAGE value="SFM sec3 done" />
+    <option name="LAST_COMMIT_MESSAGE" value="SFM sec3 done" />
   </component>
 </project>
