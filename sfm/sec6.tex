@@ -1,0 +1,61 @@
+\section{Black-Scholes model}\label{sec:black-scholes-model}
+
+\begin{itemize}
+    \item Black-Scholes model ------ $S_t^0 = e^{rt}, S_t = S_0 e^{\sigma B_t + \mu t}$
+    \item price of riskless bond $S_t^0$
+    \item interest rate $r$
+    \item price of risky asset $S_t$
+    \item drift $\mu$
+    \item volatility $\sigma$
+\end{itemize}
+
+\begin{fact}
+    $(e^{\sigma B_t - \sigma^2 t/2})$ martingale
+\end{fact}
+
+\begin{fact}
+    with $\mu^* = r - \sigma/2$, discounted asset price $(e^{rt}S_t)$ martingale
+\end{fact}
+
+\begin{prop}
+    $(S_t^0, S_t)$ Black-Scholes, fix $T$, consider $\dv{\Pb*}{\Pb} = e^{\lambda B_T - \lambda^{2}T/2}$ where $\sigma \lambda = \mu^* - \mu$, then
+    under $\Pb^*$, discounted seet price $(e^{-rt}S_t)$ martingale
+\end{prop}
+
+\begin{fact}
+    abuse notation in writing $\Pb^*$ instead of $\Pb$
+\end{fact}
+
+\begin{itemize}
+    \item time-$T$ contingent claim $C$ ------ $\F_T$-measurable r.v.
+    \item Black-Scholes price $V_0$ ------ $V_0 = e^{rT}\Ex^*(C)$
+\end{itemize}
+
+\begin{fact}
+    fair price unique
+\end{fact}
+
+\begin{example}\,
+    \begin{enumerate}
+        \item $C = S_T$
+        \item $C = K$
+    \end{enumerate}
+\end{example}
+
+\begin{itemize}
+    \item simple replicable claim ------ constant $C_0$,
+     $0 = t_0 \leq \cdots \leq t_n = T$, $\theta_k$ bounded $\F_{t_{k-1}}$-measurable
+    \begin{align*}
+        e^{rT}C = C_0 + \sum^n_1 \theta_k (X_{t_k} - X_{t_{k-1}})
+    \end{align*}
+    (Replicating strategy) at time $t_{k-1}$, buy $\theta_k$, then sell $\theta_k$ at time $t_k$, then buy $\theta_k$ bond
+\end{itemize}
+
+\begin{fact}
+    any simple replicable claim can be replicated for cost $C_0$ at time 0, $V_0 = C_0$
+\end{fact}
+
+\begin{fact}[Brownian martingale representation theorem]
+    every integrable $\F_T$-measurable contingent claim is limit in probability of simple replicable claims
+\end{fact}
+
