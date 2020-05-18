@@ -1,0 +1,105 @@
+\section{Brownian motion}\label{sec:brownian-motion}
+
+\begin{itemize}
+    \item Brownian motion ------
+    \begin{itemize}
+        \item $B_0 = 0$
+        \item $(B_{s+t} - B_s) \sim N(0, t)$, independent of $\sigma(B_r: r \leq s)$
+        \item $t \mapsto B_t(\omega)$ continuous
+    \end{itemize}
+    \item Brownian motion starting from $x$ ------ $B_0 = x$
+    \item Gaussian process ------ $\forall (t_1, \dots, t_n), (X_{t_1}, \dots, X_{t_n})$ multivariate normal
+\end{itemize}
+
+\begin{prop}
+    $(B_t)$ continuous process starting from 0, then following equivalent:
+    \begin{enumerate}
+        \item $(B_t)$ Brownian motion
+        \item $(B_t)$ zero mean Gaussian process, $\Ex(B_s B_t) = s \wedge t$
+    \end{enumerate}
+\end{prop}
+
+\begin{prop}[Scaling property]
+    $(B_t)$ Brownian motion, set $\tilde B_t = c^{-1}B_{c^2 t}$, then $(\tilde{B_t})$ Brownian motion
+\end{prop}
+
+\begin{prop}
+    $(B_t)$ Brownian motion, $(B_t)$ exit every finite interval a.s.\
+\end{prop}
+
+\begin{itemize}
+    \item $\F_t = \sigma(B_s : s \in [0, t])$
+    \item stopping time ------ $\left\{ T \leq t \right\} \in \F_t$ for all $t$
+    \item $\F_T$ ------ $A \in \F_{\infty}$ st $A \bigcap \left\{ T \leq t \right\} \in \F_t$
+\end{itemize}
+
+\begin{prop}[Strong Markov property]
+    $(B_t)$ Brownian motion, $T$ a.s.\ finite stopping time. Define $\tilde{B_t} = B_{T+t} - B_T$, then
+    \begin{enumerate}
+        \item $(\tilde{B_t})$ Brownian motion
+        \item independent of $\F_T$
+    \end{enumerate}
+\end{prop}
+
+\begin{prop}
+    $(B_t)$ Brownian motion, define $T_a = \inf \left\{ t \geq 0 : B_t = a \right\}$, then
+    \begin{enumerate}
+        \item $T_a$ stopping time
+        \item $T_a$ almost surely finite
+    \end{enumerate}
+\end{prop}
+
+\begin{thm}
+    $(\Omega, \F, \Pb)$ not discrete, $m$ prob measure on $\R$, mean 0, variance 1, then $\exists (B_t), (W_t^{(k)})$ for all $k \in \N$ st
+    \begin{enumerate}
+        \item $(B_t)$ Brownian motion
+        \item $(W_{\frac{n}{k}}^{(k)})$ random walk with distribution $m$, $(W_t^{(k)})$ linear interpolation of values $\left\{ \frac{n}{k} \right\}$
+        \item $\frac{W_t^{(k)}}{\sqrt{k}} \rightarrow B_t$ uniformly on compacts in $t$ a.s.\
+    \end{enumerate}
+\end{thm}
+
+\begin{fact}
+    combination of Wiener's Theorem and Donsker's Invariance Principle
+\end{fact}
+
+\begin{itemize}
+    \item Wiener measure
+\end{itemize}
+
+\begin{prop}
+    let $T \geq 0$, $c \in \R$, $B = (B_t)_{\left\{ 0 \leq t \leq T \right\}}$ brownian motion, $\tilde{B_t} = B_t + ct$, then\\
+    $\forall$ measurable set $A \subset C[0,T]$, $\Pb(\tilde{B} \in A) = \Ex(\In_{\left\{ B \in A \right\}}e^{cB_T - \frac{c^2 T}{2}})$
+\end{prop}
+
+\begin{fact}
+    special case of Cameron-Martin theorem
+\end{fact}
+
+\begin{prop}[Reflection principle]
+    $(B_t)$ Brownian motion, $a \geq 0$, set $T_a = \inf \left\{ t \geq 0 : B_t = a \right\}$, define $\tilde{B_t} = \begin{cases}
+                                                                                                                         B_t & \text{if }t \leq T_a\\
+                                                                                                                         2a - B_t & \text{if }t > T_a
+    \end{cases}$, then $(\tilde{B_t})$ Brownian motion
+\end{prop}
+
+\begin{itemize}
+    \item maximum process ------ $M_t = \sup_{\left\{ 0 \leq s \leq t \right\}} B_s$
+\end{itemize}
+
+\begin{fact}
+    $M_t$ same distribution as $|B_t|$
+\end{fact}
+
+\begin{prop}
+    $T_a$ has density $h_a(t) = \frac{a}{\sqrt{2\pi t^3}}e^{-\frac{a^2}{2t}}$
+\end{prop}
+
+\begin{itemize}
+    \item $p_t(x, y)$ ------ density of $B_t$ starting at $x$
+    \item $p_t^a(x, y) = p_t(x, y) - p_t(x, 2a - y)$
+\end{itemize}
+
+\begin{prop}
+    $x \leq a$, $(B_t)$ Brownian motion with density starting from $x$, then $\forall$ non-negative measurable $f$,
+    $\Ex_x(f(B_t)\In_{\left\{ T_a > t \right\}}) = \int^a_\infty f(y)p_t^a(x, y)dy$
+\end{prop}
