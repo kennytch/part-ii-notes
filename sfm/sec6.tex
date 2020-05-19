@@ -59,3 +59,205 @@
     every integrable $\F_T$-measurable contingent claim is limit in probability of simple replicable claims
 \end{fact}
 
+\begin{setting}
+    $S_0 = s$
+\end{setting}
+
+\begin{fact}
+    $\log S_t = \log s + \sigma B_t + \mu t$
+\end{fact}
+
+\begin{itemize}
+    \item $p(t, x, z) = \frac{1}{\sqrt{2\pi t}}e^{\frac{|x - z|^2}{2t}}$
+    \item $p(\sigma^2 t, x(t), \cdot)$ ------ density of $\log S_t$, $x(t) = \log s + \mu t$
+    \item $\rho(t, s, \cdot)$ ------ density of $S_t$
+    \item $\dot{\rho}$ ------ derivative in first argument
+    \item $\rho'$ ------ derivative in second argument
+\end{itemize}
+
+\begin{fact}
+    $y\rho(t, s, y) = p(\sigma^2 t, x(t), z)$, $z = \log y$
+\end{fact}
+
+\begin{fact}
+    $\dot\rho = \frac{1}{2}\sigma^2 s^2 \rho'' + rs\rho'$
+\end{fact}
+
+\begin{prop}
+    $F$ on $(0, \infty)$ continuous, polynomial growth, $t \in [0, T], s \in (0, \infty)$ \\
+    $V(t, s)$ time-t value of time-T contingent claim $F(S_T)$, conditional on $S_t = s$\\
+    $V(t, s) = e^{r (T - t)}\Ex^*(F(S_T)|S_t = s) = e^{r(T - t)} \Ex(F(se^{\sigma B_{T-t} + \mu^*(T-t)}))$, then
+    \begin{enumerate}
+        \item $V$ continous on $(0, T) \times (0, \infty)$
+        \item $V \in C^{1,2}$ on $(0, T) \times (0, \infty)$
+        \item (Black Scholes PDE) $\mathcal{L}V = \dot{V} + \frac{1}{2} \sigma^2 s^2 V'' + rsV' - rV$ with $V(\cdot, T) = F$
+    \end{enumerate}
+\end{prop}
+
+\begin{setting}[Binomial approximation to BS]
+    Consider convergence of random walk to Brownian motion, special case $(W_{n/k}^{(k)})$ simple symmetric random walk on $\left\{ -1, 1 \right\}$
+\end{setting}
+
+\begin{itemize}
+    \item $1 + a_k = \exp\left( -\frac{\sigma}{\sqrt{k}} + \frac{\mu}{k} \right)$
+    \item $1 + b_k = \exp\left( \frac{\sigma}{\sqrt{k}} + \frac{\mu}{k} \right)$
+    \item $1 + r_k = \exp\left( \frac{r}{k} \right)$
+    \item $S_t^{(k)} = S_0\exp\left( \frac{\sigma W_t^{(k)}}{\sqrt{k}} + \mu t \right)$
+    \item $S_t = S_0 \exp\left( \sigma B_t + \mu t \right)$
+    \item $S_t^{(k)0} = S_t^0 = \exp(rt)$
+\end{itemize}
+
+\begin{fact}\,
+    \begin{enumerate}
+        \item $(S_t^0, S_t)$ Black-Scholes of drift $\mu$, volatility $\sigma$, interest rate $r$
+        \item $(S_{n/k}^{(k)0}, S_{n/k}^{(k)})$ binomial model of parameters $a_k < r_k < b_k$, $p = \frac{1}{2}$
+        \item $S_t^{(k)} \rightarrow S_t$ uniformly on compacts in $t$ a.s.
+    \end{enumerate}
+\end{fact}
+
+\begin{itemize}
+    \item $\Pb^{(k)*}$ ------ martingale measures for binomial model
+    \item $\Pb^{*}$ ------ martingale measures for Black-Scholes model
+\end{itemize}
+
+\begin{fact}
+    $\Ex^{(k)*}(G(S^{(k)})) \rightarrow \Ex^*(G(S))$, so can approximate fair price using Binomial model
+\end{fact}
+
+\begin{setting}
+    $\mu = \mu^* = r - \frac{\sigma^2}{2}$ for convenience
+\end{setting}
+
+\begin{itemize}
+    \item expression $C = F(B)$ ------ $F$ on $C[0, T]$
+    \item terminal-value option $C = f(B_T)$
+\end{itemize}
+
+\begin{fact}
+    for $C = f(B_T)$, $V_0 = e^{-rT}\int f\left(\sqrt{T}y\right)\frac{1}{\sqrt{2\pi}}e^{-\frac{y^2}{2}}dy$
+\end{fact}
+
+\begin{fact}
+    May not be efficient way:
+    \begin{enumerate}
+        \item multiple assets ------ exponentially growth computational cost
+        \item want to compute pricing surface
+    \end{enumerate}
+\end{fact}
+
+\begin{itemize}
+    \item pricing surface ------ $V(t, s) = e^{-r(T - t)}\Ex^*(C|S_t = s)$
+\end{itemize}
+
+\begin{setting}
+    terminal-value option $C = g(S_T)$, $g$ continuous, no more than linear growth
+\end{setting}
+
+\begin{itemize}
+    \item $f(x) = g(e^{\sigma x})$
+    \item $u(t, x) = \Ex_x(f(B_t))$
+\end{itemize}
+
+\begin{fact}
+    $V(t, s) = e^{-r(T-t)}\Ex(g(se^{\sigma B_{T-t} + \mu(T - t)})) = e^{-r(T-t)}u\left(T-t, \frac{\log s + \mu(T-t) }{\sigma}\right)$
+\end{fact}
+
+\begin{itemize}
+    \item $p_t(x, y) = \frac{1}{\sqrt{2\pi t}}e^{\frac{-(y - x)^2}{2t}}$
+\end{itemize}
+
+\begin{fact}
+    $u(t,x) = \int p_t(x, y)f(y)dy$
+\end{fact}
+
+\begin{fact}
+    $\pdv{p}{t} = \frac{1}{2} \pdv[2]{p}{x}$ $\Rightarrow$ $\pdv{u}{t} = \frac{1}{2} \pdv[2]{u}{x}$
+\end{fact}
+
+%\subsection{Methods to approximate heat equation}\label{subsec:methods-to-approximate-heat-equation}
+
+\begin{setting}
+    assume can accurately approximate $u(t, \pm L)$ for all $t$
+\end{setting}
+
+\begin{itemize}
+    \item grid $\left\{ (ik, jh) \right\} \subset [0, T] \times [-L, L]$ ------ $k = \frac{T}{N}, h = \frac{L}{M}$
+    \item grid points $U^i_j$ ------ idea $U^i_j \approx u(ik, jh)$
+    \item FTCS (forward-in-time, central-in-space) ------ $\frac{U^{i+1}_j - U^i_j}{k} = \frac{U^i_{j-1} - 2U^i_j + U^i_{j+1}}{2h^2}$
+    \begin{itemize}
+        \item explicit
+        \item first-order in time
+    \end{itemize}
+    \item BTCS (backward-in-time, central-in-space) ------ $\frac{U^{i+1}_j - U^i_j}{k} = \frac{U^{i+1}_{j-1} - 2U^{i+1}_j + U^{i+1}_{j+1}}{2h^2}$
+    \begin{itemize}
+        \item require to solve $2M \times 2M$ matrix inversion
+        \item better stability
+        \item first-order in time
+    \end{itemize}
+    \item Crack-Nicolson ------ $\frac{U^{i+1}_j - U^i_j}{k} = \frac{1}{2}\left( \frac{U^i_{j-1} - 2U^i_j + U^i_{j+1}}{2h^2} + \frac{U^{i+1}_{j-1} - 2U^{i+1}_j + U^{i+1}_{j+1}}{2h^2} \right)$
+    \begin{itemize}
+        \item require to solve $2M \times 2M$ matrix inversion
+        \item better stability
+        \item second-order in time
+    \end{itemize}
+    \item Monte Carlo ------
+    \begin{itemize}
+        \item time-step $k = \frac{T}{N}$
+        \item \begin{enumerate}
+                  \item $(B_t^{(N)} : t = ik)$ linear interpolation of random walk with step distribution $N(0, k)$
+                  \item $(X_t : t = ik)$ simple symmetric random walk with step-size $h = \sqrt{k}$
+        \end{enumerate}
+        \item generate sample $(B^{(N),i})$
+        \item \textbf{(Idea)} $\frac{1}{n}\sum F(B^{(N), i}) \approx \Ex(F(B^{(N)})) \rightarrow \Ex(F(B))$
+    \end{itemize}
+\end{itemize}
+
+\begin{itemize}
+    \item fair price for European call $EC(x, K, \sigma, r, T) = \Ex^*(e^{-rT}(S_T - K)^+)$
+    \item $\phi(y) = \frac{1}{\sqrt{2\pi}}e^{-\frac{y^2}{2}}$
+    \item $\Phi(a) = \int^a_\infty \phi(y) dy$
+    \item $\bar\Phi(a) = 1 - \Phi(a)$
+    \item $d^{\pm} = \frac{\log(\frac{x}{K}) + rT}{\sigma\sqrt{T}} \pm \frac{\sigma \sqrt{T}}{2}$
+\end{itemize}
+
+\begin{prop}[Black-Scholes formula]
+    $EC(x, K, \sigma, r, T) = x\Phi(d^+) - e^{-rT}K\Phi(d^-)$
+\end{prop}
+
+\begin{itemize}
+    \item put-call parity ------ $(S_T - K)^+ - (S_T - K)^- = S_T - K$
+    \item fair price for forward contract ------ $\Ex^*(e^{-rT}(S_T - K)) = x - e^{-rT}K$
+    \item fair price for European put $EP(x, K, \sigma, r, T) = e^{-rT}K\bar\Phi(d^-) - x\bar\Phi(d^+)$
+\end{itemize}
+
+\begin{setting}
+    $v(x) = v(x, C, \sigma, r, T) = \Ex^*(e^{-rT}C)$
+\end{setting}
+
+\begin{itemize}
+    \item \textbf{Sensitivities}
+    \item Delta $\Delta = \pdv{v}{x}$
+    \item Gamma $\Gamma = \pdv[2]{v}{x}$
+    \item Vega $\mathcal{V} = \pdv{v}{\sigma}$
+    \item Rho $\rho = \pdv{v}{r}$
+\end{itemize}
+
+\begin{example}
+    $C$ European call, $\Delta = \Phi(d^+), \mathcal{V} = x\phi(d^+)\sqrt{T}$
+\end{example}
+
+\begin{prop}\,
+    \begin{enumerate}
+        \item $\sigma \mapsto EC(x, K, \sigma, r, T)$ increasing bijection
+        \item $\lim_{\sigma \rightarrow 0}EC(x, K, \sigma, r, T) = (x - e^{-rT})^+$
+        \item $\lim_{\sigma \rightarrow \infty}EC(x, K, \sigma, r, T) = x$
+    \end{enumerate}
+\end{prop}
+
+\begin{itemize}
+    \item implied volatility $\sigma_{implied}(K, T)$ ------ $EC(S_0, K, \sigma_{implied}(K, T), r, T) = EC_{market}(K, T)$
+\end{itemize}
+
+\begin{example}
+    up-and-out call $C = h(S_T)\In_{\left\{ \sup_{0 \leq t \leq T} S_t<A \right\}}$, $h(s) = (s - K)^+$, $A \geq \max\left\{ S_0, K \right\}$
+\end{example}

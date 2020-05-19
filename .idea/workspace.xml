@@ -2,11 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="805a30fc-edf0-4349-b4a4-7e21bcb95f75" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/sfm/sec6.tex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/sfm.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/out/sfm.pdf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/sfm.synctex.gz" beforeDir="false" afterPath="$PROJECT_DIR$/out/sfm.synctex.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sfm/sfm.tex" beforeDir="false" afterPath="$PROJECT_DIR$/sfm/sfm.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sfm/sec6.tex" beforeDir="false" afterPath="$PROJECT_DIR$/sfm/sec6.tex" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -146,7 +145,8 @@
       <workItem from="1589445986735" duration="45014000" />
       <workItem from="1589610090964" duration="2137000" />
       <workItem from="1589742943239" duration="8851000" />
-      <workItem from="1589787391422" duration="35542000" />
+      <workItem from="1589787391422" duration="35561000" />
+      <workItem from="1589867871835" duration="12851000" />
     </task>
     <task id="LOCAL-00001" summary="Updated ./preamble.tex and recompile the pdf">
       <created>1589298006446</created>
@@ -225,7 +225,14 @@
       <option name="project" value="LOCAL" />
       <updated>1589838288327</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="SFM Black-Scholes">
+      <created>1589840513168</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1589840513168</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -255,6 +262,7 @@
     <MESSAGE value="SFM sec3 done" />
     <MESSAGE value="SFM sec4 done" />
     <MESSAGE value="SFM sec5 done" />
-    <option name="LAST_COMMIT_MESSAGE" value="SFM sec5 done" />
+    <MESSAGE value="SFM Black-Scholes" />
+    <option name="LAST_COMMIT_MESSAGE" value="SFM Black-Scholes" />
   </component>
 </project>
