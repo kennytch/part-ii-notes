@@ -1,4 +1,4 @@
 # part-ii-notes
-Purely for the purpose of revision.
+Purely for myself
 
 All pdf are in ./out/
