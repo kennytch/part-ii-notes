@@ -28,7 +28,7 @@
 
 \begin{itemize}
     \item time-$T$ contingent claim $C$ ------ $\F_T$-measurable r.v.
-    \item Black-Scholes price $V_0$ ------ $V_0 = e^{rT}\Ex^*(C)$
+    \item Black-Scholes price $V_0$ ------ $V_0 = e^{-rT}\Ex^*(C)$
 \end{itemize}
 
 \begin{fact}
@@ -86,7 +86,7 @@
 \begin{prop}
     $F$ on $(0, \infty)$ continuous, polynomial growth, $t \in [0, T], s \in (0, \infty)$ \\
     $V(t, s)$ time-t value of time-T contingent claim $F(S_T)$, conditional on $S_t = s$\\
-    $V(t, s) = e^{r (T - t)}\Ex^*(F(S_T)|S_t = s) = e^{r(T - t)} \Ex(F(se^{\sigma B_{T-t} + \mu^*(T-t)}))$, then
+    $V(t, s) = e^{-r (T - t)}\Ex^*(F(S_T)|S_t = s) = e^{-r(T - t)} \Ex(F(se^{\sigma B_{T-t} + \mu^*(T-t)}))$, then
     \begin{enumerate}
         \item $V$ continous on $(0, T) \times (0, \infty)$
         \item $V \in C^{1,2}$ on $(0, T) \times (0, \infty)$

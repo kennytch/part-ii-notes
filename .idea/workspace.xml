@@ -5,7 +5,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/sfm.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/out/sfm.pdf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/sfm.synctex.gz" beforeDir="false" afterPath="$PROJECT_DIR$/out/sfm.synctex.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sfm/sec6.tex" beforeDir="false" afterPath="$PROJECT_DIR$/sfm/sec6.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sfm/sec3.tex" beforeDir="false" afterPath="$PROJECT_DIR$/sfm/sec3.tex" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -146,7 +146,7 @@
       <workItem from="1589610090964" duration="2137000" />
       <workItem from="1589742943239" duration="8851000" />
       <workItem from="1589787391422" duration="35561000" />
-      <workItem from="1589867871835" duration="12851000" />
+      <workItem from="1589867871835" duration="16112000" />
     </task>
     <task id="LOCAL-00001" summary="Updated ./preamble.tex and recompile the pdf">
       <created>1589298006446</created>
@@ -232,7 +232,14 @@
       <option name="project" value="LOCAL" />
       <updated>1589840513168</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="SFM done">
+      <created>1589893466644</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1589893466644</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -263,6 +270,7 @@
     <MESSAGE value="SFM sec4 done" />
     <MESSAGE value="SFM sec5 done" />
     <MESSAGE value="SFM Black-Scholes" />
-    <option name="LAST_COMMIT_MESSAGE" value="SFM Black-Scholes" />
+    <MESSAGE value="SFM done" />
+    <option name="LAST_COMMIT_MESSAGE" value="SFM done" />
   </component>
 </project>
