@@ -23,12 +23,15 @@
     model $\left\{ f(\cdot, \theta) \right\}$, $X \sim P$
 \end{setting}
 
+\begin{itemize}
+    \item $l(\theta) = \Ex_{\theta_0}(\log(f(X, \theta)))$
+\end{itemize}
+
 \begin{thm}
     $\Ex|\log(f(X, \theta))| < \infty$, well specified with $f(x, \theta_0)$, then \hl{$l(\theta)$ maximised at $\theta_0$}
 \end{thm}
 
 \begin{itemize}
-    \item $l(\theta) = \Ex_{\theta_0}(\log(f(X, \theta)))$
     \item sample approximation $\bar{l}_n(\theta) = \frac{1}{n} \sum \log(f(x_i, \theta))$
     \item strict identifiability ------ $f(\cdot, \theta) = f(\cdot, \theta') \iff \theta = \theta'$
 \end{itemize}
@@ -88,7 +91,7 @@
 
 \begin{prop}
     $\Phi$ differentiable functional, $\tilde\Phi$ unbiased estimator of $\Phi(\theta)$, then $\forall \theta \in int(\Theta)$,
-    $Var_\theta(\tilde\Phi) \geq \frac{1}{n} \nabla_\theta\Phi(\theta)^\top I^{-1}(\theta) \nabla_\theta \Phi(\theta)$
+    \hl{$Var_\theta(\tilde\Phi) \geq \frac{1}{n} \nabla_\theta\Phi(\theta)^\top I^{-1}(\theta) \nabla_\theta \Phi(\theta)$}
 \end{prop}
 
 \begin{fact}

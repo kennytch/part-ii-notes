@@ -1,15 +1,118 @@
-%! Author = Asus
-%! Date = 5/21/2020
+\section{Asymptotic Theory for MLE}\label{sec:asymptotic-theory-for-mle}
 
-% Preamble
-\documentclass[11pt]{article}
+\begin{itemize}
+    \item convergence almost surely
+    \item convergence in probability
+    \item convergence in distribution
+\end{itemize}
 
-% Packages
-\usepackage{amsmath}
+\begin{prop}
+    convergence \hl{a.s. $\Rightarrow$ in prob $\Rightarrow$ in distribution}
+\end{prop}
 
-% Document
-\begin{document}
+\begin{prop}[Continuous mapping theorem]
+    $g$ continuous,\\ then \hl{$X_n \xrightarrow{a.s./P/d} X \Rightarrow g(X_n) \xrightarrow{a.s./P/d} g(X)$}
+\end{prop}
 
+\begin{prop}[Slutsky's lemma]
+    $X_n \xrightarrow{d} X$, $Y_n \xrightarrow{d} c$ deterministic, then
+    \begin{enumerate}
+        \item $Y_n \xrightarrow{P} c$
+        \item $X_n + Y_n \xrightarrow{d} X + c$
+        \item $X_{n}Y_n \xrightarrow{d} cX$
+        \item $\frac{X_n}{Y_n} \xrightarrow{d} \frac{X}{c}$ if $c \neq 0$
+    \end{enumerate}
+    Random matrices $(A_n)_{ij} \xrightarrow{P} A_{ij}$ deterministic, then
+    \begin{enumerate}
+        \item $A_{n}X_n \xrightarrow{d} AX$
+    \end{enumerate}
+\end{prop}
 
+\begin{itemize}
+    \item bounded in probability $O_P(1)$ ------ $\forall \epsilon > 0, \exists M(\epsilon), \sup_n\Pb(\norm{X_n} > M(\epsilon)) < \epsilon$
+\end{itemize}
 
-\end{document}
+\begin{prop}
+    $X_n \xrightarrow{d} X$, then $(X_n)$ bounded in probability
+\end{prop}
+
+\begin{prop}[Weak law of large numbers]
+    $X_i$ i.i.d.\ , $Var(X) < \infty$ (unnecessary), then \hl{$\bar{X}_n = \frac{1}{n} \sum X_i \rightarrowp \Ex(X)$}
+\end{prop}
+
+\begin{thm}[Strong law of large numbers]
+    $X_i$ i.i.d.\ ,$\Ex|X| < \infty$, then \hl{$\bar X_n \rightarrowas \Ex(X)$}
+\end{thm}
+
+\begin{thm}[Central limit theorem(1-d)]
+    $X_i$ i.i.d.\ , $Var(X) = \sigma^2 < \infty$, then\\ \hl{$\sqrt{n}(\bar X_n - \Ex(X)) \rightarrowd \mathcal{N}(0, \sigma^2)$}
+\end{thm}
+
+\begin{itemize}
+    \item $\mathcal{N}(\mu, \Sigma)$ ------ p.d.f.\ $\frac{1}{(2\pi)^{k/2} |\det(\Sigma)|^{1/2}} \exp\left( -\frac{1}{2}
+    (x - \mu)^\top \Sigma^{-1}(x - \mu)\right)$
+\end{itemize}
+
+\begin{fact}
+    $X \sim \mathcal{N}(\mu, \Sigma)$, then $\alpha^\top X \sim \mathcal{N}(\alpha^\top \mu, \alpha^\top\Sigma\alpha)$
+\end{fact}
+
+\begin{prop}
+    $AX + b \sim \mathcal{N}(A\mu + b, A\Sigma A^\top)$
+\end{prop}
+
+\begin{prop}
+    $\Sigma$ diagonal, $X_{(j)}$ independent
+\end{prop}
+
+\begin{thm}[Central limit theorem(n-d)]
+    $X_i$ i.i.d.\ , $Cov(X) = \Sigma$ positive definite, then\\ \hl{$\sqrt{n}\left( \bar X_n  - \Ex(X)\right) \rightarrowd \mathcal{N}(0, \Sigma)$}
+\end{thm}
+
+\begin{itemize}
+    \item asymptotic efficiency ------ $nVar_{\theta_0}(\tilde \theta_0) \rightarrow I^{-1}(\theta_0)$
+\end{itemize}
+
+\begin{fact}
+    Under suitable assumptions, $\theta_{MLE} \approx \mathcal{N}(\theta, I^{-1}(\theta_0)/n)$
+\end{fact}
+
+\begin{example}[Confidence interval]\,
+    \begin{itemize}
+        \item confidence region $\mathcal{C}_n = \left\{ |\mu - \bar{X}| \leq \frac{\sigma z_\alpha}{\sqrt{n}} \right\}$
+        \item asymptotic level $1 - \alpha$ confidence set
+    \end{itemize}
+\end{example}
+
+\begin{setting}
+    $X_i$ i.i.d.\ , arising from $\left\{ P_\theta \right\}$
+\end{setting}
+
+\begin{itemize}
+    \item consistency ------ $\tilde \theta_n \xrightarrow{P_\theta} \theta_0$
+\end{itemize}
+
+\begin{assumption}[Usual regularity assumptions]
+    $\left\{ f(\cdot, \theta) \right\}$ statistical model of p.d.f.\  or p.m.f.\ st
+    \begin{enumerate}
+        \item $f(x, \theta) > 0$
+        \item $\int_{Xf(x, \theta)}dx = 1$
+        \item $f(x, \cdot)$ continuous
+        \item $\Theta$ compact
+        \item $f(\cdot, \theta) = f(\cdot, \theta') \Rightarrow \theta = \theta'$
+        \item $\Ex_{\theta}\sup_{\theta}|\log f(X, \theta)| < \infty$
+    \end{enumerate}
+\end{assumption}
+
+\begin{thm}[Consistency of the MLE]
+    Usual regularity assumptions, $X_i$ i.i.d.\ , then
+    \begin{enumerate}
+        \item MLE exists
+        \item MLE consistent
+    \end{enumerate}
+\end{thm}
+
+\begin{thm}[Uniform law of large numbers]
+    Usual regularity assumptions,\\ $\sup_\Theta|\bar{l}_n(\theta) - l(\theta)| \rightarrowp 0$
+\end{thm}
+
