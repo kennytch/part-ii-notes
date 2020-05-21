@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="805a30fc-edf0-4349-b4a4-7e21bcb95f75" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/out/sfm.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/out/sfm.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/sfm.synctex.gz" beforeDir="false" afterPath="$PROJECT_DIR$/out/sfm.synctex.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sfm/sec3.tex" beforeDir="false" afterPath="$PROJECT_DIR$/sfm/sec3.tex" afterDir="false" />
-    </list>
+    <list default="true" id="805a30fc-edf0-4349-b4a4-7e21bcb95f75" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,7 +37,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="LaTeX.sfm">
+  <component name="RunManager" selected="LaTeX.principle_of_stat">
     <configuration name="graph_theory" type="LATEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory" temporary="true">
       <texify>
         <compiler>PDFLATEX</compiler>
@@ -50,6 +46,24 @@
         <viewer-command />
         <compiler-arguments />
         <main-file>$PROJECT_DIR$/graph_theory/graph_theory.tex</main-file>
+        <aux-dir>true</aux-dir>
+        <out-dir>true</out-dir>
+        <compile-twice>false</compile-twice>
+        <output-format>PDF</output-format>
+        <has-been-run>true</has-been-run>
+        <bib-run-config />
+        <makeindex-run-config />
+      </texify>
+      <method v="2" />
+    </configuration>
+    <configuration name="principle_of_stat" type="LATEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory" temporary="true">
+      <texify>
+        <compiler>PDFLATEX</compiler>
+        <compiler-path />
+        <sumatra-path />
+        <viewer-command />
+        <compiler-arguments />
+        <main-file>$PROJECT_DIR$/prin_of_stat/principle_of_stat.tex</main-file>
         <aux-dir>true</aux-dir>
         <out-dir>true</out-dir>
         <compile-twice>false</compile-twice>
@@ -116,6 +130,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="LaTeX.principle_of_stat" />
         <item itemvalue="LaTeX.sfm" />
         <item itemvalue="LaTeX.prob_measure" />
         <item itemvalue="LaTeX.graph_theory" />
@@ -147,6 +162,7 @@
       <workItem from="1589787391422" duration="35561000" />
       <workItem from="1589867871835" duration="16112000" />
       <workItem from="1589980172226" duration="737000" />
+      <workItem from="1590074157495" duration="350000" />
     </task>
     <task id="LOCAL-00001" summary="Updated ./preamble.tex and recompile the pdf">
       <created>1589298006446</created>
