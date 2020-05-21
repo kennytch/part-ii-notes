@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="805a30fc-edf0-4349-b4a4-7e21bcb95f75" name="Default Changelist" comment="" />
+    <list default="true" id="805a30fc-edf0-4349-b4a4-7e21bcb95f75" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/prin_of_stat/sec1.tex" beforeDir="false" afterPath="$PROJECT_DIR$/prin_of_stat/sec1.tex" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -162,7 +164,7 @@
       <workItem from="1589787391422" duration="35561000" />
       <workItem from="1589867871835" duration="16112000" />
       <workItem from="1589980172226" duration="737000" />
-      <workItem from="1590074157495" duration="350000" />
+      <workItem from="1590074157495" duration="845000" />
     </task>
     <task id="LOCAL-00001" summary="Updated ./preamble.tex and recompile the pdf">
       <created>1589298006446</created>
@@ -269,7 +271,14 @@
       <option name="project" value="LOCAL" />
       <updated>1589980287002</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="PoS">
+      <created>1590074607138</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1590074607138</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -302,6 +311,7 @@
     <MESSAGE value="SFM Black-Scholes" />
     <MESSAGE value="SFM done" />
     <MESSAGE value="SFM sec6 typo" />
-    <option name="LAST_COMMIT_MESSAGE" value="SFM sec6 typo" />
+    <MESSAGE value="PoS" />
+    <option name="LAST_COMMIT_MESSAGE" value="PoS" />
   </component>
 </project>
