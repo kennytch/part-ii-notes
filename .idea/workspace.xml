@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="805a30fc-edf0-4349-b4a4-7e21bcb95f75" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/prin_of_stat/sec1.tex" beforeDir="false" afterPath="$PROJECT_DIR$/prin_of_stat/sec1.tex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/principle_of_stat.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/principle_of_stat.synctex.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/preamble.tex" beforeDir="false" afterPath="$PROJECT_DIR$/preamble.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prin_of_stat/sec2.tex" beforeDir="false" afterPath="$PROJECT_DIR$/prin_of_stat/sec2.tex" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -164,7 +168,7 @@
       <workItem from="1589787391422" duration="35561000" />
       <workItem from="1589867871835" duration="16112000" />
       <workItem from="1589980172226" duration="737000" />
-      <workItem from="1590074157495" duration="845000" />
+      <workItem from="1590074157495" duration="5374000" />
     </task>
     <task id="LOCAL-00001" summary="Updated ./preamble.tex and recompile the pdf">
       <created>1589298006446</created>
@@ -278,7 +282,14 @@
       <option name="project" value="LOCAL" />
       <updated>1590074607138</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="PoS sec1">
+      <created>1590075044808</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1590075044808</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -312,6 +323,7 @@
     <MESSAGE value="SFM done" />
     <MESSAGE value="SFM sec6 typo" />
     <MESSAGE value="PoS" />
-    <option name="LAST_COMMIT_MESSAGE" value="PoS" />
+    <MESSAGE value="PoS sec1" />
+    <option name="LAST_COMMIT_MESSAGE" value="PoS sec1" />
   </component>
 </project>
