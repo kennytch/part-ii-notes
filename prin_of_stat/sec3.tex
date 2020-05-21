@@ -1,2 +1,38 @@
 \section{Bayesian Inference}\label{sec:bayesian-inference}
 
+\begin{setting}
+    $\mathcal{X}$ sample space, probability measure $Q(x, \theta) = f(x, \theta)\pi(\theta)$
+\end{setting}
+
+\begin{itemize}
+    \item prior distribution $\pi$
+    \item posterior distribution $\Pi(\theta|X)$
+    \item conjugate prior ------ $\pi(\theta)$ and $\Pi(\theta|X)$ same family of distributions
+\end{itemize}
+
+\begin{example}\,
+\begin{enumerate}
+    \item normal prior, normal sampling, normal posterior
+    \item Beta prior, binomial sampling, Bata posterior
+    \item Gamma prior, Poisson sampling, Gamma posterior
+\end{enumerate}
+\end{example}
+
+\begin{itemize}
+    \item improper prior ------ infinite integral over $\Theta$
+    \item Jeffreys prior ------ $\pi(\theta)$ proportional to $\sqrt{\det I(\theta)}$
+\end{itemize}
+
+\begin{goal}\,
+    \begin{enumerate}
+        \item Estimation
+        \item Uncertainty Quantification
+        \item Hypothesis Testing
+    \end{enumerate}
+\end{goal}
+
+\begin{itemize}
+    \item posterior mean $\bar \theta$ ------ $\bar \theta(\ddd{X}) = \Ex_\Pi(\theta |\ddd{X})$
+    \item credible set $\mathcal{C}_n$ ------ $\Pi(\mathcal{C}_n|\ddd{X}) = 1 - \alpha$
+    \item Bayes factor ------ $\frac{\Pb(\ddd{X}|\Theta_0)}{\Pb(\ddd{X}|\theta_1)} = \frac{\Pi(\Theta_0|\ddd{X})}{\Pi(\Theta_1|\ddd{X})}$
+\end{itemize}
