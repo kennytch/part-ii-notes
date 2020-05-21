@@ -82,3 +82,20 @@
     then $\forall \theta \in int(\Theta)$, \hl{$Var_\theta(\tilde{\theta}) = \Ex[(\tilde\theta - \theta)^2] \geq \frac{1}{nI(\theta)}$}
 \end{thm}
 
+\begin{cor}
+    \hl{$Var_{\theta}(\tilde\theta) \geq \frac{(\dv{\theta}\Ex_{\theta}(\tilde\theta))^2}{nI(\theta)}$}
+\end{cor}
+
+\begin{prop}
+    $\Phi$ differentiable functional, $\tilde\Phi$ unbiased estimator of $\Phi(\theta)$, then $\forall \theta \in int(\Theta)$,
+    $Var_\theta(\tilde\Phi) \geq \frac{1}{n} \nabla_\theta\Phi(\theta)^\top I^{-1}(\theta) \nabla_\theta \Phi(\theta)$
+\end{prop}
+
+\begin{fact}
+    $Var_\theta(\alpha^\top \tilde\theta) \geq \frac{1}{n} \alpha^\top I^{-1}(\theta) \alpha$
+\end{fact}
+
+\begin{fact}
+    $Cov_{\theta}(\tilde\theta) \succeq \frac{1}{n}I^{-1}(\theta)$ (positive semi-definite)
+\end{fact}
+
