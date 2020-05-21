@@ -1,27 +1,101 @@
-\section{Introduction}\label{sec:introduction}
+\section{Likelihood Principle}\label{sec:likelihood-principle}
+
+\begin{setting}
+    $\left\{ f(\cdot, \theta)  : \theta \in \Theta \right\}$ statistical model, $X_i$ i.i.d.\  copy of $X$
+\end{setting}
 
 \begin{itemize}
-    \item distribution
-    \item p.m.f.
-    \item p.d.f.
-    \item sample
-    \item sample size
-    \item statistical model $\left\{ f(\theta, \cdot) \right\}$
-    \item law
-    \item parameter space
-    \item correctly specified
+    \item likelihood function $L_n(\theta) = \prod f(x_i, \theta)$
+    \item log-likelihood function $l_n(\theta) = \log L_n(\theta)$
+    \item normalized log-likelihood function $\bar{l}_n(\theta) = \frac{1}{n}l_n(\theta)$
 \end{itemize}
 
-\begin{fact}Goal
-    \begin{enumerate}
-        \item estimation
-        \item testing hypothesis
-        \item inference
-    \end{enumerate}
+\begin{itemize}
+    \item maximum likelihood estimator (MLE) $\hat{\theta} = \hat{\theta}_{MLE}$
+    \item score function $S_n(\theta) = \nabla_\theta l_n(\theta)$
+\end{itemize}
+
+\begin{fact}
+    $S_{n}(\hat{\theta}) = 0$
+\end{fact}
+
+\begin{setting}
+    model $\left\{ f(\cdot, \theta) \right\}$, $X \sim P$
+\end{setting}
+
+\begin{thm}
+    $\Ex|\log(f(X, \theta))| < \infty$, well specified with $f(x, \theta_0)$, then \hl{$l(\theta)$ maximised at $\theta_0$}
+\end{thm}
+
+\begin{itemize}
+    \item $l(\theta) = \Ex_{\theta_0}(\log(f(X, \theta)))$
+    \item sample approximation $\bar{l}_n(\theta) = \frac{1}{n} \sum \log(f(x_i, \theta))$
+    \item strict identifiability ------ $f(\cdot, \theta) = f(\cdot, \theta') \iff \theta = \theta'$
+\end{itemize}
+
+\begin{fact}
+    With strict identifiability, maximizer unique hence must be the true value $\theta_0$
 \end{fact}
 
 \begin{itemize}
-    \item estimator
-    \item test
-    \item confidence
+    \item Kullback-Leibler divergence $KL(P_{\theta_0}, P_\theta) = l(\theta_0) - l(\theta)$
 \end{itemize}
+
+\begin{setting}
+    regular ------ integration and differentiation can be interchanged
+\end{setting}
+
+\begin{thm}
+    regular, then $\forall \theta \in int(\Theta)$, \hl{$\Ex[\nabla_\theta \log(f(X, \theta))] = 0$}
+\end{thm}
+
+\begin{fact}
+    $\Ex_{\theta_0}[\nabla_\theta \log(f(X, \theta))] = 0$
+\end{fact}
+
+\begin{itemize}
+    \item Fisher information matrix $I(\theta) = \Ex_{\theta}[\nabla_\theta \log f(X, \theta)\nabla_\theta \log f(X, \theta)^\top]$
+\end{itemize}
+
+\begin{fact}
+    1-d case, $I(\theta) = \Ex\left[ (\dv{\theta} \log f(X, \theta))^2 \right] = Var_\theta \left[ \dv{\theta} \log f(X, \theta ) \right]$
+\end{fact}
+
+\begin{thm}
+    regularity assumptions, $\forall \theta \in int(\Theta)$, \hl{$I(\theta) = -\Ex_\theta[\nabla^2_\theta \log f(X, \theta)]$}
+\end{thm}
+
+\begin{fact}
+    1-d case, relation between variance of score and curvature of $l$
+\end{fact}
+
+\begin{itemize}
+    \item $I_n(\theta) = \Ex[\nabla_\theta \log f(\ddd{X}, \theta) \nabla \log f(\ddd{X}, \theta)^\top]$
+\end{itemize}
+
+\begin{prop}[Tensorize]
+    $X_i$ i.i.d\ , \hl{$I_n(\theta) = nI(\theta)$}
+\end{prop}
+
+\begin{thm}[Cramer-Rao lower bound (1-d)]
+    model $\left\{ f(\cdot, \theta) \right\}$, regular, $\Theta \subset \R$, unbiased estimator $\tilde\theta(\ddd{X})$,
+    then $\forall \theta \in int(\Theta)$, \hl{$Var_\theta(\tilde{\theta}) = \Ex[(\tilde\theta - \theta)^2] \geq \frac{1}{nI(\theta)}$}
+\end{thm}
+
+\begin{cor}
+    \hl{$Var_{\theta}(\tilde\theta) \geq \frac{(\dv{\theta}\Ex_{\theta}(\tilde\theta))^2}{nI(\theta)}$}
+\end{cor}
+
+\begin{prop}
+    $\Phi$ differentiable functional, $\tilde\Phi$ unbiased estimator of $\Phi(\theta)$, then $\forall \theta \in int(\Theta)$,
+    $Var_\theta(\tilde\Phi) \geq \frac{1}{n} \nabla_\theta\Phi(\theta)^\top I^{-1}(\theta) \nabla_\theta \Phi(\theta)$
+\end{prop}
+
+\begin{fact}
+    $Var_\theta(\alpha^\top \tilde\theta) \geq \frac{1}{n} \alpha^\top I^{-1}(\theta) \alpha$
+\end{fact}
+
+\begin{fact}
+    $Cov_{\theta}(\tilde\theta) \succeq \frac{1}{n}I^{-1}(\theta)$ (positive semi-definite)
+\end{fact}
+
