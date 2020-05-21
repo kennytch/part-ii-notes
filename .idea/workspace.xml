@@ -5,10 +5,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/principle_of_stat.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/out/principle_of_stat.pdf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/principle_of_stat.synctex.gz" beforeDir="false" afterPath="$PROJECT_DIR$/out/principle_of_stat.synctex.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/preamble.tex" beforeDir="false" afterPath="$PROJECT_DIR$/preamble.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prin_of_stat/principle_of_stat.tex" beforeDir="false" afterPath="$PROJECT_DIR$/prin_of_stat/principle_of_stat.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prin_of_stat/sec0.tex" beforeDir="false" afterPath="$PROJECT_DIR$/prin_of_stat/sec0.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prin_of_stat/sec1.tex" beforeDir="false" afterPath="$PROJECT_DIR$/prin_of_stat/sec1.tex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/prin_of_stat/sec2.tex" beforeDir="false" afterPath="$PROJECT_DIR$/prin_of_stat/sec2.tex" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -171,7 +167,7 @@
       <workItem from="1589787391422" duration="35561000" />
       <workItem from="1589867871835" duration="16112000" />
       <workItem from="1589980172226" duration="737000" />
-      <workItem from="1590074157495" duration="10977000" />
+      <workItem from="1590074157495" duration="13737000" />
     </task>
     <task id="LOCAL-00001" summary="Updated ./preamble.tex and recompile the pdf">
       <created>1589298006446</created>
@@ -313,7 +309,14 @@
       <option name="project" value="LOCAL" />
       <updated>1590080615454</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="PoS sec2">
+      <created>1590089842460</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1590089842460</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -348,9 +351,9 @@
     <MESSAGE value="SFM sec6 typo" />
     <MESSAGE value="PoS" />
     <MESSAGE value="PoS sec1" />
-    <MESSAGE value="PoS sec2" />
     <MESSAGE value="PoS sec2 done" />
     <MESSAGE value="PoS refactor" />
-    <option name="LAST_COMMIT_MESSAGE" value="PoS refactor" />
+    <MESSAGE value="PoS sec2" />
+    <option name="LAST_COMMIT_MESSAGE" value="PoS sec2" />
   </component>
 </project>

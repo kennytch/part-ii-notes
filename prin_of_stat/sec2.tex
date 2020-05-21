@@ -112,7 +112,58 @@
     \end{enumerate}
 \end{thm}
 
+\begin{fact}
+    proof can be simplified when $l_n$ differentiable, in this case $\Theta$ compact not needed
+\end{fact}
+
 \begin{thm}[Uniform law of large numbers]
-    Usual regularity assumptions,\\ $\sup_\Theta|\bar{l}_n(\theta) - l(\theta)| \rightarrowp 0$
+    $\Theta$ compact, $q(x, \cdot)$ continuous, $\Ex\sup_\Theta|q(X, \theta)| < \infty$, then
+    $\sup_\Theta |\frac{1}{n} \sum q(X_i, \theta) - \Ex(q(X, \theta))| \rightarrowas 0 $
 \end{thm}
 
+\begin{assumption}
+    In addition to usual regularity assumption,
+    \begin{enumerate}
+        \item true $\theta_0 \in int(\Theta)$
+        \item $\exists U$ open nbhd of $\theta_0$ st $f(x, \cdot) \in C^2$
+        \item $I(\theta_0)$ non-singular, $\Ex_{\theta_0}\norm{\nabla_\theta \log f(X, \theta_0)} < \infty$
+        \item $\exists K \subset U$ compact, non-empty interior containing $\theta_0$ st
+        \begin{align*}
+            \Ex_{\theta_0}\sup_K \norm{\nabla^2_\theta \log f(X, \theta)} < \infty \\
+            \int_X \sup_K \norm{\nabla_\theta \log f(X, \theta)}dx < \infty\\
+            \int_X \sup_K \norm{\nabla^2_\theta \log f(X, \theta)} dx < \infty
+        \end{align*}
+    \end{enumerate}
+\end{assumption}
+
+\begin{thm}
+    Further usual assumption, $\hat{\theta_n}$ MLE of i.i.d.\ $X_i \sim P_{\theta_0}$, then\\
+    $\sqrt{n}(\hat{\theta}_n - \theta_0) \rightarrowd \mathcal{N}(0, I(\theta_0)^{-1})$
+\end{thm}
+
+\begin{itemize}
+    \item asymptotic efficiency ------ $n Var_{\theta_0}(\tilde \theta_n) \rightarrow I(\theta_0)^{-1}$
+    \item Hodge estimator ------ $\tilde \theta_n = \begin{cases}
+                                                        \hat \theta_n & \text{if } |\hat \theta_n| > n^{-1/4}\\
+                                                        0 & \text{otherwise}
+    \end{cases}$
+    \item profile likelihood $L^{(p)}(\theta_1) = \sup_{\Theta_2} L((\theta_1, \theta_2))$
+    \item plug-in MLE $\Phi(\hat \theta_{MLE})$
+\end{itemize}
+
+\begin{fact}
+    under new parametrization $\left\{ f(\cdot, \phi) : \phi = \Phi(\theta) \right\}$, $\hat \phi_{MLE} = \Phi (\hat \theta_{MLE})$
+\end{fact}
+
+\begin{thm}[Delta method]
+    $\Phi \in C^1$ at $\theta_0$, $\nabla_\theta \Phi(\theta_0) \neq 0$, let $(\hat \theta_n)$ st $\sqrt{n}(\hat \theta_n - \theta_0) \rightarrowd Z$, then\\
+    $\sqrt{n} (\Phi(\hat \theta_n) - \Phi(\theta_0)) \rightarrowd \nabla_\theta \Phi(\theta_0)^\top Z$
+\end{thm}
+
+\begin{fact}
+    if $\hat \theta_n$ MLE with asymptotic normality, then $\sqrt{n}(\Phi(\hat \theta_n) - \Phi(\theta_0)) \rightarrowd \mathcal{N}(0, \nabla_\theta \Phi(\theta_0)^\top I^{-1}(\theta_0) \nabla_\theta \Phi(\theta_0))$
+\end{fact}
+
+\begin{fact}
+    plug in MLE asymptotically efficient
+\end{fact}
