@@ -167,7 +167,7 @@
       <workItem from="1589787391422" duration="35561000" />
       <workItem from="1589867871835" duration="16112000" />
       <workItem from="1589980172226" duration="737000" />
-      <workItem from="1590074157495" duration="13737000" />
+      <workItem from="1590074157495" duration="16668000" />
     </task>
     <task id="LOCAL-00001" summary="Updated ./preamble.tex and recompile the pdf">
       <created>1589298006446</created>
@@ -316,7 +316,14 @@
       <option name="project" value="LOCAL" />
       <updated>1590089842460</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="PoS finish lecture 8">
+      <created>1590092611888</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1590092611888</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -354,6 +361,7 @@
     <MESSAGE value="PoS sec2 done" />
     <MESSAGE value="PoS refactor" />
     <MESSAGE value="PoS sec2" />
-    <option name="LAST_COMMIT_MESSAGE" value="PoS sec2" />
+    <MESSAGE value="PoS finish lecture 8" />
+    <option name="LAST_COMMIT_MESSAGE" value="PoS finish lecture 8" />
   </component>
 </project>

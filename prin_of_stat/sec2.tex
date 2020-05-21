@@ -167,3 +167,50 @@
 \begin{fact}
     plug in MLE asymptotically efficient
 \end{fact}
+
+\begin{itemize}
+    \item observed Fisher information $i_n(\theta) = \frac{1}{n}\sum \nabla_\theta \log f(X_i, \theta) \nabla_\theta \log f(X_i, \theta)^\top$
+    \item $\hat i_n = i_n(\hat \theta_{MLE})$
+\end{itemize}
+
+\begin{prop}
+    Under further assumption, \hl{$\hat i_n \xrightarrow{P_{\theta_0}} I(\theta_0)$}
+\end{prop}
+
+\begin{itemize}
+    \item $j_n(\theta) = -\frac{1}{n} \sum \nabla^2_\theta \log f(X_i, \theta)$
+    \item $\hat j_n = j_n(\hat \theta_{MLE})$
+    \item Wald statistic $W_n(\theta) = n(\hat \theta_{MLE} - \theta)^\top \hat i_n (\hat \theta_{MLE} - \theta)$
+    \item $\xi_\alpha$ ------ $\Pb(\chi_p^2 \leq \xi_\alpha) = 1 - \alpha$
+\end{itemize}
+
+\begin{prop}[Confidence ellipsoids]
+    Under further assumption, define $\mathcal{C}_n = \left\{ \theta : W_n(\theta) \leq \xi_\alpha \right\}$, then $\mathcal{C}_n$ $\alpha$-level asymptotic confidence region
+\end{prop}
+
+\begin{setting}
+    hypothesis testing: \begin{cases}
+                            H_0:\theta \in \Theta_0 \\
+                            H_1:\theta \in \Theta \backslash \Theta_0
+    \end{cases}
+\end{setting}
+
+\begin{itemize}
+    \item decision rule $\psi_n$
+    \item type-one error (false positive) ------ $\Pb_\theta(reject\,\, H_0) = \Ex_\theta(\psi_n)$ for $\theta \in \Theta_0$
+    \item type-two error (false negative) ------ $\Pb_\theta(accept \,\, H_0) = \Ex_\theta(1 - \psi_n)$ for $\theta \in \Theta_1$
+    \item likelihood ratio test $\Lambda_n(\Theta, \Theta_0) = 2\log \frac{\sup_\Theta \prod f(X_i, \theta)}{\sup_{\Theta_0} \prod f(X_i, \theta)}= 2\log \frac{\prod f(X_i, \hat \theta_{MLE})}{\prod f(X_i, \hat \theta_{MLE, 0})}$
+\end{itemize}
+
+\begin{thm}[Wilks theorem]
+    Under further assumption, hypothesis test with $\Theta_0 = \left\{ \theta_0 \right\}$, $\theta_0 \in int(\Theta)$, then
+    $\Lambda_n(\Theta, \Theta_0) \rightarrowd \chi^2_p$
+\end{thm}
+
+\begin{fact}
+    test $\psi_n = \In \left\{ \Lambda_n(\Theta, \Theta_0) \geq \xi_\alpha \right\}$ controls type-one error at symptotic level $1 - \alpha$
+\end{fact}
+
+\begin{fact}
+    $\Theta_0$ dimension $p_0 < p$, then $\Lambda_n(\Theta, \Theta_0) \rightarrowd \chi^2_{p - p_0}$
+\end{fact}
