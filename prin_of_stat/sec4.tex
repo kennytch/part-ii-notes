@@ -1,0 +1,183 @@
+\section{Decision Theory}\label{sec:decision-theory}
+
+\begin{setting}
+    sample space $\mathcal{X}$
+\end{setting}
+
+\begin{itemize}
+    \item decision problems
+    \item action space $\A$
+    \item decision rules $\delta$ ------ $\delta:\mathcal{X} \rightarrow \A$
+    \item loss function $L$ ------ $L:\A \times \Theta \rightarrow [0, \infty)$
+\end{itemize}
+
+\begin{example}\,
+    \begin{itemize}
+        \item hypothesis testing ------ $\A = \left\{ 0, 1 \right\}$, $\delta(X)$ test
+        \item estimation problem ------ $\A = \Theta$, $\delta(X) = \hat \theta(X)$
+        \item inference problem ------ $\A = \B(\Theta)$, $\delta(X) = \mathcal{C}(X)$
+    \end{itemize}
+\end{example}
+
+
+\begin{itemize}
+    \item misclassification error ------ $L(a, \theta) = \In_{\left\{ a \neq \theta \right\}}$
+    \item absolute error ------ $L(a, \theta) = |a - \theta|$
+    \item squared error ------ $L(a, \theta) = |a - \theta|^2$
+    \item average loss $R(\delta, \theta) = \Ex_\theta(L(\delta(X), \theta)) = \int_\mathcal{X} L(\delta(x), \theta)f(x, \theta)dx$
+    \item quadratic risk / mean squared error (MSE) $\Ex_\theta[(\delta(X) - \theta)^2]$
+    \item $\pi$-Bayes risk $R_\pi(\delta) = \Ex_\pi[R(\delta, \theta)] = \int_\Theta R(\delta, \theta)\pi(\theta) d\theta$ ------ prior $\pi$
+    \item $\pi$-Bayes decision rule $\delta_{\pi}$ ------ minimizer of $R_\pi(\delta)$
+    \item posterior risk $R_\Pi$ ------ $R_\Pi(\delta) = \Ex_\Pi[L(\delta(x), \theta)|x]$, expectation over $\theta$
+    \item $\delta_{\Pi}$ minimise $R_\Pi$ ------ $\Ex_\Pi[L(\delta_\Pi(x), \theta)] \leq \Ex_{\Pi}[L(\delta(x), \theta)]$ for all $x$
+\end{itemize}
+
+\begin{prop}
+    $\delta$ minimizes $R_\Pi$ $\Rightarrow$ minimizes $R_\pi$
+\end{prop}
+
+\begin{fact}
+    For quadratic risk, $\delta_\Pi(X) = \Ex_{\Pi}[\theta|X]$
+\end{fact}
+
+\begin{itemize}
+    \item unbiased decision rule ------ $\Ex_\theta[\delta(X)] = \theta$
+    \item $Q(x, \theta) = f(x, \theta)\pi(\theta)$
+\end{itemize}
+
+\begin{prop}
+    $\delta$ unbiased, $\pi$-Bayes rule under quadratic risk, then $\Ex_Q[(\delta(X) - \theta)^2] = 0$
+\end{prop}
+
+\begin{fact}
+    unbiased estimator typically disjoint from Bayes estimators
+\end{fact}
+
+\begin{itemize}
+    \item prior $\lambda$ least favorable ------ $R_\lambda(\delta_\lambda) \geq R_{\lambda'}(\delta_{\lambda'})$ for all prior $\lambda'$
+    \item maximal risk $R_m(\delta, \Theta) = \sup_\Theta R(\delta, \theta)$
+    \item minimax risk $\inf_\delta R_m(\delta, \Theta)$
+    \item minimax ------ $\delta$ attain minimax risk
+\end{itemize}
+
+\begin{prop}
+    any prior $\lambda$, $\delta$ then $R_\lambda(\delta) \leq R_m(\delta, \Theta)$
+\end{prop}
+
+\begin{prop}
+    $\lambda$ prior, $\delta_\lambda$ Bayes rule, $R_\lambda(\delta_\lambda) = R_m(\delta_\lambda, \Theta)$, then
+    \begin{enumerate}
+        \item $\delta_\lambda$ minimax
+        \item if $\delta_\lambda$ unique Bayes rule, then unique minimax
+        \item prior $\lambda$ least favorable
+    \end{enumerate}
+\end{prop}
+
+\begin{cor}
+    Bayes rule $\delta_\lambda$ constant risk in $\theta$, then minimax
+\end{cor}
+
+\begin{itemize}
+    \item $\delta$ inadmissible ------ $\exists \delta'$ st $R(\delta', \theta) \leq R(\delta, \theta)$ for all $\theta$, strict inequality for some $\theta$
+\end{itemize}
+
+\begin{prop}\,
+    \begin{enumerate}
+        \item unique Bayes rule admissible
+        \item $\delta$ admissible, constant risk, then minimax
+    \end{enumerate}
+\end{prop}
+
+\begin{prop}
+    $X_i \sim \mathcal{N}(\theta, \sigma^2)$ i.i.d.\ ,known $\sigma^2$, then $\theta_{MLE} = \bar{X}_n$ admissible, minimax in quadratic risk
+\end{prop}
+
+\begin{fact}
+    all minimax rules are limits of Bayes rule (dimension $p = 1,2$, false for $p \geq 3$)
+\end{fact}
+
+\begin{itemize}
+    \item James-Stein estimator $\delta^{JS}(X) = \left( 1 - \frac{p-2}{\norm{X}^2} \right)X$
+\end{itemize}
+
+\begin{setting}
+    $X \sim \mathcal{N}(\theta, I_p)$
+\end{setting}
+
+\begin{fact}
+    $R(\hat\theta_{MLE}, \theta) = p$
+\end{fact}
+
+\begin{lemma}[Stein's lemma]
+    $X \sim \mathcal{N}(\theta, 1)$, $g$ bounded, differentiable, $\Ex |g'(X)| < \infty$, then\\
+    $\Ex[(X - \theta)g(X)] = \Ex[g'(X)]$
+\end{lemma}
+
+\begin{prop}
+    $X \sim \mathcal{N}(\theta, I_p)$, $p \geq 3$, then $R(\delta^{JS}, \theta) < p$ for all $\theta$
+\end{prop}
+
+\begin{fact}
+    $\delta^{JS}$, $\hat\theta_{MLE}$ same maximal risk
+\end{fact}
+
+\begin{fact}
+    $\delta^{JS}$ dominated by $\delta^{JS+}(X) = \left( 1  - \frac{p-2}{\norm{X}^2} \right)^{+X}$
+\end{fact}
+
+\begin{fact}
+    admissible must be smooth
+\end{fact}
+
+\begin{itemize}
+    \item $\begin{cases}
+              X|Y = 0 \sim f_0(x)   \\
+                 X|Y = 1 \sim f_1(x)
+    \end{cases}$
+    \item classification rule $\delta_\mathcal{R}(X) = \begin{cases}
+                                                           1 & \text{if }x \in \mathcal{R}\\
+                                                           0 & \text{if }x \in \mathcal{R}^c
+    \end{cases}$
+    \item $\Pb_1(X \in \mathcal{R}^c) = \Pb(X \in \mathcal{R}^c | Y = 1)$
+    \item $\Pb_0(X \in \mathcal{R}) = \Pb(X \in \mathcal{R} | Y = 0)$
+    \item risk function $R_\pi(\delta_\mathcal{R}) = \pi_0\Pb_0(X \in \mathcal{R}) + \pi_1\Pb_1(X \in \mathcal{R}^c)$
+    \item marginal distribution $P_X$
+    \item $\eta(x) = \Pi(1|X = x)$
+    \item $Q(x, y) = f(x, y)\pi(x)$
+\end{itemize}
+
+\begin{prop}
+    $R_\pi(\delta) = \Pb_Q(\delta(X) \neq Y) = \Ex_Q[\In \left\{ \delta(X) \neq Y \right\}] = \int_\mathcal{X} \Pi(\delta^c(x)|x)dP_X(x)$
+\end{prop}
+
+\begin{setting}
+    prior $\pi = (\pi_0, \pi_1)$
+\end{setting}
+
+\begin{itemize}
+    \item Bayes classifier $\delta_\pi = \delta_\mathcal{R} = \begin{cases}
+                                                                  1 & \text{if } x \in \mathcal{R}\\
+                                                                  0 & \text{if } x \in \mathcal{R}^c
+    \end{cases}$
+    \item $\mathcal{R} = \left\{ \eta(x) \geq 1 - \eta(x) \right\}$
+\end{itemize}
+
+\begin{prop}\,
+    \begin{enumerate}
+        \item $\delta_\pi$ minimizes Bayes classification risk
+        \item If $\Pb(\eta(x) = 1 - \eta(x)) = 0$, then Bayes rule unique
+    \end{enumerate}
+\end{prop}
+
+\begin{itemize}
+    \item discriminant function $D(X) = X^\top\Sigma(\mu_1 - \mu_0)$
+\end{itemize}
+
+\begin{example}[Linear discriminant analysis]
+    $\begin{cases}
+         f_0 = \mathcal{N}(\mu_0, \Sigma)
+         f_1 = \mathcal{N}(\mu_1, \Sigma)
+    \end{cases}$
+    can show Bayes rule only depends on $D(X)$
+\end{example}
+

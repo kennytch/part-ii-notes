@@ -108,7 +108,7 @@
     Usual regularity assumptions, $X_i$ i.i.d.\ , then
     \begin{enumerate}
         \item MLE exists
-        \item MLE consistent
+        \item MLE consistent i.e.\ \hl{$\tilde \theta_{MLE} \xrightarrow{P_{\theta}} \theta_0$}
     \end{enumerate}
 \end{thm}
 
@@ -118,7 +118,7 @@
 
 \begin{thm}[Uniform law of large numbers]
     $\Theta$ compact, $q(x, \cdot)$ continuous, $\Ex\sup_\Theta|q(X, \theta)| < \infty$, then
-    $\sup_\Theta |\frac{1}{n} \sum q(X_i, \theta) - \Ex(q(X, \theta))| \rightarrowas 0 $
+    \hl{$\sup_\Theta |\frac{1}{n} \sum q(X_i, \theta) - \Ex(q(X, \theta))| \rightarrowas 0 $}
 \end{thm}
 
 \begin{assumption}
@@ -137,8 +137,8 @@
 \end{assumption}
 
 \begin{thm}
-    Further usual assumption, $\hat{\theta_n}$ MLE of i.i.d.\ $X_i \sim P_{\theta_0}$, then\\
-    $\sqrt{n}(\hat{\theta}_n - \theta_0) \rightarrowd \mathcal{N}(0, I(\theta_0)^{-1})$
+    Further usual assumption, $\hat{\theta}_n$ MLE of i.i.d.\ $X_i \sim P_{\theta_0}$, then\\
+    \hl{$\sqrt{n}(\hat{\theta}_n - \theta_0) \rightarrowd \mathcal{N}(0, I(\theta_0)^{-1})$}
 \end{thm}
 
 \begin{itemize}
@@ -157,7 +157,7 @@
 
 \begin{thm}[Delta method]
     $\Phi \in C^1$ at $\theta_0$, $\nabla_\theta \Phi(\theta_0) \neq 0$, let $(\hat \theta_n)$ st $\sqrt{n}(\hat \theta_n - \theta_0) \rightarrowd Z$, then\\
-    $\sqrt{n} (\Phi(\hat \theta_n) - \Phi(\theta_0)) \rightarrowd \nabla_\theta \Phi(\theta_0)^\top Z$
+    \hl{$\sqrt{n} (\Phi(\hat \theta_n) - \Phi(\theta_0)) \rightarrowd \nabla_\theta \Phi(\theta_0)^\top Z$}
 \end{thm}
 
 \begin{fact}
@@ -189,10 +189,10 @@
 \end{prop}
 
 \begin{setting}
-    hypothesis testing: \begin{cases}
+    hypothesis testing: $\begin{cases}
                             H_0:\theta \in \Theta_0 \\
                             H_1:\theta \in \Theta \backslash \Theta_0
-    \end{cases}
+    \end{cases}$
 \end{setting}
 
 \begin{itemize}
@@ -204,7 +204,7 @@
 
 \begin{thm}[Wilks theorem]
     Under further assumption, hypothesis test with $\Theta_0 = \left\{ \theta_0 \right\}$, $\theta_0 \in int(\Theta)$, then
-    $\Lambda_n(\Theta, \Theta_0) \rightarrowd \chi^2_p$
+    \hl{$\Lambda_n(\Theta, \Theta_0) \rightarrowd \chi^2_p$}
 \end{thm}
 
 \begin{fact}
@@ -214,3 +214,4 @@
 \begin{fact}
     $\Theta_0$ dimension $p_0 < p$, then $\Lambda_n(\Theta, \Theta_0) \rightarrowd \chi^2_{p - p_0}$
 \end{fact}
+

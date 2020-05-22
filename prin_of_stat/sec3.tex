@@ -36,3 +36,37 @@
     \item credible set $\mathcal{C}_n$ ------ $\Pi(\mathcal{C}_n|\ddd{X}) = 1 - \alpha$
     \item Bayes factor ------ $\frac{\Pb(\ddd{X}|\Theta_0)}{\Pb(\ddd{X}|\theta_1)} = \frac{\Pi(\Theta_0|\ddd{X})}{\Pi(\Theta_1|\ddd{X})}$
 \end{itemize}
+
+\begin{fact}
+    Bayesian inference not based on asymptotic distribution, but posterior distribution
+\end{fact}
+
+\begin{itemize}
+    \item credible set ------ $\mathcal{C}_n = \left\{ |\nu - \hat{\theta}_n| \leq \frac{R_n}{\sqrt{n}} \right\}$ st $\Pi(\mathcal{C}_n|\ddd{X}) = 1 - \alpha$
+    \item $\phi_n \sim \mathcal{N}\left(\hat \theta_n, \frac{I(\theta_0)^{-1}}{n}\right)$
+\end{itemize}
+
+\begin{thm}[Bernstein-von Mises]
+    Under further assumptions, prior with continuous density $\pi$ at $\theta_0$, $\pi(\theta_0) > 0$, then
+    \hl{$\norm{\Pi_n - \phi_n}_{L^1} = \int_\Theta |\Pi_n(\theta) - \phi_n(\theta)|d\theta \rightarrowas 0$}
+\end{thm}
+
+\begin{fact}
+    $\Pi_n(A) - \phi_n(A) \rightarrow 0$, so $\phi_n(\mathcal{C}_n) \rightarrow 1 - \alpha$
+\end{fact}
+
+\begin{itemize}
+    \item $\Phi_0(t) = \Pb(|Z_0| \leq t)$ ------ $Z_0 \sim \mathcal{N}(0, I(\theta_0)^{-1})$
+\end{itemize}
+
+\begin{lemma}
+    Under assumptions, $R_n \rightarrowas \Phi_0^{-1}(1 - \alpha)$
+\end{lemma}
+
+\begin{thm}
+    Under assumptions, $\Pb_{\theta_0}(\theta_0 \in \mathcal{C}_n) \rightarrow 1 - \alpha$
+\end{thm}
+
+\begin{fact}
+    similar result with posterior mean $\bar \theta_n$ instead of $\hat \theta_n$
+\end{fact}
