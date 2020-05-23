@@ -1,0 +1,204 @@
+\section{Multivariate analysis \& PCA}\label{sec:multivariate-analysis-&-pca}
+
+\begin{itemize}
+    \item covariance $Cov(X, Y) = \Ex[(X - \Ex X)(Y - \Ex Y)]$
+    \item correlation $\rho_{X, Y} = \frac{Cov(X, Y)}{\sqrt{Var(X)\sqrt{Var(Y)}}}$
+    \item sample correlation coefficient $\hat \rho_{X, Y} = \frac{\frac{1}{n}\sum (X_i - \bar X_n)(Y_i - \bar Y_n)}{\sqrt{\frac{1}{n}\sum (X_i - \bar{X}_n)^2 \frac{1}{n}\sum (Y_i - \bar{Y}_n)^2}}$
+\end{itemize}
+
+\begin{fact}
+    $Var(X), Var(Y)$ positive, finite, then sample version of $Var(X), Var(Y), Cov(X, Y)$ and $\hat \rho_{X,Y}$ consistent
+\end{fact}
+
+\begin{fact}
+    $[\rho]_{ij} = \rho_{X^{(i)}, X^{(j)}}$
+    \begin{enumerate}
+        \item coefficients in $[-1, 1]$
+        \item diagonal coefficients equals to 1
+        \item positive semidefinite
+    \end{enumerate}
+\end{fact}
+
+\begin{prop}\,
+    \begin{enumerate}
+        \item $\Sigma$ positive semidefinite, then $\exists X$ st $\Ex X = 0$, $\Sigma = Cov(X)$
+        \item $\rho$ positive semidefinite, 1 on the diagonal, then $\exists X$ st $\Ex X = 0$, $\Sigma = [\rho]$
+    \end{enumerate}
+\end{prop}
+
+\begin{prop}(????)
+    Under $X,Y \sim \mathcal{N}(0, I_p)$ independent, density of $\hat \rho_{X, Y}$ \\$f_{\hat \rho}(r) = \frac{\Gamma\left(\frac{1}{2}(n-1)\right)}{\Gamma\left(\frac{1}{2}(n-2)\right)}(1 - r^2)^{\frac{1}{2}(n - 4)}$
+\end{prop}
+
+\begin{setting}
+    $X \sim \mathcal{N}(\mu, \Sigma)$, $X = (X^{(1)}, X^{(2)})$
+\end{setting}
+
+\begin{itemize}
+    \item covariance matrix $\Sigma = \begin{pmatrix}
+                                          \Sigma_{11} & \Sigma_{12} \\
+                                          \Sigma_{21} & \Sigma_{22}
+    \end{pmatrix}$
+    \item covariance of $X^{(1)} | X^{(2)}$ ------ $\Sigma_{11|2} = \Sigma_{11} - \Sigma_{12}\Sigma_{22}^{-1}\Sigma_{21}$
+    \item partial correlation of $X^{(1)(i)}, X^{(1)(j)}$ ------ $\rho_{i,j|2} = \frac{(\Sigma_{11|2})_{ij}}{\sqrt{(\Sigma_{11|2})_{ii} (\Sigma_{11|2})_{jj}}}$
+\end{itemize}
+
+\begin{example}[PCA]\,
+    \begin{itemize}
+        \item[\textbf{Method:}] projecting the observations on directions with maximum variance
+        \item[\textbf{Idea:}] recover information about leading eigenspaces of the covariance matrix $\Sigma$
+    \end{itemize}
+    \begin{setting}
+        $E[X] = 0, \Sigma = \Ex[XX^\top]$
+    \end{setting}
+    \begin{itemize}
+        \item $\Sigma = V\Lambda V^\top$ ------ $\Lambda = diag(\ddd[p]{\lambda})$
+        \item $U = V^\top X$
+    \end{itemize}
+    \begin{fact}
+        $\Ex[UU^\top] = \Lambda$
+    \end{fact}
+
+    \begin{prop}
+        $X \sim \mathcal{N}(0, \Sigma)$, then
+        \begin{enumerate}
+            \item $U \sim \mathcal{N}(0, \Lambda)$
+            \item $U_i$ independent
+        \end{enumerate}
+    \end{prop}
+    \begin{fact}
+        $X = V(V^\top X) = \sum v_i \sqrt{\lambda_i} Z_i$ where $Z \sim \mathcal{N}(0, I_p)$
+    \end{fact}
+\end{example}
+
+\begin{itemize}
+    \item $T_{(-i)}$
+    \item jacknife bias estimate $\hat B_n = (n - 1) \left( \frac{1}{n} \sum  T_{(-i)} - T_n \right)$
+    \item jacknife bias corrected estimate $\tilde T_{JACK} = T_n - \hat B_n$
+\end{itemize}
+
+\begin{prop}
+    regular bias $B(\theta)$, then $|\Ex(\tilde T_{JACK}) - \theta| = O\left(\frac{1}{n^2}\right)$
+\end{prop}
+
+\begin{example}[Bootstrap]
+    \begin{setting}
+        discrete probability distribution $\Pb_n(\cdot | \ddd{X})$ generate $(X^b_{n, i}:1\leq i \leq n)$
+    \end{setting}
+    \begin{itemize}
+        \item $\Pb_n(X_n^b = X_i) = \frac{1}{n}$
+    \end{itemize}
+    \begin{prop}
+        $\Ex(X_n^b) = \bar X_n$
+    \end{prop}
+    \begin{itemize}
+        \item bootstrap sample mean $\bar X_n^b$
+        \item[\textbf{Idea:}] $\bar X_n^b - \bar X_n$ approximates $\bar X_n - \mu$
+        \item bootstrap confidence set $\mathcal{C}_{n}^b = \left\{ |\nu - \bar X_n| \leq \frac{R_n^b}{\sqrt{n}} \right\}$ ------ $\Pb_n(|\bar X_n^b - \bar X_n| \leq \frac{R_n^b}{\sqrt{n}}|\ddd{X}) = 1 - \alpha$
+        \item $\Phi$ ------ c.d.f.\ of $\mathcal{N}(0, \sigma^2)$
+    \end{itemize}
+    \begin{thm}
+        $X_i$ i.i.d.\ , mean $\mu$, finite variance $\sigma^2$, then \\
+        $\sup_\R |\Pb_n \left( \sqrt{n} (\bar X_n^b - \bar X_n) \leq t | \ddd{X} \right) - \Phi(t)| \rightarrowas 0$
+    \end{thm}
+    \begin{fact}
+        $\Pb(\mu \in \mathcal{C}_n^b) \rightarrow 1 - \alpha$
+    \end{fact}
+    \begin{lemma}\,
+        \begin{enumerate}
+            \item $A_n \sim f_n$ with c.d.f.\ $F_{n}$
+            \item $A \sim f$ with continous c.d.f.\ $F$
+        \end{enumerate}
+        Then, $f_n \rightarrowd f$ $\Rightarrow$ $\sup |F_n(t) - F(t)| \rightarrow 0$
+    \end{lemma}
+    \begin{itemize}
+        \item triangular array $(Z_{n, i}:i\leq n)$ ------ $Z_{n,1},\dots, Z_{n,n}$ i.i.d.\ from distribution $Q_n$
+    \end{itemize}
+    \begin{assumption}\,
+        \begin{enumerate}
+            \item $\forall \delta > 0$, $n\Pb_n(|Z_{n,1}| > \delta\sqrt{n}) \rightarrow 0$
+            \item $Var\left( Z_{n,1} \In\left\{ |Z_{n, 1}| \leq \sqrt{n} \right\} \right) \rightarrow \sigma^2$
+            \item $\sqrt{n}\Ex\left(Z_{n, 1} \In\left\{ |Z_{n, 1}| > \sqrt{n} \right\}\right) \rightarrow 0$
+        \end{enumerate}
+    \end{assumption}
+    \begin{prop}[CLT for triangular arrays]
+        Under assumption above, $(Z_{n, i})$ triangular array, finite variance, $Var(Z_{n, i}) = \sigma_n^2 \rightarrow \sigma^2$, then
+        $\sqrt{n}\left(\frac{1}{n}\sum Z_{n,i} - \Ex_n(Z_{n,i})\right) \rightarrowd \mathcal{N}(0, \sigma^2)$
+    \end{prop}
+    \begin{itemize}
+        \item nonparametric bootstrap
+        \item parametric bootstrap
+    \end{itemize}
+\end{example}
+
+\begin{itemize}
+    \item pseudo-random uniform sample ------ $\Pb(U^*_1 \leq u_1, \dots, U^*_N \leq u_N) = u_1\dots u_N$
+\end{itemize}
+
+\begin{prop}
+    $U_i \sim U[0, 1]$ i.i.d.\ , $X_i = \sum x_j \In \left\{ U_i \in \left( \frac{j-1}{n}, \frac{j}{n}\right] \right\}$, then $X_i$ i.i.d\ uniform over $\left\{ x_1, \dots, x_n \right\}$
+\end{prop}
+
+\begin{itemize}
+    \item generalized inverse $F^-$ ------ $F^-(u) = \inf \left\{ x : u \leq F(x) \right\}$
+\end{itemize}
+
+\begin{prop}
+    distribution $P$ with c.d.f.\ $F$, $U$ uniform over $[0, 1]$, then $X = F^-(U) \sim P$
+\end{prop}
+
+\begin{example}[Importance sampling]
+    density $f, h$, $supp f \subset supp h$, then $\Ex_h\left( \frac{g(X)}{h(X)}f(X) \right) = \Ex_f(g(X))$
+    \begin{fact}
+        $(X_1^*,\dots, X_N^*)$ with density $h$, then $\frac{1}{N}\sum \frac{g(X^*_i)}{h(X_i^*)}f(X_i^*) \rightarrowas \Ex_f(g(X))$
+    \end{fact}
+\end{example}
+
+\begin{example}[Accept/reject algorithm]
+    $f \leq Mh$
+    \begin{enumerate}
+        \item[Step 1] generate $X \sim h$, $U \sim U[0,1]$
+        \item[Step 2] if $U \leq \frac{f(X)}{Mh(X)}$, $Y = X$
+    \end{enumerate}
+\end{example}
+
+\begin{example}[Gibbs sampler]
+    bivariate $(X, Y)$, $X_0 = x$, $\begin{cases}
+                                        Y_t \sim f_{Y|X}(\cdot|X = X_{t-1})\\
+                                        X_t \sim f_{X|Y}(\cdot|Y = Y_t)
+    \end{cases}$\\
+    By ergodic theorem, $\frac{1}{N}\sum g(X_t, Y_t) \rightarrowas \Ex_{X,Y}(g(X,Y))$
+\end{example}
+
+\begin{itemize}
+    \item empirical distribution function $F_n$ ------ $F_n(t) = \frac{1}{n}\sum \In_{(-\infty, t]}(X_i) = \frac{\# \left\{ i : X_i \leq t \right\}}{n}$
+\end{itemize}
+
+\begin{thm}[Glivenko-Cantelli]
+    $F$, $\sup |F_n(t) - F(t)| \rightarrow 0$
+\end{thm}
+
+\begin{itemize}
+    \item Brownian motion ------ $\begin{cases}
+                                      W_0 = 0\\
+                                      W_t - W_s \sim \mathcal{N}(0, t-s)
+    \end{cases}$
+    \item Brownian bridge ------ $(B_t)$ Brownian motion conditioned $B_1 = 0$\\$\begin{cases}
+                                      B_0 = B_1 = 0\\
+                                                                                     B_t \sim \mathcal{N}(0, t(1- t)), Cov(B_s, B_t) = s(1 - t)
+    \end{cases}$
+\end{itemize}
+
+\begin{fact}
+    can be constructed by taking $B_t = W_t - tW_1$
+\end{fact}
+
+\begin{thm}[Donsker-Kolmogorov-Doob]
+    $\mathcal{G}_F$ Gaussian process, $\mathcal{G}_F(t) = B_{F(t)}$, $Cov(\mathcal{G}_F(s), \mathcal{G}_F(t)) = F(s)(1 - F(t))$,
+    $\sqrt{n}(F_n - F) \rightarrowd \mathcal{G}_F$
+\end{thm}
+
+\begin{thm}[Kolmogorov-Smirnov]
+    $\sqrt{n}\norm{F_n - F}_\infty \rightarrowd \norm{\mathcal{G}_F}_\infty = \sup_{[0,1]}|B_t|$
+\end{thm}
+
