@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.3.16)  17 MAY 2020 20:17
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.3.16)  23 MAY 2020 10:24
 entering extended mode
 **./prob_measure.tex
 (prob_measure.tex
@@ -120,6 +120,11 @@ LaTeX Font Info:    Overwriting math alphabet `\mathbbm' in version `bold'
 LaTeX Font Info:    Overwriting math alphabet `\mathbbmss' in version `bold'
 (Font)                  U/bbmss/m/n --> U/bbmss/bx/n on input line 35.
 )
+("C:\Users\Asus\AppData\Local\Programs\MiKTeX 2.9\tex/latex/etoolbox\etoolbox.s
+ty"
+Package: etoolbox 2019/09/21 v2.5h e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count187
+)
 ("C:\Users\Asus\AppData\Local\Programs\MiKTeX 2.9\tex/latex/mathtools\mathtools
 .sty"
 Package: mathtools 2020/01/17 v1.23 mathematical typesetting tools
@@ -130,15 +135,15 @@ Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks25
 ) ("C:\Users\Asus\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tools\calc.sty"
 Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count187
-\calc@Bcount=\count188
+\calc@Acount=\count188
+\calc@Bcount=\count189
 \calc@Adimen=\dimen144
 \calc@Bdimen=\dimen145
 \calc@Askip=\skip55
 \calc@Bskip=\skip56
 LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count189
+\calc@Ccount=\count190
 \calc@Cskip=\skip57
 )
 ("C:\Users\Asus\AppData\Local\Programs\MiKTeX 2.9\tex/latex/mathtools\mhsetup.s
@@ -149,7 +154,7 @@ LaTeX Info: Thecontrolsequence`\('isalreadyrobust on input line 129.
 LaTeX Info: Thecontrolsequence`\)'isalreadyrobust on input line 129.
 LaTeX Info: Thecontrolsequence`\['isalreadyrobust on input line 129.
 LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 129.
-\g_MT_multlinerow_int=\count190
+\g_MT_multlinerow_int=\count191
 \l_MT_multwidth_dim=\dimen146
 \origjot=\skip58
 \l_MT_shortvdotswithinadjustabove_dim=\dimen147
@@ -159,29 +164,30 @@ LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 129.
 \l_MT_above_shortintertext_sep=\dimen151
 \l_MT_below_shortintertext_sep=\dimen152
 )
-\c@thm=\count191
-\c@setting=\count192
+\c@thm=\count192
+\c@setting=\count193
+\c@assumption=\count194
 
 
-../preamble.tex:39: LaTeX Error: Command \Pb undefined.
+../preamble.tex:48: LaTeX Error: Command \Pb undefined.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.39 \renewcommand{\Pb}
+l.48 \renewcommand{\Pb}
                        {\mathbb{P}}
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-../preamble.tex:40: LaTeX Error: Command \Ex undefined.
+../preamble.tex:49: LaTeX Error: Command \Ex undefined.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.40 \renewcommand{\Ex}
+l.49 \renewcommand{\Ex}
                        {\mathbb{E}}
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -205,8 +211,8 @@ Package: enumitem 2019/06/20 v3.9 Customized lists
 \enit@outerparindent=\dimen156
 \enit@toks=\toks31
 \enit@inbox=\box47
-\enit@count@id=\count193
-\enitdp@description=\count194
+\enit@count@id=\count195
+\enitdp@description=\count196
 )
 ("C:\Users\Asus\AppData\Local\Programs\MiKTeX 2.9\tex/latex/hyperref\hyperref.s
 ty"
@@ -261,8 +267,8 @@ Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
 Package: kvoptions 2019/11/29 v3.13 Key value format for package options (HO)
 )
 \@linkdim=\dimen157
-\Hy@linkcounter=\count195
-\Hy@pagecounter=\count196
+\Hy@linkcounter=\count197
+\Hy@pagecounter=\count198
 
 ("C:\Users\Asus\AppData\Local\Programs\MiKTeX 2.9\tex/latex/hyperref\pd1enc.def
 "
@@ -278,7 +284,7 @@ Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 .sty"
 Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
 )
-\Hy@SavedSpaceFactor=\count197
+\Hy@SavedSpaceFactor=\count199
 Package hyperref Info: Hyper figures OFF on input line 4547.
 Package hyperref Info: Link nesting OFF on input line 4552.
 Package hyperref Info: Hyper index ON on input line 4555.
@@ -286,7 +292,7 @@ Package hyperref Info: Plain pages OFF on input line 4562.
 Package hyperref Info: Backreferencing OFF on input line 4567.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4800.
-\c@Hy@tempcnt=\count198
+\c@Hy@tempcnt=\count266
  ("C:\Users\Asus\AppData\Local\Programs\MiKTeX 2.9\tex/latex/url\url.sty"
 \Urlmuskip=\muskip17
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
@@ -303,7 +309,7 @@ calc.sty"
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
 )
 ))
-\Fld@menulength=\count199
+\Fld@menulength=\count267
 \Field@Width=\dimen159
 \Fld@charsize=\dimen160
 Package hyperref Info: Hyper figures OFF on input line 6430.
@@ -320,9 +326,9 @@ LaTeX Info: Redefining \pageref on input line 6504.
 .sty"
 Package: atbegshi 2019/12/05 v1.19 At begin shipout hook (HO)
 )
-\Hy@abspage=\count266
-\c@Item=\count267
-\c@Hfootnote=\count268
+\Hy@abspage=\count268
+\c@Item=\count269
+\c@Hfootnote=\count270
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
 
@@ -333,10 +339,9 @@ File: hpdftex.def 2020/01/14 v7.00d Hyperref driver for pdfTeX
 ("C:\Users\Asus\AppData\Local\Programs\MiKTeX 2.9\tex/latex/atveryend\atveryend
 .sty"
 Package: atveryend 2019-12-11 v1.11 Hooks at the very end of document (HO)
-Package atveryend Info: \enddocument detected (standard20110627).
 )
-\Fld@listcount=\count269
-\c@bookmark@seq@number=\count270
+\Fld@listcount=\count271
+\c@bookmark@seq@number=\count272
 
 ("C:\Users\Asus\AppData\Local\Programs\MiKTeX 2.9\tex/latex/rerunfilecheck\reru
 nfilecheck.sty"
@@ -351,7 +356,7 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip61
 )
-Package hyperref Info: Option `colorlinks' set `true' on input line 56.
+Package hyperref Info: Option `colorlinks' set `true' on input line 65.
 
 ("C:\Users\Asus\AppData\Local\Programs\MiKTeX 2.9\tex/latex/cancel\cancel.sty"
 Package: cancel 2013/04/12 v2.2 Cancel math terms
@@ -363,9 +368,9 @@ Package: geometry 2020/01/02 v5.9 Page Geometry
 ("C:\Users\Asus\AppData\Local\Programs\MiKTeX 2.9\tex/generic/iftex\ifvtex.sty"
 Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 )
-\Gm@cnth=\count271
-\Gm@cntv=\count272
-\c@Gm@tempcnt=\count273
+\Gm@cnth=\count273
+\Gm@cntv=\count274
+\c@Gm@tempcnt=\count275
 \Gm@bindingoffset=\dimen161
 \Gm@wd@mp=\dimen162
 \Gm@odd@mp=\dimen163
@@ -413,12 +418,12 @@ Package caption3 Info: TeX engine: e-TeX on input line 61.
 \caption@hangindent=\dimen175
 Package caption Info: Standard document class detected.
 )
-\c@caption@flags=\count274
-\c@continuedfloat=\count275
+\c@caption@flags=\count276
+\c@continuedfloat=\count277
 Package caption Info: hyperref package is loaded.
 )
-\c@subfigure=\count276
-\c@subtable=\count277
+\c@subfigure=\count278
+\c@subtable=\count279
 )
 ("C:\Users\Asus\AppData\Local\Programs\MiKTeX 2.9\tex/latex/picture\picture.sty
 "
@@ -462,7 +467,7 @@ Package color Info: Driver file: pdftex.def on input line 147.
 Package: import 2020/01/22  v 6.0
 ) ("C:\Users\Asus\AppData\Local\Programs\MiKTeX 2.9\tex/latex/float\float.sty"
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count278
+\c@float@type=\count280
 \float@exts=\toks37
 \float@box=\box48
 \@float@everytoks=\toks38
@@ -489,8 +494,8 @@ es.sty"
 Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
 )
 \svg@box=\box50
-\c@svg@param@lastpage=\count279
-\c@svg@param@currpage=\count280
+\c@svg@param@lastpage=\count281
+\c@svg@param@currpage=\count282
 )
 ("C:\Users\Asus\AppData\Local\Programs\MiKTeX 2.9\tex/latex/xcolor\xcolor.sty"
 Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
@@ -520,7 +525,7 @@ Package: transparent 2019/11/29 v1.4 Transparency via pdfTeX's color stack (HO)
 "
 \wrapoverhang=\dimen178
 \WF@size=\dimen179
-\c@WF@wrappedlines=\count281
+\c@WF@wrappedlines=\count283
 \WF@box=\box51
 \WF@everypar=\toks39
 Package: wrapfig 2003/01/31  v 3.6
@@ -534,22 +539,22 @@ nment
 Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 )
 \@float@every@algorithm=\toks40
-\c@algorithm=\count282
+\c@algorithm=\count284
 )
 ("C:\Users\Asus\AppData\Local\Programs\MiKTeX 2.9\tex/latex/algorithmicx\algori
 thmicx.sty"
 Package: algorithmicx 2005/04/27 v1.2 Algorithmicx
 
 Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
-\c@ALG@line=\count283
-\c@ALG@rem=\count284
-\c@ALG@nested=\count285
+\c@ALG@line=\count285
+\c@ALG@rem=\count286
+\c@ALG@nested=\count287
 \ALG@tlm=\skip62
 \ALG@thistlm=\skip63
-\c@ALG@Lnr=\count286
-\c@ALG@blocknr=\count287
-\c@ALG@storecount=\count288
-\c@ALG@tmpcounter=\count289
+\c@ALG@Lnr=\count288
+\c@ALG@blocknr=\count289
+\c@ALG@storecount=\count290
+\c@ALG@tmpcounter=\count291
 \ALG@tmplength=\skip64
 )
 ("C:\Users\Asus\AppData\Local\Programs\MiKTeX 2.9\tex/latex/algorithmicx\algpse
@@ -570,14 +575,14 @@ Package: expl3 2020-02-14 L3 programming layer (loader)
 ("C:\Users\Asus\AppData\Local\Programs\MiKTeX 2.9\tex/latex/l3backend\l3backend
 -pdfmode.def"
 File: l3backend-pdfmode.def 2020-02-03 L3 backend support: PDF mode
-\l__kernel_color_stack_int=\count290
+\l__kernel_color_stack_int=\count292
 \l__pdf_internal_box=\box52
 ))
 Package: xparse 2020-02-14 L3 Experimental document command parser
-\l__xparse_current_arg_int=\count291
-\g__xparse_grabber_int=\count292
-\l__xparse_m_args_int=\count293
-\l__xparse_v_nesting_int=\count294
+\l__xparse_current_arg_int=\count293
+\g__xparse_grabber_int=\count294
+\l__xparse_m_args_int=\count295
+\l__xparse_v_nesting_int=\count296
 )))
 Runaway argument?
 {\newcommand {\svgwidth {##1}}{\import {./figure}{##2.pdf_tex}} \par \ETC.
@@ -639,7 +644,7 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 ttitlestring.sty"
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count295
+\c@section@level=\count297
 )
 LaTeX Info: Redefining \ref on input line 19.
 LaTeX Info: Redefining \pageref on input line 19.
@@ -693,16 +698,16 @@ Package caption Info: End \AtBeginDocument code.
 ("C:\Users\Asus\AppData\Local\Programs\MiKTeX 2.9\tex/context/base/mkii\supp-pd
 f.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count296
+\scratchcounter=\count298
 \scratchdimen=\dimen180
 \scratchbox=\box54
-\nofMPsegments=\count297
-\nofMParguments=\count298
+\nofMPsegments=\count299
+\nofMParguments=\count300
 \everyMPshowfont=\toks41
-\MPscratchCnt=\count299
+\MPscratchCnt=\count301
 \MPscratchDim=\dimen181
-\MPnumerator=\count300
-\makeMPintoPDFobject=\count301
+\MPnumerator=\count302
+\makeMPintoPDFobject=\count303
 \everyMPtoPDFconversion=\toks42
 )
 ("C:\Users\Asus\AppData\Local\Programs\MiKTeX 2.9\tex/latex/epstopdf-pkg\epstop
@@ -858,16 +863,15 @@ Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 41.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 41.
 Package rerunfilecheck Info: File `prob_measure.out' has not changed.
 (rerunfilecheck)             Checksum: 8E2F562C70D7EBF729D7CE56937D0774;1170.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 41.
  ) 
 Here is how much of TeX's memory you used:
- 12604 strings out of 481556
- 199438 string characters out of 2914337
- 503980 words of memory out of 3000000
- 27252 multiletter control sequences out of 15000+200000
+ 12921 strings out of 481556
+ 203172 string characters out of 2914337
+ 511149 words of memory out of 3000000
+ 27565 multiletter control sequences out of 15000+200000
  552082 words of font info for 99 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 51i,13n,54p,345b,532s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 51i,13n,54p,826b,532s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\Asus\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/public/bbm/dpi657\bb
 m10.pk><C:/Users/Asus/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsf
 onts/cm/cmbx10.pfb><C:/Users/Asus/AppData/Local/Programs/MiKTeX 2.9/fonts/type1
@@ -891,7 +895,7 @@ e1/public/amsfonts/cm/cmti10.pfb><C:/Users/Asus/AppData/Local/Programs/MiKTeX 2
 .9/fonts/type1/public/amsfonts/cm/cmti8.pfb><C:/Users/Asus/AppData/Local/Progra
 ms/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
 Output written on C:/Users\Asus\Documents\GitHub\part-ii-notes\out\prob_measure
-.pdf (19 pages, 328408 bytes).
+.pdf (19 pages, 328789 bytes).
 PDF statistics:
  541 PDF objects out of 1000 (max. 8388607)
  273 named destinations out of 1000 (max. 500000)
