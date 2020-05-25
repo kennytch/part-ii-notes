@@ -24,7 +24,7 @@
     \item misclassification error ------ $L(a, \theta) = \In_{\left\{ a \neq \theta \right\}}$
     \item absolute error ------ $L(a, \theta) = |a - \theta|$
     \item squared error ------ $L(a, \theta) = |a - \theta|^2$
-    \item average loss $R(\delta, \theta) = \Ex_\theta(L(\delta(X), \theta)) = \int_\mathcal{X} L(\delta(x), \theta)f(x, \theta)dx$
+    \item risk / average loss $R(\delta, \theta) = \Ex_\theta(L(\delta(X), \theta)) = \int_\mathcal{X} L(\delta(x), \theta)f(x, \theta)dx$
     \item quadratic risk / mean squared error (MSE) $\Ex_\theta[(\delta(X) - \theta)^2]$
     \item $\pi$-Bayes risk $R_\pi(\delta) = \Ex_\pi[R(\delta, \theta)] = \int_\Theta R(\delta, \theta)\pi(\theta) d\theta$ ------ prior $\pi$
     \item $\pi$-Bayes decision rule $\delta_{\pi}$ ------ minimizer of $R_\pi(\delta)$
