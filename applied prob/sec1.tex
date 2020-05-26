@@ -1,5 +1,21 @@
 \section{Continuous time Markov Chains}\label{sec:continous-time-markov-chains}
 
+\begin{itemize}
+    \item right continuous ------ $\forall t, \exists \epsilon, X_t(\omega) = X_{t+s}(\omega)$ for all $s \in [0, \epsilon]$
+    \item finite dimension marginals $\Pb(X_{t_1} = x_1, \dots, X_{t_n} = x_n)$
+\end{itemize}
+
+\begin{fact}
+    process can be determined from the finite dimension marginals
+\end{fact}
+\begin{itemize}
+    \item Memoryless property $\Pb(S > t+s | S > s) = \Pb(S > t)$
+\end{itemize}
+
+\begin{thm}
+    Memoryless iff exponential distribution
+\end{thm}
+
 \subsection{Poisson process}\label{subsec:poisson-process}
 
 \begin{itemize}
@@ -53,6 +69,34 @@
     $U$ to $T$, then calculate density
 \end{pf}
 
+\begin{thm}
+    $(X_n)$ increasing right-continuous, taking values $\left\{ 0, 1, \dots \right\}$, $X_0 = 0$, then following equivalent:
+    \begin{enumerate}
+        \item holding times $S_i \sim Exp(\lambda)$ i.i.d.\ ,jump chain $Y_n = n$,\\ (Sousi defined $X$ Poisson process in this manner)
+        \item (\textbf{infinitesimal}) $X$ independent increments, $h \downarrow 0$ uniformly in $t$,\\ $
+        \begin{cases}
+            \Pb(X_{t+h} - X_t = 1) = \lambda h + o(h)\\
+            \Pb(X_{t+h} - X_t = 0) = 1 - \lambda h + o(h)
+        \end{cases}$
+        \item $X$ has independent, stationary increments, $X_t \sim Poi(\lambda t)$
+    \end{enumerate}
+\end{thm}
+
+\begin{thm}[Superposition]
+    $X$, $Y$ independent Poisson process, with parameters $\lambda$, $\mu$, then $Z_t = X_t + Y_t$ Poisson process with parameters $\lambda + \mu$
+\end{thm}
+\begin{pf}
+    infinitesimal
+\end{pf}
+
+\begin{thm}[Thining]
+    $X$ Poisson process with parameters $\lambda$, $(Z_i) \sim Bernoulli(p)$ i.i.d.\ , $Y$ jumps $\iff$ $X$ jumps and $Z_{X_t} = 1$, then
+    $Y$ Poisson process of parameter $\lambda p$, $X - Y$ independent Poisson process of parameter $\lambda (1 - p)$
+\end{thm}
+\begin{pf}
+    infinitesimal for Poisson process, independence follows from expanding $\Pb(Y_t = n, X_t - Y_t = m)$ (suffice to prove independence using finite dimension marginals)
+\end{pf}
+
 \subsection{Birth process}\label{subsec:birth-process}
 
 \begin{itemize}
@@ -75,6 +119,15 @@
         \item \textbf{Simple birth with immigration}: $\lambda_n = n\lambda + \nu$
     \end{enumerate}
 \end{example}
+
+\begin{prop}
+    $T_k \sim Exp(q_k)$ independent, $0 < q = \sum q_k < \infty$, $T = \inf_k T_k$, then
+    \begin{enumerate}
+        \item infimum attained at unique $K$ with probability 1
+        \item $T, K$ independent
+        \item $T \sim Exp(q), \Pb(K = k) = \frac{q_k}{q}$
+    \end{enumerate}
+\end{prop}
 
 \begin{itemize}
     \item $T_\infty = \lim T_n = \sum^\infty U_i$
@@ -270,6 +323,29 @@
 \end{fact}
 
 \begin{itemize}
+    \item $T_A = \inf \left\{ t > 0 : X_t \in A \right\}$
+    \item $H_A = \inf \left\{ n \geq 0 : Y_n \in A \right\}$
+    \item hitting probability $h_A(x) = \Pb_x(T_A < \infty)$
+    \item expected hitting time $k_A(x) = \Ex_x(T_A)$
+\end{itemize}
+
+\begin{thm}
+    $(h_A(x))_x$ minimal non-negative solution to \\$
+    \begin{cases}
+        h_A(x) = 1 &\forall x \in A \\
+        Qh_A(x) = \sum_y q_{xy}h_A(y) = 0 &\forall x \notin A
+    \end{cases}$
+\end{thm}
+
+\begin{thm}
+    $q_x > 0 \forall x \notin A$, then $k_A(x)$ minimal non-negative solution to\\$
+    \begin{cases}
+        k_A(x) = 0 & \forall x \in A\\
+        Qk_A(x) = \sum_y q_{xy}k_A(y) = -1 &\forall x \notin A
+    \end{cases}$
+\end{thm}
+
+\begin{itemize}
     \item recurrent ------ $\Pb(\left\{ t: X(t) = i \right\} \text{ unbounded}) = 1$
     \item transient ------ $\Pb(\left\{ t: X(t) = i \right\} \text{ unbounded}) = 0$
     \item $R_i = \inf \left\{ t > U_0 : X(t) = i \right\}$
@@ -411,6 +487,52 @@
     $X$ minimal, then $|p_{ij}(t + u) - p_{ij}(t)| \leq 1 - e^{-g_{i}u}$
 \end{lemma}
 
+\subsection{Reversibility}\label{subsec:reversibility}
+
+\begin{thm}
+    $X$ irreducible, non-explosive, with invariant distribution $\bm \pi$, let $X_0 \sim \bm \pi$, fix $T$, $\hat X_t = X_{T-t}$, then
+    \begin{enumerate}
+        \item $\hat X$ Markov with generator $\hat Q$ and invariant distribution $\bm \pi$, $\pi(x)\hat q_{xy} = \pi(y)q_{yx}$
+        \item $\hat X$ irreducible, non-explosive
+    \end{enumerate}
+\end{thm}
+\begin{pf}
+    expand $\Pb(\hat X_{t_0} = x_0, \dots, \hat X_{t_n} = x_n)$, then $\hat P$ satisfies Komogorov backward with $\hat Q$, then minimal, easy to show irreducible,
+    finally $\hat p_{xy}(t) = \Pb_x(\hat X_t = y, t < \hat \zeta)$ where $\zeta$ explosion time
+\end{pf}
+
+\begin{itemize}
+    \item reversible ------ $(X_t)$, $(X_{T-t})$ same distribution
+    \item detailed balanced ------ $\lambda(x)q_{xy} = \lambda(y)q_{yx}$
+\end{itemize}
+
+\begin{lemma}
+    detail balanced $\Rightarrow$ $\lambda$ invariant measure
+\end{lemma}
+
+\begin{thm}
+    $X$ irreducible, non-explosive, $X_0 \sim \bm \pi$, then\\
+    detail balanced $\iff$ $(X_t)$ reversible
+\end{thm}
+
+\begin{lemma}
+    $\bm \pi$ invariant for birth-death chain $\iff$ detail balanced
+\end{lemma}
+
+\subsection{Ergodic theorem}\label{subsec:ergodic-theorem}
+
+\begin{itemize}
+    \item long run proportion of time spends at $x$ ------ $\frac{1}{t} \int_0^t \In(X_s = x)ds$
+\end{itemize}
+
+\begin{thm}
+    $X$ irreducible, then
+    \begin{enumerate}
+        \item $\frac{1}{t} \int_0^t \In(X_s = x)ds \rightarrowas \frac{1}{m_x g_x} $
+        \item if $\pi$ invariant, $f$ bounded, then $\frac{1}{t} \int_0^t f(X_s)ds \rightarrowas \sum_x f(x)\pi(x)$
+    \end{enumerate}
+\end{thm}
+
 \subsection{Birth-death process and imbedding}\label{subsec:birth-death-process-and-imbedding}
 
 \begin{itemize}
@@ -489,3 +611,4 @@
     \item age density function $f_T(u) = (\lambda + \mu)e^{-(\lambda + \mu)u}$
     \item family-size generating function $G(s) = \frac{\mu + \lambda s^2}{\mu + \lambda} = p_0 + p_2 s^2$
 \end{itemize}
+

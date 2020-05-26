@@ -1,28 +1,6 @@
 \section{Continuous time Markov Chains}\label{sec:continous-time-markov-chains}
 
 \begin{itemize}
-    \item Markov Property
-    \item discrete-time Markov chain
-    \item time homogeneous
-    \item transition matrix
-    \item stochastic matrix
-    \item starting distribution
-    \item continuous-time Markov chain ------ $(X_t)_{t \geq 0}$, $\forall$ $0 \leq t_1 \leq \dots \leq t_n$,\\
-    $\Pb(X_{t_n} = x_n|X_{t_{n-1}} = x_{n-1}, \dots, X_{t_1} = x_1) = \Pb(X_{t_n} = x_n|X_{t_{n-1}} = x_{n-1})$
-    \item time homogeneous
-    \item transition semigroup $P(t) = (p_{xy}(t))$ ------ $p_{xy}(t) = \Pb(X_t = y | X_0 = x)$
-    \item Chapman-Kolmogorov equation $p_{xy}(t + s) = \sum_z p_{xz}(t)p_{zy}(s)$
-\end{itemize}
-
-\begin{fact}\,
-    \begin{enumerate}
-        \item $P(t)$ stochastic matrix
-        \item $P(t + s) = P(t)P(s)$
-        \item $P(0) = I$
-    \end{enumerate}
-\end{fact}
-
-\begin{itemize}
     \item right continuous ------ $\forall t, \exists \epsilon, X_t(\omega) = X_{t+s}(\omega)$ for all $s \in [0, \epsilon]$
 \end{itemize}
 
@@ -30,21 +8,8 @@
     process can be determined from the finite dimension marginals $\Pb(X_{t_1} = x_1, \dots, X_{t_n} = x_n)$
 \end{fact}
 \begin{itemize}
-    \item jump time $J_i$ ------ $J_0 = 0, J_{n + 1} = \inf \left\{ t \geq J_n : X_t \neq X_{J_n} \right\}$
-    \item holding time $S_n = \begin{cases}
-                                  J_n - J_{n-1} & \text{if } J_{n-1} < \infty\\
-                                  \infty & \text{otherwise }
-    \end{cases}$
-    \item explosion time $\zeta = \sup J_n = \sum S_n$
-    \item jump chain $Y_n = X_{J_n}$
-    \item minimal ------ not consider after explosion
-    \item holding time $S_x$
     \item Memoryless property $\Pb(S > t+s | S > s) = \Pb(S > t)$
 \end{itemize}
-
-\begin{fact}
-    $S_x$ memoryless
-\end{fact}
 
 \begin{thm}
     Memoryless iff exponential distribution
