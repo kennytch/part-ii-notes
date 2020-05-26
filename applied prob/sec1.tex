@@ -125,6 +125,8 @@
     \end{enumerate}
 \end{itemize}
 
+\subsection{Continuous Markov Chain}\label{subsec:continuous-markov-chain}
+
 \begin{setting}
     $(X(t))$ takes values in countable $S$
 \end{setting}
@@ -291,12 +293,12 @@
 \end{pf}
 
 \begin{itemize}
-    \item \textbf{Forward equation:} $\bP_t' = \bP_t \bG$ with boundary condition $\bP_0 = 1$
-    \item \textbf{Backward equation:} $\bP_t' = \bG \bP_t$  with boundary condition $\bP_0 = 1$
+    \item \textbf{Forward equation:} $\bm P_t' = \bm P_t \bm G$ with boundary condition $\bm P_0 = 1$
+    \item \textbf{Backward equation:} $\bm P_t' = \bm G \bm P_t$  with boundary condition $\bm P_0 = 1$
 \end{itemize}
 
 \begin{fact}
-    If states $S$ finite, then $\bP_t = e^{t\bG}$
+    If states $S$ finite, then $\bm P_t = e^{t\bm G}$
 \end{fact}
 
 \begin{itemize}
@@ -305,10 +307,10 @@
 \end{itemize}
 
 \begin{thm}
-    $S$ countable, $X$ minimal Markov chain with generator $\bG$, then
+    $S$ countable, $X$ minimal Markov chain with generator $\bm G$, then
     \begin{enumerate}
-        \item $\bP_t$ minimal non-negative solution of backward equation $\bP_t' = \bG \bP_t$  with boundary condition $\bP_0 = 1$
-        \item $\bP_t$ minimal non-negative solution of forward equation $\bP_t' = \bP_t \bG$
+        \item $\bm P_t$ minimal non-negative solution of backward equation $\bm P_t' = \bm G \bm P_t$  with boundary condition $\bm P_0 = 1$
+        \item $\bm P_t$ minimal non-negative solution of forward equation $\bm P_t' = \bm P_t \bm G$
     \end{enumerate}
 \end{thm}
 \begin{pf}
@@ -321,12 +323,12 @@
 \end{fact}
 
 \begin{fact}
-    non-explosive $\Rightarrow$ $\bP_t$ unique solution to both equations
+    non-explosive $\Rightarrow$ $\bm P_t$ unique solution to both equations
 \end{fact}
 
 \begin{itemize}
     \item measure
-    \item stationary measure ------ $\pi = \pi P_t$
+    \item stationary measure ------ $\bm{\pi} = \bm\pi \bm P_t$
     \item stationary distribution
     \item unique measure ------ unique up to scalar multiplication
     \item first return time $R_{i}$
@@ -338,32 +340,152 @@
     \begin{enumerate}
         \item some state $k$ positive recurrent, then
         \begin{enumerate}
-            \item $\exists$ unique stationary distribution $\pi$
-            \item unique distribution st $\pi \bG = 0$
+            \item $\exists$ unique stationary distribution $\bm \pi$
+            \item unique distribution st $\bm \pi \bm G = 0$
             \item all states positive recurrent
         \end{enumerate}
-        \item $X$ non-explosive, $\exists$ $\pi$ st $\pi \bG = 0$, then
+        \item $X$ non-explosive, $\exists$ $\bm \pi$ st $\bm \pi \bm G = 0$, then
         \begin{enumerate}
             \item all states positive recurrent
-            \item $\pi$ stationary
+            \item $\bm \pi$ stationary
             \item $\pi_k = \frac{1}{m_k g_k}$
         \end{enumerate}
     \end{enumerate}
 \end{thm}
+\begin{pf}
+    \begin{enumerate}
+        \item use~\ref{lemma:sta}\ref{lemma:sta4} $\bm \pi = \mu(k)/m_k$, then uniqueness of measure $\Rightarrow$ all state non-null
+        \item $\bm \nu' = \frac{\pi_i g_i}{\pi_k g_k}$, then $\bm \rho(k) \leq \bm\nu'$ from discrete MC
+    \end{enumerate}
+\end{pf}
+
 
 \begin{itemize}
     \item $\nu_i = x_i g_i$
-    \item $\mu(k) = (\mu_j(k))_j$ ------ $\mu_j(k) = \Ex_k\left( \int^{R_k}_0 \In \left\{ X(s) = j \right\} ds \right)$
+    \item $\bm \mu(k) = (\mu_j(k))_j$ ------ $\mu_j(k) = \Ex_k\left( \int^{R_k}_0 \In \left\{ X(s) = j \right\} ds \right)$
+    \item $\bm \rho(k) = (\rho_j(k))$ ------ mean visit to $j$ starting from $k$ in jump chain $Y$
 \end{itemize}
 
-\begin{lemma}
-    $X$ irreducible, $|S|\geq 2$
+\begin{lemma}\label{lemma:sta}
+    $X$ irreducible Markov chain, $|S|\geq 2$
     \begin{enumerate}
-        \item measure $x$, then $x \bG = 0$ $\iff$ $\nu \textbf{Y}= \nu$
-        \item $X$ recurrent, $x \bG = 0$ unique measure
-        \item $x$ measure, $x \bG = 0$, then $x_j > 0$
-        \item $X$ recurrent, $k \in S$, then $\mu(k) \bG = 0$ and stationary
+        \item measure $\bm x$, then $\bm x \bm G = 0$ $\iff$ $\bm \nu \bm Y= \bm \nu$
+        \item $X$ recurrent, $\bm x \bm G = 0$ unique measure
+        \item $\bm x$ measure, $\bm x \bm G = 0$, then $x_j > 0$
+        \item $X$ recurrent, $k \in S$, then $\bm \mu(k) \bm G = 0$ and stationary \label{lemma:sta4}
     \end{enumerate}
 \end{lemma}
+\begin{pf}
+    \begin{enumerate}
+        \item expand
+        \item $\bm \nu \bm Y= \bm \nu$, then uniqueness from discrete MC
+        \item $\mu_j(k) = \frac{1}{g_j}\rho_j(k)$, then $\bm \rho(k) \bm Y = \bm \rho (k)$ from discrete MC
+        \item strong Markov to shift time $t$
+    \end{enumerate}
+\end{pf}
 
+\begin{fact}
+    $X$ non-explosive, then $R_k = \sum_j \int_0^{R_k} \In \left\{ X(s) = j \right\}ds$
+\end{fact}
 
+\begin{fact}
+    $X$ irreducible, $\exists$ more than one stationary distribution, then $X$ explosive
+\end{fact}
+
+\begin{thm}[Markov chain limit theorem]
+    $X$ irreducible, non-explosive
+    \begin{enumerate}
+        \item if $\exists$ stationary distribution $\bm\pi$, then
+        \begin{enumerate}
+            \item $\bm\pi$ unique
+            \item $p_{ij}(t) \rightarrow \pi_j$
+        \end{enumerate}
+        \item if no stationary distribution, then $p_{ij}(t) \rightarrow 0$
+    \end{enumerate}
+\end{thm}
+\begin{pf}
+    skeleton $Z_n = X(nh)$
+\end{pf}
+
+\begin{lemma}
+    $X$ minimal, then $|p_{ij}(t + u) - p_{ij}(t)| \leq 1 - e^{-g_{i}u}$
+\end{lemma}
+
+\subsection{Birth-death process and imbedding}\label{subsec:birth-death-process-and-imbedding}
+
+\begin{itemize}
+    \item birth rate $\lambda_0, \lambda_1, \dots$
+    \item death rate $\mu_{1}, \mu_2, \dots$
+    \item birth-death process
+\end{itemize}
+
+\begin{thm}
+    $X$ birth-death process, generator $\bm G$
+    \begin{enumerate}
+        \item measure $x_n = \frac{\lambda_0\lambda_1 \cdots \lambda_{n-1}}{\mu_1\mu_2\cdots\mu_n}x_0$ satisfies $\bm x \bm G = 0$
+        \item $\exists$ distribution $\bm\pi$ satisfies $\bm \pi \bm G = 0$ $\iff$ $\sum \frac{\lambda_0\lambda_1 \cdots \lambda_{n-1}}{\mu_1\mu_2\cdots\mu_n}< \infty$
+        \item if $\sum \frac{\lambda_0\lambda_1 \cdots \lambda_{n-1}}{\mu_1\mu_2\cdots\mu_n} (\lambda_n + \mu_n) < \infty$, then $\bm \pi$ stationary
+    \end{enumerate}
+\end{thm}
+\begin{pf}
+    \begin{enumerate}
+        \item solve $\bm x \bm G =0$
+        \item trivial
+        \item condition for jump chain $Y$ recurrent, then non-explosive
+    \end{enumerate}
+\end{pf}
+
+\begin{example}\,
+    \begin{itemize}
+        \item \textbf{Pure birth} $\mu_n = 0$
+        \item \textbf{Simple death with immigration} $\lambda_n = \lambda, \mu_n = n\mu$
+        \begin{thm}
+            $X(t)$ asymptotically $Poi(\rho) = Poi\left(\frac{\lambda}{\mu}\right)$
+        \end{thm}
+        \item \textbf{Simple birth-death} $\lambda_n = n\lambda, \mu_n = n\mu$, $X(0) = I$
+        \begin{fact}
+            state 0 absorbing
+        \end{fact}
+        \begin{thm}
+            $G(s, t) = \Ex(s^{X(t)}) =
+            \begin{cases}
+                \left( \frac{\lambda t(1 - s) + s}{\lambda t (1 - s) + 1}   \right) ^I & \text{if } \mu = \lambda\\
+                \left( \frac{\mu(1 - s) - (\mu - \lambda s)e^{-t(\lambda - \mu)}}{\lambda(1 - s) - (\mu - \lambda s)e^{-t(\lambda - \mu)}}   \right) ^I & \text{if } \mu \neq \lambda\\
+            \end{cases}$
+        \end{thm}
+        \begin{pf}
+            Forward equation
+        \end{pf}
+        \begin{fact}
+            non-explosive as $\sum p_j(t) = G(1, t) = 1$
+        \end{fact}
+        \begin{fact}
+            $\Ex_I(X(t)) \rightarrow
+            \begin{cases}
+                0 & \text{if } \rho < 1\\
+                \infty & \text{if } \rho > 1\\
+            \end{cases}$
+        \end{fact}
+        \begin{itemize}
+            \item extinction probability $\eta(t) = \Pb_I(X(t) = 0)$
+        \end{itemize}
+        \begin{cor}
+            $\eta(t) \rightarrow
+            \begin{cases}
+                1 & \text{if } \rho \leq 1\\
+                \rho^{-I} & \text{if } \rho > 1
+            \end{cases}$
+        \end{cor}
+    \end{itemize}
+\end{example}
+
+\begin{itemize}
+    \item imbedded random walk ------ jump chain $Y$ with parameter $\frac{\lambda}{\lambda + \mu}$, absorbing at 0
+    \item imbedded branching process ------ lives $Exp(\lambda + \mu)$, then born $n$ individuals where $\begin{cases}
+                                                                                    p_0 = \Pb(n = 0) = \frac{\mu}{\lambda + \mu}\\
+                                                                                    p_2 = \Pb(n = 2) =\frac{\lambda}{\lambda + \mu}
+    \end{cases}$
+    \item age-dependent branching process
+    \item age density function $f_T(u) = (\lambda + \mu)e^{-(\lambda + \mu)u}$
+    \item family-size generating function $G(s) = \frac{\mu + \lambda s^2}{\mu + \lambda} = p_0 + p_2 s^2$
+\end{itemize}

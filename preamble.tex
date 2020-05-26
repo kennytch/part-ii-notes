@@ -26,7 +26,7 @@
 % theorem, lemma, example
 \newtheorem{thmm}{Theorem}[section]
 \newtheorem{lemmaa}[thmm]{Lemma}
-\newtheorem{cor}[thmm]{Corollary}
+\newtheorem{corr}[thmm]{Corollary}
 \newtheorem{propp}[thmm]{Proposition}
 \newtheorem*{example}{Example}
 \newtheorem*{counterexample}{Counter Example}
@@ -77,6 +77,15 @@
         roundcorner=5pt,
         nobreak=true]\begin{propp}}%
   {\end{propp}\end{mdframed}}
+\newenvironment{cor}%
+  {\begin{mdframed}[
+        backgroundcolor=green!30,
+        innertopmargin=-3pt,
+        shadow=true,
+        shadowsize=4pt,
+        roundcorner=5pt,
+        nobreak=true]\begin{corr}}%
+  {\end{corr}\end{mdframed}}
 
 % shortcut
 \newcommand{\x}{\times}
