@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="805a30fc-edf0-4349-b4a4-7e21bcb95f75" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/applied prob/sec2.tex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/applied prob/sec0.tex" beforeDir="false" afterPath="$PROJECT_DIR$/applied prob/sec0.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/applied prob/sec1.tex" beforeDir="false" afterPath="$PROJECT_DIR$/applied prob/sec1.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/applied prob/applied_prob.tex" beforeDir="false" afterPath="$PROJECT_DIR$/applied prob/applied_prob.tex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/applied_prob.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/out/applied_prob.pdf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/applied_prob.synctex.gz" beforeDir="false" afterPath="$PROJECT_DIR$/out/applied_prob.synctex.gz" afterDir="false" />
     </list>
@@ -173,7 +173,7 @@
       <workItem from="1590225842755" duration="16283000" />
       <workItem from="1590312696498" duration="1219000" />
       <workItem from="1590383623694" duration="24196000" />
-      <workItem from="1590469067047" duration="15185000" />
+      <workItem from="1590469067047" duration="21519000" />
     </task>
     <task id="LOCAL-00001" summary="Updated ./preamble.tex and recompile the pdf">
       <created>1589298006446</created>
@@ -392,7 +392,14 @@
       <option name="project" value="LOCAL" />
       <updated>1590479518795</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="applied prob sec 1 done">
+      <created>1590508346463</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1590508346463</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -412,7 +419,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="prob_measure/sec7.tex" />
     <MESSAGE value="prob_measure/sec10.tex" />
     <MESSAGE value="prob_measure/sec15.tex" />
     <MESSAGE value="prob_measure" />
@@ -437,6 +443,7 @@
     <MESSAGE value="Applied prob" />
     <MESSAGE value="new outlook" />
     <MESSAGE value="applied prob sec1 G note" />
-    <option name="LAST_COMMIT_MESSAGE" value="applied prob sec1 G note" />
+    <MESSAGE value="applied prob sec 1 done" />
+    <option name="LAST_COMMIT_MESSAGE" value="applied prob sec 1 done" />
   </component>
 </project>

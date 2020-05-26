@@ -1,0 +1,142 @@
+\section{Queues}\label{sec:queues}
+
+\begin{itemize}
+    \item interarrival time $X_n$ with common distribution $F_X$
+    \item service time $S_n$ with common distribution $F_S$
+    \item $n$-th customer arrival time $T_n = \sum X_i$
+    \item length of queue $Q(t)$
+    \item $A/B/s$ ------ $F_X/F_S/\# $servers
+\end{itemize}
+
+\begin{example}\,
+    \begin{itemize}
+        \item $D(d)$ ------ deterministic
+        \item $M(\lambda)$ ------ $Exp(\lambda)$ (Markovian)
+        \item $\Gamma(\lambda, k)$
+        \item $G$ ------ general
+    \end{itemize}
+\end{example}
+
+\begin{example}\,
+    \begin{itemize}
+        \item $M/M/1$
+        \item $M/D/1$
+        \item $G/G/1$
+    \end{itemize}
+\end{example}
+
+\begin{itemize}
+    \item traffic intensity $\rho = \frac{\Ex(S)}{\Ex(X)}$
+\end{itemize}
+
+\subsection{M/M/1}\label{subsec:MM1}
+
+\begin{setting}
+    $M(\lambda)/M(\mu)/1$, $\lambda_n = \lambda$, $\mu_n = \mu$
+\end{setting}
+
+\begin{fact}
+    $\rho = \frac{\lambda}{\mu}$
+\end{fact}
+
+\begin{thm}\,
+    \begin{enumerate}
+        \item if $\rho < 1$, then $\Pb(Q(t) = n) \rightarrow (1 - \rho)\rho^n = \pi_n$
+        \item if $\rho \geq 1$, then $\Pb(Q(t) = n) \rightarrow 0$
+    \end{enumerate}
+\end{thm}
+
+\begin{fact}
+    can define underlying discrete random walk $Q_{n+1} =
+    \begin{cases}
+        Q_n + 1 & \text{with probability } \frac{\lambda}{\lambda + \mu} = \frac{\rho}{1 + \rho}\\
+        Q_n - 1 & \text{with probability } \frac{\mu}{\lambda + \mu} = \frac{1}{1 + \rho}
+    \end{cases}$ for $n \geq 1$, and $\Pb(Q_{n+1} = 1|Q_n = 0) = 1$
+\end{fact}
+
+\begin{fact}
+    $Q_n$ is $\begin{cases}
+                  \text{positive recurrent} & \text{if } \rho < 1\\
+                  \text{null recurrent} & \text{if } \rho = 1\\
+                  \text{transient} & \text{if } \rho > 1\\
+    \end{cases}$
+\end{fact}
+
+\begin{itemize}
+    \item waiting time of customer arrived at time $t$, $W$
+\end{itemize}
+
+\begin{thm}
+    $\rho < 1$, queue in equilibrium, then $W \sim Exp(\mu - \lambda)$
+\end{thm}
+
+\begin{fact}
+    expected queue length at equilibrium $ = \frac{\lambda}{\lambda + \mu}$
+\end{fact}
+
+\subsection{M/M/$\infty$}\label{subsec:m/m/}
+
+\begin{setting}
+    $\begin{cases}
+         q_{i,i+1} = \lambda\\
+         q_{i,i-1} = i\mu
+    \end{cases}$
+\end{setting}
+
+\begin{thm}\,
+    \begin{enumerate}
+        \item $Q(t)$ positive recurrent
+        \item invariant distribution $\pi \sim Poi(\rho)$
+    \end{enumerate}
+\end{thm}
+\begin{pf}
+    solve detail balanced for invariant, coupling to prove non-explosive
+\end{pf}
+
+\begin{setting}
+    $M/M/1$ queue, $\rho < 1$
+\end{setting}
+
+\begin{itemize}
+    \item $D_t$ ------ number of customers have departed queue up to time $t$
+\end{itemize}
+
+\begin{thm}[Burke's theorem]\,
+    \begin{enumerate}
+        \item At equalibrium, $D_t \sim Poi(\lambda)$
+        \item $X_t$ independent from $(D_s : s \leq t)$
+    \end{enumerate}
+\end{thm}
+\begin{pf}
+    \begin{enumerate}
+        \item fix $T$, time reversal, then Poisson process for all $T$, use independent increment criterion.
+        \item $X_0$ independent to $[0,T]$, then reverse
+    \end{enumerate}
+\end{pf}
+
+\subsection{Queues in tandem}\label{subsec:queues-in-tandem}
+
+\begin{setting}
+    two $M/M/1$ with $\lambda, \mu_1, \mu_{2}$
+\end{setting}
+
+\begin{thm}
+    $X_t$, $Y_t$ queue length of first, second queue, then $(X, Y)$ positive recurrent Markov chain $\iff$ $\lambda < \mu_1, \mu_2$
+    In this case, $\pi(m, n) = (1 - \rho_1)\rho_1^m (1 - \rho_2)\rho_n$, so $X_t, Y_t$ indepedent, geometric distributed
+\end{thm}
+\begin{pf}
+    \begin{enumerate}
+        \item (\textbf{Proof 1:}) $(m , n) \rightarrow \begin{cases}
+                                                           (m + 1, n) & \text{with rate }\lambda\\
+                                                           (m , n + 1) & \text{with rate }\mu_1 \text{ if } m \geq 1\\
+                                                           (m , n - 1) & \text{with rate }\mu_2 \text{ if } n \geq 1\\
+        \end{cases}$, then check directly.
+        Rate bounded so non-explosive
+        \item (\textbf{Proof 2:}) Burke's
+    \end{enumerate}
+\end{pf}
+
+\begin{fact}
+    r.v.\ independent while process not independent
+\end{fact}
+
