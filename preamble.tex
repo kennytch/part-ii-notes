@@ -24,10 +24,10 @@
 \DeclarePairedDelimiter{\floor}{\lfloor}{\rfloor}
 
 % theorem, lemma, example
-\newtheorem{thm}{Theorem}[section]
-\newtheorem{lemma}[thm]{Lemma}
-\newtheorem{cor}[thm]{Corollary}
-\newtheorem{prop}[thm]{Proposition}
+\newtheorem{thmm}{Theorem}[section]
+\newtheorem{lemmaa}[thmm]{Lemma}
+\newtheorem{cor}[thmm]{Corollary}
+\newtheorem{propp}[thmm]{Proposition}
 \newtheorem*{example}{Example}
 \newtheorem*{counterexample}{Counter Example}
 \newtheorem*{definition}{Definition}
@@ -37,6 +37,46 @@
 \newtheorem*{goal}{Goal}
 \newtheorem*{myth}{Myth}
 \newtheorem*{exam}{Topics covered in Exam}
+
+\usepackage{xcolor}
+\usepackage[framemethod=TikZ]{mdframed}
+\usetikzlibrary{shadows}
+\newenvironment{pf}%
+  {\begin{mdframed}[
+        backgroundcolor=orange!30,
+        shadow=true,
+        shadowsize=4pt,
+        roundcorner=5pt,
+        nobreak=true]
+        \begin{proof}}%
+  {\end{proof}\end{mdframed}}
+\newenvironment{thm}%
+  {\begin{mdframed}[
+        backgroundcolor=blue!30,
+        innertopmargin=-3pt,
+        shadow=true,
+        shadowsize=4pt,
+        roundcorner=5pt,
+        nobreak=true]\begin{thmm}}%
+  {\end{thmm}\end{mdframed}}
+\newenvironment{lemma}%
+  {\begin{mdframed}[
+        backgroundcolor=green!30,
+        innertopmargin=-3pt,
+        shadow=true,
+        shadowsize=4pt,
+        roundcorner=5pt,
+        nobreak=true]\begin{lemmaa}}%
+  {\end{lemmaa}\end{mdframed}}
+\newenvironment{prop}%
+  {\begin{mdframed}[
+        backgroundcolor=green!30,
+        innertopmargin=-3pt,
+        shadow=true,
+        shadowsize=4pt,
+        roundcorner=5pt,
+        nobreak=true]\begin{propp}}%
+  {\end{propp}\end{mdframed}}
 
 % shortcut
 \newcommand{\x}{\times}

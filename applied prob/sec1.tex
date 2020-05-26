@@ -1,2 +1,369 @@
-\section{Continous time Markov Chains}\label{sec:continous-time-markov-chains}
+\section{Continuous time Markov Chains}\label{sec:continous-time-markov-chains}
+
+\subsection{Poisson process}\label{subsec:poisson-process}
+
+\begin{itemize}
+    \item Poisson process with intensity $\lambda$
+    \begin{enumerate}
+        \item $N(0) = 0$, $N(s) \leq N(t)$ for $s < t$
+        \item $\Pb(N(t + h) = n + m| N(t) = n) = \begin{cases}
+                                                     \lambda h + o(h) & \text{if } m = 1\\
+                                                     o(h) & \text{if } m > 1\\
+                                                     1 - \lambda h + o(h) & \text{if } m = 0\\
+        \end{cases}$
+        \item $N(t) - N(s)$ independent of $(N(k))_{k \leq s}$
+    \end{enumerate}
+\end{itemize}
+
+\begin{thm}
+    $N(t) \sim Poi(\lambda t)$
+\end{thm}
+\begin{pf}
+    derive differential equation, then generating function
+\end{pf}
+
+\begin{itemize}
+    \item $p_j(t) = \Pb(N(t) = j)$
+    \item Generating function $G(s, t) = \sum p_j(t)s^j$
+    \item Arrival time $T_n$
+    \item interarrival time $U_n$
+\end{itemize}
+
+\begin{thm}\,
+    \begin{enumerate}
+        \item $U_i \sim Exp(\lambda)$
+        \item $U_i$ independent
+    \end{enumerate}
+\end{thm}
+\begin{pf}
+    use $N(t)$ Poisson
+\end{pf}
+
+\begin{fact}
+    $N(t) \geq j$ $\iff$ $T_j \leq t$
+\end{fact}
+\begin{itemize}
+    \item order statistics
+\end{itemize}
+
+\begin{thm}
+    $T_1, \dots, T_n$ conditional on $\left\{ N(t) = n \right\}$ same as joint distribution of order statistics of $n$ i.i.d. $Uniform[0, t]$
+\end{thm}
+\begin{pf}
+    $U$ to $T$, then calculate density
+\end{pf}
+
+\subsection{Birth process}\label{subsec:birth-process}
+
+\begin{itemize}
+    \item birth process with birth rates $\lambda_0, \lambda_1, \dots$
+    \begin{enumerate}
+        \item $N(0) = 0$, $N(s) \leq N(t)$ for $s < t$
+        \item $\Pb(N(t + h) = n + m| N(t) = n) = \begin{cases}
+                                                     \lambda_n h + o(h) & \text{if } m = 1\\
+                                                     o(h) & \text{if } m > 1\\
+                                                     1 - \lambda_n h + o(h) & \text{if } m = 0\\
+        \end{cases}$
+        \item $N(t) - N(s)$ independent of $(N(k))_{k \leq s}$
+    \end{enumerate}
+\end{itemize}
+
+\begin{example}\,
+    \begin{enumerate}
+        \item \textbf{Poisson process}: $\lambda_n = \lambda$
+        \item \textbf{Simple birth}: $\lambda_n = n\lambda$
+        \item \textbf{Simple birth with immigration}: $\lambda_n = n\lambda + \nu$
+    \end{enumerate}
+\end{example}
+
+\begin{itemize}
+    \item $T_\infty = \lim T_n = \sum^\infty U_i$
+    \item non-explosive / honest ------ $\Pb(T_\infty = \infty) = 1$
+\end{itemize}
+
+\begin{thm}
+    birth process $N$, $\lambda_n > 0$, then non-explosive $\iff$ $\sum_n \frac{1}{\lambda_n} = \infty$
+\end{thm}
+
+\begin{lemma}
+    $U_n \sim Exp(\lambda_n)$, independent, then $\Pb(T_\infty < \infty) = \begin{cases}
+                                                     0 & \text{if } \sum_n \frac{1}{\lambda_n} = \infty\\
+                                                     1 & \text{if } \sum_n \frac{1}{\lambda_n} < \infty\\
+    \end{cases}$
+\end{lemma}
+
+\begin{itemize}
+    \item forward system of equations: $p_{ij}'(t) = \lambda_{j-1}p_{i, j-1}(t) - \lambda_j p_{ij}(t)$
+    \item backward system of equations: $p_{ij}'(t) = \lambda_i p_{i+1, j}(t) - \lambda_i p_{ij}(t)$
+\end{itemize}
+
+\begin{thm}\,
+    \begin{enumerate}
+        \item forward system has unique solution $\left\{ p_{ij}(t) \right\}$
+        \item $\left\{ p_{ij}(t) \right\}$ satisfy backward system
+    \end{enumerate}
+\end{thm}
+
+\begin{thm}
+    $\left\{ p_{ij}(t) \right\}$ unique solution of forward equations, $\left\{ \pi_{ij}(t) \right\}$ any solution of backward equations, then
+    $p_{ij}(t) \leq \pi_{ij}(t)$
+\end{thm}
+
+\begin{fact}
+    $\sum_j p_{ij}(t) = 1 \iff \Pb(T_\infty > t) = 1$
+\end{fact}
+
+\begin{itemize}
+    \item weak Markov property
+    \item stopping time
+    \item strong Markov property
+    \item right continuity
+    \item stationary independent increments
+    \begin{enumerate}
+        \item $N(t) - N(s)$ only depends on $t - s$
+        \item $\left\{ N(t_i) - N(s_i) \right\}$ independent where $s_1 \leq t_1 \leq \dots \leq s_n \leq t_n$
+    \end{enumerate}
+\end{itemize}
+
+\begin{setting}
+    $(X(t))$ takes values in countable $S$
+\end{setting}
+
+\begin{itemize}
+    \item Markov property ------ \\$\Pb(X(t_n) = j|X(t_{n-1}) = i_{n-1}, \dots, X(t_1) = i_1) =\Pb(X(t_n) = j|X(t_{n-1}) = i_{n-1}) $
+    \item continuous-time Markov chain ------ right-continuous, Markov property
+    \item transition probability $p_{ij}(s, t) = \Pb(X(t) = j|X(s) = i)$
+    \item homogeneous ------ $p_{ij}(s, t) = p_{ij}(0, t-s)$
+    \item transition semigroup $(P_t)_{ij} = p_{ij}(t)$
+    \item stochastic semigroup
+    \begin{enumerate}
+        \item $P_0 = I$
+        \item $P_t$ stochastic ------ non-negative entries, row sum 1
+        \item (Chapman-Kolmogorov) $P_{s+t} = P_s P_t$
+    \end{enumerate}
+\end{itemize}
+
+\begin{setting}
+    $(X(t))$ homogeneous Markov chain
+\end{setting}
+
+\begin{thm}
+    $P_t$ stochastic semigroup
+\end{thm}
+
+\begin{itemize}
+    \item $\Pb_i$ ------ probability measure conditional on $X(0) = i$
+    \item $\Ex_i$
+    \item $t$-historical ------ events given by $\left\{ X(s) : s < t \right\}$
+    \item $t$-future ------ events given by $\left\{ X(s) : s > t \right\}$
+    \item stopping time $T$ ------ $\left\{ T \leq t \right\}$ given by $\left\{ X(s) : s \leq t \right\}$
+\end{itemize}
+
+\begin{thm}[Extended Markov property]
+    $H$ $t$-historical, $F$ $t$-future, then $\Pb(F|X(t) = j, H) = \Pb(F | X(t) = j)$
+\end{thm}
+
+\begin{thm}[Strong Markov property]
+    $T$ stopping time, conditional on $\left\{ T \leq T_\infty \right\} \bigcap \left\{ X(T) = i \right\}$, then
+    \begin{enumerate}
+        \item $(X_{T + u})_u$ continuous Markov chain start at state $i$
+        \item same transition prob
+        \item independent to $\left\{ X(s) : s < T \right\}$
+    \end{enumerate}
+\end{thm}
+
+\begin{setting}
+    $X(0) = i$
+\end{setting}
+
+\begin{itemize}
+    \item $U_0 = \inf \left\{ t : X(t) \neq i \right\}$
+\end{itemize}
+
+\begin{fact}
+    right continuous $\Rightarrow$ $U_0 > 0$
+\end{fact}
+
+\begin{thm}\,
+    \begin{enumerate}
+        \item $U_0 \sim Exp(g_i)$
+        \item $U_0$ stopping time
+    \end{enumerate}
+\end{thm}
+\begin{pf}
+    Extended Markov and homogeneity to deduce memoryless
+\end{pf}
+
+\begin{itemize}
+    \item transition matrix $\textbf{Y} = (y_{ij})$ ------ $y_{ij} = \begin{cases}
+                                                                \delta_{ij} & \text{if } g_i = 0\\
+                                                                \Pb_i(X(U_0) = j) & \text{if } g_i > 0
+    \end{cases}$
+    \item generator $\textbf{G} = (g_{ij})$ ------ $g_{ij} = \begin{cases}
+                                                        g_{i} y_{ij} &\text{if } j \neq i\\
+                                                        -g_i & \text{if } j = i
+    \end{cases}$
+\end{itemize}
+
+\begin{fact}
+    $\Pb(X(t+h) = j |X(t) = i) = g_{ij}h + o(h)$
+\end{fact}
+
+\begin{fact}
+    $g_{ij} = g_i(y_{ij} - \delta_{ij})$
+\end{fact}
+
+\begin{thm}
+    $X(0) = i$, then
+    \begin{enumerate}
+        \item $X(U_0)$ independent of $U_0$
+        \item conditional on $X(U_0) = j$, $X^*(s) = X(U_0 + s)$ continuous-time Markov chain, same transition prob, initial state $j$, independent to the past
+    \end{enumerate}
+\end{thm}
+
+\begin{itemize}
+    \item $T_m$
+    \item holding time $U_m = T_{m + 1} - T_m$
+    \item jump chain $Y = \left\{ Y_n \right\}$
+    \item $T_{\infty} = \lim T_n$
+    \item minimal process
+    \item explode from state $i$ ------ $\Pb_i(T_\infty < \infty) > 0$
+\end{itemize}
+
+\begin{prop}
+    $X$ minimal process, then $\textbf{P}_{s+t} = \textbf{P}_s$
+\end{prop}
+\begin{pf}
+    may go to $\left\{ \infty \right\}$
+\end{pf}
+
+\begin{thm}
+    $i \in S$, non-explosive from $i$ if any of the following holds:
+    \begin{enumerate}
+        \item $S$ finite
+        \item $\sup_j g_j < \infty$
+        \item $i$ recurrent in jump chain $Y$
+    \end{enumerate}
+\end{thm}
+\begin{pf}
+    be dominated by Poisson process which is non-explosive
+\end{pf}
+
+\begin{itemize}
+    \item irreducible ------ $\forall i,j, \exists t > 0, p_{ij}(t) > 0$
+\end{itemize}
+
+\begin{thm}\,
+    \begin{enumerate}
+        \item (Levy dichotomy) $X$ irreducible, then $\forall t > 0$, $p_{ij}(t) > 0$
+        \item $X$ irreducible $\iff$ $Y$ irreducible
+    \end{enumerate}
+\end{thm}
+\begin{pf}
+    look at jump chain, $g_{i_0}\cdots g_{i_n} > 0$, $p_{i_k, i_{k+1}}(t) > 0$
+\end{pf}
+
+\begin{fact}
+    birth process not irreducible
+\end{fact}
+
+\begin{itemize}
+    \item recurrent ------ $\Pb(\left\{ t: X(t) = i \right\} \text{ unbounded}) = 1$
+    \item transient ------ $\Pb(\left\{ t: X(t) = i \right\} \text{ unbounded}) = 0$
+    \item $R_i = \inf \left\{ t > U_0 : X(t) = i \right\}$
+    \item mean return time $m_i = \Ex(R_i)$
+    \item positive recurrent / non-null recurrent ------ $m_i < \infty$
+\end{itemize}
+
+\begin{thm}
+    continuous-time chain $X$, jump chain $Y$
+    \begin{enumerate}
+        \item $g_i = 0$, then $i$ recurrent for $X$
+        \item $g_i > 0$, then $i$ recurrent for $X$ $\iff$ recurrent for $Y$
+        \item $i$ recurrent $\iff$ $\int p_{ii}(t)dt = \infty$
+        \item $i$ transient $\iff$ $\int p_{ii}(t)dt < \infty$
+        \item $X$ irreducible, then every state recurrent or every state transient
+    \end{enumerate}
+\end{thm}
+\begin{pf}
+    main point is no explosion.
+    Interchange summation, then old result.
+\end{pf}
+
+\begin{itemize}
+    \item \textbf{Forward equation:} $\bP_t' = \bP_t \bG$ with boundary condition $\bP_0 = 1$
+    \item \textbf{Backward equation:} $\bP_t' = \bG \bP_t$  with boundary condition $\bP_0 = 1$
+\end{itemize}
+
+\begin{fact}
+    If states $S$ finite, then $\bP_t = e^{t\bG}$
+\end{fact}
+
+\begin{itemize}
+    \item minimal solution ------ $p_{ij}(t) \leq \pi_{ij}(t)$
+    \item sub-stochastic ------ $\sum_j p_{ij}(t) < 1$
+\end{itemize}
+
+\begin{thm}
+    $S$ countable, $X$ minimal Markov chain with generator $\bG$, then
+    \begin{enumerate}
+        \item $\bP_t$ minimal non-negative solution of backward equation $\bP_t' = \bG \bP_t$  with boundary condition $\bP_0 = 1$
+        \item $\bP_t$ minimal non-negative solution of forward equation $\bP_t' = \bP_t \bG$
+    \end{enumerate}
+\end{thm}
+\begin{pf}
+    \textbf{Solution:} condition on $T_1 > t$ or $T_1 \leq t$.\\
+    \textbf{Minimal:} reverse argument and induction.
+\end{pf}
+
+\begin{fact}
+    any solution to both equations sub-stochastic
+\end{fact}
+
+\begin{fact}
+    non-explosive $\Rightarrow$ $\bP_t$ unique solution to both equations
+\end{fact}
+
+\begin{itemize}
+    \item measure
+    \item stationary measure ------ $\pi = \pi P_t$
+    \item stationary distribution
+    \item unique measure ------ unique up to scalar multiplication
+    \item first return time $R_{i}$
+    \item $m_i = \Ex_i(R_i)$
+\end{itemize}
+
+\begin{thm}
+    $X$ irreducible, $|S|\geq 2$
+    \begin{enumerate}
+        \item some state $k$ positive recurrent, then
+        \begin{enumerate}
+            \item $\exists$ unique stationary distribution $\pi$
+            \item unique distribution st $\pi \bG = 0$
+            \item all states positive recurrent
+        \end{enumerate}
+        \item $X$ non-explosive, $\exists$ $\pi$ st $\pi \bG = 0$, then
+        \begin{enumerate}
+            \item all states positive recurrent
+            \item $\pi$ stationary
+            \item $\pi_k = \frac{1}{m_k g_k}$
+        \end{enumerate}
+    \end{enumerate}
+\end{thm}
+
+\begin{itemize}
+    \item $\nu_i = x_i g_i$
+    \item $\mu(k) = (\mu_j(k))_j$ ------ $\mu_j(k) = \Ex_k\left( \int^{R_k}_0 \In \left\{ X(s) = j \right\} ds \right)$
+\end{itemize}
+
+\begin{lemma}
+    $X$ irreducible, $|S|\geq 2$
+    \begin{enumerate}
+        \item measure $x$, then $x \bG = 0$ $\iff$ $\nu \textbf{Y}= \nu$
+        \item $X$ recurrent, $x \bG = 0$ unique measure
+        \item $x$ measure, $x \bG = 0$, then $x_j > 0$
+        \item $X$ recurrent, $k \in S$, then $\mu(k) \bG = 0$ and stationary
+    \end{enumerate}
+\end{lemma}
+
 

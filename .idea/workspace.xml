@@ -2,10 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="805a30fc-edf0-4349-b4a4-7e21bcb95f75" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/applied prob/sec0.tex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/prin_of_stat/superefficiency_topics.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/Asus.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/Asus.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/principle_of_stat.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/out/principle_of_stat.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/principle_of_stat.synctex.gz" beforeDir="false" afterPath="$PROJECT_DIR$/out/principle_of_stat.synctex.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prin_of_stat/sec4.tex" beforeDir="false" afterPath="$PROJECT_DIR$/prin_of_stat/sec4.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/applied prob/applied_prob.tex" beforeDir="false" afterPath="$PROJECT_DIR$/applied prob/applied_prob.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/applied prob/sec1.tex" beforeDir="false" afterPath="$PROJECT_DIR$/applied prob/sec1.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/applied_prob.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/out/applied_prob.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/applied_prob.synctex.gz" beforeDir="false" afterPath="$PROJECT_DIR$/out/applied_prob.synctex.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/preamble.tex" beforeDir="false" afterPath="$PROJECT_DIR$/preamble.tex" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -42,7 +47,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="LaTeX.applied_prob">
+  <component name="RunManager" selected="LaTeX.graph_theory">
     <configuration name="applied_prob" type="LATEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory" temporary="true">
       <texify>
         <compiler>PDFLATEX</compiler>
@@ -135,11 +140,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="LaTeX.applied_prob" />
-        <item itemvalue="LaTeX.principle_of_stat" />
-        <item itemvalue="LaTeX.prob_measure" />
-        <item itemvalue="LaTeX.sfm" />
         <item itemvalue="LaTeX.graph_theory" />
+        <item itemvalue="LaTeX.sfm" />
+        <item itemvalue="LaTeX.prob_measure" />
+        <item itemvalue="LaTeX.principle_of_stat" />
+        <item itemvalue="LaTeX.applied_prob" />
       </list>
     </recent_temporary>
   </component>
@@ -171,6 +176,8 @@
       <workItem from="1590151228912" duration="16869000" />
       <workItem from="1590225842755" duration="16283000" />
       <workItem from="1590312696498" duration="1219000" />
+      <workItem from="1590383623694" duration="24196000" />
+      <workItem from="1590469067047" duration="343000" />
     </task>
     <task id="LOCAL-00001" summary="Updated ./preamble.tex and recompile the pdf">
       <created>1589298006446</created>
@@ -368,7 +375,14 @@
       <option name="project" value="LOCAL" />
       <updated>1590268343097</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="Applied prob">
+      <created>1590383809509</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1590383809509</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -411,6 +425,7 @@
     <MESSAGE value="PoS finish lecture 11" />
     <MESSAGE value="PoS finish sec4" />
     <MESSAGE value="PoS finish sec5" />
-    <option name="LAST_COMMIT_MESSAGE" value="PoS finish sec5" />
+    <MESSAGE value="Applied prob" />
+    <option name="LAST_COMMIT_MESSAGE" value="Applied prob" />
   </component>
 </project>
