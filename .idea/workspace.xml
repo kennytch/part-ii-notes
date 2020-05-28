@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="805a30fc-edf0-4349-b4a4-7e21bcb95f75" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/applied prob/sec3.tex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/number_theory/number_theory.tex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/number_theory/sec1.tex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/applied prob/applied_prob.tex" beforeDir="false" afterPath="$PROJECT_DIR$/applied prob/applied_prob.tex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/applied_prob.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/out/applied_prob.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/applied_prob.synctex.gz" beforeDir="false" afterPath="$PROJECT_DIR$/out/applied_prob.synctex.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/sfm.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/out/sfm.pdf" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -36,14 +34,15 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/number_theory" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Asus\Documents\GitHub\part-ii-notes\number_theory" />
+      <recent name="C:\Users\Asus\Desktop\Revision" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Asus\Desktop\Revision\graph_theory" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Asus\Desktop\Revision" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -58,7 +57,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="LaTeX.applied_prob">
+  <component name="RunManager" selected="LaTeX.number_theory">
     <configuration name="applied_prob" type="LATEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory" temporary="true">
       <texify>
         <compiler>PDFLATEX</compiler>
@@ -95,14 +94,14 @@
       </texify>
       <method v="2" />
     </configuration>
-    <configuration name="principle_of_stat" type="LATEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory" temporary="true">
+    <configuration name="number_theory" type="LATEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory" temporary="true">
       <texify>
         <compiler>PDFLATEX</compiler>
         <compiler-path />
         <sumatra-path />
         <viewer-command />
         <compiler-arguments />
-        <main-file>$PROJECT_DIR$/prin_of_stat/principle_of_stat.tex</main-file>
+        <main-file>$PROJECT_DIR$/number_theory/number_theory.tex</main-file>
         <aux-dir>true</aux-dir>
         <out-dir>true</out-dir>
         <compile-twice>false</compile-twice>
@@ -151,11 +150,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="LaTeX.number_theory" />
         <item itemvalue="LaTeX.applied_prob" />
         <item itemvalue="LaTeX.sfm" />
         <item itemvalue="LaTeX.graph_theory" />
         <item itemvalue="LaTeX.prob_measure" />
-        <item itemvalue="LaTeX.principle_of_stat" />
       </list>
     </recent_temporary>
   </component>
@@ -190,7 +189,8 @@
       <workItem from="1590383623694" duration="24196000" />
       <workItem from="1590469067047" duration="21529000" />
       <workItem from="1590558340080" duration="13622000" />
-      <workItem from="1590644465620" duration="13862000" />
+      <workItem from="1590644465620" duration="13872000" />
+      <workItem from="1590677266200" duration="5557000" />
     </task>
     <task id="LOCAL-00001" summary="Updated ./preamble.tex and recompile the pdf">
       <created>1589298006446</created>
@@ -430,7 +430,14 @@
       <option name="project" value="LOCAL" />
       <updated>1590644490783</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="applied prob sec 3 almost done">
+      <created>1590677165063</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1590677165063</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -450,7 +457,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="prob_measure/sec15.tex" />
     <MESSAGE value="prob_measure" />
     <MESSAGE value="SFM Martingale" />
     <MESSAGE value="SFM sec2 done" />
@@ -475,6 +481,7 @@
     <MESSAGE value="applied prob sec1 G note" />
     <MESSAGE value="applied prob sec 1 done" />
     <MESSAGE value="applied prob sec 2 almost done" />
-    <option name="LAST_COMMIT_MESSAGE" value="applied prob sec 2 almost done" />
+    <MESSAGE value="applied prob sec 3 almost done" />
+    <option name="LAST_COMMIT_MESSAGE" value="applied prob sec 3 almost done" />
   </component>
 </project>

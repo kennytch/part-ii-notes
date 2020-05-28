@@ -1,0 +1,166 @@
+\section{Numbers and Sets}\label{sec:numbers-and-sets}
+
+\begin{itemize}
+    \item natural numbers
+    \item divides ------ $\exists k$ st $b = ka$
+    \item factor
+    \item divisor
+    \item divisible
+    \item prime ------ only factor are 1 and $n$
+    \item composite
+    \item prime counting function $\pi(x)$ ------ $\#$ primes $\leq x$
+\end{itemize}
+
+\begin{lemma}
+    $n > 1$, then $n$ has prime factor
+\end{lemma}
+
+\begin{thm}
+    $\exists$ infinitely many primes
+\end{thm}
+
+\begin{itemize}
+    \item highest common factor / greatest common divisor
+    \item coprime / relatively prime
+    \item Euclid's algorithm
+\end{itemize}
+
+\begin{prop}
+    Euclid's algorithm works
+\end{prop}
+
+\begin{thm}[Bezout]
+    $a,b,c \in \N$, then $\exists m, n$ st $am + bn = c$ $\iff$ $(a,b) \mid c$
+\end{thm}
+
+\begin{prop}
+    $p$ prime, $p \mid ab $, then $p \mid a$ or $p \mid b$
+\end{prop}
+\begin{pf}
+    assume $p \nmid a$, then Bezout
+\end{pf}
+
+\begin{thm}[Fundamental Theorem of Arithmetic]
+    $n \in \N$, then $n$ can be factorised as product of primes uniquely (up to reordering)
+\end{thm}
+\begin{pf}
+    Existence: induction\\
+    Uniqueness: $p_1 \mid q_1\cdots q_k$
+\end{pf}
+
+\begin{itemize}
+    \item congruent to $b$ modulo $n$ ------ $n \mid a - b$
+\end{itemize}
+
+\begin{lemma}
+    $n  >1$, $(a, n) = 1$, then $\exists m$ st $am \equiv 1$ (multiplicative inverse mod $n$)
+\end{lemma}
+\begin{pf}
+    Bezout
+\end{pf}
+
+\begin{itemize}
+    \item unit ------ invertible elements
+    \item multiplicative group $(\Z/n\Z)^\times$ or $(\Z/n\Z)^*$ ------ group of unit
+    \item Euler totient function $\phi(n) = \left|(\Z/n\Z)^\times  \right|$
+\end{itemize}
+
+\begin{fact}
+    $\phi(p) = p - 1$
+\end{fact}
+
+\begin{thm}[Fermat-Euler]
+    $n > 1$, $(a , n ) = 1$, then $a^\phi(n) \equiv 1 \pmod n$
+\end{thm}
+\begin{pf}
+    Langrange's
+\end{pf}
+
+\begin{cor}[Fermat's Little Theorem]
+    $a^{p-1} \equiv 1 \pmod{p}$
+\end{cor}
+
+\begin{thm}[Chinese remainder theorem]
+    $m_1, m_2 > 1$, $(m_1, m_2) = 1$, $a_1, a_2 \in \Z$, then $\exists n$ st
+    $\begin{cases}
+         n \equiv a_1 \pmod{m_1}\\
+         n \equiv a_2 \pmod{m_2}
+    \end{cases}$, unique up to modulo $m_{1}m_2$
+\end{thm}
+
+\begin{fact}
+    extend to more congruences as long as pairwise coprime
+\end{fact}
+
+\begin{fact}
+    $\Z/n\Z \cong \Z/p_1^{\alpha_1}\Z \times \cdots \times \Z/p_k^{\alpha_k}\Z$
+\end{fact}
+
+\begin{cor}
+    In addition, $(a_1, m_1) = 1, (a_2, m_2) = 1$, then $(n, m_1 m_2) = 1$
+\end{cor}
+
+\begin{fact}
+    $(\Z/n\Z)^\times \cong (\Z/p_1^{\alpha_1}\Z)^\times \times \cdots \times (\Z/p_k^{\alpha_k}\Z)^\times$
+\end{fact}
+
+\begin{itemize}
+    \item multiplicative ------ $f(mn) = f(m)f(n)$ whenever $m, n$ coprime
+    \item totally multiplicative ------ $f(mn) = f(m)f(n)$ for all $m, n$
+\end{itemize}
+
+\begin{cor}
+    $\phi$ Euler function multiplicative
+\end{cor}
+\begin{pf}
+    $(\Z/m_1 m_2\Z)^\times = (\Z/m_1\Z)^\times \times (\Z/m_2\Z)^\times$
+\end{pf}
+
+\begin{lemma}
+    $p$ prime, $k \in \N$, then $\phi(p^k) = p^{k-1}(p - 1)$
+\end{lemma}
+\begin{pf}
+    direct counting $p^k - p^{k-1}$
+\end{pf}
+
+\begin{itemize}
+    $\sum_{d \mid n} \phi(d)$
+\end{itemize}
+
+\begin{lemma}
+    $n \in \N$, then $\sum_{d \mid n} \phi(d) = n$
+\end{lemma}
+\begin{pf}
+    prove multiplicity, then work on $p^k$
+\end{pf}
+
+\begin{cor}
+    $f$ multiplicative $\Rightarrow$ $\sum_{d \mid n} f(d)$ multiplicative
+\end{cor}
+
+\begin{itemize}
+    \item $d(n) = \tau(n) = \sum_{d \mid n} 1 = $ \# divisors
+    \item $\sigma(n) = \sum_{d \mid n} d = $ sum of divisors
+\end{itemize}
+
+\begin{thm}[Lagrange Theorem]
+    $p$ prime, $f(x) = a_n x^n + \dots + a_{1}x + a_0$, $a_n \nmid p$, then $f(x) \equiv 0 \pmod p$ at most $n$ solutions
+\end{thm}
+\begin{pf}
+    induction, $(x - x_0)g(x) \equiv 0 \pmod{p}$, $\Z/p\Z$ no zero divisor
+\end{pf}
+
+\begin{thm}
+    $p$ prime, $(\Z/p\Z)$ cyclic
+\end{thm}
+\begin{pf}
+    $d \mid p - 1$, $S_d = \left\{ a : \text{order } d \right\}$, $x^d - 1 \equiv 0$ at most $d$ solution, then either 0 or $\phi(d)$ solution, but $\sum \phi(d) = p-1$
+\end{pf}
+
+\begin{itemize}
+    \item primitive root
+\end{itemize}
+
+\begin{lemma}
+    $p$ prime, then $\exists$ primitive root $g$ st $g^{p-1} = 1 + bp$ where $(b, p) = 1$
+\end{lemma}
