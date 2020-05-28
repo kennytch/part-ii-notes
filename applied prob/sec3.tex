@@ -1,0 +1,195 @@
+\section{Renewals}\label{sec:renewals}
+
+\begin{itemize}
+    \item $X_i$ i.i.d. ------ non-negative, $\Pb(X_i > 0) = 1$
+    \item $T_n = \ddd{X}$
+    \item renewal process $N$
+\end{itemize}
+
+\begin{thm}
+    $\Pb(N(t) < \infty) = 1 \iff \Ex(X_1) > 0$
+\end{thm}
+
+\begin{itemize}
+    \item $F$ distribution of $X$
+    \item $F_k$ distribution of $T_k$
+\end{itemize}
+
+\begin{lemma}
+    $F_1 = F$, $F_{k+1}(x) = \int_0^x F_k(x - y)dF(y)$
+\end{lemma}
+
+\begin{lemma}
+    $\Pb(N(t) = k) = F_k(t) - F_{k+1}(t)$
+\end{lemma}
+
+\begin{itemize}
+    \item renewal function $m(t) = \Ex(N(t))$
+\end{itemize}
+
+\begin{lemma}
+    $m(t) = \sum F_k(t)$
+\end{lemma}
+
+\begin{lemma}
+    $m(t) = F(t) + \int^t_0 m(t- x)dF(x)$
+\end{lemma}
+\begin{pf}
+    condition on $X_1$
+\end{pf}
+
+\begin{itemize}
+    \item renewal-type equation $\mu(t) = H(t) + \int^{t}_0 \mu(t-x)dF(x)$, $H$ uniformly bounded
+\end{itemize}
+
+\begin{thm}\,
+    \begin{enumerate}
+        \item $\mu(t) = H(t) + \int_0^t H(t - x)dm(x)$ solution of renewal-type equation
+        \item $H$ bounded on finite interval, then $\mu$ bounded on finite intervals, unique sol to equation
+    \end{enumerate}
+\end{thm}
+
+\begin{itemize}
+    \item Laplace-Stieltjes transform ------ $g^*(\theta) = \int_0^\infty e^{-\theta x} dg(x)$
+\end{itemize}
+
+\begin{fact}
+    after transform, $\mu^*(\theta) = \frac{H^*(\theta)}{1 - F^*(\theta)}$\\
+    if $H = F$,  $m^*(\theta) = \frac{F^*(\theta)}{1 - F^*(\theta)}$
+\end{fact}
+
+\begin{thm}
+    $\frac{1}{t}N(t) \rightarrowas \frac{1}{\mu}$
+\end{thm}
+\begin{pf}
+    Strong law on $T_{N(t)}$ and $T_{N(t) + 1}$
+\end{pf}
+
+\begin{thm}
+    $Var(X_1) = \sigma^2$, $\frac{N(t) - \frac{t}{\mu}}{\sqrt{\frac{t\sigma^2}{\mu^3}}} \rightarrowd \mathcal{N}(0, 1)$
+\end{thm}
+
+\begin{thm}[Elementary renewal theorem]
+    $\frac{1}{t}m(t) \rightarrow \frac{1}{\mu}$
+\end{thm}
+\begin{pf}
+    $M = N(t) + 1$ stopping time for $X_i$, then $t < T_{N(t) + 1}$ with Wald giving lower bound.
+    $t \geq T_{N(t)}$ and truncation for upper bound.
+\end{pf}
+
+\begin{lemma}[Wald's equation]
+    $X_i$ i.i.d.\ , finite mean, $M$ stopping time wrt $(X_i)$, $\Ex(M) < \infty$, then $\Ex\left(\sum^M_{i=1} X_i\right) = \Ex(X_1)\Ex(M)$
+\end{lemma}
+
+\begin{fact}
+    $N(t)$ not stopping time
+\end{fact}
+
+\begin{fact}
+    $\Ex_{N(t) + 1} \neq \mu$ in general
+\end{fact}
+
+\begin{itemize}
+    \item $F_X$ arithmetic with span $\lambda$ ------ $X$ take values $\left\{ m\lambda \right\}$ a.s.\
+\end{itemize}
+
+\begin{thm}[Blackwell's renewal theorem]\,
+    \begin{enumerate}
+        \item $X_1$ not arithmetic, then $m(t + h) - m(t) \xrightarrow{t\rightarrow\infty} \frac{h}{\mu}$ for all $h$
+        \item If $X_1$ arithmetic, still holds when $h$ multiple of $\lambda$
+    \end{enumerate}
+\end{thm}
+
+\begin{thm}[Key renewal theorem]
+    $X_1$ not arithmetic, $g$ such that
+    \begin{enumerate}
+        \item $g(t) \geq 0$ for all $t$
+        \item $\int_0^\infty g(t)dt < \infty$
+        \item $g$ non-increasing
+    \end{enumerate}
+    then $\int_0^t g(t-x) dm(x) \rightarrow \frac{1}{\mu} \int_0^\infty g(x) dx$
+\end{thm}
+
+\subsection{Excess Life}\label{subsec:excess-life}
+
+\begin{itemize}
+    \item excess lifetime $E(t) = T_{N(t)+1 - t}$
+    \item current lifetime/age $C(t) = t - T_{N(t)}$
+    \item total lifetime $D(t) = E(t) + C(t) = X_{N(t) + 1}$
+\end{itemize}
+
+\begin{thm}
+    $\Pb(E(t) \leq y) = F(t + y) - \int_0^t [1 - F(t + y - x)]dm(x)$
+\end{thm}
+\begin{pf}
+    consider $\Pb(E(t) > y)$ and condition on $X_1$ to get renewal-type equation
+\end{pf}
+
+\begin{cor}
+    $\Pb(C(t) \geq y) =
+    \begin{cases}
+        0 & \text{if } y > t\\
+        1 - F(t) + \int_0^{t-y}(1 - F(t-x))dm(x) &\text{if } y \leq t
+    \end{cases}$
+\end{cor}
+\begin{pf}
+    $\Pb(C(t) \geq y) = \Pb(E(t -y) > y)$
+\end{pf}
+
+\begin{setting}
+    $X = X_1$
+\end{setting}
+
+\begin{thm}
+    $X$ not arithmetic, $\mu = \Ex(X) < \infty$, then $\Pb(E(t) \leq y) \xrightarrow{t \rightarrow \infty} \frac{1}{\mu} \int_0^y (1 - F(x)) dx$
+\end{thm}
+\begin{pf}
+    key renewal and $\mu = \int F(x) dx$
+\end{pf}
+
+\begin{thm}
+    $X$ takes values in $\N$ with span 1, $\mu = \Ex(X) < \infty$, then $\Pb(E(n) = k) \rightarrow \frac{1}{\mu}\Pb(X \geq k)$ for $k \in \N$
+\end{thm}
+\begin{pf}
+    $p_{k, k-1} = 1, p_{1, j} = \Pb(X = j)$, invariant distribution $\pi_k = \frac{1}{\mu}\Pb(X \geq k)$
+\end{pf}
+
+\subsection{Renewal-reward processes}\label{subsec:renewal-reward-processes}
+
+\begin{setting}
+    $\left\{ (X_i, R_i) \right\}$ i.i.d.\
+\end{setting}
+
+\begin{itemize}
+    \item reward process $C(t) = \sum^{N(t)}_{i=1} R_i$
+    \item reward function $c(t) = \Ex(C(t))$
+\end{itemize}
+
+\begin{thm}[Renewal-reward theorem]
+    $0 < \Ex X < \infty$, $\Ex|R| < \infty$, then
+    \begin{enumerate}
+        \item $\frac{C(t)}{t} \rightarrowas \frac{\Ex R}{\Ex X}$
+        \item $\frac{c(t)}{t} \rightarrow \frac{\Ex R}{\Ex X}$
+    \end{enumerate}
+\end{thm}
+\begin{pf}
+    \begin{enumerate}
+        \item $\frac{C(t)}{t} = \frac{C(t)}{N(t)} \frac{N(t)}{t}$
+        \item
+        \begin{enumerate}
+            \item[\textbf{1)}] Wald, suffice $t^{-1} \Ex(R_{N(t) + 1}) \rightarrow 0$, then condition on $X_1$, renewal, then bound
+            \item[\textbf{2)}] uniform integrablity, then cvg in prob $\Rightarrow$ $L^1$ convergence
+        \end{enumerate}
+    \end{enumerate}
+\end{pf}
+
+\begin{fact}
+    also work for accumulative reward as long as monotone
+\end{fact}
+
+
+
+
+
+
+
