@@ -140,3 +140,156 @@
     r.v.\ independent while process not independent
 \end{fact}
 
+\subsection{Jackson network}\label{subsec:jackson-network}
+
+\begin{setting}
+    finite set $S = \left\{ s_1, \dots, s_c \right\}$, $Q_i(t)$ individual in station $i$, $\mathcal{N} = \left\{ \bm n = (n_1, \dots, n_c) \right\}$ countable,
+    $g_{\bm m, \bm n} =
+    \begin{cases}
+         \lambda_{ij}\phi_i(m_i) &\text{if } \bm n = \bm m - \bm e_i + \bm e_j \textbf{  (transfer)}\\
+         \nu_j &\text{if } \bm n = \bm m + \bm e_j \textbf{  (arrival)}\\
+         \mu_i\phi_i(m_i) &\text{if } \bm n = \bm m - \bm e_i \textbf{  (departure)}\\
+         0 &\text{other } \bm m \neq \bm n
+    \end{cases}
+    $, $\begin{cases}
+            \phi_i(0) = 0\\
+            \phi_i(m) > 0
+    \end{cases}$, $\lambda_{ii} = 0$
+\end{setting}
+
+\begin{itemize}
+    \item closed migration process ------ $\nu_j = \mu_j = 0$
+    \item irreducible
+\end{itemize}
+
+\begin{setting}
+    closed migration process, $N$ number of customers
+\end{setting}
+
+\begin{example}[Base case]
+    $N = 1$, $\phi_j(1) = 1$, generator $h_{ij} = \begin{cases}
+                                                      \lambda_{ij} &\text{if } i \neq j\\
+                                                      - \sum_k \lambda_{ik} & \text{if } i = j
+    \end{cases}$, irreducible
+    \begin{fact}[Traffic equations]
+        $\sum_j \alpha_j\lambda_{ji} = \alpha_i \sum_j \lambda_{ij}$
+    \end{fact}
+\end{example}
+
+\begin{itemize}
+    \item $\alpha$ ------ stationary distribution for base case $N = 1$
+\end{itemize}
+
+\begin{thm}
+    irreducible closed migration process, $N$ customers, then \\unique stationary distribution
+    $\pi(\bm n) = B_N \prod^c_{i = 1} \left\{ \frac{\alpha_i^{n_{i}}}{\prod^{n_i}_{r=1}\phi_i(r)} \right\}$
+\end{thm}
+\begin{pf}
+    stationary condition gives $\sum_{i,j} \gamma(\bm n - \bm e_i + \bm e_j)\lambda_{ji}\phi_j(n_j +1) = \gamma(\bm n)\sum_{i,j}\lambda_{ij} \phi_{i}(n_i)$
+    partial balance equation: $\sum_{j} \gamma(\bm n - \bm e_i + \bm e_j)\lambda_{ji}\phi_j(n_j +1) = \gamma(\bm n)\sum_{j}\lambda_{ij} \phi_{i}(n_i)$,
+    then plug in $\pi$
+\end{pf}
+
+\begin{fact}
+    In equilibrium, not independence as constraint of $\sum n_i = N$
+\end{fact}
+
+\begin{example}[Open migration process]\,
+    \begin{itemize}
+        \item auxiliary process ------ add station $\left\{ \infty \right\}$
+        \item $\bm \beta = (\b_1, \dots, \beta_c, \beta_\infty)$ ------ stationary distribution of auxiliary process
+        \item $\alpha_i = \frac{\beta_i}{\beta_\infty} $
+    \end{itemize}
+    \begin{fact}
+        $\nu_i + \sum_j \alpha_j \lambda_{ji} = \alpha_i\left(\mu_i + \sum_j \lambda_{ij}\right)$
+    \end{fact}
+    \begin{itemize}
+        \item $D_i = \sum^\infty_{n=0} \frac{\alpha_i^n}{\prod_{r=1}^n \phi_j(r)}$
+        \item $\pi_i(n_i) = D^{-1} \frac{\alpha_i^{n_i}}{\prod^{n_i}_{r=1}\phi_i(r)}$
+    \end{itemize}
+    \begin{thm}
+        auxiliary process irreducible, $D_i < \infty$, then stationary distribution $\pi(\bm n) = \prod^c_i \pi_i(n_i)$
+    \end{thm}
+\end{example}
+
+\begin{fact}
+    In equilibrium, queue length of different stations independent r.v.\
+\end{fact}
+
+\begin{itemize}
+    \item $g_i = \mu_i + \sum_{j \neq i}\lambda_{ij}$ ------ total rate of departure of a customer at station $i$
+    \item $\gamma_i = \alpha_i g_i$ \dash aggregate/effective arrival rate at $i$
+\end{itemize}
+
+\begin{fact}[Traffic equation]
+    $\gamma_i = \nu_i + \sum_j \gamma_j y_{ij}$ where $(y_{ij})$ jump chain of single-customer system
+\end{fact}
+
+\begin{thm}
+    $\bm Q = \left\{ \bm Q(t) : -\infty < t < \infty \right\}$ irreducible open migration process, $\exists$ stationary distribution $\pi$,
+    let $\bm Q'(t) = \bm Q(-t)$, then $\bm Q'$ open migration network with parameters
+    $\begin{cases}
+         \lambda_{ij}' = \frac{\alpha_j \lambda_{ji}}{\alpha_i}\\
+         \nu_j' = \alpha_j \mu_j\\
+         \mu_i' = \frac{\nu_i}{\alpha_{i}}\\
+         \phi_i'(\cdot) = \phi_i(\cdot)
+    \end{cases}$
+\end{thm}
+\begin{pf}
+    similar to reversal
+\end{pf}
+
+\begin{fact}
+    arrival processes of different station independent Poisson process, so by reversal, departure process independent Poisson process
+\end{fact}
+
+\subsection{M/G/1}\label{subsec:m/g/1}
+
+\begin{itemize}
+    \item $Q(D_n)$ ------ $Q(D_n+)$ number of customers left after $n$-th customer left
+\end{itemize}
+
+\begin{fact}
+    $Q(D_{n+1}) =
+    \begin{cases}
+        U_n + Q(D_n) - 1 &\text{if } Q(D_n) > 0\\
+        U_n &\text{if } Q(D_n) = 0
+    \end{cases}$
+\end{fact}
+
+\begin{thm}
+    $S$ typical service time, then $Q(D)$ Markov chain with transition matrix\\ $P_D = \begin{pmatrix}
+                                                    \delta_0 & \delta_1 & \delta_2 & \cdots\\
+                                                    \delta_0 & \delta_1 & \delta_2 &\cdots\\
+                                                    0 & \delta_0 & \delta_1  &\cdots\\
+                                                    \vdots & \vdots & \vdots & \ddots
+    \end{pmatrix}$, $\delta_j = \Ex\left( \frac{(\lambda S)^j}{j!} e^{-\lambda S} \right)$
+\end{thm}
+
+\begin{itemize}
+    \item traffic intensity $\rho = \lambda \Ex(S)$
+    \item $M_S$ ------ moment generating function of service time
+\end{itemize}
+
+\begin{thm}\,
+    \begin{enumerate}
+        \item $\rho < 1$, then $Q(D)$ ergodic, unique stationary distribution $\pi$ with generating function
+        $G(s) = \sum \pi_j s^j = (1 - \rho)(s - 1)\frac{M_S(\lambda(s-1))}{s - M_S(\lambda(s - 1))}$
+        \item $\rho > 1$, $Q(D)$ transient
+        \item $\rho = 1$, $Q(D)$ null recurrent
+    \end{enumerate}
+\end{thm}
+\begin{pf}
+    stationary $\iff$ $\lim_{s \uparrow 1}G(s) = 1$
+\end{pf}
+\begin{itemize}
+    \item busy period $B$ ------ time during which server continuously occupied
+\end{itemize}
+
+\begin{fact}
+    $\begin{cases}
+        E(B)   < \infty & \text{if } \rho < 1\\
+        E(B)   = \infty, \Pb(B = \infty) = 0 & \text{if } \rho = 1\\
+        \Pb(B = \infty) > 0 & \text{if } \rho > 1\\
+    \end{cases}$
+\end{fact}

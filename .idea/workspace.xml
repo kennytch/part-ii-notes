@@ -2,17 +2,32 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="805a30fc-edf0-4349-b4a4-7e21bcb95f75" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/applied prob/sec2.tex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/applied prob/applied_prob.tex" beforeDir="false" afterPath="$PROJECT_DIR$/applied prob/applied_prob.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/applied prob/sec2.tex" beforeDir="false" afterPath="$PROJECT_DIR$/applied prob/sec2.tex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/applied_prob.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/out/applied_prob.pdf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/applied_prob.synctex.gz" beforeDir="false" afterPath="$PROJECT_DIR$/out/applied_prob.synctex.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/sfm.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/out/sfm.pdf" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -43,7 +58,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="LaTeX.applied_prob">
+  <component name="RunManager" selected="LaTeX.sfm">
     <configuration name="applied_prob" type="LATEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory" temporary="true">
       <texify>
         <compiler>PDFLATEX</compiler>
@@ -136,9 +151,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="LaTeX.sfm" />
         <item itemvalue="LaTeX.applied_prob" />
         <item itemvalue="LaTeX.graph_theory" />
-        <item itemvalue="LaTeX.sfm" />
         <item itemvalue="LaTeX.prob_measure" />
         <item itemvalue="LaTeX.principle_of_stat" />
       </list>
@@ -173,7 +188,8 @@
       <workItem from="1590225842755" duration="16283000" />
       <workItem from="1590312696498" duration="1219000" />
       <workItem from="1590383623694" duration="24196000" />
-      <workItem from="1590469067047" duration="21519000" />
+      <workItem from="1590469067047" duration="21529000" />
+      <workItem from="1590558340080" duration="13622000" />
     </task>
     <task id="LOCAL-00001" summary="Updated ./preamble.tex and recompile the pdf">
       <created>1589298006446</created>
@@ -399,7 +415,14 @@
       <option name="project" value="LOCAL" />
       <updated>1590508346463</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="applied prob sec 1 done">
+      <created>1590520634812</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1590520634812</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
