@@ -1,0 +1,95 @@
+\section{Quadratic residue}\label{sec:quadratic-residue}
+
+\begin{itemize}
+    \item quadratic residue ------ $(a, n) = 1$, $\exists$ solution for $x^2 \equiv a \pmod{n}$
+    \item quadratic non-residue
+\end{itemize}
+
+\begin{lemma}
+    $p$ odd prime, then $\exists$ exactly $\frac{p-1}{2}$ quadratic residues modulo $p$
+\end{lemma}
+\begin{pf}
+    \textbf{Method 1:} pair $a, -a$, then at most $\frac{p-1}{2}$, then no duplicate\\
+    \textbf{Method 2:} primitive root
+\end{pf}
+
+\begin{itemize}
+    \item Legendre symbol $\legen{a}{p} = \begin{cases}
+                                              1 & \text{if } a \text{ quadratic residue modulo } p\\
+                                              -1 & \text{if } a \text{ quadratic non-residue modulo } p\\
+                                              0 & \text{if } (a, p) > 1
+    \end{cases}$
+\end{itemize}
+
+\begin{thm}[Euler's criterion]
+    $p$ odd prime, then $a^{\frac{p-1}{2}} \equiv \legen{a}{p} \pmod{p}$
+\end{thm}
+\begin{pf}
+    $p\mid a$ trivial, $a^{\frac{p-1}{2}} \equiv \pm 1 \pmod{p}$, primitive root $g$, $a = g^{2i}$ give $\frac{p-1}{2}$ sol, so rest are non-residue
+\end{pf}
+
+\begin{cor}
+    $p$ prime, $\legen{a}{p} \legen{b}{p} = \legen{ab}{p}$ (total multiplicative)
+\end{cor}
+\begin{pf}
+    $p = 2$ trivial, $p > 2$ follows from Euler's criterion
+\end{pf}
+
+\begin{cor}
+    $p$ odd prime, then $\legen{-1}{p} = (-1)^{\frac{p-1}{2}}$
+\end{cor}
+\begin{pf}
+    Euler criterion $\Rightarrow \equiv$, but both $\in \left\{ 0, \pm 1 \right\}$
+\end{pf}
+
+\begin{itemize}
+    \item $\left< b \right>$ ------ $p$ odd prime, lies in $[-\frac{p}{2}, \frac{p}{2}]$
+\end{itemize}
+
+\begin{prop}[Gauss' lemma]
+    $p$ odd prime, $(a, p) = 1$, then $\legen{a}{p} = (-1)^\nu$ where $\nu = \# \left\{ k : k \in [1, \frac{p-1}{2}], \left< ka \right> < 0 \right\}$
+\end{prop}
+\begin{pf}
+    $\left< a \right>, \dots, \left< \frac{p-1}{2}a \right>$ are $\pm 1, \dots, \pm \left(\frac{p-1}{2}\right)$ in some order
+\end{pf}
+
+\begin{cor}
+    $p$ odd prime, then $\legen{2}{p} = (-1)^{\frac{p^2 - 1}{8}}$
+\end{cor}
+
+\begin{thm}[Law of Quadratic Reciprocity]
+    $p, q$ odd primes, then $\legen{q}{p} = (-1)^{\frac{p-1}{2}\frac{q-1}{2}}\legen{p}{q}$
+\end{thm}
+\begin{pf}
+    write $\left< bq \right> = bq - cp$, then count $(b, c)$ in $[0, \frac{p}{2}] \times [0, \frac{q}{2}]$
+\end{pf}
+
+\begin{itemize}
+    \item Jacobi symbol $\legen{a}{n} = \legen{a}{p_1} \cdots \legen{a}{p_k}$ \dash $n = p_1\cdots p_k$
+\end{itemize}
+\begin{fact}
+    $\legen{a}{n} = 1 \not\Rightarrow a$ quadratic residue
+\end{fact}
+
+\begin{lemma}\,
+    \begin{enumerate}
+        \item $n$ odd, $a, b\in \Z$, then $\legen{ab}{n} = \legen{a}{n}\legen{b}{n}$
+        \item $m, n$ odd, $a \in \Z$, then $\legen{a}{mn} = \legen{a}{m} \legen{a}{n}$
+    \end{enumerate}
+\end{lemma}
+
+\begin{lemma}
+    $n$ odd, then $\legen{-1}{n} = (-1)^\frac{n-1}{2}$ and $\legen{2}{n} = (-1)^{\frac{n^2 - 1}{8}}$
+\end{lemma}
+\begin{pf}
+    count $p_i \equiv -1 \pmod{4}$ and $p_i \equiv \pm 3 \pmod 8$
+\end{pf}
+
+\begin{thm}[LQR for Jacobi symbol]
+    $m, n$ odd, then $\legen{m}{n} = (-1)^{\frac{m-1}{2}\frac{n-1}{2}}\legen{n}{m}$
+\end{thm}
+\begin{pf}
+    consider $\prod_i \prod_j (-1)^{\frac{p_i - 1}{2}\frac{q_j - 1}{2}}$, count $p_i, q_j \equiv -1 \pmod{4}$
+\end{pf}
+
+
