@@ -129,3 +129,47 @@
     equivalent form properly represent the same numbers
 \end{fact}
 
+\begin{lemma}
+    $n \in \N$, $n$ properly represented by $f$ $\iff$ $f \sim f'$ which first coefficient $n$
+\end{lemma}
+\begin{pf}
+    $\Leftarrow$ trivial\\
+    $\Rightarrow$ Bezout
+\end{pf}
+
+\begin{thm}
+    $n \in \N$,
+    \begin{enumerate}
+        \item $n$ properly represented by $f$, $\disc(f) = d$, then $\exists$ solution to $\omega^{2} \equiv d \pmod{4n}$
+        \item if $\exists$ solution to $\omega^{2} \equiv d \pmod{4n}$, then $\exists$ $f$ st $n$ properly represented by $f$, $\disc(f) = d$
+    \end{enumerate}
+\end{thm}
+\begin{pf}
+    $f'$ first coefficient $n$, $\disc(f') = b^2 - 4nc = d$
+\end{pf}
+
+\begin{fact}
+    $h(d) = 1$, then $n$ properly represented by $f$ $\iff$ $\exists$ solution to $\omega^{2} \equiv d \pmod{4n}$
+\end{fact}
+
+\begin{prop}[Hensel's Lemma]
+    $f$ polynomial, $p$ odd prime, $f(x_1) \equiv 0 \pmod{p}$, $f'(x_1) \not\equiv 0 \pmod{p}$, then $\exists x_r$ st $f(x_r) \not \equiv 0 \pmod{p^r}$ for each $r \geq 1$
+\end{prop}
+\begin{pf}
+    $x_r = x_{r-1} + \lambda p^{r-1}$
+\end{pf}
+
+\begin{thm}
+    $n = x^2 + y^2$ where $(x, y) = 1$ $\iff$ $4 \nmid n$ and all odd prime factors $p_i \equiv 1 \pmod{4}$
+\end{thm}
+\begin{pf}
+    $n$ properly represented $\iff$ $\exists$ sol to $\omega^2 \equiv -4 \pmod{4n}$, then CRT, Hensel
+\end{pf}
+
+\begin{cor}
+    $n = x^2 + y^2$ $\iff$ each $p_i \equiv 3 \pmod{4}$ occurs to even power
+\end{cor}
+
+\begin{thm}[Langrange]
+    every $n \in \N$ sum of four squares
+\end{thm}
