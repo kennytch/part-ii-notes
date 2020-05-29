@@ -1,0 +1,131 @@
+\section{Binary Quadratic Forms}\label{sec:binary-quadratic-forms}
+
+\begin{itemize}
+    \item binary quadratic form $f(x, y) = ax^2 + bxy + cy^2$
+\end{itemize}
+\begin{notation}
+    $(a, b, c)$ or $\begin{pmatrix}
+                        a & \frac{b}{2} \\
+                        \frac{b}{2} & c
+    \end{pmatrix}$
+\end{notation}
+\begin{fact}
+    $f = \left( x, y \right)\qmatrix{a}{\frac{b}{2}}{\frac{b}{2}}{c}\qvector{x}{y}$
+\end{fact}
+
+\begin{itemize}
+    \item unimodular substitution ------ $\begin{cases}
+                                              X = px + qy\\
+                                              Y = rx + sy
+    \end{cases}$, $ps - qr = 1$
+\end{itemize}
+\begin{fact}
+    Equivalently, $\qvector{X}{Y} = A\qvector{x}{y}$ where $A \in SL_2(\Z)$
+\end{fact}
+
+\begin{itemize}
+    \item equivalent ------ $(a, b, c) \sim (a', b', c')$ or $f \sim f'$ if related to unimodular substitution
+\end{itemize}
+\begin{fact}
+    $T \sim A^{\top}TA$ where $A \in SL_2(\Z)$
+\end{fact}
+
+\begin{itemize}
+    \item discriminant $disc(f) = b^2 - 4ac$
+\end{itemize}
+
+\begin{lemma}
+    $f \sim f'$, then $\disc(f) = \disc(f')$
+\end{lemma}
+\begin{pf}
+    $T = \qmatrix{a}{\frac{b}{2}}{\frac{b}{2}}{c}$, then $\disc(f) = -4\det(T)$ and $\disc(f') = -4\det(A^\top T A)$
+\end{pf}
+
+\begin{lemma}
+    $\exists$ BQF $f$, $\disc(f) = d$ $\iff$ $d \equiv 0, 1 \pmod 4$
+\end{lemma}
+\begin{pf}
+    $(\Rightarrow)$ $d = b^2 - 4ac$\\
+    $(\Leftarrow)$ $(1, 0, -\frac{d}{4})$ and $(1, 0, \frac{1-d}{4})$
+\end{pf}
+
+\begin{itemize}
+    \item positive definite $f(x,y) \geq 0$ for all $x, y$
+    \item negative definite $f(x, y) \leq 0$ for all $x, y$
+    \item indefinite $f(x, y) > 0$ and $f(x', y') < 0$ for some $x, y, x', y'$
+\end{itemize}
+
+\begin{lemma}
+    $f$ BQF, $\disc(f) = d$, $a \neq 0$,
+    \begin{enumerate}
+        \item $d < 0$, $a > 0$, then $f$ positive definite
+        \item $d < 0$, $a < 0$, then $f$ negative definite
+        \item $d > 0$, then $f$ indefinite
+    \end{enumerate}
+\end{lemma}
+\begin{pf}
+    $4af(x,y) = (2ax + by)^2 - dy^{2}$\\
+    $d < 0$, trivial, equality iff $x = y = 0$\\
+    $d > 0$, $4af(x, y) = 4a^2(x - \theta_+ y)(x - \theta_- y)$, $\theta_\pm = -\left(\frac{b \pm \sqrt{d}}{2a}\right)$
+\end{pf}
+
+\begin{itemize}
+    \item $S = \qmatrix{0}{-1}{1}{0}$, $S:(a, b, c) \mapsto (c, -b, a)$
+    \item $T_\pm = \qmatrix{1}{\pm 1}{0}{1}$, $T_\pm:(a, b, c)\mapsto (a, b \pm 2a, a \pm b +c)$
+    \item reduced ------ positive definite BQF, $-a < b \leq a < c$ or $0 \leq b \leq a = c$
+\end{itemize}
+
+\begin{lemma}
+    every positive define BQF $\sim$ reduced form
+\end{lemma}
+\begin{pf}
+    apply $S, T_\pm$
+\end{pf}
+
+\begin{lemma}
+    $f$ reduced positive definite BQF, coprime $x, y$ or $x = y = 0$, then $0, a, c, a - |b| + c$ smallest integers represented by $f$
+\end{lemma}
+\begin{pf}
+    $x, y \in \left\{ 0, \pm 1 \right\}$, if $|x| \geq |y| > 0$, then $f \geq a - |b| + c$, similarly for $|y| \geq |x|$
+\end{pf}
+
+\begin{thm}(Uniqueness)
+    every positive define BQF $\sim$ unique reduced form
+\end{thm}
+\begin{pf}
+    smallest represented int $\Rightarrow$ $a = a'$, then 2nd smallest $\Rightarrow$ $c = c'$, by disc, $b = \pm b'$,
+    $(a, b, c), (a, -b, c)$ both reduced $\Rightarrow$ $\begin{cases}
+         f(\pm 1, 0)\\
+         f(0, \pm 1)
+    \end{cases}$ match $\begin{cases}
+           f'(\pm 1, 0)\\
+                            f'(0, \pm 1)
+    \end{cases}$, then $\qmatrix{p}{q}{r}{s} = \pm \qmatrix{1}{0}{0}{1}$, so $b= 0$
+\end{pf}
+
+\begin{prop}
+    $d < 0$ fixed, then finite reduced form with $\disc(f) = d$
+\end{prop}
+\begin{pf}
+    $b^2 < ac$ bound $a$, hence $|b|$, then $c$ uniquely determined through $\disc$
+\end{pf}
+
+\begin{itemize}
+    \item class number of $d$, $h(d)$ ------ \# reduced form with $\disc(f) = d$
+\end{itemize}
+
+\begin{lemma}
+    $\qvector{x'}{y'} = \qmatrix{p}{q}{r}{s} \qvector{x}{y}$, then $x', y'$ coprime $\iff$ $x, y$ coprime
+\end{lemma}
+\begin{pf}
+    $(x, y) \mid (x', y')$
+\end{pf}
+
+\begin{itemize}
+    \item $f$ represents $n$ ------ $f$ BQF, $\exists x, y, f(x, y) = n$
+    \item $f$ properly represents $n$ ------ $f$ BQF, $\exists x, y, f(x, y) = n$, $(x, y) = 1$
+\end{itemize}
+\begin{fact}
+    equivalent form properly represent the same numbers
+\end{fact}
+

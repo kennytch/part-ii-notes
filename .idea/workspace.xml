@@ -2,10 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="805a30fc-edf0-4349-b4a4-7e21bcb95f75" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/number_theory/sec2.tex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/number_theory/sec3.tex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/number_theory.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/number_theory.synctex.gz" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/number_theory/number_theory.tex" beforeDir="false" afterPath="$PROJECT_DIR$/number_theory/number_theory.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/number_theory/sec1.tex" beforeDir="false" afterPath="$PROJECT_DIR$/number_theory/sec1.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/preamble.tex" beforeDir="false" afterPath="$PROJECT_DIR$/preamble.tex" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -191,7 +193,7 @@
       <workItem from="1590558340080" duration="13622000" />
       <workItem from="1590644465620" duration="13872000" />
       <workItem from="1590677266200" duration="5565000" />
-      <workItem from="1590733514140" duration="5764000" />
+      <workItem from="1590733514140" duration="13390000" />
     </task>
     <task id="LOCAL-00001" summary="Updated ./preamble.tex and recompile the pdf">
       <created>1589298006446</created>
@@ -445,7 +447,14 @@
       <option name="project" value="LOCAL" />
       <updated>1590700302890</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="number theory sec2 done">
+      <created>1590739324532</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1590739324532</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -465,7 +474,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="prob_measure" />
     <MESSAGE value="SFM Martingale" />
     <MESSAGE value="SFM sec2 done" />
     <MESSAGE value="SFM sec3 done" />
@@ -490,6 +498,7 @@
     <MESSAGE value="applied prob sec 1 done" />
     <MESSAGE value="applied prob sec 2 almost done" />
     <MESSAGE value="applied prob sec 3 almost done" />
-    <option name="LAST_COMMIT_MESSAGE" value="applied prob sec 3 almost done" />
+    <MESSAGE value="number theory sec2 done" />
+    <option name="LAST_COMMIT_MESSAGE" value="number theory sec2 done" />
   </component>
 </project>
