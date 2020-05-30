@@ -5,9 +5,166 @@
 \end{thm}
 
 \begin{prop}
-    $x \geq 10$, then $\sum \frac{1}{p} \geq \log \log x - \frac{1}{2}$
+    $x \geq 10$, then $\sum_{p \leq x} \frac{1}{p} \geq \log \log x - \frac{1}{2}$
 \end{prop}
+\begin{pf}
+    $\prod (1 - \frac{1}{p})^{-1} \geq \log x$, $\log(1 - \frac{1}{p})^{-1} - \frac{1}{p} = \frac{1}{2p(p-1)}$
+\end{pf}
 
 \begin{fact}
-    $\frac{1}{p} = $
+    $\sum \frac{1}{p} = \log \log x + c + O(\frac{1}{\log x})$
 \end{fact}
+
+\begin{cor}
+    infinitely many primes
+\end{cor}
+
+\begin{itemize}
+    \item $\pi(x)$ \dash $\#$ primes $\leq x$
+\end{itemize}
+
+\begin{prop}
+    $\pi \geq c \log x$ for some $c > 0$
+\end{prop}
+\begin{pf}
+    $y = m^{2}\prod p_i^{\alpha_i}$
+\end{pf}
+
+\begin{itemize}
+    \item Riemann zeta function $\zeta(s) = \sum_{n=1}^\infty \frac{1}{n^s}$ ------ $\Re(s) > 1$
+\end{itemize}
+
+\begin{lemma}
+    $\Re(s) > 1$,
+    \begin{enumerate}
+        \item $\sum \frac{1}{n^s}$ converges absolutely
+        \item converges uniformly on $\Re(s) \geq 1 + \delta$, hence analytic on $\Re(s) > 1$
+    \end{enumerate}
+\end{lemma}
+
+\begin{prop}[Euler product for $\zeta$]
+    $\Re(s) > 1$, then $\zeta(s) = \prod_p (1 - p^{-s})^{-1}$
+\end{prop}
+\begin{pf}
+    $\prod_{p \leq N} \left( 1 + p^{-s} + \cdots + p^{-Ms} \right)$ where $p^M < N$, then uniform bound in $M$, $M \rightarrow \infty$, then $N \rightarrow \infty$
+\end{pf}
+
+\begin{lemma}
+    $Re(s) > 1$, then $\zeta(s) \neq 0$
+\end{lemma}
+\begin{pf}
+    $|\zeta(s) \times \prod_{p\leq x} (1 - p^{-s})| \geq 1 - \sum_{n = x+1} n^{-\sigma} \geq \frac{1}{2}$
+\end{pf}
+
+\begin{itemize}
+    \item Gamma function $\Gamma(z) = \int_0^\infty e^{-t}t^{z-1} dt$ ------ for $\Re(z) > 0$
+\end{itemize}
+
+\begin{fact}
+    $z\Gamma(z) = \Gamma(z-1)$
+\end{fact}
+\begin{fact}
+    $\Gamma(n) = (n-1)!$
+\end{fact}
+
+\begin{itemize}
+    \item completed $\zeta$ function $\Xi(s) = \pi^{-\frac{s}{2}} \Gamma\left(\frac{s}{2}\right) \zeta(s)$
+\end{itemize}
+\begin{fact}
+    $\Xi(s) = \Xi(1 - s)$
+\end{fact}
+
+\begin{itemize}
+    \item trivial zeros ------ at $s = -2, -4, -6, \dots$
+    \item Mobius function $\mu(n) = \begin{cases}
+                                        (-1)^k & \text{if } n=p_1\cdots p_{k} \text{ where } p_i \text{ distinct primes}\\
+                                        0 & \text{if } n \text{ not square-free}
+    \end{cases}$
+    \item Mertans function $\sum_{n \leq x} \mu(n)$
+    \item $f \sim g \iff \lim \frac{f}{g} \rightarrow 1$
+\end{itemize}
+
+\begin{thm}[Prime Number Theorem]
+    $\pi(x) \sim \frac{x}{\log x}$
+\end{thm}
+
+\begin{thm}[Prime Number Theorem]
+    $\pi(x) = \int_2^x \frac{dt}{\log t} + O(xe^{-c\sqrt{\log x}})$
+\end{thm}
+
+\begin{itemize}
+    \item Von Mangoldt function $\Lambda(n) = \begin{cases}
+        \log p & \text{if } n = p^k\\
+                                     0 &\text{otherwise}
+    \end{cases}$
+    \item $\psi(x) = \sum_{1\leq n\leq x} \Lambda(n)$
+\end{itemize}
+
+\begin{fact}
+    $\psi(x) \sim x$
+\end{fact}
+
+\begin{itemize}
+    \item Dirichlet series for $(a_n)$ ------ $\sum \frac{a_n}{n^s}$
+\end{itemize}
+\begin{lemma}
+    if $\Re(s) > 1$, then $\frac{\zeta'(s)}{\zeta(s)} = - \sum \frac{\Lambda(n)}{n^s}$
+\end{lemma}
+\begin{pf}
+    $\zeta(s) = \prod(1 - p^{-s})^{-1}$, then differentiate $\log(\zeta(s))$
+\end{pf}
+
+\begin{fact}
+    $\psi(x) = x - \sum_\rho \frac{x^\rho}{\rho} - \frac{\zeta'(0)}{\zeta(0)}$ where $\rho$ all zeros of $\zeta$
+\end{fact}
+
+\begin{itemize}
+    \item $N\left(x, \sqrt{x}\right)$ ------ \# $n$ not divisible by any prime $\leq \sqrt{x}$, $1 \leq n \leq x$
+    \item $A_i = \left\{ n : i \mid n \right\}$
+\end{itemize}
+
+\begin{prop}[Legendre's formula]
+    $x \geq 10$,
+    \begin{enumerate}
+        \item $\pi(x) = \pi(\sqrt{x}) - 1 + N(x, \sqrt{x})$
+        \item $N(x, \sqrt{x}) = \floor{x} - \sum |A_i| + \sum |A_{i_1}\bigcap A_{i_2}| - \cdots + (-1)^{\pi\left(\sqrt{x}\right)}|\bigcap A_p|$
+    \end{enumerate}
+\end{prop}
+\begin{pf}
+    trivial, $-1$ as not counting $1$
+\end{pf}
+
+\begin{lemma}
+    $n \in \N$, $\frac{2^{2n}}{2n} \leq {2n \choose n} < 2^{2n}$
+\end{lemma}
+\begin{pf}
+    $2n{2n \choose n} \geq (1 + 1)^{2n} > {2n \choose n}$
+\end{pf}
+
+\begin{itemize}
+    \item primorial function $\prod_{p\leq x} p$
+\end{itemize}
+
+\begin{lemma}
+    $x \in \R$, $x \geq 1$, then $\prod_{p \leq x} p \leq 4^x$
+\end{lemma}
+\begin{pf}
+    $\prod_{k+2\leq p \leq 2k+1} p \mid {2k + 1 \choose k + 1}$, $2{2k + 1 \choose k + 1} = {2k + 1 \choose k + 1} + {2k + 1 \choose k }$
+\end{pf}
+
+\begin{thm}[Bertrand's postulate]
+    $n \in \N$, then $\exists p$, $n < p \leq 2n$
+\end{thm}
+\begin{pf}
+    $\alpha(p, N) = v_p(N!)$, $\alpha(p) = \alpha(p, 2n) - 2\alpha(p, n)$\\
+    bound on power: $\alpha(p) \leq \frac{\log(2n)}{\log p}$, $p^{\alpha(p)} \leq 2n$\\
+    bound on larger prime: $p^2 > n$, $\alpha(p) \leq 1$\\
+    $\frac{2n}{3} < p \leq n$, $\alpha(p) = 0$\\
+    \begin{cases}
+        T_1 = \prod_{p \leq \sqrt{2n}} p^{\alpha(p)} \leq (2n)^{\pi(2n)}\\
+        T_2 = \prod_{\sqrt{2n} < p \leq n} p^{\alpha(p)} \leq \prod_{\sqrt{2n} < p \leq \frac{2n}{3}} p \leq 4^{\frac{2n}{3}}\\
+        T_3 = \prod_{n < p \leq 2n} p\\
+    \end{cases}\\
+    $1 + \pi(\sqrt{2n}) < \frac{1}{2}\sqrt{2n}$
+\end{pf}
+
