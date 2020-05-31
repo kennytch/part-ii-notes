@@ -2,13 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="805a30fc-edf0-4349-b4a4-7e21bcb95f75" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/sfm/sec7.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/Asus.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/Asus.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/number_theory/sec4.tex" beforeDir="false" afterPath="$PROJECT_DIR$/number_theory/sec4.tex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/number_theory/sec6.tex" beforeDir="false" afterPath="$PROJECT_DIR$/number_theory/sec6.tex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/number_theory.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/out/number_theory.pdf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/number_theory.synctex.gz" beforeDir="false" afterPath="$PROJECT_DIR$/out/number_theory.synctex.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sfm/sec6.tex" beforeDir="false" afterPath="$PROJECT_DIR$/sfm/sec6.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sfm/sfm.tex" beforeDir="false" afterPath="$PROJECT_DIR$/sfm/sfm.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/sfm.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/out/sfm.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/sfm.synctex.gz" beforeDir="false" afterPath="$PROJECT_DIR$/out/sfm.synctex.gz" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -154,8 +155,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="LaTeX.number_theory" />
-        <item itemvalue="LaTeX.applied_prob" />
         <item itemvalue="LaTeX.sfm" />
+        <item itemvalue="LaTeX.applied_prob" />
         <item itemvalue="LaTeX.graph_theory" />
         <item itemvalue="LaTeX.prob_measure" />
       </list>
@@ -196,7 +197,7 @@
       <workItem from="1590677266200" duration="5565000" />
       <workItem from="1590733514140" duration="22387000" />
       <workItem from="1590817773665" duration="18089000" />
-      <workItem from="1590907493974" duration="6413000" />
+      <workItem from="1590907493974" duration="18705000" />
     </task>
     <task id="LOCAL-00001" summary="Updated ./preamble.tex and recompile the pdf">
       <created>1589298006446</created>
@@ -492,7 +493,14 @@
       <option name="project" value="LOCAL" />
       <updated>1590915768570</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="sfm update">
+      <created>1590916881019</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1590916881019</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -512,7 +520,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="SFM sec4 done" />
     <MESSAGE value="SFM sec5 done" />
     <MESSAGE value="SFM Black-Scholes" />
     <MESSAGE value="SFM done" />
@@ -537,6 +544,7 @@
     <MESSAGE value="number theory sec3 half done" />
     <MESSAGE value="number theory sec4 done" />
     <MESSAGE value="number theory sec5 done" />
-    <option name="LAST_COMMIT_MESSAGE" value="number theory sec5 done" />
+    <MESSAGE value="sfm update" />
+    <option name="LAST_COMMIT_MESSAGE" value="sfm update" />
   </component>
 </project>
