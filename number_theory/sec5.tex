@@ -1,0 +1,166 @@
+\section{Continued Fractions}\label{sec:continued-fractions}
+
+\begin{prop}[Dirichlet]
+    $\theta \in \R$, $N \in \N$, then $\exists \frac{a}{q}$, $1 \leq q \leq N$ st $|\theta - \frac{a}{q}| \leq \frac{1}{qN}$
+\end{prop}
+\begin{pf}
+    $0, \dots, N\theta$, pigeonhole on $[\frac{j}{N}, \frac{j+1}{N}]$
+\end{pf}
+
+\begin{itemize}
+    \item continued fraction $a_0 + \frac{1}{a_1 + \frac{1}{a_2 + \frac{1}{a_3 + \dots}}}$ ------ $a_0 \in \Z$, $a_i \in \N$
+    \item partial quotients $[a_0, a_1, \dots]$
+    \item finite $[a_0, \dots, a_n]$
+    \item infinite
+\end{itemize}
+
+\begin{convention}
+    For $[a_0, \dots, a_n]$, \begin{enumerate}
+                                 \item $a_n > 1$
+                                 \item $a_n$ something other than natural number
+    \end{enumerate}
+\end{convention}
+
+\begin{lemma}
+    $1-1$ correspondence between finite continued fractions and rational numbers
+\end{lemma}
+\begin{pf}
+    $(\Leftarrow)$ trivial\\
+    $(\Rightarrow)$ strictly decresing denominators
+\end{pf}
+
+\begin{itemize}
+    \item convergents for $[a_0, a_1, \dots]$ ------ $[a_0], [a_0, a_1], \dots$
+    \item $(p_n)$, $(q_n)$ ------ $\begin{cases}
+                            p_{0} = a_0\\
+                            p_1 = a_{0}a_1 + 1\\
+                                   p_n = a_n p_{n-1} + p_{n-2}
+    \end{cases}$, $\begin{cases}
+                      q_0 = 1 \\
+                      q_1 = a_1\\
+                      q_n = a_n q_{n-1} + q_{n-2}
+    \end{cases}$, $a_i \in \R$, $a_1, \dots \geq 1$
+\end{itemize}
+
+\begin{lemma}
+    $\frac{p_n}{q_n} = [a_0, a_1, \dots, a_n]$
+\end{lemma}
+\begin{pf}
+    induction
+\end{pf}
+
+\begin{lemma}
+    $n \geq 1$, $p_{n}q_{n-1} - p_{n-1}q_n = (-1)^{n+1}$
+\end{lemma}
+\begin{pf}
+    induction
+\end{pf}
+
+\begin{lemma}
+    if $a_0, \dots, a_n \in \Z$, then $(p_n, q_n) = 1$
+\end{lemma}
+\begin{pf}
+    use above
+\end{pf}
+
+\begin{prop}
+    $\theta \in \R \backslash \Q$, then $\frac{p_n}{q_n}\rightarrow\theta$
+\end{prop}
+\begin{pf}
+    $\theta = [a_0, \dots, a_n, \alpha_{n+1}] = \frac{\alpha_{n+1}p_n + p_{n-1}}{\alpha_{n+1} q_n + q_{n-1}}$,
+    expand $|\theta - \frac{p_n}{q_n}|$, $q_n$ strictly increasing
+\end{pf}
+
+\begin{lemma}
+    $\frac{1}{q_{n+2}} \leq |q_n \theta - p_n| \leq \frac{1}{q_{n+1}}$
+\end{lemma}
+\begin{pf}
+    $|q_n \theta - p_n| = \frac{1}{\alpha q_n + q_{n-1}}$ and $\alpha_{n+1} = \floor{a_{n+1}}$
+\end{pf}
+\begin{fact}
+    $|q_n \theta - p_n| \leq |q_{n-1}\theta - p_{n-1}|$
+\end{fact}
+
+\begin{setting}
+    $\theta \in \R \backslash \Q$ with convergents $\frac{p_n}{q_n}$
+\end{setting}
+
+\begin{thm}["best rational approximation"]
+    $n \in \N$, $p, q \in \Z$, $0 < q < q_{n}$, then $|q\theta - p| \geq |q_{n-1} - p_{n-1}|$
+\end{thm}
+\begin{pf}
+    $\det \qmatrix{p_{n-1}}{p_n}{q_{n-1}}{q_n} = (-1)^n$, $\qvector{p}{q} = \qmatrix{p_{n-1}}{p_n}{q_{n-1}}{q_n} \qvector{u}{v}$ for some $u, v \in \Z$,
+    size of $q$ $\Rightarrow$ $u, v$ opposite sign, $\theta - \frac{p_{n-1}}{q_{n-1}}$, $\theta - \frac{p_{n}}{q_{n}}$ opposite sign
+\end{pf}
+
+\begin{cor}
+    $p \in Z$, $q \in \N$, $|\theta - \frac{p}{q}| < \frac{1}{2q^2}$, then $\frac{p}{q}$ convergent for $\theta$
+\end{cor}
+\begin{pf}
+    $q_{n} \leq q < q_{n+1}$, bound st $|\frac{p}{q} - \frac{p_n}{q_n}| < \frac{1}{q_n q}$
+\end{pf}
+
+\begin{itemize}
+    \item Diophantine equation $x^2 - N y^2 = 1$ ------ $N \in \N$ not square
+    \item Pell's equation
+\end{itemize}
+
+\begin{cor}
+    $N \in \N$, not square, $x, y > 0$, $x^2 - N y^2 = 1$, then $\frac{x}{y}$ convergent for $\sqrt{N}$
+\end{cor}
+\begin{pf}
+    $(x - y\sqrt{N}) < \frac{1}{2y}$
+\end{pf}
+
+\begin{itemize}
+    \item eventually periodic $[a_0, \dots, a_{n-1}; \overline{a_n, \dots, a_{n + m -1}}]$
+    \item purely periodic $[\overline{a_0, \dots, a_{m -1}}]$
+    \item $\theta$ quadratic irrational ------ $a\theta^2 + b\theta + c = 0$ for some $a, b, c \in \Z$, $a \neq 0$
+\end{itemize}
+
+\begin{thm}[Lagrange]
+    $\theta \in \R$, $\theta$ quadratic irrational $\iff$ continued fraction eventually periodic
+\end{thm}
+\begin{pf}
+    $(\Leftarrow)$ $\phi = [\overline{a_n, \dots, a_{n + m -1}}]$, then $\phi = [a_n, \dots, a_{n+m-1}, \phi]$ quadratic irrational,
+    then $\theta = \frac{\phi p_{n-1} + p_{n-2}}{\phi q_{n-1} + q_{n-2}}$ quadratic irrational\\
+    $(\Rightarrow)$ $f(x, y) = ax^2 + bxy + cy^2$, $f(\theta, 1) = 0$, finitely many $f(p_n, q_n)$, so finitely many $\alpha_n$
+\end{pf}
+
+\begin{thm}
+    $\sqrt{N} = [a_0;\overline{a_1, a_2, \dots, a_2, a_1, 2a_0}]$ (symmetric, then $2a_0$)
+\end{thm}
+
+\begin{prop}
+    $N \in \N$, not square, then $\exists$ convergent $\frac{p_n}{q_n}$ for $\sqrt{N}$ with $p_n^2 - N q_{n}^2 = 1$
+\end{prop}
+\begin{pf}
+    $\sqrt{N} = [a_0;\overline{a_1, \dots, a_n, 2a_0}] = \frac{\alpha_{n+1 p_n + p_{n-1}}}{\alpha_{n+1}q_n + q_{n-1}}$, $\alpha_{n+1} = [\overline{2a_0, a_1, \dots, a_n}] = a_0 + \sqrt{N}$,
+    then plug in and sol for $p_n, q_n$, then $p_{n}q_{n-1} - p_{n-1}q_n = (-1)^{n+1} = p_n^2 - N q_n^2$, then\\
+    \hl{$n$ odd, $(p_n, q_n)$ sol}\\
+    \hl{$n$ even, $(p_{2n + 1}, q_{2n + 1})$ sol}
+\end{pf}
+
+\begin{lemma}
+    $(x_1, y_1), (x_2, y_2)$ solutions to $x^2 - Ny^2 = 1$, then $(x_1 x_2 + y_1 y_2 N, x_1 y_2 + x_2 y_1)$ also solution
+\end{lemma}
+\begin{pf}
+    $(x_1 \pm y_1\sqrt{N})(x_2 \pm y_2\sqrt{N})$
+\end{pf}
+
+\begin{itemize}
+    \item $(x_1, y_1) \ast (x_2, y_2) = (x_1 x_2 + y_1 y_2 N, x_1 y_2 + x_2 y_1)$
+\end{itemize}
+\begin{fact}\,
+    \begin{enumerate}
+        \item solution to $x^2 - N y^2 = 1$ group under $\ast$
+        \item group cyclic
+    \end{enumerate}
+\end{fact}
+\begin{itemize}
+    \item fundamental unit ------ generator of the group above
+\end{itemize}
+
+
+
+
