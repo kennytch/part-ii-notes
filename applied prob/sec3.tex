@@ -2,7 +2,7 @@
 
 \begin{itemize}
     \item $X_i$ i.i.d. ------ non-negative, $\Pb(X_i > 0) = 1$
-    \item $T_n = \ddd{X}$
+    \item $T_n = X_1 + \dots + X_n$
     \item renewal process $N$
 \end{itemize}
 
@@ -113,7 +113,7 @@
 \subsection{Excess Life}\label{subsec:excess-life}
 
 \begin{itemize}
-    \item excess lifetime $E(t) = T_{N(t)+1 - t}$
+    \item excess lifetime $E(t) = T_{N(t)+1} - t$
     \item current lifetime/age $C(t) = t - T_{N(t)}$
     \item total lifetime $D(t) = E(t) + C(t) = X_{N(t) + 1}$
 \end{itemize}
@@ -187,9 +187,58 @@
     also work for accumulative reward as long as monotone
 \end{fact}
 
+\begin{setting}
+    Continuous Markov Chain, irreducible, mean return time $\mu_i$
+\end{setting}
 
+\begin{thm}
+    $X(0) = i$, $\mu_i < \infty$, then
+    \begin{enumerate}
+        \item $\frac{1}{t}\int_0^t \In\left\{ X(s) = i \right\}ds \rightarrowas \frac{1}{\mu_i g_i}$
+        \item $\frac{1}{t}\int_0^t p_{ii}(s)ds \rightarrow \frac{1}{\mu_i g_i}$
+    \end{enumerate}
+\end{thm}
+\begin{pf}
+    process $(P_r, Q_r)$ where $P_r$ $r$-th passage time, $Q_r$ $r$-th holding time
+\end{pf}
 
+\begin{fact}
+    proportion of time spent in $i$, and corresponding expectation
+\end{fact}
 
+\begin{assumption}\,
+    \begin{enumerate}
+        \item customers arrive one by one, spend waiting time $V_n$ time before departure
+        \item $\exists$ a.s.\ finite $T$ st $Q(T) = Q(0) = 0$, and the distribution the same after time $T$
+    \end{enumerate}
+\end{assumption}
 
+\begin{itemize}
+    \item $X_i = T_i - T_{i-1}$
+    \item cycles $[T_{i-1}, T_i)$
+    \item $P_i = \left\{ Q(t) : t\in [T_{i-1}, T_i] \right\}$
+    \item $N_i$ number of arrival in $[T_{i-1}, T_i]$
+    \item $\begin{cases}
+               N = N_1\\
+               X = T_1
+    \end{cases}$
+    \item waiting time $V_n$
+\end{itemize}
+
+\begin{fact}
+    let $R = \int_0^X Q(u)du$, $S = \sum^N V_i$
+    \begin{enumerate}
+        \item \textbf{long run average queue length $L$:} $\frac{1}{t}\int_0^t \rightarrowas \frac{\Ex R}{\Ex X}$
+        \item \textbf{long run rate of arrival $\lambda$:} $\frac{N(t)}{t} \rightarrowas \frac{\Ex N}{\Ex X}$
+        \item \textbf{long run average waiting time $W$:} $\frac{\sum^n V_i}{n} \rightarrowas \frac{\Ex S}{\Ex N}$
+    \end{enumerate}
+\end{fact}
+
+\begin{thm}[Little's theorem]
+    Under assumption, $L = \lambda W$
+\end{thm}
+\begin{pf}
+    use above, then suffice $\sum^N V_i = \int_0^X Q(u)du$
+\end{pf}
 
 

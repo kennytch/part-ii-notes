@@ -197,7 +197,7 @@
 \begin{example}[Open migration process]\,
     \begin{itemize}
         \item auxiliary process ------ add station $\left\{ \infty \right\}$
-        \item $\bm \beta = (\b_1, \dots, \beta_c, \beta_\infty)$ ------ stationary distribution of auxiliary process
+        \item $\bm \beta = (\beta_1, \dots, \beta_c, \beta_\infty)$ ------ stationary distribution of auxiliary process
         \item $\alpha_i = \frac{\beta_i}{\beta_\infty} $
     \end{itemize}
     \begin{fact}
@@ -288,8 +288,22 @@
 
 \begin{fact}
     $\begin{cases}
-        E(B)   < \infty & \text{if } \rho < 1\\
-        E(B)   = \infty, \Pb(B = \infty) = 0 & \text{if } \rho = 1\\
+        \Ex(B)   < \infty & \text{if } \rho < 1\\
+        \Ex(B)   = \infty, \Pb(B = \infty) = 0 & \text{if } \rho = 1\\
         \Pb(B = \infty) > 0 & \text{if } \rho > 1\\
     \end{cases}$
 \end{fact}
+
+\begin{itemize}
+    \item imbedded branching process ------ $C_2$ offspring of $C_1$ if $C_2$ join when $C_1$ being served
+\end{itemize}
+
+\begin{thm}
+    $\Pb(B < \infty) \begin{cases}
+                         = 1 &\text{if } \rho \leq 1\\
+                         < 1 &\text{if } \rho > 1\\
+    \end{cases}$
+\end{thm}
+\begin{pf}
+    branching process dies out $\iff$ mean number of offsprings $= \rho < 1$
+\end{pf}

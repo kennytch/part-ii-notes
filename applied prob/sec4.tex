@@ -1,0 +1,80 @@
+\section{Spatial Poisson processes}\label{sec:spatial-poisson-processes}
+
+\begin{itemize}
+    \item Poisson process with (constant) intensity $\lambda$, $\Pi$ ------ $\Pi \subset \R^d$ random countable,\\
+    $N(A) = |\Pi \bigcap A|$, $A \in \B^d$
+    \begin{enumerate}
+        \item $N(A) \sim Poi(\lambda |A|)$
+        \item $A_1, \dots, A_n$ disjoint, then $N(A_1), \dots, N(A_n)$ independent
+    \end{enumerate}
+\end{itemize}
+
+\begin{itemize}
+    \item density $\lambda$ ------ non-negative measurable
+    \item mean measure $\Lambda(A) = \int_A \lambda(x)dx$
+    \item non-homogeneous Poisson process with intensity function $\lambda$, $\Pi$ ------ $\Pi \subset \R^d$ random countable,\\
+     $N(A) = |\Pi \bigcap A|$, $A \in \B^d$, $\Lambda(A) < \infty$ for all bounded $A$
+    \begin{enumerate}
+        \item $N(A) \sim Poi(\Lambda(A))$
+        \item $A_1, \dots, A_n$ disjoint, then $N(A_1), \dots, N(A_n)$ independent
+    \end{enumerate}
+\end{itemize}
+
+\begin{fact}
+    measures $\Lambda$ no atoms
+\end{fact}
+
+\begin{thm}[Superposition theorem]
+    $\Pi'$, $\Pi''$ independent (non-homogeneous) Poisson process wrt $\lambda'$, $\lambda''$, then
+    $\Pi = \Pi' \bigcup \Pi''$ (non-homogeneous) Poisson process wrt $\lambda = \lambda' + \lambda''$
+\end{thm}
+\begin{pf}
+    hard part: show $\Pi' \bigcap \Pi'' = \varnothing$, suffice to consider $n$-boxes
+\end{pf}
+
+\begin{setting}
+     $f: \R^d \rightarrow \R^s$, $\Pi$ non-homogeneous Poisson process, $\Lambda(f^{-1}\left\{ y \right\}) = 0$
+\end{setting}
+
+\begin{thm}[Mapping theorem]
+    let $\mu(B) = \Lambda(f^{-1}B) = \int_{f^{-1}B} \lambda(x)dx$, $B \in \B^s$, $\mu(B) < \infty$ for all $B$, then
+    $f(\Pi)$ non-homogeneous Poisson process on $\R^s$ with mean measure $\mu$
+\end{thm}
+\begin{pf}
+    hard part: show $f(\Pi)$ a.s.\ distinct,
+\end{pf}
+
+\begin{thm}[Conditional property]
+    $\Pi$ non-homogeneous Poisson process with $\lambda$, $A \subset \R^d$, $0 < \Lambda(A) < \infty$, \\
+    Conditional on $|\Pi \bigcap A| = n$, then $n$ points in $A$ have same distribution as $n$ points chosen independently
+    according $\mathbb{Q}(B) = \frac{\Lambda(B)}{\Lambda(A)}$ where $B \subset A$, i.e.\ density $\frac{\lambda(x)}{\Lambda(A)}$
+\end{thm}
+\begin{pf}
+    $A_1, \dots, A_k$ partition of $A$, then calculate $\Pb(N(A_i) = n_i \mid N(A) = n)$ where $\sum n_i = n$
+\end{pf}
+
+\begin{fact}
+    used as prood of existence of Poisson process: $A_i$ partition of $\R^d$, then sample $n_i$ from $Poi(\Lambda(A_i))$, then sample according to $\mathbb{Q}$
+\end{fact}
+
+\begin{thm}[Colouring theorem]
+    $\Pi$ non-homogeneous Poisson process with $\lambda$,\\ colour $x \in \Pi$ $\begin{cases}
+              \text{green with probability } \gamma(x)\\
+              \text{scalet with probability } \sigma(x) = 1- \gamma(x)
+    \end{cases}$, $\begin{cases}
+                 \Gamma \text{ set of green points}\\
+                 \Sigma \text{ set of scalet points}
+    \end{cases}$, then\\ $\Gamma, \Sigma$ independent Poisson processes with density $\lambda(x)\gamma(x), \lambda(x)\sigma(x)$
+\end{thm}
+\begin{pf}
+    conditional on $|\Pi \bigcap A| = n$, work with $\mathbb{Q}$, $\begin{cases}
+                                                                       \overline{\gamma} = \int_A \gamma(x)d\mathbb{Q}\\
+                                                                       \overline{\sigma} = \int_A \sigma(x)d\mathbb{Q}\\
+    \end{cases}$
+\end{pf}
+
+\begin{thm}[Renyi's theorem]
+    $\Pi$ random countable, $\lambda$ non-negative integrable, $\Lambda(A) < \infty$ for bounded $A$, if $\Pb(\Pi \in A = \varnothing) = e^{-\lambda(A)}$ for any finite union of boxes $A$,
+    then $\Pi$ Poisson process with $\lambda$
+\end{thm}
+
