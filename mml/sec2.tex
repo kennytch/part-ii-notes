@@ -229,3 +229,13 @@
     $\X = \R^p$, $\F = \left\{ x \mapsto x^\top \beta : \beta \in \R^p \right\}$
 \end{example}
 
+\begin{prop}
+    Under above setting, $VC(\H) \leq \dim(\F)$
+\end{prop}
+\begin{pf}
+    $d= \dim(\F) + 1$, linear map $L(f) = (f(x_1), \dots, f(x_d))$, then $\sum_{\gamma_i > 0} \gamma_i f(x_i) + \sum_{\gamma_i} f(x_i) = 0$, then pick $h$ forcing
+    contradiction, so $x_{1:d}$ cannot be shattered
+\end{pf}
+
+
+
