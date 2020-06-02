@@ -1,0 +1,70 @@
+\section{Computation for empirical risk minimisation}\label{sec:computation-for-empirical-risk-minimisation}
+
+\begin{itemize}
+    \item convex set $C$ ------ $x, y \in C$, then $(1 - t)x + ty \in C$ for all $t \in (0, 1)$
+    \item convex function $f$ ------ $f: C \rightarrow \R$, $f((1-t)x + ty) \leq (1- t)f(x) + tf(y)$ for all $x,y \in C, t \in (0,1)$
+    \item concave function ------ $-f$
+    \item strictly convex
+\end{itemize}
+
+\begin{fact}[Local to global phenomenon]
+    local minimum $\Rightarrow$ global minimum
+\end{fact}
+
+\begin{itemize}
+    \item Hessian matrix at $x$ $H(x)$
+\end{itemize}
+
+\begin{prop}
+    $C$ convex set, $f$ convex function, then
+    \begin{enumerate}
+        \item $g$ convex, $a, b \geq 0$, then \hl{$af + bg$ convex function}
+        \item $A$ matrix, $b$ vector, $C = R^d$, then \hl{$g(x) = f(Ax - b)$ convex function}
+        \item $I$ index set, $f_\alpha$ convex for $\alpha \in I$, \hl{$g(x) = \sup_{\alpha \in I} f_{\alpha}(x)$}, then
+        \begin{enumerate}
+            \item $D = \left\{ x : g(x) < \infty \right\}$ convex
+            \item $g$ restricted to $D$ convex
+        \end{enumerate}
+        \item $f$ differentiable at $x \in int(C)$, then \hl{$f(y) \geq f(x) + \nabla f(x)^\top (y- x)$}
+        \item $f$ twice differentiable, then
+        \begin{enumerate}
+            \item \hl{$f$ convex $\iff$ $H(x)$ positive semi-definite}
+            \item \hl{$f$ stricly convex $\iff$ $H(x)$ positive definite}
+        \end{enumerate}
+    \end{enumerate}
+\end{prop}
+
+\begin{setting}
+    \textbf{Classification framework}:
+    \begin{enumerate}
+        \item family $\H$ of $h$
+        \item each $h$ determine classifier by $x \mapsto \sgn(h(x))$
+        \item loss function $l(h(x), y) = \phi(y h(x))$ where $\phi$ convex and aim to approximate $\In_{(\infty, 0]}$
+        \item $\phi$-risk $R_\phi = \Ex(\phi(Y h(X)))$
+    \end{enumerate}
+\end{setting}
+
+\begin{example}[Surrogate loss]\,
+    \begin{enumerate}
+        \item \textbf{Hinge loss:} $\phi(u) = \max(1 - u, 0)$
+        \item \textbf{Exponential loss:} $\phi(u) = e^{-u}$
+        \item \textbf{Logistic loss:} $\phi(u) = \log_2 (1 + e^{-u})$
+    \end{enumerate}
+\end{example}
+
+\begin{itemize}
+    \item $h_{\phi, 0}$ ERM of surrogate loss
+    \item $\eta(x) = \Pb(Y = 1 | X = x)$
+\end{itemize}
+
+\begin{idea}
+    want $x \mapsto \sgn({h_{\phi, 0}(x)})$ mimics Bayes classifier $x \mapsto \sgn\left(\eta(x) - \frac{1}{2}\right)$
+\end{idea}
+
+\begin{itemize}
+    \item conditional $\phi$-risk $\Ex(\phi(Yh(X)) | X = x) = \eta(x) \phi(h(x)) + (1 - \eta(x))\phi(-h(x))$
+    \item $C_\eta(\alpha) = \eta(x) \phi(\alpha) + (1 - \eta(x))\phi(-\alpha) = \Ex(\phi(Y\alpha))$
+    \item classification calibrated ------ $\inf_{\alpha \in \R} C_\eta(\alpha) < \inf_{\alpha(2 \eta - 1) \leq 0} C_\eta (\alpha)$ for all $\eta \in [0, \frac{1}{2}) \bigcup (\frac{1}{2}, 1]$
+\end{itemize}
+
+
