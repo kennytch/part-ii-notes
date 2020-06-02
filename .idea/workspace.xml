@@ -2,13 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="805a30fc-edf0-4349-b4a4-7e21bcb95f75" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/mml/mml.tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mml/sec1.tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mml/sec2.tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/mml.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/mml.synctex.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/Asus.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/Asus.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mml/mml.tex" beforeDir="false" afterPath="$PROJECT_DIR$/mml/mml.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mml/sec2.tex" beforeDir="false" afterPath="$PROJECT_DIR$/mml/sec2.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/mml.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/out/mml.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/mml.synctex.gz" beforeDir="false" afterPath="$PROJECT_DIR$/out/mml.synctex.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/preamble.tex" beforeDir="false" afterPath="$PROJECT_DIR$/preamble.tex" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -198,7 +197,7 @@
       <workItem from="1590817773665" duration="18089000" />
       <workItem from="1590907493974" duration="18721000" />
       <workItem from="1590997749130" duration="16174000" />
-      <workItem from="1591076139589" duration="9501000" />
+      <workItem from="1591076139589" duration="16291000" />
     </task>
     <task id="LOCAL-00001" summary="Updated ./preamble.tex and recompile the pdf">
       <created>1589298006446</created>
@@ -515,7 +514,14 @@
       <option name="project" value="LOCAL" />
       <updated>1591044908466</updated>
     </task>
-    <option name="localTasksCounter" value="46" />
+    <task id="LOCAL-00046" summary="mml sec2 half">
+      <created>1591086990503</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1591086990503</updated>
+    </task>
+    <option name="localTasksCounter" value="47" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -535,7 +541,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="SFM done" />
     <MESSAGE value="SFM sec6 typo" />
     <MESSAGE value="PoS" />
     <MESSAGE value="PoS sec1" />
@@ -560,6 +565,7 @@
     <MESSAGE value="sfm update" />
     <MESSAGE value="number theory done" />
     <MESSAGE value="applied prob done" />
-    <option name="LAST_COMMIT_MESSAGE" value="applied prob done" />
+    <MESSAGE value="mml sec2 half" />
+    <option name="LAST_COMMIT_MESSAGE" value="mml sec2 half" />
   </component>
 </project>

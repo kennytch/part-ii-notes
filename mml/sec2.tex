@@ -90,13 +90,20 @@
 \begin{itemize}
     \item $a_{j:k}$ ------ subsequence $a_j, \dots, a_k$
     \item bound differences property:\\
-    $f(\omega_1, \dots, \omega_{i-1}, \omega_i, \omega_{i+1}, \dots, \omega_n) - f(\omega_1, \dots, \omega_{i-1}, \omega_i', \omega_{i+1}, \dots, \omega_n) \leq L_i$
+    $f(w_1, \dots, w_{i-1}, w_i, w_{i+1}, \dots, w_n) - f(w_1, \dots, w_{i-1}, w_i', w_{i+1}, \dots, w_n) \leq L_i$
 \end{itemize}
 
 \begin{thm}[Bounded differences inequality]
     $f$ bound differences property, $W_i$ independent,\\
     then $\Pb(f(W_{1:n}) - \Ex f(W_{1:n}) \geq t) \leq \exp \left( - \frac{2t^2}{\sum_i L_i^2} \right)$
 \end{thm}
+\begin{pf}
+    $(D_i)$ martingale difference wrt Doob martingale, $F_i(w_{1:i}) = \Ex(f(W_{1:n}|W_{1:i} = w_{1:i}))$
+    $\begin{cases}
+         A_i = \inf_{w_i} F_i (W_{1:(i-1)}, w_i) - \Ex( f(W_{1:n}|W_{1:i-1}))\\
+         B_i = \sup_{w_i} F_i (W_{1:(i-1)}, w_i) - \Ex( f(W_{1:n}|W_{1:i-1}))
+    \end{cases}$, then use $W_{(i+1:n)}$ independent to $W_i$, then Azuma-Hoeffding
+\end{pf}
 
 \begin{itemize}
     \item martingale sequence $(Z_i)_{i \geq 0}$ wrt $(W_i)_{i \geq 0}$ ------
@@ -118,5 +125,107 @@
 \end{pf}
 
 \begin{thm}[Azuma-Hoeffding]
-    $(D_i)$ martingale difference sequence wrt $(W_i)$,
+    $(D_i)$ martingale difference sequence wrt $(W_i)$,\\ $\exists \sigma(W_{0:(i-1)})$-measurable $A_i, B_i$, constant $L_i$ st
+    \begin{enumerate}
+        \item $A_i \leq D_i \leq B_i$
+        \item $B_i - A_i \leq L_i$
+    \end{enumerate}, then $\Pb\left( \sum_i D_i \geq t \right) \leq \exp\left( - \frac{2t^2}{\sum L_i^2} \right)$
 \end{thm}
+\begin{pf}
+    Hoeffding's Lemma conditionally on $W_{0:(i-1)}$, then lemma, then Gaussian tail bound
+\end{pf}
+
+\begin{setting}
+    $\H$ (possibly infinite) hypothesis class, $l$ takes values in $[0, M]$
+\end{setting}
+\begin{fact}
+    $R(\hat h) - R(h^*) \leq (G - \Ex G) + \Ex G + \hat R(h^*) - R(h^*)$
+\end{fact}
+
+\begin{itemize}
+    \item $Z_i = (X_i, Y_i)$
+    \item $\F = \left\{ (x,y) \mapsto -l(h(x), y) : h \in \H \right\}$
+\end{itemize}
+\begin{fact}
+    $G = \sup_{f \in \F} \frac{1}{n} \sum (f(Z_i) - \Ex f(Z_i))$
+\end{fact}
+
+\begin{itemize}
+    \item $\RR_n(\F) = \Ex \left( \sup_{f \in \F} \frac{1}{n} \sum_i \epsilon_i f(Z_i) \right)$ ------ $\epsilon_i$ i.i.d.\ Rademacher independent of $Z_{1:n}$
+\end{itemize}
+\begin{intuition}
+    capture how closely $f(Z_i)$ align with random label $\epsilon_i$ (dot product)
+\end{intuition}
+\begin{thm}
+    $\F$ class of real functions, $Z_i$ i.i.d.\ ,\\ then $\Ex \left( \sup_{f \in \F} \frac{1}{n} \sum (f(Z_i) - \Ex f(Z_i)) \right) \leq 2 \RR_n(\F)$
+\end{thm}
+\begin{pf}
+    $Z_i'$ i.i.d.\ copy of $Z_i$, symmetrisation technique: \\
+    $\sup \frac{1}{n} \sum f(Z_i) - \Ex f(Z_i) \leq \Ex\left( \sup \frac{1}{n} \sum f(Z_i) - f(Z_i') | Z_{1:n} \right)$
+\end{pf}
+
+\begin{itemize}
+    \item $\F(z_{1:n}) = \left\{ (f(z_1), \dots, f(z_n)) : f \in \F \right\}$
+    \item empirical Rademacher complexity $\hat \RR(\F(z_{1:n})) = \Ex \left( \sup_{f \in \F} \frac{1}{n} \sum_i \epsilon_i f(z_i) \right)$
+    \item $\hat \RR(\F(Z_{1:n})) = \Ex \left( \sup_{f \in \F} \frac{1}{n} \sum_i \epsilon_i f(Z_i) \mid Z_{1:n}\right)$
+\end{itemize}
+
+\begin{fact}
+    $\RR_n(\F) = \Ex \hat \RR(\F(Z_{1:n}))$
+\end{fact}
+
+\begin{thm}[Generalisation bound based on Rademacher complexity]
+    \,\\$\F = \left\{ (x, y) \mapsto l(h(x), y) \right\}$, $l$ takes values in $[0, M]$, \\
+    then with probability at least $1 - \delta$, $R(\hat{h}) - R(h^*) \leq 2\RR_n(\F) + M \sqrt{\frac{2 \log(\frac{2}{\delta})}{n}}$
+\end{thm}
+\begin{pf}
+    decomposition: $R(\hat h) - R(h^*) \leq (G - \Ex G) + \Ex G + \hat R(h^*) - R(h^*)$\\
+    Bounded differences inequality: $\Pb\left(G - \Ex G \geq \frac{t}{2}\right) \leq \exp\left(-\frac{t^2 n}{2M^2}\right)$,\\
+    Hoeffding's inequality: $\Pb\left(\hat R(h^*) - R(h^*) \geq \frac{t}{2}\right) \leq \exp\left(-\frac{t^2 n}{2M^2}\right)$\\
+    $\RR_n(\F) = \RR_n(-\F)$, so $\Ex G \leq 2 \RR_n (\F)$, then $t= M\sqrt{\frac{2\log \frac{1}{\delta}}{n}}$
+\end{pf}
+
+\begin{setting}
+    classification setting, misclassification loss, $\F = \left\{ (x, y) \mapsto l(h(x), y) : h \in \H\right\}$
+\end{setting}
+\begin{fact}
+    $|\F(z_{1:n})| = |\H(x_{1:n})|$
+\end{fact}
+
+\begin{lemma}
+    $\hat R(\F(z_{1:n})) \leq \sqrt{\frac{2 \log |\F(z_{1:n})|}{n}} = \sqrt{\frac{2 \log |\H(x_{1:n})|}{n}}$
+\end{lemma}
+\begin{pf}
+    $\F' = \left\{ f_1, \dots, f_d \right\}$ st $\F'(z_{1:n}) = \F(z_{1:n})$, $W_j = \frac{1}{n} \sum \epsilon_i f_j(z_i)$,
+    then $W_j$ sub-Gaussian with $\sigma = \frac{1}{\sqrt{n}}$, then apply max bound
+\end{pf}
+
+\begin{setting}
+    $\F$ class of functions $f : \X \mapsto \left\{ a, b \right\}$, $\F \geq 2$
+\end{setting}
+
+\begin{itemize}
+    \item $\F$ shatters $x_{1:n}$ ------ $|\F(x_{1:n})| = 2^n$
+    \item shattering coefficient $s(\F, n) = \max_{x_{1:n}} |\F(x_{1:n})|$
+    \item VC dimension $VC(\F) = \sup \left\{ n : s(\F, n) = 2^n \right\}$
+\end{itemize}
+
+\begin{lemma}[Sauer-Shelah]
+    $VC(\F) = d$, then $s(\F, n) \leq \sum_0^d {n \choose i} \leq (n+1)^d$
+\end{lemma}
+\begin{pf}
+    non-empty $Q \subset [n]$, stronger statement: at least $|\F(x_{1:n})| - 1$ non-empty $Q$ st $\F$ shatters $x_Q$,
+    then induction on $|\F(x_{1:n})|$
+\end{pf}
+
+\begin{fact}
+    $\RR_n(\F) \leq \sqrt{\frac{2 VC(\F) \log(n+1)}{n}}$
+\end{fact}
+
+\begin{setting}
+    $\F$ vector space of functions, $\H = \left\{ h : h(x) = \sgn(f(x)), f\in \F \right\}$
+\end{setting}
+\begin{example}
+    $\X = \R^p$, $\F = \left\{ x \mapsto x^\top \beta : \beta \in \R^p \right\}$
+\end{example}
+
