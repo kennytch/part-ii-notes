@@ -1,0 +1,122 @@
+\section{Statistical learning theory}\label{sec:statistical-learning-theory}
+
+\begin{fact}
+    $R(\hat h) - R(h^*) = \left( R(\hat h) - \hat R(\hat h) \right) + \left( \hat R (\hat h) - \hat R (h^*) \right) + \left( \hat R (h^*) - R(h^*) \right)$
+\end{fact}
+
+\begin{itemize}
+    \item concentration inequalities
+\end{itemize}
+
+\begin{fact}[Markov's inequality]
+    $W$ non-negative, $\phi$ strictly increasing, then $\Pb(W \geq t) \leq \frac{\Ex\phi(W)}{\phi(t)}$
+\end{fact}
+\begin{fact}[Chernoff bound]
+    $\phi(t) = e^{\alpha t}$, $\alpha > 0$, then $\Pb(W \geq t) \leq \inf_{\alpha > 0} e^{-\alpha t}\Ex e^{\alpha W}$
+\end{fact}
+\begin{itemize}
+    \item sub-Gaussian with parameter $\sigma$ ------ $\Ex e^{\alpha (W - EW)} \leq e^{\frac{\alpha^2 \sigma^2}{2}}$
+\end{itemize}
+
+\begin{prop}
+    $W$ sub-Gaussian with $\sigma$, then $\Pb(W \geq t) \leq e^{-\frac{t^2}{2\sigma^2}}$
+\end{prop}
+\begin{pf}
+    Chernoff bound
+\end{pf}
+\begin{fact}
+    $W$ sub-Gaussian with $\sigma$, then
+    \begin{enumerate}
+        \item $W$ sub-Gaussian with $\sigma'$ for all $\sigma' \geq \sigma$
+        \item $-W$ sub-Gaussian with $\sigma$
+    \end{enumerate}
+\end{fact}
+\begin{fact}
+    $\Pb(|W - \Ex W| \geq t) \leq 2 e^{-\frac{t^2}{2\sigma^2}}$
+\end{fact}
+\begin{prop}
+    $W_i$ independent, sub-Gaussian with $\sigma_i$, \st{mean $\mu_i$},\\ then $\gamma^\top W$ sub-Gaussian with $\sqrt{\sum_i \gamma_i \sigma_i}$
+\end{prop}
+\begin{pf}
+    expand
+\end{pf}
+\begin{fact}
+    same setting, pick $\gamma = (1, \dots, 1)$, then $\Pb\left(\sum_i (W_i - \mu_i) \geq t\right) \leq \exp\left( - \frac{t^2}{2 \sum_i \sigma_i^2} \right)$
+\end{fact}
+
+\begin{prop}
+    $W_{i}$ mean 0, sub-Gaussian with $\sigma$ (non necessarily independent),\\ then $\Ex \max_j W_j \leq \sigma \sqrt{2 \log(d)}$
+\end{prop}
+\begin{pf}
+    $\exp (\alpha \Ex \max W_j) \leq \Ex \exp (\alpha \max W_j) \leq \sum \exp (\alpha W_j) \leq de^{\frac{\alpha^2 \sigma^2}{2}}$, then maximise over $\alpha$
+\end{pf}
+
+\begin{itemize}
+    \item Rademacher r.v.\ $\epsilon$ ------ take $\left\{ -1 ,1 \right\}$ with equal prob
+\end{itemize}
+\begin{fact}
+    Rademacher $\epsilon$ sub-Gaussian with $\sigma = 1$
+\end{fact}
+\begin{lemma}[Hoeffding's lemma]
+    $W$ mean 0, take values in $[a, b]$, \\then $W$ sub-Gaussian with $\sigma = \frac{b- a}{2}$
+\end{lemma}
+\begin{pf}
+    weaker result $\sigma = b - a$: consider independent $W'$, conditional Jensen, Rademacher sub-Gaussian,
+    $\Ex e^{\alpha W} \leq \Ex e^{\alpha \epsilon(W - W')} \leq \Ex e^{\alpha^2 (W - W')^2/2} \leq \Ex e^{\alpha^2 (b - a)^2/2}$
+\end{pf}
+
+\begin{itemize}
+    \item symmetrisation argument
+\end{itemize}
+
+\begin{fact}[Hoeffding's inequality]
+    $W_i$ independent, mean 0, $a_i \leq W_i \leq b_i$ a.s.\ , then $\Pb(\frac{1}{n}\sum_i W_i \geq t) \leq \exp\left( -\frac{2n^{2}t^2}{\sum_i (b_i - a_i)^2} \right)$
+\end{fact}
+
+\begin{thm}
+    $\H$ finite, $l$ take values in $[0, M]$, \\then with probability at least $1 - \delta$, $R(\hat h) - R(h^*) \leq M \sqrt{\frac{2(\log |\H| + \log \frac{1}{\delta})}{n}}$
+\end{thm}
+\begin{pf}
+    decomposition $R(\hat h) - R(h^*)$, then Hoeffding's inequality
+\end{pf}
+
+\begin{itemize}
+    \item $G(X_1, Y_1, \dots, X_n, Y_n) = \sup_{h \in \H} R(h) - \hat R(h)$
+\end{itemize}
+\begin{fact}
+    $l$ takes values $[0, M]$, then $G(x_1, y_1, \dots, x_n, y_n) - G(x_1', y_1', x_2, y_2, \dots, x_n, y_n)\leq \frac{M}{n}$
+\end{fact}
+
+\begin{itemize}
+    \item $a_{j:k}$ ------ subsequence $a_j, \dots, a_k$
+    \item bound differences property:\\
+    $f(\omega_1, \dots, \omega_{i-1}, \omega_i, \omega_{i+1}, \dots, \omega_n) - f(\omega_1, \dots, \omega_{i-1}, \omega_i', \omega_{i+1}, \dots, \omega_n) \leq L_i$
+\end{itemize}
+
+\begin{thm}[Bounded differences inequality]
+    $f$ bound differences property, $W_i$ independent,\\
+    then $\Pb(f(W_{1:n}) - \Ex f(W_{1:n}) \geq t) \leq \exp \left( - \frac{2t^2}{\sum_i L_i^2} \right)$
+\end{thm}
+
+\begin{itemize}
+    \item martingale sequence $(Z_i)_{i \geq 0}$ wrt $(W_i)_{i \geq 0}$ ------
+    \begin{enumerate}
+        \item $\Ex|Z_i| < \infty$
+        \item $Z_i$ $\sigma(W_{0:i})$-measurable
+        \item $\Ex (Z_i|W_{0:(i-1)}) = Z_{i-1}$
+    \end{enumerate}
+    \item martingale difference sequence $D_i = Z_i - Z_{i-1}$
+    \item Doob martingale $Z_i = \Ex f(W_{1:n}) | W_{1:i}$ ------ martingale provided $\Ex |f(W_{1:n})| < \infty$
+\end{itemize}
+
+\begin{lemma}
+    $(D_i)$ martingale difference sequence wrt $(W_i)$, $\Ex (e^{\alpha D_i} | W_{0:{i-1}}) \leq e^{\frac{\alpha^2 \sigma_i^2}{2}}$, \\
+    then $\gamma^\top D$ sub-Gaussian with $\sqrt{\sum \gamma_i^2 \sigma_i^2}$
+\end{lemma}
+\begin{pf}
+    Tower property with $\sigma(W_{1:i})$ for $i=n-1, n-2, \dots, 1$
+\end{pf}
+
+\begin{thm}[Azuma-Hoeffding]
+    $(D_i)$ martingale difference sequence wrt $(W_i)$,
+\end{thm}

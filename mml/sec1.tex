@@ -1,0 +1,104 @@
+\section{Introduction}\label{sec:introduction}
+
+\begin{itemize}
+    \item $(X,Y) \in \mathcal{X} \times \mathcal{Y}$ with joint distribution $P_0$
+    \item classification setting $\Y \in \left\{ -1, 1 \right\}$
+    \item regression setting $\Y = \R$
+\end{itemize}
+
+\begin{assumption}
+    $\X \in \R^p$
+\end{assumption}
+
+\begin{itemize}
+    \item hypothesis $h:\X \rightarrow \Y$
+    \item loss function $l : \Y \times \Y \rightarrow \R$
+    \item \textbf{Classification setting}
+    \item misclassification error $l(h(x), y) = \begin{cases}
+                                                    1 & \text{ if } h(x) = y\\
+                                                    0 & \text{ otherwise }
+    \end{cases}$
+    \item classifier $h$
+    \item \textbf{Regression setting}
+    \item squared error $l(h(x), y) = (h(x) - y)^2$
+    \item risk $R(h) = \int_{(x,y) \in \X \times \Y} l(h(x), y) dP_0(x,y)$
+\end{itemize}
+
+\begin{fact}
+    $R(h) = \Ex l(h(X), Y)$ for deterministic $h$
+\end{fact}
+
+\begin{setting}
+    $l$ misclassification error, $R$ risk
+\end{setting}
+
+\begin{itemize}
+    \item Bayes classifier $h_0$ ------ minimises misclassification risk
+    \item Bayes risk $R(h_0)$
+    \item regression function $\eta(x) = \Pb(Y = 1\mid X= x)$
+\end{itemize}
+
+\begin{prop}
+    Bayes classifier $h_0$, then $h_0(x) = \begin{cases}
+                                               1 & \text{if } \eta(x) > \frac{1}{2}\\
+                                               -1 & \text{otherwise }
+    \end{cases}$
+\end{prop}
+\begin{pf}
+    $R(h) = \frac{1}{4}\Ex(Y - h(X))^2 = \frac{1}{4}\Ex(Y - \Ex(Y|X))^2 + \frac{1}{4}\Ex(\Ex(Y|X) - h(X))^2$
+\end{pf}
+
+\begin{setting}
+    $P_0$ unknown
+\end{setting}
+
+\begin{itemize}
+    \item training data $(X_i, Y_i)$ ------ i.i.d.\ of $(X, Y)$
+    \item $R(\hat h)$
+\end{itemize}
+
+\begin{fact}
+    $R(\hat h) = \Ex(l(h(X), Y) \mid X_1, Y_1, \dots, X_n, Y_n)$
+\end{fact}
+
+\begin{itemize}
+    \item class $\H$ of hypotheses
+\end{itemize}
+
+\begin{example}
+    \begin{enumerate}
+        \item $\H = \left\{ h : h(x) = \sgn (\mu + x^\top \beta) \right\}$
+        \item $\H = \left\{ h : h(x) = \sgn \left(\mu + \sum \phi_j(x)\beta_j\right) \right\}$ with dictionary $\phi_i : \X \rightarrow \R$
+    \end{enumerate}
+\end{example}
+
+\begin{setting}
+    $\sgn(0) = -1$
+\end{setting}
+
+\begin{itemize}
+    \item conditional expectation $\Ex(Z \mid W)$
+\end{itemize}
+
+\begin{prop}\,
+    \begin{enumerate}
+        \item \textbf{Role of independence} $\Ex(Z|W) = \Ex Z$
+        \item \textbf{Tower property} $\Ex{[\Ex(Z|W)\mid f(W)]} = \Ex [Z\mid f(W)]$
+        \item \textbf{Taking out what is known} $\Ex(f(W)Z|W) = f(W)\Ex (Z | W)$
+        \item \textbf{Conditional Jensen} $\Ex(f(Z)|W) \geq f(\Ex (Z | W))$ ------ $f$ convex, $f(Z)$ integrable
+    \end{enumerate}
+\end{prop}
+
+\begin{itemize}
+    \item empirical risk / training error $\hat R(h) = \frac{1}{n} \sum l(h(X_i), Y_i)$
+    \item empirical risk minimiser (ERM) $\hat h \in \argmin_{h \in \H} \hat R(h)$ (multiple minimiser)
+    \item generalisation error $R(\hat h)$
+    \item $h^* \in \argmin_{h \in \H} R(h)$
+    \item stochastic error / excess risk $R(\hat h) - R(h^*)$ ------ increase with complexity of $\H$
+    \item approximation error $R(h^*) - R(h_0)$ ------ decrease with complexity of $\H$
+\end{itemize}
+
+\begin{fact}
+    $R(\hat h) - R(h_0)$ = excess risk + approximation error
+\end{fact}
+
