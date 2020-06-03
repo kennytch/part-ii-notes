@@ -2,15 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="805a30fc-edf0-4349-b4a4-7e21bcb95f75" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/Revision.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Revision.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mml/sec4.tex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mml/mml.tex" beforeDir="false" afterPath="$PROJECT_DIR$/mml/mml.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mml/sec1.tex" beforeDir="false" afterPath="$PROJECT_DIR$/mml/sec1.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mml/sec2.tex" beforeDir="false" afterPath="$PROJECT_DIR$/mml/sec2.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mml/sec3.tex" beforeDir="false" afterPath="$PROJECT_DIR$/mml/sec3.tex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/mml.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/out/mml.pdf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/mml.synctex.gz" beforeDir="false" afterPath="$PROJECT_DIR$/out/mml.synctex.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/preamble.tex" beforeDir="false" afterPath="$PROJECT_DIR$/preamble.tex" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -210,14 +206,7 @@
       <workItem from="1590907493974" duration="18721000" />
       <workItem from="1590997749130" duration="16174000" />
       <workItem from="1591076139589" duration="23434000" />
-      <workItem from="1591170498539" duration="13993000" />
-    </task>
-    <task id="LOCAL-00002" summary="prob_measure/sec7.tex">
-      <created>1589351593665</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1589351593665</updated>
+      <workItem from="1591170498539" duration="20135000" />
     </task>
     <task id="LOCAL-00003" summary="prob_measure/sec10.tex">
       <created>1589446548527</created>
@@ -555,7 +544,14 @@
       <option name="project" value="LOCAL" />
       <updated>1591122551568</updated>
     </task>
-    <option name="localTasksCounter" value="51" />
+    <task id="LOCAL-00051" summary="mml sec3 done">
+      <created>1591195315217</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1591195315217</updated>
+    </task>
+    <option name="localTasksCounter" value="52" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

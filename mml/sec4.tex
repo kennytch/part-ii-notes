@@ -1,0 +1,33 @@
+\section{Popular machine learning methods}\label{sec:popular-machine-learning-methods}
+
+\begin{itemize}
+    \item cross validation ------ minimise $CV(j) = \frac{1}{n} \sum_{k=1}^v \sum_{i \in A_k} l(H_{-k}^j(X_i), Y_i)$ over $j$
+    \item stacking ------ minimise $\frac{1}{n} \sum_{k=1}^v \sum_{i \in A_k} l(\sum_{j=1}^m w_j H_{-k}^j(X_i), Y_i)$ over $w$ on $\left\{ w : w_j \geq 0 \right\}$
+    \item Adaboost
+    \begin{setting}
+        $h : \X \rightarrow \left\{ -1, 1 \right\}$, $\H^M = \left\{ \sum_{m=1}^M \beta_m h_m  \right\}$
+    \end{setting}
+    \begin{itemize}
+        \item tuning parameters $M$
+    \end{itemize}
+    Procedures:
+    \begin{enumerate}
+        \item $\hat f_0$ ------ $x \mapsto 0$
+        \item $(\hat \beta_m, \hat h_m) = \arg \min \frac{1}{n} \sum \exp [-Y_i(\hat f_{m-1}(X_i) + \beta h(X_i))]$
+        \item $\hat f_m = \hat f_{m-1} + \hat \beta_m \hat h_m$
+    \end{enumerate}
+    Return:
+    \begin{itemize}
+        \item $\sgn \circ \hat f_M$
+    \end{itemize}
+    \item $err_m(h) = \frac{\sum w_{i}^{(m)} \In_{h(X_i \neq Y_i)}}{\sum w_i^{(m)}}$
+    \begin{fact}
+        $\hat h_m = \arg \min err_m(h)$, $\hat \beta_m = \frac{1}{2} \log \left( \frac{1 - err_m(\hat h_m)}{err_m(\hat h_m)} \right)$
+    \end{fact}
+\end{itemize}
+
+\begin{example}
+    \begin{itemize}
+        \item decision stumps $\H = \left\{ h_{a,j,1}(x) = \sgn(x_j - a), h_{a, j,2}(x) = \sgn (a - x_j) \right\}$
+    \end{itemize}
+\end{example}
