@@ -2,14 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="805a30fc-edf0-4349-b4a4-7e21bcb95f75" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/Revision.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Revision.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mml/mml.tex" beforeDir="false" afterPath="$PROJECT_DIR$/mml/mml.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mml/sec1.tex" beforeDir="false" afterPath="$PROJECT_DIR$/mml/sec1.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mml/sec2.tex" beforeDir="false" afterPath="$PROJECT_DIR$/mml/sec2.tex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mml/sec3.tex" beforeDir="false" afterPath="$PROJECT_DIR$/mml/sec3.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/mml.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/out/mml.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/mml.synctex.gz" beforeDir="false" afterPath="$PROJECT_DIR$/out/mml.synctex.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/preamble.tex" beforeDir="false" afterPath="$PROJECT_DIR$/preamble.tex" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DaemonCodeAnalyzer">
+    <disable_hints>
+      <file url="file://$PROJECT_DIR$/mml/sec3.tex" />
+    </disable_hints>
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -28,11 +40,15 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/mml/sec3.tex" root0="SKIP_INSPECTION" />
+  </component>
   <component name="ProjectId" id="1bfIEkujoVNtGbRqX050ThYskw8" />
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/number_theory" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -193,14 +209,8 @@
       <workItem from="1590817773665" duration="18089000" />
       <workItem from="1590907493974" duration="18721000" />
       <workItem from="1590997749130" duration="16174000" />
-      <workItem from="1591076139589" duration="23394000" />
-    </task>
-    <task id="LOCAL-00001" summary="Updated ./preamble.tex and recompile the pdf">
-      <created>1589298006446</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1589298006446</updated>
+      <workItem from="1591076139589" duration="23434000" />
+      <workItem from="1591170498539" duration="13993000" />
     </task>
     <task id="LOCAL-00002" summary="prob_measure/sec7.tex">
       <created>1589351593665</created>
@@ -538,7 +548,14 @@
       <option name="project" value="LOCAL" />
       <updated>1591104888550</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="mml sec3 done">
+      <created>1591122551567</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1591122551568</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

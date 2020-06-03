@@ -71,5 +71,184 @@
     $\phi$ convex, then $\phi$ classification calibrated $\iff$ differentiable at $0$, $\phi'(0) < 0$
 \end{thm}
 \begin{pf}
+    $C_\eta'(0) = (2\eta - 1)\phi'(0)$, assume $\eta > \frac{1}{2}$, $C_\eta(\alpha) \geq C_{\eta}(0)$ for $\alpha \leq 0$, then find $\alpha^* > 0$ st $C_\eta(\alpha^*) < C_\eta(0)$
+\end{pf}
 
+\begin{setting}
+    $\F = \left\{ (x, y) \mapsto \phi(yh(x)) : h \in \H \right\}$
+\end{setting}
+
+\begin{lemma}[Contraction lemma]
+    $r = \sup_{x \in \X, h \in \H}|h(x)|$, $\exists L \geq 0$, $|\phi(u) - \phi(u')| \leq L |u - u'|$ for $u, u' \in [-r, r]$ (Lipschitz with $L$ on $[-r, r]$)
+    , then $\RR_n(\F) \leq L \RR_n(\H)$
+\end{lemma}
+\begin{pf}
+    $\Ex \sup_h \left( \frac{1}{n} \epsilon_i \phi(y_i h(x_i)) + A(h, \epsilon_{-i}) \right) \leq \Ex \sup_h \left( \frac{L}{n} \epsilon_i h(x_i) + A(h, \epsilon_{-i}) \right)$, then stepwise argument
+    inequality from conditioning $\epsilon_{-i}$ and expand $\epsilon_i$
+\end{pf}
+
+\begin{cor}
+    setup of contration lemma, $r$ finite, $\phi$ non-incresing, $M = \phi(-r)$, then with probabiliy at least $1 - \delta$,
+    $R_\phi(\hat h) - R_\phi (h^*) \leq 2L \RR_n(\H) + M \sqrt{\frac{2 \log(\frac{2}{\delta})}{n}}$
+\end{cor}
+
+\begin{example}[$l_2$-constraint]
+    \begin{setting}
+        $\X = \left\{ \norm{x}_2 \leq C \right\}$, $\H = \left\{ x \mapsto x^{\top}\beta : \norm{\beta}_2 \leq \lambda\right\}$
+    \end{setting}
+    \begin{fact}
+        $\hat \RR(\H(x_{1:n})) \leq \frac{\lambda C}{\sqrt{n}}$ (Cauchy-Schwarz, Jensen)
+    \end{fact}
+    \begin{fact}
+        $\sup_{x, h} |h(x)| = \lambda C$
+    \end{fact}
+\end{example}
+
+\begin{example}[$l_1$-constraint]
+    \begin{setting}
+        $\X = \left\{ \norm{x}_\infty \leq C \right\}$, $\H = \left\{ x \mapsto x^\top \beta : \norm{\beta}_1 \leq \lambda \right\}$
+    \end{setting}
+    \begin{itemize}
+        \item convex hull $\conv S$ ------ intersection of all convex sets containing $S$
+        \item convex combination $v = \sum \alpha_i v_i$ ------ $\sum \alpha_i = 1$
+    \end{itemize}
+    \begin{lemma}
+        $v \in \conv S$ $\iff$ $v$ convex combination of points in $S$
+    \end{lemma}
+    \begin{pf}
+         induction
+    \end{pf}
+    \begin{lemma}
+        $L$ linear map, then $\conv L(S) = L(\conv S)$
+    \end{lemma}
+    \begin{lemma}
+        $\hat \RR(A) = \hat \RR (\conv A)$
+    \end{lemma}
+    \begin{itemize}
+        \item $S = \bigcup_{j=1}^p \left\{ \lambda e_j, - \lambda e_j \right\}$
+        \item $L(\beta) = (x_1^\top \beta, \dots, x_n^\top \beta)^\top$
+    \end{itemize}
+    \begin{fact}
+        $\left\{ \norm{\beta}_1 \leq \lambda \right\} = \conv S$
+    \end{fact}
+    \begin{fact}
+        $\hat \RR(\H(x_{1:n})) = \hat \RR (L(S))= \frac{\lambda}{n} \Ex\left(\max \left| \sum \epsilon_i x_{ij} \right|\right) \leq \frac{\lambda C}{\sqrt{n}} \sqrt{2 \log(2p)}$ (sub-Gaussian bound for max)
+    \end{fact}
+    \begin{fact}
+        $\sup |h(x)| = \lambda C$
+    \end{fact}
+\end{example}
+
+\begin{prop}
+    $C$ closed convex set, then
+    \begin{enumerate}
+        \item minimiser of $\norm{x- z}_2$ exists and unique
+        \item let $\pi_C(x) = \arg \min_{z \in C} \norm{x - z}_2$, then
+        \begin{itemize}
+            \item $(x - \pi_C(x))^\top(z - \pi_C(x)) \leq 0$ for all $z \in C$
+            \item $\norm{\pi_C(x) - \pi_C(y)}_2 \leq \norm{x- y}_2$ for all $y \in \R^d$
+        \end{itemize}
+    \end{enumerate}
+\end{prop}
+\begin{pf}
+    \begin{enumerate}
+        \item \textbf{Existence:} bounded set $B = \left\{ w : \norm{w - x}_2 \leq \inf \norm{x- z}_2 + 1 \right\}$
+        \item \textbf{Uniqueness:} $z \mapsto \norm{x - z}_2^2$ convex
+    \end{enumerate}
+\end{pf}
+
+\begin{itemize}
+    \item projection $\pi_C(x)$
+\end{itemize}
+
+\begin{prop}
+    $C$ closed convex set, $x \notin C$, then $\exists v, \epsilon > 0$ st $v^\top z \leq v^\top x - \epsilon$
+\end{prop}
+\begin{pf}
+    $v = x - \pi_{C}(x)$
+\end{pf}
+
+\begin{itemize}
+    \item subgradient $g$ ------ $f$ convex, $f(z) \geq f(x) + g^\top (z -x)$
+    \item subdifferential $\partial f(x)$ ------ set of subgradients
+    \item epigraph $C = \left\{ (z, y) : y \geq f(z) \right\}$
+\end{itemize}
+
+\begin{prop}
+    $f$ convex, then $\partial f(x)$ non-empty for all $x$
+\end{prop}
+\begin{pf}
+    epigraph closed, convex, $w_k \notin C \rightarrow (x, f(x))$, apply prop, BW
+\end{pf}
+
+\begin{prop}
+    $f$ convex, $f$ differentiablea at $x$, then $\partial f(x) = \left\{ \nabla f(x) \right\}$
+\end{prop}
+\begin{pf}
+    $g$ subgradient, then $\lim \frac{f( x + tz ) - f(x)}{t} \geq g^\top z$
+\end{pf}
+
+\begin{prop}[Subgradient calculus]
+    $f, f_1, f_2$ convex, $h(x) = f(Ax + b)$, then
+    \begin{enumerate}
+        \item $\partial(\alpha f)(x) = \left\{ \alpha g : g \in \partial f(x) \right\}$
+        \item $\partial(f_1 + f_2)(x) = \left\{ g_1, g_2 : g_i \in \partial f_i(x) \right\}$
+        \item $\partial h(x) = A^\top \partial f(Ax + b)$
+    \end{enumerate}
+\end{prop}
+
+\textbf{Gradient descent}
+\begin{itemize}
+    \item Parameters:
+    \begin{itemize}
+        \item $\beta_1 \in C$, $k$, step sizes $(\eta_s)$
+    \end{itemize}
+    \item Procedures:\\
+    For $s = 1, \dots, k - 1$:
+    \begin{enumerate}
+        \item compute $g_s \in \partial f(\beta_s)$
+        \item $z_{s+1} = \beta_s - \eta_s g_s$
+        \item $\beta_{s+1} = \pi_C(z_{s+1})$
+    \end{enumerate}
+    \item Return:
+    \begin{itemize}
+        \item $\bar \beta = \frac{1}{k} \sum \beta_s$
+    \end{itemize}
+\end{itemize}
+
+\begin{thm}
+    $f$ convex function, $C$ closed convex, $\hat \beta$ minimiser of $f$ over $C$, $\sup_{\beta \in C} \norm{\beta}_2 \leq R$,
+    $\sup_{\beta \in C}\sup_{g \in \partial f(\beta)} \norm{g}_2 \leq L$, step size $\eta_s = \eta = \frac{2R}{L\sqrt{k}}$,
+    then \hl{$f(\bar \beta) - f(\hat \beta) \leq \frac{2LR}{\sqrt{k}}$}
+\end{thm}
+\begin{pf}
+    Jensen
+\end{pf}
+
+\textbf{Stochastic gradient descent}
+\begin{setting}
+    $f(\beta) = \Ex \tilde f(\beta;U)$, $\beta \mapsto \tilde f(\beta; u)$ convex for all $u$
+\end{setting}
+
+\begin{itemize}
+    \item Parameters:
+    \begin{itemize}
+        \item $\beta_1 \in C$, $k$, step sizes $(\eta_s)$, $U_i$ i.i.d.\
+    \end{itemize}
+    \item Procedures:\\
+    For $s = 1, \dots, k - 1$:
+    \begin{enumerate}
+        \item compute $\tilde g_s \in \partial \tilde f(\beta_s; U_s)$
+        \item $z_{s+1} = \beta_s - \eta_s \tilde g_s$
+        \item $\beta_{s+1} = \pi_C(z_{s+1})$
+    \end{enumerate}
+\end{itemize}
+
+\begin{thm}
+     $f$ convex function, $C$ closed convex, $\hat \beta$ minimiser of $f$ over $C$, $\sup_{\beta \in C} \norm{\beta}_2 \leq R$,
+    $\sup_{\beta \in C} \Ex \left( \sup_{\tilde g \in \partial \tilde f(\beta;U)}  \norm{\tilde g}_2^2 \right)\leq L^2$, step size $\eta_s = \eta = \frac{2R}{L\sqrt{k}}$,
+    then \hl{$\Ex f(\bar \beta) - f(\hat \beta) \leq \frac{2LR}{\sqrt{k}}$}
+\end{thm}
+\begin{pf}
+    $g_s = \Ex(\tilde g_s \mid \beta_s) \in \partial f(\beta_s)$
 \end{pf}
