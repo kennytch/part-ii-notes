@@ -13,7 +13,7 @@
 \end{itemize}
 
 \begin{thm}
-    $|G| \geq 3$, every pair of non-adjacent vertices $d(x) + d(y) \geq k$ \\
+    $|G| \geq 3$, every pair of \hl{non-adjacent} vertices $d(x) + d(y) \geq k$ \\
     If $k < n$, G connected, then exists path of length k \\
     If k = n, exist Hamiltonian cycle
 \end{thm}
@@ -55,7 +55,7 @@
 \end{proof}
 
 \begin{thm}[problem of Zarankiewicz]
-    Bipartite n x n, no $K_{t,t}$
+    Bipartite $n \times n$, no $K_{t,t}$
     \begin{align*}
         z(n, t) \leq (t - 1)^{1/t}(n - t + 1)n^{1 - 1/t} + (t - 1)n = O(n^{2 - 1/t})
     \end{align*}
@@ -63,13 +63,13 @@
 
 \begin{thm}
     \begin{align*}
-        z(n, 2) \leq n/2 (1 + \sqrt{4n - 3}), \text{ equality holds for infinitely many n}
+        z(n, 2) \leq \frac{n}{2} (1 + \sqrt{4n - 3}), \text{ equality holds for infinitely many n}
     \end{align*}
 \end{thm}
 
 \begin{thm}
 \begin{align*}
-    ex(n, K_{2,2}) \leq n/4 (1 + \sqrt{4n - 3})
+    ex(n, K_{2,2}) \leq \frac{n}{4} (1 + \sqrt{4n - 3})
 \end{align*}
 \end{thm}
 
@@ -89,12 +89,12 @@
 \end{itemize}
 
 \begin{lemma}
-    If $n > n_1(r, t, \epsilon), |G| = n, \delta(G) \geq (1 - 1/r + \epsilon)n $
+    If $n > n_1(r, t, \epsilon), |G| = n, \delta(G) \geq (1 - \frac{1}{r} + \epsilon)n $
     Then contains $K_{r+1}(t)$
 \end{lemma}
 
 \begin{thm}[Erdos-Stone]
-    n sufficiently large, $e(G) \geq (1 - 1/r + \epsilon) {n\choose2}$, then contains $K_{r+1}(t)$
+    n sufficiently large, $e(G) \geq (1 - \frac{1}{r} + \epsilon) {n\choose2}$, then contains $K_{r+1}(t)$
 \end{thm}
 
 \begin{itemize}
