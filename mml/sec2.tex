@@ -98,7 +98,7 @@
     then $\Pb(f(W_{1:n}) - \Ex f(W_{1:n}) \geq t) \leq \exp \left( - \frac{2t^2}{\sum_i L_i^2} \right)$
 \end{thm}
 \begin{pf}
-    $(D_i)$ martingale difference wrt Doob martingale, $F_i(w_{1:i}) = \Ex(f(W_{1:n}|W_{1:i} = w_{1:i}))$
+    $(D_i)$ martingale difference wrt Doob martingale, $F_i(w_{1:i}) = \Ex(f(W_{1:n})|W_{1:i} = w_{1:i})$
     $\begin{cases}
          A_i = \inf_{w_i} F_i (W_{1:(i-1)}, w_i) - \Ex( f(W_{1:n}|W_{1:i-1}))\\
          B_i = \sup_{w_i} F_i (W_{1:(i-1)}, w_i) - \Ex( f(W_{1:n}|W_{1:i-1}))
@@ -127,7 +127,7 @@
 \begin{thm}[Azuma-Hoeffding]
     $(D_i)$ martingale difference sequence wrt $(W_i)$,\\ $\exists \sigma(W_{0:(i-1)})$-measurable $A_i, B_i$, constant $L_i$ st
     \begin{enumerate}
-        \item $A_i \leq D_i \leq B_i$
+        \item $A_i \leq D_i \leq B_i$ a.s.\ 
         \item $B_i - A_i \leq L_i$
     \end{enumerate}, then $\Pb\left( \sum_i D_i \geq t \right) \leq \exp\left( - \frac{2t^2}{\sum L_i^2} \right)$
 \end{thm}

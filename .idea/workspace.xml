@@ -2,9 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="805a30fc-edf0-4349-b4a4-7e21bcb95f75" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/mml/sec4.tex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mml/mml.tex" beforeDir="false" afterPath="$PROJECT_DIR$/mml/mml.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auxil/graph_theory.aux" beforeDir="false" afterPath="$PROJECT_DIR$/auxil/graph_theory.aux" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auxil/graph_theory.log" beforeDir="false" afterPath="$PROJECT_DIR$/auxil/graph_theory.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/graph_theory/sec1.tex" beforeDir="false" afterPath="$PROJECT_DIR$/graph_theory/sec1.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/graph_theory/sec2.tex" beforeDir="false" afterPath="$PROJECT_DIR$/graph_theory/sec2.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mml/sec2.tex" beforeDir="false" afterPath="$PROJECT_DIR$/mml/sec2.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/graph_theory.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/out/graph_theory.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/graph_theory.synctex.gz" beforeDir="false" afterPath="$PROJECT_DIR$/out/graph_theory.synctex.gz" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/mml.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/out/mml.pdf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/mml.synctex.gz" beforeDir="false" afterPath="$PROJECT_DIR$/out/mml.synctex.gz" afterDir="false" />
     </list>
@@ -67,7 +72,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="LaTeX.mml">
+  <component name="RunManager" selected="LaTeX.graph_theory">
     <configuration name="applied_prob" type="LATEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory" temporary="true">
       <texify>
         <compiler>PDFLATEX</compiler>
@@ -160,11 +165,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="LaTeX.graph_theory" />
         <item itemvalue="LaTeX.mml" />
         <item itemvalue="LaTeX.applied_prob" />
         <item itemvalue="LaTeX.number_theory" />
         <item itemvalue="LaTeX.sfm" />
-        <item itemvalue="LaTeX.graph_theory" />
       </list>
     </recent_temporary>
   </component>
@@ -206,14 +211,8 @@
       <workItem from="1590907493974" duration="18721000" />
       <workItem from="1590997749130" duration="16174000" />
       <workItem from="1591076139589" duration="23434000" />
-      <workItem from="1591170498539" duration="20135000" />
-    </task>
-    <task id="LOCAL-00003" summary="prob_measure/sec10.tex">
-      <created>1589446548527</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1589446548527</updated>
+      <workItem from="1591170498539" duration="20147000" />
+      <workItem from="1591528380284" duration="2310000" />
     </task>
     <task id="LOCAL-00004" summary="prob_measure/sec15.tex">
       <created>1589493051784</created>
@@ -551,7 +550,14 @@
       <option name="project" value="LOCAL" />
       <updated>1591195315217</updated>
     </task>
-    <option name="localTasksCounter" value="52" />
+    <task id="LOCAL-00052" summary="mml sec3 done">
+      <created>1591207833111</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1591207833111</updated>
+    </task>
+    <option name="localTasksCounter" value="53" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
