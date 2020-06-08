@@ -3,10 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="805a30fc-edf0-4349-b4a4-7e21bcb95f75" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/principle_of_stat.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/out/principle_of_stat.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/principle_of_stat.synctex.gz" beforeDir="false" afterPath="$PROJECT_DIR$/out/principle_of_stat.synctex.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prin_of_stat/sec3.tex" beforeDir="false" afterPath="$PROJECT_DIR$/prin_of_stat/sec3.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prin_of_stat/sec4.tex" beforeDir="false" afterPath="$PROJECT_DIR$/prin_of_stat/sec4.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/sfm.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/out/sfm.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/sfm.synctex.gz" beforeDir="false" afterPath="$PROJECT_DIR$/out/sfm.synctex.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sfm/sec2.tex" beforeDir="false" afterPath="$PROJECT_DIR$/sfm/sec2.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sfm/sec3.tex" beforeDir="false" afterPath="$PROJECT_DIR$/sfm/sec3.tex" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -67,25 +67,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="LaTeX.principle_of_stat">
-    <configuration name="applied_prob" type="LATEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory" temporary="true">
-      <texify>
-        <compiler>PDFLATEX</compiler>
-        <compiler-path />
-        <sumatra-path />
-        <viewer-command />
-        <compiler-arguments />
-        <main-file>$PROJECT_DIR$/applied prob/applied_prob.tex</main-file>
-        <aux-dir>true</aux-dir>
-        <out-dir>true</out-dir>
-        <compile-twice>false</compile-twice>
-        <output-format>PDF</output-format>
-        <has-been-run>true</has-been-run>
-        <bib-run-config />
-        <makeindex-run-config />
-      </texify>
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="LaTeX.sfm">
     <configuration name="graph_theory" type="LATEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory" temporary="true">
       <texify>
         <compiler>PDFLATEX</compiler>
@@ -158,13 +140,31 @@
       </texify>
       <method v="2" />
     </configuration>
+    <configuration name="sfm" type="LATEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory" temporary="true">
+      <texify>
+        <compiler>PDFLATEX</compiler>
+        <compiler-path />
+        <sumatra-path />
+        <viewer-command />
+        <compiler-arguments />
+        <main-file>$PROJECT_DIR$/sfm/sfm.tex</main-file>
+        <aux-dir>true</aux-dir>
+        <out-dir>true</out-dir>
+        <compile-twice>false</compile-twice>
+        <output-format>PDF</output-format>
+        <has-been-run>true</has-been-run>
+        <bib-run-config />
+        <makeindex-run-config />
+      </texify>
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="LaTeX.sfm" />
         <item itemvalue="LaTeX.principle_of_stat" />
         <item itemvalue="LaTeX.graph_theory" />
         <item itemvalue="LaTeX.number_theory" />
         <item itemvalue="LaTeX.mml" />
-        <item itemvalue="LaTeX.applied_prob" />
       </list>
     </recent_temporary>
   </component>
@@ -208,14 +208,7 @@
       <workItem from="1591076139589" duration="23434000" />
       <workItem from="1591170498539" duration="20147000" />
       <workItem from="1591528380284" duration="7135000" />
-      <workItem from="1591596100557" duration="10192000" />
-    </task>
-    <task id="LOCAL-00010" summary="SFM sec4 done">
-      <created>1589826893485</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1589826893485</updated>
+      <workItem from="1591596100557" duration="13212000" />
     </task>
     <task id="LOCAL-00011" summary="SFM sec5 done">
       <created>1589838288327</created>
@@ -553,7 +546,14 @@
       <option name="project" value="LOCAL" />
       <updated>1591633086899</updated>
     </task>
-    <option name="localTasksCounter" value="59" />
+    <task id="LOCAL-00059" summary="pos typo">
+      <created>1591647614182</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1591647614182</updated>
+    </task>
+    <option name="localTasksCounter" value="60" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -573,7 +573,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="PoS finish lecture 8" />
     <MESSAGE value="PoS finish sec2" />
     <MESSAGE value="PoS finish lecture 11" />
     <MESSAGE value="PoS finish sec4" />
@@ -598,6 +597,7 @@
     <MESSAGE value="typo" />
     <MESSAGE value="number theory typo" />
     <MESSAGE value="graph theory typo" />
-    <option name="LAST_COMMIT_MESSAGE" value="graph theory typo" />
+    <MESSAGE value="pos typo" />
+    <option name="LAST_COMMIT_MESSAGE" value="pos typo" />
   </component>
 </project>

@@ -23,7 +23,7 @@
 \end{setting}
 
 \begin{prop}
-    $(\theta_n)$ preivisible process, then $\exists$ $(\theta_n^0)$ st
+    $(\theta_n)$ previsible process, then $\exists$ $(\theta_n^0)$ st
     \begin{enumerate}
         \item $(\theta_n^0)$ previsible
         \item $(\bar\theta_n^0)$ self-financing with initial value $V_0$
@@ -97,7 +97,7 @@
 \end{fact}
 
 \begin{setting}
-    single period model, $\F_0 = {\varnothing, \Omega}$
+    single period model, $\F_0 = \left\{\varnothing, \Omega\right\}$
 \end{setting}
 
 \begin{prop}
@@ -125,7 +125,7 @@
 \end{setting}
 
 \begin{itemize}
-    \item attainable/replicable ------ $\exists$ previsible, self-financing $\bar(\theta_n)$ st $C = \bar \theta_n \bar S_T$
+    \item attainable/replicable ------ $\exists$ previsible, self-financing $(\bar\theta_n)$ st $C = \bar \theta_n \bar S_T$
 \end{itemize}
 
 \begin{fact}
@@ -141,14 +141,14 @@
 \begin{prop}
     $\F_0 = \left\{ \varnothing, \Omega \right\}$, $\F_T = \sigma(\bar S_1)$
     \begin{enumerate}
-        \item $C$ non-negative, attainable, time-T contingent claim, $\tilde \Pb$ equivalent martingale measure, then\\
+        \item $C$ non-negative, attainable, time-T contingent claim, $\tilde \Pb$ equivalent martingale measure, then
         fair price $V_0 = \tilde \Ex(D)$, $D = C/S_T^0$
         \item $(\bar S_n)$ complete, numeraire non-random, then at most one equivalent martingale measure
     \end{enumerate}
 \end{prop}
 
 \begin{itemize}
-    \item binomial model (Cox-Ross-Rubinstein model) ------ interest rate $r$, parameters $a < b$, $R_i$ i.i.d.\ with parameter$p$
+    \item binomial model (Cox-Ross-Rubinstein model) ------ interest rate $r$, parameters $a < b$, $R_i$ i.i.d.\ with parameter $p$
     \begin{itemize}
         \item $S^0_n = (1+r)^n$
         \item $S_n = S_0 \prod(1 + R_k)$
@@ -164,10 +164,13 @@
 \end{prop}
 
 \begin{prop}
-    $(\bar S_n)$ binamial model, $r \in (a,b)$, define
+    $(\bar S_n)$ binomial model, $r \in (a,b)$, define
     \begin{enumerate}
         \item $p^* = \frac{r - a}{b - a}$
-        \item equivalent prob measure $\dv{\Pb^*}{\Pb} = \left( \frac{p^*}{p} \right)^{U_T} \left( \frac{1 - p^*}{1 - p} \right)^{D_T}$ where $U_T = (T + S_T)/2, D_T = (T - S_T)/2$, $S_T$ number of $b$
+        \item equivalent prob measure $\dv{\Pb^*}{\Pb} = \left( \frac{p^*}{p} \right)^{U_T} \left( \frac{1 - p^*}{1 - p} \right)^{D_T}$ where $\begin{cases}
+                                 U_T = (T + S_T)/2 \\
+                              D_T = (T - S_T)/2
+        \end{cases}$,\\ $S_T$ number of $b$
     \end{enumerate}
     Then under $\Pb^*$,
     \begin{enumerate}
