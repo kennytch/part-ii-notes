@@ -13,7 +13,7 @@
 \end{prop}
 \begin{pf}
     $B = $ $\left\{ \text{all bases st } n \text{ pseudoprime} \right\}$, then $f : B \rightarrow \left( \frac{\Z}{n\Z} \right)^\times \backslash \, B$,
-    $f(b_1) = f(b b_1)$, injection as $B$ group
+    $f(b_1) = b b_1$, injection as $B$ group
 \end{pf}
 
 \begin{itemize}
@@ -82,7 +82,7 @@
     $N = r^2 - s^2$
 \end{fact}
 
-\begin{example}[Fermat factorisation]
+\begin{example}[Fermat factorisation]\,
     \begin{enumerate}
         \item $r = \floor{\sqrt{N}} + 1, \floor{\sqrt{N}} + 2, \dots$
         \item if $r^2 - N = s^2$, then $N = (r-s)(r+s)$
@@ -110,7 +110,7 @@
 \end{fact}
 
 \begin{fact}
-    try $\floor{kN}, \floor{kN} + 1$ for $B$-numbers
+    try $\floor{\sqrt{kN}}, \floor{\sqrt{kN}} + 1$ for $B$-numbers
 \end{fact}
 
 \begin{lemma}
@@ -128,7 +128,7 @@
 \begin{example}[Pollard's $p-1$ method]\,
     \begin{enumerate}
         \item $k$ product of small prime (e.g. $\lcm(1, \dots, B)$)
-        \item $(a, N)$ (e.g. $a = 2, 3$ or random)
+        \item $(a, N) = 1$ (e.g. $a = 2, 3$ or random)
         \item compute $a^k \pmod{N}$
         \item compute $(N, a^k - 1)$ and hope for proper factor
     \end{enumerate}
