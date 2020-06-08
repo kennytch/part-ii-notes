@@ -3,11 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="805a30fc-edf0-4349-b4a4-7e21bcb95f75" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/graph_theory/sec4.tex" beforeDir="false" afterPath="$PROJECT_DIR$/graph_theory/sec4.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/number_theory.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/out/number_theory.pdf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/principle_of_stat.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/out/principle_of_stat.pdf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/principle_of_stat.synctex.gz" beforeDir="false" afterPath="$PROJECT_DIR$/out/principle_of_stat.synctex.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prin_of_stat/sec2.tex" beforeDir="false" afterPath="$PROJECT_DIR$/prin_of_stat/sec2.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prin_of_stat/sec3.tex" beforeDir="false" afterPath="$PROJECT_DIR$/prin_of_stat/sec3.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prin_of_stat/sec4.tex" beforeDir="false" afterPath="$PROJECT_DIR$/prin_of_stat/sec4.tex" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -68,7 +67,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="LaTeX.graph_theory">
+  <component name="RunManager" selected="LaTeX.principle_of_stat">
     <configuration name="applied_prob" type="LATEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory" temporary="true">
       <texify>
         <compiler>PDFLATEX</compiler>
@@ -161,8 +160,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="LaTeX.graph_theory" />
         <item itemvalue="LaTeX.principle_of_stat" />
+        <item itemvalue="LaTeX.graph_theory" />
         <item itemvalue="LaTeX.number_theory" />
         <item itemvalue="LaTeX.mml" />
         <item itemvalue="LaTeX.applied_prob" />
@@ -209,14 +208,7 @@
       <workItem from="1591076139589" duration="23434000" />
       <workItem from="1591170498539" duration="20147000" />
       <workItem from="1591528380284" duration="7135000" />
-      <workItem from="1591596100557" duration="7735000" />
-    </task>
-    <task id="LOCAL-00009" summary="SFM sec3 done">
-      <created>1589821167416</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1589821167416</updated>
+      <workItem from="1591596100557" duration="10192000" />
     </task>
     <task id="LOCAL-00010" summary="SFM sec4 done">
       <created>1589826893485</created>
@@ -554,7 +546,14 @@
       <option name="project" value="LOCAL" />
       <updated>1591628320942</updated>
     </task>
-    <option name="localTasksCounter" value="58" />
+    <task id="LOCAL-00058" summary="graph theory typo">
+      <created>1591633086899</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1591633086899</updated>
+    </task>
+    <option name="localTasksCounter" value="59" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -597,8 +596,8 @@
     <MESSAGE value="mml sec2 done" />
     <MESSAGE value="mml sec3 done" />
     <MESSAGE value="typo" />
-    <MESSAGE value="graph theory typo" />
     <MESSAGE value="number theory typo" />
-    <option name="LAST_COMMIT_MESSAGE" value="number theory typo" />
+    <MESSAGE value="graph theory typo" />
+    <option name="LAST_COMMIT_MESSAGE" value="graph theory typo" />
   </component>
 </project>
