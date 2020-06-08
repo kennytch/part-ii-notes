@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="805a30fc-edf0-4349-b4a4-7e21bcb95f75" name="Default Changelist" comment="" />
+    <list default="true" id="805a30fc-edf0-4349-b4a4-7e21bcb95f75" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auxil/graph_theory.log" beforeDir="false" afterPath="$PROJECT_DIR$/auxil/graph_theory.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/number_theory/sec1.tex" beforeDir="false" afterPath="$PROJECT_DIR$/number_theory/sec1.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/number_theory/sec3.tex" beforeDir="false" afterPath="$PROJECT_DIR$/number_theory/sec3.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/number_theory/sec4.tex" beforeDir="false" afterPath="$PROJECT_DIR$/number_theory/sec4.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/number_theory/sec6.tex" beforeDir="false" afterPath="$PROJECT_DIR$/number_theory/sec6.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/graph_theory.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/out/graph_theory.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/number_theory.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/out/number_theory.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/number_theory.synctex.gz" beforeDir="false" afterPath="$PROJECT_DIR$/out/number_theory.synctex.gz" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,7 +71,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="LaTeX.graph_theory">
+  <component name="RunManager" selected="LaTeX.number_theory">
     <configuration name="applied_prob" type="LATEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory" temporary="true">
       <texify>
         <compiler>PDFLATEX</compiler>
@@ -154,10 +164,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="LaTeX.number_theory" />
         <item itemvalue="LaTeX.graph_theory" />
         <item itemvalue="LaTeX.mml" />
         <item itemvalue="LaTeX.applied_prob" />
-        <item itemvalue="LaTeX.number_theory" />
         <item itemvalue="LaTeX.sfm" />
       </list>
     </recent_temporary>
@@ -201,14 +211,8 @@
       <workItem from="1590997749130" duration="16174000" />
       <workItem from="1591076139589" duration="23434000" />
       <workItem from="1591170498539" duration="20147000" />
-      <workItem from="1591528380284" duration="7117000" />
-    </task>
-    <task id="LOCAL-00006" summary="SFM Martingale">
-      <created>1589752856856</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1589752856856</updated>
+      <workItem from="1591528380284" duration="7135000" />
+      <workItem from="1591596100557" duration="4572000" />
     </task>
     <task id="LOCAL-00007" summary="SFM Martingale">
       <created>1589792554237</created>
@@ -546,7 +550,14 @@
       <option name="project" value="LOCAL" />
       <updated>1591564104983</updated>
     </task>
-    <option name="localTasksCounter" value="55" />
+    <task id="LOCAL-00055" summary="graph theory typo">
+      <created>1591564922700</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1591564922700</updated>
+    </task>
+    <option name="localTasksCounter" value="56" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -566,7 +577,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="PoS refactor" />
     <MESSAGE value="PoS sec2" />
     <MESSAGE value="PoS finish lecture 8" />
     <MESSAGE value="PoS finish sec2" />
@@ -591,6 +601,7 @@
     <MESSAGE value="mml sec2 done" />
     <MESSAGE value="mml sec3 done" />
     <MESSAGE value="typo" />
-    <option name="LAST_COMMIT_MESSAGE" value="typo" />
+    <MESSAGE value="graph theory typo" />
+    <option name="LAST_COMMIT_MESSAGE" value="graph theory typo" />
   </component>
 </project>
