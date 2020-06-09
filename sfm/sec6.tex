@@ -2,11 +2,13 @@
 
 \begin{itemize}
     \item Black-Scholes model ------ $S_t^0 = e^{rt}, S_t = S_0 e^{\sigma B_t + \mu t}$
-    \item price of riskless bond $S_t^0$
-    \item interest rate $r$
-    \item price of risky asset $S_t$
-    \item drift $\mu$
-    \item volatility $\sigma$
+    \begin{itemize}
+        \item price of riskless bond $S_t^0$
+        \item interest rate $r$
+        \item price of risky asset $S_t$
+        \item drift $\mu$
+        \item volatility $\sigma$
+    \end{itemize}
 \end{itemize}
 
 \begin{fact}
@@ -249,7 +251,7 @@
 \begin{prop}\,
     \begin{enumerate}
         \item $\sigma \mapsto EC(x, K, \sigma, r, T)$ increasing bijection
-        \item $\lim_{\sigma \rightarrow 0}EC(x, K, \sigma, r, T) = (x - e^{-rT})^+$
+        \item $\lim_{\sigma \rightarrow 0}EC(x, K, \sigma, r, T) = (x - e^{-rT}K)^+$
         \item $\lim_{\sigma \rightarrow \infty}EC(x, K, \sigma, r, T) = x$
     \end{enumerate}
 \end{prop}
